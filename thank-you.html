@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You! Check Your Email | Bible Quiz Daily</title>
+    <meta name="description" content="Thank you for downloading the Ultimate Bible Knowledge Challenge. Check your email for the download link.">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 600px;
+            width: 100%;
+        }
+        
+        .success-card {
+            background: white;
+            border-radius: 16px;
+            padding: 60px 40px;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            animation: slideUp 0.6s ease-out;
+        }
+        
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .success-icon {
+            width: 80px;
+            height: 80px;
+            background: #27ae60;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 30px;
+            animation: scaleIn 0.5s ease-out 0.3s both;
+        }
+        
+        @keyframes scaleIn {
+            from {
+                transform: scale(0);
+            }
+            to {
+                transform: scale(1);
+            }
+        }
+        
+        .success-icon::after {
+            content: '✓';
+            font-size: 48px;
+            color: white;
+            font-weight: bold;
+        }
+        
+        h1 {
+            font-size: 36px;
+            color: #1a1a1a;
+            margin-bottom: 20px;
+            animation: fadeIn 0.6s ease-out 0.4s both;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        .greeting {
+            font-size: 20px;
+            color: #555;
+            margin-bottom: 30px;
+            animation: fadeIn 0.6s ease-out 0.5s both;
+        }
+        
+        .instruction-box {
+            background: #f8f9fa;
+            border-left: 4px solid #3498db;
+            padding: 20px;
+            border-radius: 8px;
+            text-align: left;
+            margin-bottom: 30px;
+            animation: fadeIn 0.6s ease-out 0.6s both;
+        }
+        
+        .instruction-box h3 {
+            font-size: 18px;
+            margin-bottom: 12px;
+            color: #3498db;
+        }
+        
+        .instruction-box p {
+            font-size: 15px;
+            color: #555;
+            line-height: 1.6;
+        }
+        
+        .backup-download {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            animation: fadeIn 0.6s ease-out 0.7s both;
+        }
+        
+        .backup-download p {
+            font-size: 14px;
+            color: #856404;
+            margin-bottom: 15px;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            padding: 14px 30px;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 14px;
+        }
+        
+        .download-btn:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(39, 174, 96, 0.3);
+        }
+        
+        .share-section {
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #e0e0e0;
+            animation: fadeIn 0.6s ease-out 0.8s both;
+        }
+        
+        .share-section h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #1a1a1a;
+        }
+        
+        .share-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 30px;
+        }
+        
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border-radius: 6px;
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            font-size: 14px;
+        }
+        
+        .share-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        }
+        
+        .share-btn.twitter {
+            background: #1DA1F2;
+        }
+        
+        .share-btn.facebook {
+            background: #4267B2;
+        }
+        
+        .share-btn.pinterest {
+            background: #E60023;
+        }
+        
+        .next-steps {
+            background: #e8f5e9;
+            padding: 25px;
+            border-radius: 8px;
+            margin-top: 30px;
+            animation: fadeIn 0.6s ease-out 0.9s both;
+        }
+        
+        .next-steps h3 {
+            font-size: 20px;
+            color: #27ae60;
+            margin-bottom: 15px;
+        }
+        
+        .next-steps ul {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .next-steps li {
+            padding: 10px 0;
+            color: #555;
+            font-size: 15px;
+            display: flex;
+            align-items: flex-start;
+        }
+        
+        .next-steps li::before {
+            content: '→';
+            color: #27ae60;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .quiz-link {
+            display: inline-block;
+            margin-top: 25px;
+            padding: 16px 40px;
+            background: #667eea;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: 700;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .quiz-link:hover {
+            background: #5568d3;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(102, 126, 234, 0.4);
+        }
+        
+        @media (max-width: 600px) {
+            .success-card {
+                padding: 40px 25px;
+            }
+            
+            h1 {
+                font-size: 28px;
+            }
+            
+            .greeting {
+                font-size: 18px;
+            }
+            
+            .share-buttons {
+                flex-direction: column;
+            }
+            
+            .share-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="success-card">
+            <div class="success-icon"></div>
+            
+            <h1>Success! 🎉</h1>
+            <p class="greeting" id="greeting">Thank you for downloading the Ultimate Bible Knowledge Challenge!</p>
+            
+            <div class="instruction-box">
+                <h3>📧 Check Your Email</h3>
+                <p>We've sent your free PDF to the email address you provided. It should arrive within the next 2-3 minutes.</p>
+                <p style="margin-top: 10px;"><strong>Don't see it?</strong> Check your spam or promotions folder.</p>
+            </div>
+            
+            <div class="backup-download">
+                <p><strong>Can't find the email?</strong> No problem! Download your PDF right now:</p>
+                <a href="/50-Ultimate-Bible-Questions.pdf" class="download-btn" download>
+                    ⬇️ Download PDF Now
+                </a>
+            </div>
+            
+            <div class="share-section">
+                <h3>Share This Challenge! 📢</h3>
+                <p style="font-size: 14px; color: #666; margin-bottom: 15px;">Think your friends can beat your score? Challenge them!</p>
+                
+                <div class="share-buttons">
+                    <a href="https://twitter.com/intent/tweet?text=I%20just%20took%20the%20Ultimate%20Bible%20Knowledge%20Challenge!%20Can%20you%20beat%20my%20score?%20Get%20it%20free%20at&url=https://www.biblequizdaily.com/free-download" target="_blank" class="share-btn twitter">
+                        🐦 Share on Twitter
+                    </a>
+                    
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.biblequizdaily.com/free-download" target="_blank" class="share-btn facebook">
+                        📘 Share on Facebook
+                    </a>
+                    
+                    <a href="https://pinterest.com/pin/create/button/?url=https://www.biblequizdaily.com/free-download&description=50%20Challenging%20Bible%20Questions%20-%20Free%20Download" target="_blank" class="share-btn pinterest">
+                        📌 Pin on Pinterest
+                    </a>
+                </div>
+            </div>
+            
+            <div class="next-steps">
+                <h3>What's Next?</h3>
+                <ul>
+                    <li>Take the quiz and calculate your score</li>
+                    <li>Check the answer key with Scripture references</li>
+                    <li>Share your results with friends</li>
+                    <li>Try our 270+ online quizzes for more practice</li>
+                </ul>
+                
+                <a href="https://www.biblequizdaily.com/" class="quiz-link">
+                    Explore 270+ More Quizzes
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Get name from URL parameter
+        const urlParams = new URLSearchParams(window.location.search);
+        const name = urlParams.get('name');
+        
+        if (name) {
+            document.getElementById('greeting').textContent = 
+                `Thank you, ${name}! 🎉`;
+        }
+    </script>
+</body>
+</html>

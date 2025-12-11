@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Download: Ultimate Bible Knowledge Challenge | Bible Quiz Daily</title>
+    <meta name="description" content="Download 50 challenging Bible questions that will test your Scripture knowledge. Free PDF with answer key and Scripture references.">
+    
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            background: #f8f9fa;
+        }
+        
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 50px;
+            animation: fadeInDown 0.8s ease-out;
+        }
+        
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .logo {
+            font-size: 14px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            color: #1a1a1a;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-family: 'Georgia', serif;
+        }
+        
+        .subtitle {
+            font-size: 20px;
+            color: #555;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+        
+        .warning-badge {
+            display: inline-block;
+            padding: 8px 20px;
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #856404;
+            margin-bottom: 40px;
+        }
+        
+        .main-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+            padding: 50px 40px;
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+        
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .benefits {
+            margin-bottom: 40px;
+        }
+        
+        .benefit-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            animation: fadeInLeft 0.6s ease-out both;
+        }
+        
+        .benefit-item:nth-child(1) { animation-delay: 0.3s; }
+        .benefit-item:nth-child(2) { animation-delay: 0.4s; }
+        .benefit-item:nth-child(3) { animation-delay: 0.5s; }
+        .benefit-item:nth-child(4) { animation-delay: 0.6s; }
+        
+        @keyframes fadeInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        .checkmark {
+            width: 24px;
+            height: 24px;
+            background: #27ae60;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .benefit-text {
+            font-size: 16px;
+            color: #333;
+            line-height: 1.5;
+        }
+        
+        .form-section {
+            background: #f8f9fa;
+            padding: 30px;
+            border-radius: 8px;
+            margin-top: 40px;
+        }
+        
+        .form-title {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1a1a1a;
+            margin-bottom: 10px;
+            text-align: center;
+        }
+        
+        .form-subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 25px;
+            font-size: 14px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #333;
+            font-size: 14px;
+        }
+        
+        input[type="text"],
+        input[type="email"] {
+            width: 100%;
+            padding: 14px 16px;
+            border: 2px solid #e0e0e0;
+            border-radius: 6px;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #3498db;
+            box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.1);
+        }
+        
+        .consent-box {
+            background: white;
+            padding: 20px;
+            border-radius: 6px;
+            border: 2px solid #e0e0e0;
+            margin-bottom: 25px;
+        }
+        
+        .checkbox-label {
+            display: flex;
+            align-items: flex-start;
+            cursor: pointer;
+            font-size: 14px;
+            line-height: 1.6;
+            color: #555;
+        }
+        
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            cursor: pointer;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+        
+        .submit-btn {
+            width: 100%;
+            padding: 18px;
+            background: #27ae60;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 18px;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-family: 'Georgia', serif;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .submit-btn:hover {
+            background: #229954;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(39, 174, 96, 0.3);
+        }
+        
+        .submit-btn:disabled {
+            background: #95a5a6;
+            cursor: not-allowed;
+            transform: none;
+        }
+        
+        .privacy-note {
+            text-align: center;
+            font-size: 13px;
+            color: #7f8c8d;
+            margin-top: 20px;
+            line-height: 1.6;
+        }
+        
+        .privacy-note a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .privacy-note a:hover {
+            text-decoration: underline;
+        }
+        
+        .error-message {
+            background: #fee;
+            color: #c33;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            display: none;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 6px;
+            margin-bottom: 15px;
+            font-size: 14px;
+            display: none;
+        }
+        
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+            
+            .subtitle {
+                font-size: 18px;
+            }
+            
+            .main-card {
+                padding: 30px 20px;
+            }
+            
+            .form-section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">BibleQuizDaily.com</div>
+            <h1>The Ultimate Bible Knowledge Challenge</h1>
+            <p class="subtitle">50 Questions That Separate Bible Readers from Bible Scholars</p>
+            <div class="warning-badge">⚠️ These Questions Are Genuinely Difficult</div>
+        </header>
+        
+        <div class="main-card">
+            <div class="benefits">
+                <div class="benefit-item">
+                    <div class="checkmark">✓</div>
+                    <div class="benefit-text"><strong>50 challenging questions</strong> extracted directly from Scripture—not your typical Sunday School quiz</div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="checkmark">✓</div>
+                    <div class="benefit-text"><strong>Progressive difficulty levels</strong> from warm-up to expert (most seminary students score below 35/50)</div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="checkmark">✓</div>
+                    <div class="benefit-text"><strong>Complete answer key</strong> with exact Scripture references for every question</div>
+                </div>
+                
+                <div class="benefit-item">
+                    <div class="checkmark">✓</div>
+                    <div class="benefit-text"><strong>Instant PDF download</strong>—perfect for personal study, small groups, or Sunday School</div>
+                </div>
+            </div>
+            
+            <div class="form-section">
+                <h2 class="form-title">Get Your Free PDF Now</h2>
+                <p class="form-subtitle">Enter your details below for instant access</p>
+                
+                <div id="errorMessage" class="error-message"></div>
+                <div id="successMessage" class="success-message"></div>
+                
+                <form id="downloadForm">
+                    <div class="form-group">
+                        <label for="name">First Name *</label>
+                        <input type="text" id="name" name="name" required placeholder="Enter your first name">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" required placeholder="your.email@example.com">
+                    </div>
+                    
+                    <div class="consent-box">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="consent" name="consent" required>
+                            <span>Yes, I want to receive the free PDF and occasional emails from BibleQuizDaily.com with Bible trivia, new quizzes, and exclusive resources. I can unsubscribe anytime.</span>
+                        </label>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">
+                        Download Free PDF
+                    </button>
+                    
+                    <div class="privacy-note">
+                        🔒 We respect your privacy. Your email will only be used to send you the PDF and occasional Bible-related content. We'll never spam you or sell your information. Unsubscribe anytime with one click. <a href="/privacy.html">Privacy Policy</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Initialize EmailJS with your PUBLIC KEY
+        // IMPORTANT: Replace 'YOUR_PUBLIC_KEY' with your actual EmailJS public key
+        emailjs.init('YOUR_PUBLIC_KEY'); // You'll get this from EmailJS dashboard
+        
+        document.getElementById('downloadForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = document.getElementById('submitBtn');
+            const errorMsg = document.getElementById('errorMessage');
+            const successMsg = document.getElementById('successMessage');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const consent = document.getElementById('consent').checked;
+            
+            // Hide previous messages
+            errorMsg.style.display = 'none';
+            successMsg.style.display = 'none';
+            
+            // Validate
+            if (!name || !email || !consent) {
+                errorMsg.textContent = 'Please fill in all fields and accept the consent.';
+                errorMsg.style.display = 'block';
+                return;
+            }
+            
+            // Disable button
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending...';
+            
+            try {
+                // Send email via EmailJS
+                // IMPORTANT: Replace these with your actual EmailJS IDs
+                const response = await emailjs.send(
+                    'YOUR_SERVICE_ID',    // Replace with your EmailJS service ID
+                    'YOUR_TEMPLATE_ID',   // Replace with your EmailJS template ID
+                    {
+                        to_email: email,
+                        to_name: name,
+                        from_name: 'Bible Quiz Daily',
+                        download_link: 'https://www.biblequizdaily.com/50-Ultimate-Bible-Questions.pdf'
+                    }
+                );
+                
+                console.log('Email sent successfully:', response);
+                
+                // Save email to localStorage (simple storage)
+                const subscribers = JSON.parse(localStorage.getItem('subscribers') || '[]');
+                subscribers.push({
+                    name: name,
+                    email: email,
+                    date: new Date().toISOString(),
+                    consent: true
+                });
+                localStorage.setItem('subscribers', JSON.stringify(subscribers));
+                
+                // Redirect to thank you page
+                window.location.href = '/thank-you.html?name=' + encodeURIComponent(name);
+                
+            } catch (error) {
+                console.error('Error sending email:', error);
+                errorMsg.textContent = 'Something went wrong. Please try again or contact us at biblequizdaily.contact@gmail.com';
+                errorMsg.style.display = 'block';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Download Free PDF';
+            }
+        });
+    </script>
+</body>
+</html>

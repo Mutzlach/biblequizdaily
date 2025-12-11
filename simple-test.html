@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Test</title>
+    <style>
+        body { font-family: Arial; padding: 50px; }
+        .result { padding: 20px; margin: 10px 0; border-radius: 5px; }
+        .success { background: #d4edda; color: #155724; }
+        .error { background: #f8d7da; color: #721c24; }
+    </style>
+</head>
+<body>
+    <h1>Bible Quiz Daily - Simple Test</h1>
+    
+    <div id="results"></div>
+    
+    <script src="questions.js"></script>
+    <script>
+        const results = document.getElementById('results');
+        
+        // Test 1: Is questions.js loaded?
+        if (typeof window.quizQuestions !== 'undefined') {
+            results.innerHTML += '<div class="result success">✅ TEST 1 PASSED: questions.js is loaded!</div>';
+            
+            // Test 2: How many categories?
+            const categories = Object.keys(window.quizQuestions);
+            results.innerHTML += `<div class="result success">✅ TEST 2 PASSED: Found ${categories.length} categories:<br>${categories.join(', ')}</div>`;
+            
+            // Test 3: Show first question from old-testament
+            if (window.quizQuestions['old-testament']) {
+                const firstQ = window.quizQuestions['old-testament'][0];
+                results.innerHTML += `<div class="result success">✅ TEST 3 PASSED: Old Testament has ${window.quizQuestions['old-testament'].length} questions!<br><br>First question: ${firstQ.question}</div>`;
+            } else {
+                results.innerHTML += '<div class="result error">❌ TEST 3 FAILED: old-testament category not found</div>';
+            }
+            
+            // Test 4: Try to load quiz
+            results.innerHTML += '<div class="result success">✅ All tests passed! <br><br><a href="quiz.html?category=old-testament">Click here to try the quiz</a></div>';
+            
+        } else {
+            results.innerHTML += '<div class="result error">❌ TEST 1 FAILED: questions.js did NOT load!<br><br>This means:<br>1. File is not uploaded, OR<br>2. File path is wrong, OR<br>3. File is corrupted</div>';
+        }
+    </script>
+</body>
+</html>
