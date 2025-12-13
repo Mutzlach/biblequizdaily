@@ -409,8 +409,8 @@
             submitBtn.textContent = 'Sending...';
             
             try {
-                // Send email via EmailJS
-                const response = await emailjs.send(
+                // 1. Send email via EmailJS
+                const emailResponse = await emailjs.send(
                     'service_c8ua9io',
                     'template_hz40tit',
                     {
@@ -421,9 +421,30 @@
                     }
                 );
                 
-                console.log('Email sent successfully:', response);
+                console.log('Email sent successfully:', emailResponse);
                 
-                // Save email to localStorage (simple storage)
+                // 2. Save to Google Sheets
+                try {
+                    const sheetsResponse = await fetch('https://script.google.com/macros/s/AKfycbwk68AmT8IN6RqEEth-vv4Eq9Jh_dfvf-ZI3Yia1BPp-Q8qsEx2oFo_pZxitA3TSDnShA/exec', {
+                        method: 'POST',
+                        mode: 'no-cors',
+                        headers: {
+                            'Content-Type': 'application/json',
+                        },
+                        body: JSON.stringify({
+                            name: name,
+                            email: email,
+                            consent: true,
+                            source: 'Free Download Page'
+                        })
+                    });
+                    console.log('Saved to Google Sheets');
+                } catch (sheetsError) {
+                    console.error('Google Sheets error (non-critical):', sheetsError);
+                    // Don't show error to user - email still sent successfully
+                }
+                
+                // 3. Save email to localStorage (backup)
                 const subscribers = JSON.parse(localStorage.getItem('subscribers') || '[]');
                 subscribers.push({
                     name: name,
@@ -433,7 +454,7 @@
                 });
                 localStorage.setItem('subscribers', JSON.stringify(subscribers));
                 
-                // Redirect to thank you page
+                // 4. Redirect to thank you page
                 window.location.href = '/thank-you.html?name=' + encodeURIComponent(name);
                 
             } catch (error) {
