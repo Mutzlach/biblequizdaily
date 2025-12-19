@@ -6,6 +6,12 @@
     <title>Download 30 Spiritual Warfare Verse Cards | BibleQuizDaily.com</title>
     <meta name="description" content="Get 50 challenging Bible quiz questions free! Test your knowledge of Old Testament, New Testament, and Biblical history.">
     <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📖</text></svg>">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("iF0jfIZcpZ3k5cvj0");
+        })();
+    </script>
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -181,30 +187,6 @@
             border: 1px solid #f5c6cb;
         }
         
-        .download-link {
-            display: none;
-            margin-top: 20px;
-            text-align: center;
-        }
-        
-        .download-link a {
-            display: inline-block;
-            background: #27ae60;
-            color: white;
-            padding: 15px 40px;
-            border-radius: 10px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1em;
-            transition: all 0.3s;
-        }
-        
-        .download-link a:hover {
-            background: #229954;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 20px rgba(39, 174, 96, 0.4);
-        }
-        
         .back-link {
             text-align: center;
             margin-top: 25px;
@@ -232,8 +214,21 @@
             h1 { font-size: 1.8em; }
         }
     </style>
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-N3G4FWBF');</script>
+    <!-- End Google Tag Manager -->
+    
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3G4FWBF"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+    
     <div class="container">
         <div class="icon">⚔️</div>
         <h1>30 Spiritual Warfare Verse Cards</h1>
@@ -242,17 +237,17 @@
         <div class="benefits">
             <h3>📖 What's Inside:</h3>
             <ul>
-                <li>50 challenging multiple-choice questions</li>
-                <li>Covers Old Testament, New Testament & more</li>
-                <li>Perfect for Bible study groups</li>
-                <li>Great for Sunday School classes</li>
-                <li>Answer key included</li>
+                <li>30 powerful spiritual warfare cards</li>
+                <li>Ephesians 6:10-11, Psalm 91, James 4:7 & more</li>
+                <li>Perfect for prayer time & spiritual battles</li>
+                <li>Bold, battle-ready design</li>
+                <li>Print & cut format - ready to use</li>
                 <li>Instant PDF download</li>
             </ul>
         </div>
         
         <div class="form-section">
-            <h3>Enter Your Info to Download ⬇️</h3>
+            <h3>Get Your Free Quiz Now! ⬇️</h3>
             <form id="downloadForm">
                 <div class="form-group">
                     <label for="name">First Name *</label>
@@ -267,22 +262,19 @@
                 <div class="consent">
                     <label>
                         <input type="checkbox" id="consent" name="consent" required>
-                        <span>I agree to allow BibleQuizDaily.com to store my email address so I can receive occasional free Bible resources in the future (optional emails only - your download starts immediately). (Required)</span>
+                        <span>I agree to receive this free download and occasional emails with free Bible resources. I can unsubscribe anytime. (Required)</span>
                     </label>
                 </div>
                 
                 <button type="submit" class="submit-btn" id="submitBtn">
-                    📥 Download Free Cards!
+                    📥 Send Me The Verse Cards!
                 </button>
             </form>
             
             <div id="message" class="message"></div>
-            <div id="downloadLink" class="download-link">
-                <a href="30-Spiritual-Warfare-Protection-Cards.pdf" download>📥 Click Here if Download Didn't Start</a>
-            </div>
         </div>
         
-        <p class="privacy">📥 Your PDF will download automatically - no email required!</p>
+        <p class="privacy">🔒 We respect your privacy. Unsubscribe anytime.</p>
         
         <div class="back-link">
             <a href="free-resources.html">← Back to Free Resources</a>
@@ -293,9 +285,7 @@
         const form = document.getElementById('downloadForm');
         const submitBtn = document.getElementById('submitBtn');
         const messageDiv = document.getElementById('message');
-        const downloadLinkDiv = document.getElementById('downloadLink');
         const GOOGLE_APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwk68AmT8IN6RqEEth-vv4Eq9Jh_dfvf-ZI3Yia1BPp-Q8qsEx2oFo_pZxitA3TSDnShA/exec';
-        const PDF_URL = '30-Spiritual-Warfare-Protection-Cards.pdf';
 
         form.addEventListener('submit', async function(e) {
             e.preventDefault();
@@ -310,9 +300,17 @@
             }
             
             submitBtn.disabled = true;
-            submitBtn.textContent = '⏳ Processing...';
+            submitBtn.textContent = '📤 Sending...';
             
             try {
+                // Send email via EmailJS
+                await emailjs.send('service_6l29o6f', 'template_jnwezep', {
+                    to_email: email,
+                    to_name: name,
+                    from_name: 'BibleQuizDaily.com',
+                    message: 'Thank you for downloading the 30 Spiritual Warfare Verse Cards! Your PDF is attached.'
+                });
+                
                 // Save to Google Sheets (non-blocking)
                 fetch(GOOGLE_APPS_SCRIPT_URL, {
                     method: 'POST',
@@ -332,34 +330,18 @@
                 subscribers.push({ name, email, consent: 'yes', timestamp, source: 'Quiz Questions' });
                 localStorage.setItem('subscribers', JSON.stringify(subscribers));
                 
-                // Show success message
-                showMessage('🎉 Success! Your download is starting...', 'success');
+                showMessage('🎉 Success! Check your email for the download link!', 'success');
                 form.reset();
                 
-                // Trigger automatic download
                 setTimeout(() => {
-                    const link = document.createElement('a');
-                    link.href = PDF_URL;
-                    link.download = '30-Spiritual-Warfare-Protection-Cards.pdf';
-                    document.body.appendChild(link);
-                    link.click();
-                    document.body.removeChild(link);
-                    
-                    // Show manual download link as backup
-                    downloadLinkDiv.style.display = 'block';
-                }, 500);
-                
-                // Redirect to thank you page
-                setTimeout(() => {
-                    window.location.href = 'thank-you.html?name=' + encodeURIComponent(name) + '&resource=quiz';
-                }, 3000);
+                    window.location.href = 'thank-you.html?name=' + encodeURIComponent(name) + '&resource=warfare';
+                }, 2000);
                 
             } catch (error) {
                 console.error('Error:', error);
-                showMessage('✅ Your info is saved! Click the button below to download.', 'success');
-                downloadLinkDiv.style.display = 'block';
+                showMessage('⚠️ Something went wrong. Please try again or contact us.', 'error');
                 submitBtn.disabled = false;
-                submitBtn.textContent = '📥 Download Free Cards!';
+                submitBtn.textContent = '📥 Send Me The Quiz Questions!';
             }
         });
         
