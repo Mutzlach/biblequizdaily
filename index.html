@@ -815,25 +815,10 @@
 
             <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html">Home</a></li>
-                <li><a href="old-testament-quiz.html">📜 Old Testament</a></li>
-                <li><a href="new-testament-quiz.html">✝️ New Testament</a></li>
-                <li><a href="jesus-life-quiz.html">🕊️ Life of Jesus</a></li>
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle">
-                        More Quizzes <span>▼</span>
-                    </a>
-                    <div class="dropdown-content">
-                        <a href="#" onclick="startQuiz('prophets')">📯 Prophets</a>
-                        <a href="#" onclick="startQuiz('psalms-proverbs')">🎵 Psalms & Proverbs</a>
-                        <a href="#" onclick="startQuiz('bible-knowledge')">📚 Bible Knowledge</a>
-                        <a href="#" onclick="startQuiz('women-bible')">👩 Women of the Bible</a>
-                        <a href="#" onclick="startQuiz('miracles')">✨ Miracles & Wonders</a>
-                        <a href="#" onclick="startQuiz('parables')">📖 Parables of Jesus</a>
-                    </div>
-                </li>
+                <li><a href="#categories">All Quizzes</a></li>
                 <li><a href="free-resources.html">Free Resources</a></li>
                 <li><a href="about.html">About</a></li>
-                <li><a href="#" class="nav-cta" onclick="startRandomQuiz()">Play Now 🎮</a></li>
+                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -1007,7 +992,7 @@
                         </div>
                     </div>
 
-                    <div class="category-card" onclick="startQuiz('women-bible')">
+                    <div class="category-card" onclick="startQuiz('women-of-the-bible')">
                         <span class="category-icon">👩</span>
                         <h3 class="category-title">Women of the Bible</h3>
                         <p class="category-desc">Faithful women who shaped biblical history</p>
@@ -1153,7 +1138,7 @@
         }
 
         function startRandomQuiz() {
-            const categories = ['old-testament', 'new-testament', 'jesus-life', 'prophets', 'psalms-proverbs', 'bible-knowledge', 'women-bible', 'miracles', 'parables'];
+            const categories = ['old-testament', 'new-testament', 'jesus-life', 'prophets', 'psalms-proverbs', 'bible-knowledge', 'women-of-the-bible', 'miracles', 'parables'];
             const random = categories[Math.floor(Math.random() * categories.length)];
             startQuiz(random);
         }
