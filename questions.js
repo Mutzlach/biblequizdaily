@@ -1064,98 +1064,98 @@ window.quizQuestions = {
         {
             scripture: "In the beginning was the Word.",
             reference: "John 1:1",
-            question: "How many books in the Bible?",
+            question: "How many books are in the Bible?",
             answers: ["60", "66", "70", "73"],
             correct: 1
         },
         {
             scripture: "All scripture is given by inspiration of God.",
             reference: "2 Timothy 3:16",
-            question: "How many Old Testament books?",
+            question: "How many books are in the Old Testament?",
             answers: ["27", "36", "39", "42"],
             correct: 2
         },
         {
             scripture: "For whatsoever things were written aforetime.",
             reference: "Romans 15:4",
-            question: "How many New Testament books?",
+            question: "How many books are in the New Testament?",
             answers: ["24", "27", "30", "33"],
             correct: 1
         },
         {
             scripture: "And that from a child thou hast known.",
             reference: "2 Timothy 3:15",
-            question: "What is the first book?",
+            question: "What is the first book of the Bible?",
             answers: ["Exodus", "Genesis", "Matthew", "Psalms"],
             correct: 1
         },
         {
             scripture: "In the beginning God created.",
             reference: "Genesis 1:1",
-            question: "What is the last book?",
+            question: "What is the last book of the Bible?",
             answers: ["Jude", "3 John", "Revelation", "Hebrews"],
             correct: 2
         },
         {
             scripture: "The Revelation of Jesus Christ.",
             reference: "Revelation 1:1",
-            question: "Old Testament language?",
+            question: "What language was the Old Testament originally written in?",
             answers: ["Greek", "Hebrew", "Aramaic", "Latin"],
             correct: 1
         },
         {
             scripture: "And he came to Nazareth.",
             reference: "Luke 4:16",
-            question: "New Testament language?",
+            question: "What language was the New Testament originally written in?",
             answers: ["Hebrew", "Aramaic", "Greek", "Latin"],
             correct: 2
         },
         {
             scripture: "And Philip ran thither to him.",
             reference: "Acts 8:30",
-            question: "Which Gospel written first?",
+            question: "Which Gospel was written first?",
             answers: ["Matthew", "Mark", "Luke", "John"],
             correct: 1
         },
         {
             scripture: "The beginning of the gospel of Jesus Christ.",
             reference: "Mark 1:1",
-            question: "Which Gospel written last?",
+            question: "Which Gospel was written last?",
             answers: ["Matthew", "Mark", "Luke", "John"],
             correct: 3
         },
         {
             scripture: "And there are also many other things.",
             reference: "John 21:25",
-            question: "How many Gospels?",
+            question: "How many Gospels are there?",
             answers: ["Three", "Four", "Five", "Six"],
             correct: 1
         },
         {
             scripture: "Forasmuch as many have taken in hand.",
             reference: "Luke 1:1",
-            question: "Who wrote most NT books?",
+            question: "Who wrote the most New Testament books?",
             answers: ["Peter", "John", "Paul", "James"],
             correct: 2
         },
         {
             scripture: "Paul, an apostle of Jesus Christ.",
             reference: "1 Timothy 1:1",
-            question: "What comes after Psalms?",
+            question: "What book comes after Psalms?",
             answers: ["Proverbs", "Job", "Ecclesiastes", "Song of Solomon"],
             correct: 0
         },
         {
             scripture: "The proverbs of Solomon.",
             reference: "Proverbs 1:1",
-            question: "What comes before Acts?",
+            question: "What book comes before Acts?",
             answers: ["Luke", "John", "Romans", "Matthew"],
             correct: 1
         },
         {
             scripture: "The former treatise have I made.",
             reference: "Acts 1:1",
-            question: "First five books called?",
+            question: "What are the first five books of the Bible called?",
             answers: ["Torah", "Pentateuch", "Both", "The Law"],
             correct: 2
         },
@@ -1169,35 +1169,35 @@ window.quizQuestions = {
         {
             scripture: "The former treatise have I made, O Theophilus.",
             reference: "Acts 1:1",
-            question: "Which book about early church?",
+            question: "Which book is about the early church?",
             answers: ["Romans", "Acts", "Revelation", "Hebrews"],
             correct: 1
         },
         {
             scripture: "But ye shall receive power.",
             reference: "Acts 1:8",
-            question: "How many major prophets?",
+            question: "How many major prophets are there?",
             answers: ["Three", "Four", "Five", "Six"],
             correct: 2
         },
         {
             scripture: "The burden of the word of the LORD.",
             reference: "Malachi 1:1",
-            question: "How many minor prophets?",
+            question: "How many minor prophets are there?",
             answers: ["10", "12", "15", "18"],
             correct: 1
         },
         {
             scripture: "Hear this word that the LORD hath spoken.",
             reference: "Amos 3:1",
-            question: "What is middle book of Bible?",
+            question: "What is the middle book of the Bible?",
             answers: ["Psalms", "Proverbs", "Micah", "Nahum"],
             correct: 2
         },
         {
             scripture: "The burden of Nineveh.",
             reference: "Nahum 1:1",
-            question: "How many Psalm chapters?",
+            question: "How many chapters are in Psalms?",
             answers: ["100", "120", "150", "175"],
             correct: 2
         },
@@ -1253,7 +1253,7 @@ window.quizQuestions = {
         {
             scripture: "Alleluia: for the Lord God omnipotent reigneth.",
             reference: "Revelation 19:6",
-            question: "How many tribes of Israel?",
+            question: "How many tribes of Israel were there?",
             answers: ["10", "12", "14", "16"],
             correct: 1
         },
@@ -1266,7 +1266,7 @@ window.quizQuestions = {
         }
     ],
 
-    "women-bible": [
+    "women-of-the-bible": [
         {
             scripture: "And Adam called his wife's name Eve.",
             reference: "Genesis 3:20",
