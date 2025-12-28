@@ -1889,5 +1889,433 @@ window.quizQuestions = {
             answers: ["He prospered", "He died that night", "He lost wealth", "He repented"],
             correct: 1
         }
+    ],
+
+    // NEW SEASONAL QUIZZES - 60 BRAND NEW ORIGINAL QUESTIONS
+    // Easter Quiz - Palm Sunday through Resurrection
+    "easter": [
+        {
+            scripture: "Rejoice greatly, O daughter of Zion; shout, O daughter of Jerusalem: behold, thy King cometh unto thee.",
+            reference: "Zechariah 9:9",
+            question: "On Palm Sunday, what did people wave as Jesus entered Jerusalem?",
+            answers: ["Olive branches", "Palm branches", "Cedar branches", "Fig branches"],
+            correct: 1
+        },
+        {
+            scripture: "And they brought the colt to Jesus, and cast their garments on him.",
+            reference: "Mark 11:7",
+            question: "What animal did Jesus ride during His triumphal entry?",
+            answers: ["A horse", "A donkey's colt", "A camel", "He walked"],
+            correct: 1
+        },
+        {
+            scripture: "Hosanna; Blessed is he that cometh in the name of the Lord.",
+            reference: "Mark 11:9",
+            question: "What does 'Hosanna' mean?",
+            answers: ["King is coming", "Save now", "Blessed one", "Holy God"],
+            correct: 1
+        },
+        {
+            scripture: "And he sent Peter and John, saying, Go and prepare us the passover.",
+            reference: "Luke 22:8",
+            question: "How many disciples did Jesus send to prepare the Passover?",
+            answers: ["Two", "Three", "Four", "All twelve"],
+            correct: 0
+        },
+        {
+            scripture: "And he took bread, and gave thanks, and brake it, and gave unto them.",
+            reference: "Luke 22:19",
+            question: "What did the bread represent at the Last Supper?",
+            answers: ["His life", "His body", "His spirit", "His teaching"],
+            correct: 1
+        },        {
+            scripture: "This cup is the new testament in my blood, which is shed for you.",
+            reference: "Luke 22:20",
+            question: "What did the cup represent at the Last Supper?",
+            answers: ["New covenant", "Forgiveness", "His blood", "All of these"],
+            correct: 3
+        },
+        {
+            scripture: "And he was withdrawn from them about a stone's cast, and kneeled down, and prayed.",
+            reference: "Luke 22:41",
+            question: "Where did Jesus pray before His arrest?",
+            answers: ["Mount of Olives", "Gethsemane", "Kidron Valley", "Temple"],
+            correct: 1
+        },
+        {
+            scripture: "Father, if thou be willing, remove this cup from me: nevertheless not my will, but thine, be done.",
+            reference: "Luke 22:42",
+            question: "What did Jesus pray in the garden?",
+            answers: ["For strength", "For His disciples", "God's will be done", "For deliverance"],
+            correct: 2
+        },
+        {
+            scripture: "And being in an agony he prayed more earnestly: and his sweat was as it were great drops of blood.",
+            reference: "Luke 22:44",
+            question: "What happened to Jesus as He prayed intensely?",
+            answers: ["He wept", "He sweat blood", "He fell down", "Angels appeared"],
+            correct: 1
+        },
+        {
+            scripture: "And while he yet spake, behold a multitude, and he that was called Judas went before them.",
+            reference: "Luke 22:47",
+            question: "How did Judas identify Jesus to the soldiers?",
+            answers: ["Pointed at Him", "Called His name", "Kissed Him", "Led them to Him"],
+            correct: 2
+        },
+        {
+            scripture: "Then Simon Peter having a sword drew it, and smote the high priest's servant.",
+            reference: "John 18:10",
+            question: "What was the name of the servant whose ear Peter cut off?",
+            answers: ["Marcus", "Malchus", "Matthias", "Manaen"],
+            correct: 1
+        },
+        {
+            scripture: "Then took they him, and led him, and brought him into the high priest's house.",
+            reference: "Luke 22:54",
+            question: "Where was Jesus taken first after His arrest?",
+            answers: ["Pilate's palace", "Herod's court", "High priest's house", "The Sanhedrin"],
+            correct: 2
+        },
+        {
+            scripture: "And the Lord turned, and looked upon Peter. And Peter remembered the word of the Lord.",
+            reference: "Luke 22:61",
+            question: "How many times did Peter deny Jesus?",
+            answers: ["Once", "Twice", "Three times", "Four times"],
+            correct: 2
+        },
+        {
+            scripture: "And as soon as it was day, the elders of the people and the chief priests and the scribes came together.",
+            reference: "Luke 22:66",
+            question: "What Jewish council tried Jesus?",
+            answers: ["Pharisees", "Sadducees", "Sanhedrin", "Scribes"],
+            correct: 2
+        },
+        {
+            scripture: "And the whole multitude of them arose, and led him unto Pilate.",
+            reference: "Luke 23:1",
+            question: "Who was the Roman governor who judged Jesus?",
+            answers: ["Felix", "Festus", "Pilate", "Herod"],
+            correct: 2
+        },
+        {
+            scripture: "And when Herod saw Jesus, he was exceeding glad: for he was desirous to see him of a long season.",
+            reference: "Luke 23:8",
+            question: "Why did Herod want to see Jesus?",
+            answers: ["To condemn Him", "To see a miracle", "To question Him", "To mock Him"],
+            correct: 1
+        },
+        {
+            scripture: "And Pilate gave sentence that it should be as they required.",
+            reference: "Luke 23:24",
+            question: "What prisoner was released instead of Jesus?",
+            answers: ["Barnabas", "Barabbas", "Bartholomew", "Barsabbas"],
+            correct: 1
+        },
+        {
+            scripture: "And there followed him a great company of people, and of women, which also bewailed and lamented him.",
+            reference: "Luke 23:27",
+            question: "Who helped Jesus carry His cross?",
+            answers: ["Peter", "John", "Simon of Cyrene", "Joseph of Arimathea"],
+            correct: 2
+        },
+        {
+            scripture: "And when they were come to the place, which is called Calvary, there they crucified him.",
+            reference: "Luke 23:33",
+            question: "What does 'Calvary' mean?",
+            answers: ["Hill of crosses", "Place of skull", "Mount of death", "Valley of suffering"],
+            correct: 1
+        },
+        {
+            scripture: "Father, forgive them; for they know not what they do.",
+            reference: "Luke 23:34",
+            question: "What was Jesus' first statement on the cross?",
+            answers: ["I thirst", "It is finished", "Father forgive them", "Why have you forsaken me"],
+            correct: 2
+        },
+        {
+            scripture: "And Jesus said unto him, Verily I say unto thee, Today shalt thou be with me in paradise.",
+            reference: "Luke 23:43",
+            question: "To whom did Jesus promise paradise?",
+            answers: ["John", "His mother", "The repentant thief", "Mary Magdalene"],
+            correct: 2
+        },
+        {
+            scripture: "And it was about the sixth hour, and there was a darkness over all the earth until the ninth hour.",
+            reference: "Luke 23:44",
+            question: "How long was there darkness when Jesus was on the cross?",
+            answers: ["One hour", "Two hours", "Three hours", "Six hours"],
+            correct: 2
+        },
+        {
+            scripture: "And, behold, the veil of the temple was rent in twain from the top to the bottom.",
+            reference: "Matthew 27:51",
+            question: "What tore in the temple when Jesus died?",
+            answers: ["The door", "The veil", "The altar", "The floor"],
+            correct: 1
+        },
+        {
+            scripture: "And when Jesus had cried with a loud voice, he said, Father, into thy hands I commend my spirit.",
+            reference: "Luke 23:46",
+            question: "What were Jesus' last words on the cross?",
+            answers: ["It is finished", "Father, into thy hands", "I thirst", "Why have you forsaken me"],
+            correct: 1
+        },
+        {
+            scripture: "There came a rich man of Arimathaea, named Joseph, who also himself was Jesus' disciple.",
+            reference: "Matthew 27:57",
+            question: "Who asked for Jesus' body to bury it?",
+            answers: ["Peter", "John", "Joseph of Arimathea", "Nicodemus"],
+            correct: 2
+        },
+        {
+            scripture: "And he bought fine linen, and took him down, and wrapped him in the linen.",
+            reference: "Mark 15:46",
+            question: "What was Jesus' body wrapped in?",
+            answers: ["Fine linen", "Purple cloth", "Wool", "Cotton"],
+            correct: 0
+        },
+        {
+            scripture: "And rolled a stone unto the door of the sepulchre, and departed.",
+            reference: "Matthew 27:60",
+            question: "Where was Jesus buried?",
+            answers: ["In a field", "In a garden tomb", "On a hill", "In a cave"],
+            correct: 1
+        },
+        {
+            scripture: "In the end of the sabbath, as it began to dawn toward the first day of the week, came Mary Magdalene.",
+            reference: "Matthew 28:1",
+            question: "Who was the first person to see the risen Jesus?",
+            answers: ["Peter", "John", "Mary Magdalene", "Thomas"],
+            correct: 2
+        },
+        {
+            scripture: "And the angel answered and said unto the women, Fear not ye: for I know that ye seek Jesus, which was crucified. He is not here: for he is risen.",
+            reference: "Matthew 28:5-6",
+            question: "What did the angel say at the empty tomb?",
+            answers: ["He is coming", "He is risen", "He is alive", "He is Lord"],
+            correct: 1
+        },
+        {
+            scripture: "And go quickly, and tell his disciples that he is risen from the dead.",
+            reference: "Matthew 28:7",
+            question: "How many days was Jesus in the tomb?",
+            answers: ["One day", "Two days", "Three days", "Four days"],
+            correct: 2
+        },
+
+    // Christmas Quiz - Birth of Jesus
+    "christmas": [
+        {
+            scripture: "But thou, Bethlehem Ephratah, though thou be little among the thousands of Judah, yet out of thee shall he come forth.",
+            reference: "Micah 5:2",
+            question: "Which prophet foretold Jesus would be born in Bethlehem?",
+            answers: ["Isaiah", "Jeremiah", "Micah", "Malachi"],
+            correct: 2
+        },
+        {
+            scripture: "Therefore the Lord himself shall give you a sign; Behold, a virgin shall conceive, and bear a son.",
+            reference: "Isaiah 7:14",
+            question: "What sign did Isaiah prophesy about Jesus' birth?",
+            answers: ["A star", "A virgin birth", "Angels singing", "Wise men coming"],
+            correct: 1
+        },
+        {
+            scripture: "And there appeared unto him an angel of the Lord standing on the right side of the altar of incense.",
+            reference: "Luke 1:11",
+            question: "Who was Zacharias' son, born before Jesus?",
+            answers: ["James", "John the Baptist", "Joseph", "Simon"],
+            correct: 1
+        },
+        {
+            scripture: "And the angel said unto her, Fear not, Mary: for thou hast found favour with God.",
+            reference: "Luke 1:30",
+            question: "Which angel announced Jesus' birth to Mary?",
+            answers: ["Michael", "Raphael", "Gabriel", "Uriel"],
+            correct: 2
+        },
+        {
+            scripture: "And, behold, thou shalt conceive in thy womb, and bring forth a son, and shalt call his name JESUS.",
+            reference: "Luke 1:31",
+            question: "What does the name 'Jesus' mean?",
+            answers: ["God with us", "The Lord saves", "Prince of Peace", "Mighty God"],
+            correct: 1
+        },
+        {
+            scripture: "And Mary said, Behold the handmaid of the Lord; be it unto me according to thy word.",
+            reference: "Luke 1:38",
+            question: "How did Mary respond to the angel's message?",
+            answers: ["She was afraid", "She questioned it", "She accepted it", "She ran away"],
+            correct: 2
+        },
+        {
+            scripture: "And Mary arose in those days, and went into the hill country with haste, unto a city of Juda.",
+            reference: "Luke 1:39",
+            question: "Who did Mary visit after the angel's announcement?",
+            answers: ["Her mother", "Elisabeth", "Joseph", "Anna"],
+            correct: 1
+        },
+        {
+            scripture: "For, lo, as soon as the voice of thy salutation sounded in mine ears, the babe leaped in my womb for joy.",
+            reference: "Luke 1:44",
+            question: "What happened when Mary greeted Elisabeth?",
+            answers: ["Elisabeth fainted", "The baby leaped", "Angels appeared", "Zacharias spoke"],
+            correct: 1
+        },
+        {
+            scripture: "And Mary said, My soul doth magnify the Lord, And my spirit hath rejoiced in God my Saviour.",
+            reference: "Luke 1:46-47",
+            question: "What is Mary's song of praise called?",
+            answers: ["The Benedictus", "The Magnificat", "The Gloria", "The Nunc Dimittis"],
+            correct: 1
+        },
+        {
+            scripture: "Then Joseph being raised from sleep did as the angel of the Lord had bidden him, and took unto him his wife.",
+            reference: "Matthew 1:24",
+            question: "How did Joseph learn about Mary's pregnancy?",
+            answers: ["Mary told him", "In a dream", "From a priest", "From Elisabeth"],
+            correct: 1
+        },
+        {
+            scripture: "And it came to pass in those days, that there went out a decree from Caesar Augustus.",
+            reference: "Luke 2:1",
+            question: "Which Roman emperor ordered the census?",
+            answers: ["Julius Caesar", "Caesar Augustus", "Tiberius Caesar", "Nero"],
+            correct: 1
+        },
+        {
+            scripture: "And Joseph also went up from Galilee, out of the city of Nazareth, into Judaea.",
+            reference: "Luke 2:4",
+            question: "Why did Joseph and Mary travel to Bethlehem?",
+            answers: ["To visit family", "For the census", "To escape Herod", "To pay taxes"],
+            correct: 1
+        },
+        {
+            scripture: "And she brought forth her firstborn son, and wrapped him in swaddling clothes.",
+            reference: "Luke 2:7",
+            question: "Where was Jesus born?",
+            answers: ["In a house", "In a stable", "In a manger", "In an inn"],
+            correct: 1
+        },
+        {
+            scripture: "And there were in the same country shepherds abiding in the field, keeping watch over their flock by night.",
+            reference: "Luke 2:8",
+            question: "Who were the first to hear about Jesus' birth?",
+            answers: ["Wise men", "Priests", "Shepherds", "King Herod"],
+            correct: 2
+        },
+        {
+            scripture: "And, lo, the angel of the Lord came upon them, and the glory of the Lord shone round about them.",
+            reference: "Luke 2:9",
+            question: "How did the shepherds react to the angel?",
+            answers: ["They rejoiced", "They were afraid", "They worshiped", "They ran away"],
+            correct: 1
+        },
+        {
+            scripture: "For unto you is born this day in the city of David a Saviour, which is Christ the Lord.",
+            reference: "Luke 2:11",
+            question: "What was the angel's message to the shepherds?",
+            answers: ["A king is born", "A Saviour is born", "The Messiah comes", "God is here"],
+            correct: 1
+        },
+        {
+            scripture: "And suddenly there was with the angel a multitude of the heavenly host praising God.",
+            reference: "Luke 2:13",
+            question: "What did the angels say?",
+            answers: ["Hosanna in the highest", "Glory to God in the highest", "Blessed be the King", "Peace on earth"],
+            correct: 1
+        },
+        {
+            scripture: "And they came with haste, and found Mary, and Joseph, and the babe lying in a manger.",
+            reference: "Luke 2:16",
+            question: "What did the shepherds do after hearing the angels?",
+            answers: ["Went home", "Told everyone", "Went to find Jesus", "Praised God"],
+            correct: 2
+        },
+        {
+            scripture: "And when eight days were accomplished for the circumcising of the child, his name was called JESUS.",
+            reference: "Luke 2:21",
+            question: "When was Jesus circumcised?",
+            answers: ["On the 3rd day", "On the 7th day", "On the 8th day", "On the 40th day"],
+            correct: 2
+        },
+        {
+            scripture: "And, behold, there was a man in Jerusalem, whose name was Simeon; and the same man was just and devout.",
+            reference: "Luke 2:25",
+            question: "What had the Holy Spirit revealed to Simeon?",
+            answers: ["He would see the Messiah", "He would be blessed", "He would live long", "He would prophesy"],
+            correct: 0
+        },
+        {
+            scripture: "Lord, now lettest thou thy servant depart in peace, according to thy word: For mine eyes have seen thy salvation.",
+            reference: "Luke 2:29-30",
+            question: "What did Simeon say when he saw baby Jesus?",
+            answers: ["This is the King", "Now I can die in peace", "Blessed be God", "The Messiah has come"],
+            correct: 1
+        },
+        {
+            scripture: "And there was one Anna, a prophetess, the daughter of Phanuel, of the tribe of Aser.",
+            reference: "Luke 2:36",
+            question: "How old was Anna the prophetess?",
+            answers: ["70 years", "80 years", "84 years", "90 years"],
+            correct: 2
+        },
+        {
+            scripture: "Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king, behold, there came wise men from the east.",
+            reference: "Matthew 2:1",
+            question: "Where did the wise men come from?",
+            answers: ["The north", "The south", "The east", "The west"],
+            correct: 2
+        },
+        {
+            scripture: "Saying, Where is he that is born King of the Jews? for we have seen his star in the east.",
+            reference: "Matthew 2:2",
+            question: "How did the wise men know about Jesus?",
+            answers: ["An angel told them", "They saw a star", "A prophet told them", "They had a dream"],
+            correct: 1
+        },
+        {
+            scripture: "When Herod the king had heard these things, he was troubled, and all Jerusalem with him.",
+            reference: "Matthew 2:3",
+            question: "How did King Herod react to news of Jesus' birth?",
+            answers: ["He rejoiced", "He was troubled", "He worshiped", "He ignored it"],
+            correct: 1
+        },
+        {
+            scripture: "And when they were come into the house, they saw the young child with Mary his mother, and fell down, and worshipped him.",
+            reference: "Matthew 2:11",
+            question: "How many wise men visited Jesus?",
+            answers: ["Two", "Three", "Four", "The Bible doesn't say"],
+            correct: 3
+        },
+        {
+            scripture: "And when they had opened their treasures, they presented unto him gifts; gold, and frankincense, and myrrh.",
+            reference: "Matthew 2:11",
+            question: "Which gift symbolized Jesus' kingship?",
+            answers: ["Gold", "Frankincense", "Myrrh", "All of them"],
+            correct: 0
+        },
+        {
+            scripture: "And being warned of God in a dream that they should not return to Herod, they departed into their own country another way.",
+            reference: "Matthew 2:12",
+            question: "Why didn't the wise men return to Herod?",
+            answers: ["They forgot", "God warned them in a dream", "Joseph told them", "They were afraid"],
+            correct: 1
+        },
+        {
+            scripture: "Arise, and take the young child and his mother, and flee into Egypt, and be thou there until I bring thee word.",
+            reference: "Matthew 2:13",
+            question: "Where did Joseph take Jesus to escape Herod?",
+            answers: ["Nazareth", "Egypt", "Damascus", "Babylon"],
+            correct: 1
+        },
+        {
+            scripture: "And was there until the death of Herod: that it might be fulfilled which was spoken of the Lord by the prophet, saying, Out of Egypt have I called my son.",
+            reference: "Matthew 2:15",
+            question: "How long did Jesus stay in Egypt?",
+            answers: ["Until Herod died", "One year", "Two years", "Until He was 12"],
+            correct: 0
+        }
+    ]
     ]
 };
