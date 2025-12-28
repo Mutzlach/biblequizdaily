@@ -2102,7 +2102,8 @@ window.quizQuestions = {
             question: "How many days was Jesus in the tomb?",
             answers: ["One day", "Two days", "Three days", "Four days"],
             correct: 2
-        },
+        }
+    ],
 
     // Christmas Quiz - Birth of Jesus
     "christmas": [
@@ -2316,6 +2317,5 @@ window.quizQuestions = {
             answers: ["Until Herod died", "One year", "Two years", "Until He was 12"],
             correct: 0
         }
-    ]
     ]
 };
