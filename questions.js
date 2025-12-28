@@ -2317,5 +2317,647 @@ window.quizQuestions = {
             answers: ["Until Herod died", "One year", "Two years", "Until He was 12"],
             correct: 0
         }
+    ],
+
+    // KIDS BIBLE QUIZ - Fun questions for children ages 6-12
+    "kids": [
+        {
+            scripture: "And the LORD God said, Let there be light: and there was light.",
+            reference: "Genesis 1:3",
+            question: "What was the very first thing God created?",
+            answers: ["Animals", "Light", "People", "Water"],
+            correct: 1
+        },
+        {
+            scripture: "And God called the dry land Earth; and the gathering together of the waters called he Seas.",
+            reference: "Genesis 1:10",
+            question: "How many days did God take to create everything?",
+            answers: ["5 days", "6 days", "7 days", "8 days"],
+            correct: 1
+        },
+        {
+            scripture: "And the rib, which the LORD God had taken from man, made he a woman.",
+            reference: "Genesis 2:22",
+            question: "Who was the first woman God created?",
+            answers: ["Mary", "Sarah", "Eve", "Ruth"],
+            correct: 2
+        },
+        {
+            scripture: "Now the serpent was more subtil than any beast of the field.",
+            reference: "Genesis 3:1",
+            question: "What animal tricked Eve in the Garden?",
+            answers: ["A snake", "A lion", "A bird", "A monkey"],
+            correct: 0
+        },
+        {
+            scripture: "And God said, Make thee an ark of gopher wood.",
+            reference: "Genesis 6:14",
+            question: "What did Noah build to save the animals?",
+            answers: ["A house", "An ark", "A tower", "A boat"],
+            correct: 1
+        },
+        {
+            scripture: "Of every clean beast thou shalt take to thee by sevens.",
+            reference: "Genesis 7:2",
+            question: "How many of each animal went on the ark?",
+            answers: ["One", "Two", "Three", "Four"],
+            correct: 1
+        },
+        {
+            scripture: "And the dove came in to him in the evening; and, lo, in her mouth was an olive leaf.",
+            reference: "Genesis 8:11",
+            question: "What bird brought Noah an olive leaf?",
+            answers: ["A raven", "An eagle", "A dove", "A sparrow"],
+            correct: 2
+        },
+        {
+            scripture: "And I will establish my covenant with you.",
+            reference: "Genesis 9:11",
+            question: "What sign did God put in the sky after the flood?",
+            answers: ["A star", "A rainbow", "A cloud", "The sun"],
+            correct: 1
+        },
+        {
+            scripture: "And he said, Take now thy son, thine only son Isaac, whom thou lovest.",
+            reference: "Genesis 22:2",
+            question: "Who was Abraham's special promised son?",
+            answers: ["Jacob", "Esau", "Isaac", "Joseph"],
+            correct: 2
+        },
+        {
+            scripture: "And Esau said, Behold, I am at the point to die: and what profit shall this birthright do to me?",
+            reference: "Genesis 25:32",
+            question: "What did Esau sell for a bowl of soup?",
+            answers: ["His house", "His birthright", "His coat", "His sheep"],
+            correct: 1
+        },
+        {
+            scripture: "Now Israel loved Joseph more than all his children.",
+            reference: "Genesis 37:3",
+            question: "What special gift did Jacob give Joseph?",
+            answers: ["A colorful coat", "A crown", "A sword", "A ring"],
+            correct: 0
+        },
+        {
+            scripture: "And Moses hid his face; for he was afraid to look upon God.",
+            reference: "Exodus 3:6",
+            question: "What was burning but not burning up when God spoke to Moses?",
+            answers: ["A tree", "A mountain", "A bush", "A house"],
+            correct: 2
+        },
+        {
+            scripture: "And the LORD said unto Moses, Stretch out thine hand over the sea.",
+            reference: "Exodus 14:26",
+            question: "What sea did God part for Moses and the Israelites?",
+            answers: ["The Red Sea", "The Dead Sea", "The Black Sea", "The Blue Sea"],
+            correct: 0
+        },
+        {
+            scripture: "And he gave unto Moses, when he had made an end of communing with him upon mount Sinai, two tables of stone.",
+            reference: "Exodus 31:18",
+            question: "How many commandments did God give Moses?",
+            answers: ["5", "8", "10", "12"],
+            correct: 2
+        },
+        {
+            scripture: "And the walls of Jericho fell down flat.",
+            reference: "Joshua 6:20",
+            question: "What made the walls of Jericho fall down?",
+            answers: ["An earthquake", "Trumpets and shouting", "A giant", "Rain"],
+            correct: 1
+        },
+        {
+            scripture: "And he took his staff in his hand, and chose him five smooth stones out of the brook.",
+            reference: "1 Samuel 17:40",
+            question: "What weapon did David use to defeat Goliath?",
+            answers: ["A sword", "A spear", "A sling and stone", "An arrow"],
+            correct: 2
+        },
+        {
+            scripture: "So the LORD sent a pestilence upon Israel from the morning even to the time appointed.",
+            reference: "2 Samuel 24:15",
+            question: "Who was the strongest man in the Bible?",
+            answers: ["David", "Samson", "Goliath", "Peter"],
+            correct: 1
+        },
+        {
+            scripture: "And Elijah went up by a whirlwind into heaven.",
+            reference: "2 Kings 2:11",
+            question: "How did Elijah go to heaven?",
+            answers: ["He walked", "In a whirlwind", "On a cloud", "He didn't"],
+            correct: 1
+        },
+        {
+            scripture: "Now when Daniel knew that the writing was signed, he went into his house.",
+            reference: "Daniel 6:10",
+            question: "Where was Daniel thrown for praying to God?",
+            answers: ["A river", "A pit of lions", "A fire", "A cave"],
+            correct: 1
+        },
+        {
+            scripture: "And the angel came in unto her, and said, Hail, thou that art highly favoured, the Lord is with thee.",
+            reference: "Luke 1:28",
+            question: "Who was Jesus' mother?",
+            answers: ["Martha", "Mary", "Sarah", "Ruth"],
+            correct: 1
+        },
+        {
+            scripture: "And she brought forth her firstborn son, and wrapped him in swaddling clothes, and laid him in a manger.",
+            reference: "Luke 2:7",
+            question: "Where was baby Jesus laid when he was born?",
+            answers: ["In a bed", "In a manger", "On the floor", "In a basket"],
+            correct: 1
+        },
+        {
+            scripture: "And there were in the same country shepherds abiding in the field.",
+            reference: "Luke 2:8",
+            question: "Who visited baby Jesus first?",
+            answers: ["Kings", "Shepherds", "Soldiers", "Teachers"],
+            correct: 1
+        },
+        {
+            scripture: "And, behold, there came a leper and worshipped him.",
+            reference: "Matthew 8:2",
+            question: "Jesus healed people who were what?",
+            answers: ["Rich", "Sick", "Strong", "Happy"],
+            correct: 1
+        },
+        {
+            scripture: "And Jesus said unto them, How many loaves have ye?",
+            reference: "Mark 6:38",
+            question: "What miracle food did Jesus multiply?",
+            answers: ["Bread and fish", "Grapes and cheese", "Meat and vegetables", "Apples and honey"],
+            correct: 0
+        },
+        {
+            scripture: "But Jesus said, Suffer little children, and forbid them not, to come unto me.",
+            reference: "Matthew 19:14",
+            question: "Did Jesus love children?",
+            answers: ["Yes", "No", "Sometimes", "Only older kids"],
+            correct: 0
+        },
+        {
+            scripture: "And he saith unto them, Follow me, and I will make you fishers of men.",
+            reference: "Matthew 4:19",
+            question: "How many special disciples did Jesus choose?",
+            answers: ["7", "10", "12", "20"],
+            correct: 2
+        },
+        {
+            scripture: "And when they had prayed, the place was shaken where they were assembled together.",
+            reference: "Acts 4:31",
+            question: "What should children do to talk to God?",
+            answers: ["Sing", "Pray", "Shout", "Dance"],
+            correct: 1
+        },
+        {
+            scripture: "Jesus saith unto him, I am the way, the truth, and the life.",
+            reference: "John 14:6",
+            question: "Who died on the cross to save us?",
+            answers: ["Moses", "David", "Jesus", "Peter"],
+            correct: 2
+        },
+        {
+            scripture: "And when he had spoken these things, while they beheld, he was taken up.",
+            reference: "Acts 1:9",
+            question: "After Jesus rose from the dead, where did he go?",
+            answers: ["To Egypt", "To heaven", "To the sea", "To a mountain"],
+            correct: 1
+        },
+        {
+            scripture: "Honour thy father and thy mother.",
+            reference: "Exodus 20:12",
+            question: "What does God want children to do with their parents?",
+            answers: ["Ignore them", "Obey and honor them", "Argue with them", "Hide from them"],
+            correct: 1
+        }
+    ],
+
+    // EASY BIBLE QUIZ - Simple questions for beginners
+    "easy": [
+        {
+            scripture: "In the beginning God created the heaven and the earth.",
+            reference: "Genesis 1:1",
+            question: "What is the first book of the Bible?",
+            answers: ["Exodus", "Genesis", "Matthew", "Psalms"],
+            correct: 1
+        },
+        {
+            scripture: "The grace of the Lord Jesus Christ, and the love of God, and the communion of the Holy Ghost, be with you all. Amen.",
+            reference: "2 Corinthians 13:14",
+            question: "What is the last book of the Bible?",
+            answers: ["Jude", "Acts", "Revelation", "John"],
+            correct: 2
+        },
+        {
+            scripture: "All scripture is given by inspiration of God.",
+            reference: "2 Timothy 3:16",
+            question: "How many books are in the Bible total?",
+            answers: ["39", "50", "66", "100"],
+            correct: 2
+        },
+        {
+            scripture: "The law of the LORD is perfect, converting the soul.",
+            reference: "Psalm 19:7",
+            question: "How many books are in the Old Testament?",
+            answers: ["27", "39", "45", "50"],
+            correct: 1
+        },
+        {
+            scripture: "For God so loved the world, that he gave his only begotten Son.",
+            reference: "John 3:16",
+            question: "How many books are in the New Testament?",
+            answers: ["22", "27", "30", "35"],
+            correct: 1
+        },
+        {
+            scripture: "So God created man in his own image.",
+            reference: "Genesis 1:27",
+            question: "Who were the first two people God created?",
+            answers: ["Cain and Abel", "Adam and Eve", "Abraham and Sarah", "Moses and Aaron"],
+            correct: 1
+        },
+        {
+            scripture: "And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him.",
+            reference: "Genesis 4:8",
+            question: "Who were the first two sons of Adam and Eve?",
+            answers: ["Jacob and Esau", "Cain and Abel", "Peter and Andrew", "James and John"],
+            correct: 1
+        },
+        {
+            scripture: "Make thee an ark of gopher wood.",
+            reference: "Genesis 6:14",
+            question: "Who built the ark?",
+            answers: ["Moses", "Abraham", "Noah", "David"],
+            correct: 2
+        },
+        {
+            scripture: "And the LORD appeared unto Abram, and said, Unto thy seed will I give this land.",
+            reference: "Genesis 12:7",
+            question: "Who is known as the father of many nations?",
+            answers: ["Isaac", "Jacob", "Abraham", "Joseph"],
+            correct: 2
+        },
+        {
+            scripture: "And she called his name Moses: and she said, Because I drew him out of the water.",
+            reference: "Exodus 2:10",
+            question: "Who led the Israelites out of Egypt?",
+            answers: ["Aaron", "Joshua", "Moses", "Joseph"],
+            correct: 2
+        },
+        {
+            scripture: "And the LORD said unto Moses, Go unto Pharaoh, and say unto him, Thus saith the LORD, Let my people go.",
+            reference: "Exodus 8:1",
+            question: "How many plagues did God send on Egypt?",
+            answers: ["7", "10", "12", "40"],
+            correct: 1
+        },
+        {
+            scripture: "I am the LORD thy God. Thou shalt have no other gods before me.",
+            reference: "Exodus 20:2-3",
+            question: "Where did Moses receive the Ten Commandments?",
+            answers: ["Mount Sinai", "Mount Ararat", "Mount Zion", "Mount Horeb"],
+            correct: 0
+        },
+        {
+            scripture: "And Joshua the son of Nun sent out of Shittim two men to spy secretly.",
+            reference: "Joshua 2:1",
+            question: "Who led Israel after Moses died?",
+            answers: ["Aaron", "Caleb", "Joshua", "Samuel"],
+            correct: 2
+        },
+        {
+            scripture: "And the young man that told him said, As I happened by chance upon mount Gilboa, behold, Saul leaned upon his spear.",
+            reference: "2 Samuel 1:6",
+            question: "Who was Israel's first king?",
+            answers: ["David", "Saul", "Solomon", "Rehoboam"],
+            correct: 1
+        },
+        {
+            scripture: "And Samuel said, Hath the LORD as great delight in burnt offerings and sacrifices, as in obeying the voice of the LORD?",
+            reference: "1 Samuel 15:22",
+            question: "Who killed the giant Goliath?",
+            answers: ["Saul", "Jonathan", "David", "Samuel"],
+            correct: 2
+        },
+        {
+            scripture: "And Solomon's wisdom excelled the wisdom of all the children of the east country.",
+            reference: "1 Kings 4:30",
+            question: "Who was the wisest king of Israel?",
+            answers: ["David", "Solomon", "Saul", "Hezekiah"],
+            correct: 1
+        },
+        {
+            scripture: "And he shall turn the heart of the fathers to the children, and the heart of the children to their fathers.",
+            reference: "Malachi 4:6",
+            question: "What is the last book of the Old Testament?",
+            answers: ["Zechariah", "Malachi", "Haggai", "Micah"],
+            correct: 1
+        },
+        {
+            scripture: "The book of the generation of Jesus Christ, the son of David, the son of Abraham.",
+            reference: "Matthew 1:1",
+            question: "What is the first book of the New Testament?",
+            answers: ["Mark", "Matthew", "Luke", "John"],
+            correct: 1
+        },
+        {
+            scripture: "The beginning of the gospel of Jesus Christ, the Son of God.",
+            reference: "Mark 1:1",
+            question: "How many Gospels are in the Bible?",
+            answers: ["2", "3", "4", "5"],
+            correct: 2
+        },
+        {
+            scripture: "And she shall bring forth a son, and thou shalt call his name JESUS.",
+            reference: "Matthew 1:21",
+            question: "In which town was Jesus born?",
+            answers: ["Nazareth", "Jerusalem", "Bethlehem", "Capernaum"],
+            correct: 2
+        },
+        {
+            scripture: "And Jesus, when he was baptized, went up straightway out of the water.",
+            reference: "Matthew 3:16",
+            question: "Who baptized Jesus?",
+            answers: ["Peter", "John the Baptist", "Andrew", "James"],
+            correct: 1
+        },
+        {
+            scripture: "Now the names of the twelve apostles are these; The first, Simon, who is called Peter.",
+            reference: "Matthew 10:2",
+            question: "How many apostles did Jesus have?",
+            answers: ["7", "10", "12", "70"],
+            correct: 2
+        },
+        {
+            scripture: "Our Father which art in heaven, Hallowed be thy name.",
+            reference: "Matthew 6:9",
+            question: "What prayer did Jesus teach his disciples?",
+            answers: ["The Shepherd's Psalm", "The Lord's Prayer", "The Beatitudes", "The Sermon"],
+            correct: 1
+        },
+        {
+            scripture: "And he took bread, and gave thanks, and brake it, and gave unto them.",
+            reference: "Luke 22:19",
+            question: "What meal did Jesus share with his disciples before his death?",
+            answers: ["Breakfast", "The Passover", "The Last Supper", "A feast"],
+            correct: 2
+        },
+        {
+            scripture: "When Jesus therefore had received the vinegar, he said, It is finished.",
+            reference: "John 19:30",
+            question: "Where was Jesus crucified?",
+            answers: ["Bethany", "Calvary", "Gethsemane", "Nazareth"],
+            correct: 1
+        },
+        {
+            scripture: "He is not here: for he is risen, as he said.",
+            reference: "Matthew 28:6",
+            question: "On what day did Jesus rise from the dead?",
+            answers: ["Friday", "Saturday", "Sunday", "Monday"],
+            correct: 2
+        },
+        {
+            scripture: "And they were all filled with the Holy Ghost.",
+            reference: "Acts 2:4",
+            question: "What came upon the disciples at Pentecost?",
+            answers: ["Fire", "The Holy Spirit", "Wind", "All of these"],
+            correct: 3
+        },
+        {
+            scripture: "Then Peter said unto them, Repent, and be baptized every one of you.",
+            reference: "Acts 2:38",
+            question: "Who preached the first sermon after Jesus ascended?",
+            answers: ["Paul", "Peter", "John", "James"],
+            correct: 1
+        },
+        {
+            scripture: "And Saul, yet breathing out threatenings and slaughter against the disciples of the Lord.",
+            reference: "Acts 9:1",
+            question: "What was Paul's name before he became a Christian?",
+            answers: ["Simon", "Saul", "Samuel", "Stephen"],
+            correct: 1
+        },
+        {
+            scripture: "For by grace are ye saved through faith.",
+            reference: "Ephesians 2:8",
+            question: "Who wrote most of the letters in the New Testament?",
+            answers: ["Peter", "John", "Paul", "James"],
+            correct: 2
+        }
+    ],
+
+    // HARD BIBLE QUIZ - Challenging questions for experts
+    "hard": [
+        {
+            scripture: "And Enoch walked with God: and he was not; for God took him.",
+            reference: "Genesis 5:24",
+            question: "How old was Enoch when God took him?",
+            answers: ["300 years", "365 years", "500 years", "600 years"],
+            correct: 1
+        },
+        {
+            scripture: "And all the days of Methuselah were nine hundred sixty and nine years: and he died.",
+            reference: "Genesis 5:27",
+            question: "Who is the oldest person recorded in the Bible?",
+            answers: ["Noah", "Adam", "Methuselah", "Enoch"],
+            correct: 2
+        },
+        {
+            scripture: "These are the three sons of Noah: and of them was the whole earth overspread.",
+            reference: "Genesis 9:19",
+            question: "Which of Noah's sons is NOT mentioned in Scripture?",
+            answers: ["Shem", "Ham", "Japheth", "All are mentioned"],
+            correct: 3
+        },
+        {
+            scripture: "And Terah lived seventy years, and begat Abram, Nahor, and Haran.",
+            reference: "Genesis 11:26",
+            question: "What was Abraham's father's name?",
+            answers: ["Nahor", "Terah", "Serug", "Peleg"],
+            correct: 1
+        },
+        {
+            scripture: "And the name of Amram's wife was Jochebed, the daughter of Levi.",
+            reference: "Numbers 26:59",
+            question: "What was Moses' mother's name?",
+            answers: ["Miriam", "Zipporah", "Jochebed", "Deborah"],
+            correct: 2
+        },
+        {
+            scripture: "And Moses was fourscore years old, and Aaron fourscore and three years old, when they spake unto Pharaoh.",
+            reference: "Exodus 7:7",
+            question: "How old was Moses when he confronted Pharaoh?",
+            answers: ["40 years", "60 years", "80 years", "120 years"],
+            correct: 2
+        },
+        {
+            scripture: "And the children of Israel journeyed from Rameses to Succoth.",
+            reference: "Exodus 12:37",
+            question: "From which Egyptian city did the Exodus begin?",
+            answers: ["Rameses", "Goshen", "Memphis", "Thebes"],
+            correct: 0
+        },
+        {
+            scripture: "And the LORD spake unto Moses and Aaron in the land of Egypt.",
+            reference: "Exodus 12:1",
+            question: "Which month was designated as the first month of the Hebrew calendar?",
+            answers: ["Tishri", "Abib", "Nisan", "Sivan"],
+            correct: 1
+        },
+        {
+            scripture: "And Moses sent them to spy out the land of Canaan.",
+            reference: "Numbers 13:17",
+            question: "How many spies did Moses send into Canaan?",
+            answers: ["2", "7", "10", "12"],
+            correct: 3
+        },
+        {
+            scripture: "Save Caleb the son of Jephunneh the Kenezite, and Joshua the son of Nun.",
+            reference: "Numbers 32:12",
+            question: "Who were the only two spies who gave a good report?",
+            answers: ["Moses and Aaron", "Caleb and Joshua", "Gad and Asher", "Reuben and Simeon"],
+            correct: 1
+        },
+        {
+            scripture: "And the children of Israel went into the midst of the sea upon the dry ground.",
+            reference: "Exodus 14:22",
+            question: "Which direction did the east wind blow to part the Red Sea?",
+            answers: ["North", "South", "East", "Text doesn't specify"],
+            correct: 2
+        },
+        {
+            scripture: "And Othniel the son of Kenaz, Caleb's younger brother, took it.",
+            reference: "Judges 3:9",
+            question: "Who was the first judge of Israel?",
+            answers: ["Deborah", "Gideon", "Othniel", "Ehud"],
+            correct: 2
+        },
+        {
+            scripture: "And Deborah, a prophetess, the wife of Lapidoth, she judged Israel at that time.",
+            reference: "Judges 4:4",
+            question: "What was the name of Deborah's husband?",
+            answers: ["Barak", "Lapidoth", "Heber", "Jael"],
+            correct: 1
+        },
+        {
+            scripture: "And it came to pass, when the judge was dead, that they returned, and corrupted themselves.",
+            reference: "Judges 2:19",
+            question: "How many judges are recorded in the Book of Judges?",
+            answers: ["7", "12", "13", "15"],
+            correct: 1
+        },
+        {
+            scripture: "And Mephibosheth the son of Saul came down to meet the king.",
+            reference: "2 Samuel 19:24",
+            question: "Mephibosheth was the son of which of Saul's sons?",
+            answers: ["Jonathan", "Ishbosheth", "Abinadab", "Malchishua"],
+            correct: 0
+        },
+        {
+            scripture: "And Solomon had twelve officers over all Israel.",
+            reference: "1 Kings 4:7",
+            question: "How many chariots did Solomon have?",
+            answers: ["4,000", "12,000", "40,000", "50,000"],
+            correct: 2
+        },
+        {
+            scripture: "In the fourth year of king Darius came the word of the LORD unto Zechariah.",
+            reference: "Zechariah 7:1",
+            question: "Which month is Chisleu in the Hebrew calendar?",
+            answers: ["The 3rd month", "The 6th month", "The 9th month", "The 12th month"],
+            correct: 2
+        },
+        {
+            scripture: "Shimei the son of Gera, a Benjamite, which was of Bahurim.",
+            reference: "2 Samuel 16:5",
+            question: "From which tribe was Shimei who cursed David?",
+            answers: ["Judah", "Levi", "Benjamin", "Ephraim"],
+            correct: 2
+        },
+        {
+            scripture: "And it came to pass, when Ahab heard those words, that he rent his clothes.",
+            reference: "1 Kings 21:27",
+            question: "What was the name of Ahab's wife?",
+            answers: ["Athaliah", "Jezebel", "Maacah", "Azubah"],
+            correct: 1
+        },
+        {
+            scripture: "And Jehoash slept with his fathers; and Jeroboam sat upon his throne.",
+            reference: "2 Kings 13:13",
+            question: "How many years did Jeroboam II reign over Israel?",
+            answers: ["22 years", "31 years", "41 years", "52 years"],
+            correct: 2
+        },
+        {
+            scripture: "The burden of Nineveh. The book of the vision of Nahum the Elkoshite.",
+            reference: "Nahum 1:1",
+            question: "Nahum prophesied against which city?",
+            answers: ["Babylon", "Damascus", "Nineveh", "Tyre"],
+            correct: 2
+        },
+        {
+            scripture: "In the second year of Darius the king, in the sixth month.",
+            reference: "Haggai 1:1",
+            question: "Whose son was Zerubbabel the governor?",
+            answers: ["Shealtiel", "Jehozadak", "Josedech", "Seraiah"],
+            correct: 0
+        },
+        {
+            scripture: "Elisabeth's full time came that she should be delivered; and she brought forth a son.",
+            reference: "Luke 1:57",
+            question: "How much older was John the Baptist than Jesus?",
+            answers: ["6 months", "1 year", "2 years", "3 years"],
+            correct: 0
+        },
+        {
+            scripture: "And when they had performed all things according to the law of the Lord, they returned into Galilee.",
+            reference: "Luke 2:39",
+            question: "How many days after birth was Jesus presented at the temple?",
+            answers: ["8 days", "30 days", "40 days", "50 days"],
+            correct: 2
+        },
+        {
+            scripture: "And Jesus himself began to be about thirty years of age.",
+            reference: "Luke 3:23",
+            question: "Who was the high priest when Jesus began his ministry?",
+            answers: ["Caiaphas", "Annas", "Both Annas and Caiaphas", "Ananias"],
+            correct: 2
+        },
+        {
+            scripture: "Philip saith unto him, Lord, shew us the Father, and it sufficeth us.",
+            reference: "John 14:8",
+            question: "Philip was from which town?",
+            answers: ["Capernaum", "Bethsaida", "Cana", "Nazareth"],
+            correct: 1
+        },
+        {
+            scripture: "Then saith the woman of Samaria unto him, How is it that thou, being a Jew, askest drink of me?",
+            reference: "John 4:9",
+            question: "Jesus spoke to the Samaritan woman at which well?",
+            answers: ["Isaac's well", "Abraham's well", "Jacob's well", "David's well"],
+            correct: 2
+        },
+        {
+            scripture: "There was a man of the Pharisees, named Nicodemus, a ruler of the Jews.",
+            reference: "John 3:1",
+            question: "At what time of day did Nicodemus visit Jesus?",
+            answers: ["Morning", "Noon", "Evening", "Night"],
+            correct: 3
+        },
+        {
+            scripture: "And Cornelius said, Four days ago I was fasting until this hour.",
+            reference: "Acts 10:30",
+            question: "Cornelius was a centurion of which band?",
+            answers: ["The Italian band", "The Augustan band", "The Imperial band", "The Roman band"],
+            correct: 0
+        },
+        {
+            scripture: "Paul, a servant of Jesus Christ, called to be an apostle.",
+            reference: "Romans 1:1",
+            question: "How many of Paul's epistles are addressed to specific churches?",
+            answers: ["7", "9", "11", "13"],
+            correct: 1
+        }
     ]
 };
