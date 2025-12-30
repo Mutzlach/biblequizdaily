@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Quiz of the Week Archive | Bible Quiz Daily</title>
+    <meta name="description" content="Browse our complete archive of past featured Bible quizzes. Every quiz we've featured since launch, organized by date.">
+    <meta name="keywords" content="bible quiz archive, past bible quizzes, weekly bible trivia history">
+    
+    <!-- Open Graph -->
+    <meta property="og:title" content="Past Quiz of the Week Archive">
+    <meta property="og:description" content="Browse our complete archive of featured Bible quizzes">
+    <meta property="og:url" content="https://biblequizdaily.com/past-quizzes.html">
+    
+    <!-- Pinterest -->
+    <meta name="p:domain_verify" content="ff2dce6f2aa45e6f2689b853350c789a"/>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRXEYD2W4M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JRXEYD2W4M');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root {
+            --primary: #667eea;
+            --primary-dark: #5568d3;
+            --secondary: #764ba2;
+            --text-dark: #2d3436;
+            --text-light: #636e72;
+            --bg-light: #f7f7ff;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+        header {
+            background: rgba(255,255,255,0.98);
+            padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .nav-links a {
+            color: var(--text-dark);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        .nav-links a:hover {
+            color: var(--primary);
+        }
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+        .page-header {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+            text-align: center;
+        }
+        .page-header h1 {
+            font-family: 'Merriweather', serif;
+            color: var(--text-dark);
+            font-size: 42px;
+            margin-bottom: 15px;
+        }
+        .page-header p {
+            color: var(--text-light);
+            font-size: 18px;
+        }
+        .archive-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+        .year-header {
+            font-family: 'Merriweather', serif;
+            color: var(--primary);
+            font-size: 32px;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--bg-light);
+        }
+        .quiz-entry {
+            display: flex;
+            align-items: center;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary);
+            background: var(--bg-light);
+            border-radius: 8px;
+            transition: all 0.3s;
+        }
+        .quiz-entry:hover {
+            transform: translateX(5px);
+            box-shadow: 0 4px 15px rgba(102,126,234,0.2);
+        }
+        .quiz-date {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 16px;
+            min-width: 150px;
+            margin-right: 20px;
+        }
+        .quiz-info {
+            flex: 1;
+        }
+        .quiz-info h3 {
+            color: var(--text-dark);
+            font-size: 20px;
+            margin-bottom: 5px;
+            font-weight: 700;
+        }
+        .quiz-info p {
+            color: var(--text-light);
+            font-size: 14px;
+        }
+        .quiz-link {
+            background: var(--primary);
+            color: white;
+            padding: 10px 25px;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: all 0.3s;
+            white-space: nowrap;
+        }
+        .quiz-link:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+        .stats-banner {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .stats-banner h3 {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        @media (max-width: 768px) {
+            .quiz-entry {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .quiz-date {
+                margin-bottom: 10px;
+            }
+            .quiz-link {
+                margin-top: 15px;
+                display: inline-block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">BibleQuizDaily</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="old-testament-quiz.html">Old Testament</a>
+                <a href="new-testament-quiz.html">New Testament</a>
+                <a href="jesus-life-quiz.html">Jesus's Life</a>
+                <a href="past-quizzes.html">Past Quizzes</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="page-header">
+            <h1>📅 Past Quiz of the Week Archive</h1>
+            <p>Browse our complete collection of featured quizzes since launch</p>
+        </div>
+
+        <div class="stats-banner">
+            <h3>🎯 Growing Archive</h3>
+            <p>Every quiz featured is added to this page • Check back weekly for new additions!</p>
+        </div>
+
+        <!-- 2026 Archive -->
+        <div class="archive-section">
+            <h2 class="year-header">2026</h2>
+
+            <div class="quiz-entry">
+                <div class="quiz-date">January 7, 2026</div>
+                <div class="quiz-info">
+                    <h3>🌟 Kids Bible Quiz</h3>
+                    <p>Fun questions for children ages 6-12 about Bible heroes and stories</p>
+                </div>
+                <a href="kids-bible-quiz.html" class="quiz-link">Take Quiz →</a>
+            </div>
+
+            <div class="quiz-entry">
+                <div class="quiz-date">January 1, 2026</div>
+                <div class="quiz-info">
+                    <h3>🎯 Hard Bible Quiz</h3>
+                    <p>Challenging questions for serious Bible scholars and experts</p>
+                </div>
+                <a href="hard-bible-quiz.html" class="quiz-link">Take Quiz →</a>
+            </div>
+        </div>
+
+        <!-- 2025 Archive -->
+        <div class="archive-section">
+            <h2 class="year-header">2025</h2>
+
+            <div class="quiz-entry">
+                <div class="quiz-date">December 31, 2025</div>
+                <div class="quiz-info">
+                    <h3>🎄 Christmas Bible Quiz</h3>
+                    <p>Test your knowledge of Jesus' birth and the nativity story</p>
+                </div>
+                <a href="christmas-bible-quiz.html" class="quiz-link">Take Quiz →</a>
+            </div>
+
+            <div class="quiz-entry">
+                <div class="quiz-date">December 24, 2025</div>
+                <div class="quiz-info">
+                    <h3>✝️ Easter Bible Quiz</h3>
+                    <p>Celebrate the resurrection with questions about Holy Week</p>
+                </div>
+                <a href="easter-bible-quiz.html" class="quiz-link">Take Quiz →</a>
+            </div>
+
+            <div class="quiz-entry">
+                <div class="quiz-date">December 17, 2025</div>
+                <div class="quiz-info">
+                    <h3>📖 Old Testament Bible Quiz</h3>
+                    <p>Journey from Genesis to Malachi with 30 comprehensive questions</p>
+                </div>
+                <a href="old-testament-quiz.html" class="quiz-link">Take Quiz →</a>
+            </div>
+
+            <div class="quiz-entry">
+                <div class="quiz-date">December 10, 2025</div>
+                <div class="quiz-info">
+                    <h3>✝️ New Testament Bible Quiz</h3>
+                    <p>Explore the Gospels, Acts, and Epistles with 30 questions</p>
+                </div>
+                <a href="new-testament-quiz.html" class="quiz-link">Take Quiz →</a>
+            </div>
+
+            <div class="quiz-entry">
+                <div class="quiz-date">December 3, 2025</div>
+                <div class="quiz-info">
+                    <h3>🙏 Life of Jesus Quiz</h3>
+                    <p>Follow Christ's ministry from birth to resurrection</p>
+                </div>
+                <a href="jesus-life-quiz.html" class="quiz-link">Take Quiz →</a>
+            </div>
+        </div>
+
+        <!-- Instructions Section -->
+        <div class="archive-section">
+            <h2 class="year-header">📝 How to Update This Page</h2>
+            <p style="color: var(--text-light); line-height: 1.8; margin-bottom: 15px;">
+                Every time you change the "Quiz of the Week" on the homepage, add that same quiz to the top of this archive page. 
+                Copy one of the existing quiz entries above, change the date and quiz details, and paste it as the first entry in the current year section.
+            </p>
+            <p style="color: var(--text-light); line-height: 1.8;">
+                This creates an evergreen content page that grows over time and gives Google more pages to index!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
