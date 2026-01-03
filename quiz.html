@@ -302,6 +302,45 @@
             .question-text { font-size: 20px; }
             .button-group { flex-direction: column; }
         }
+        
+        /* EMAIL CAPTURE MODAL */
+        .email-modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.7);
+            z-index: 10000;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .email-modal-overlay.active { display: flex; }
+        .email-modal {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 500px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            text-align: center;
+            animation: modalSlideIn 0.3s ease-out;
+        }
+        @keyframes modalSlideIn {
+            from { transform: translateY(-50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        .email-modal h2 { font-size: 32px; margin-bottom: 10px; color: var(--text-dark); }
+        .email-modal .score-display { font-size: 48px; font-weight: 800; color: var(--primary); margin: 20px 0; }
+        .email-modal .email-prompt { font-size: 18px; color: var(--text-dark); margin: 20px 0; font-weight: 600; }
+        .email-modal input { width: 100%; padding: 16px; font-size: 16px; border: 2px solid #e0e0e0; border-radius: 10px; margin: 15px 0; transition: border-color 0.3s; }
+        .email-modal input:focus { outline: none; border-color: var(--primary); }
+        .email-modal .privacy-note { font-size: 13px; color: #666; margin: 10px 0 20px 0; }
+        .email-modal .button-group { display: flex; gap: 10px; margin-top: 20px; }
+        .email-modal .btn { flex: 1; }
+        .email-modal .loading { display: none; margin: 10px 0; color: var(--primary); font-weight: 600; }
     </style>
 </head>
 <body>
@@ -320,6 +359,43 @@
             </div>
         </nav>
     </header>
+    <!-- ════════════════════════════════════════════════════════ -->
+    <!-- ENHANCED PROGRESS TRACKING - Live Stats Display -->
+    <!-- ════════════════════════════════════════════════════════ -->
+    <div id="liveProgressBar" style="background: rgba(255,255,255,0.98); padding: 16px 20px; box-shadow: 0 2px 12px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 999; display: none;">
+        <div style="max-width: 900px; margin: 0 auto; display: flex; gap: 20px; align-items: center; flex-wrap: wrap;">
+            <!-- Progress Bar -->
+            <div style="flex: 1; min-width: 200px;">
+                <div style="display: flex; justify-content: space-between; margin-bottom: 6px;">
+                    <span style="font-size: 13px; font-weight: 700; color: #667eea;">PROGRESS</span>
+                    <span id="liveProgressText" style="font-size: 13px; font-weight: 700; color: #2d3436;">Question 1/30</span>
+                </div>
+                <div style="height: 8px; background: #e0e0e0; border-radius: 10px; overflow: hidden;">
+                    <div id="liveProgressFill" style="height: 100%; width: 3%; background: linear-gradient(90deg, #667eea, #764ba2); border-radius: 10px; transition: width 0.5s ease;"></div>
+                </div>
+            </div>
+            
+            <!-- Live Stats -->
+            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                <div style="text-align: center; min-width: 70px;">
+                    <div style="font-size: 22px; font-weight: 800; color: #00b894;" id="liveCorrect">0</div>
+                    <div style="font-size: 11px; color: #636e72; font-weight: 600;">✓ CORRECT</div>
+                </div>
+                <div style="text-align: center; min-width: 70px;">
+                    <div style="font-size: 22px; font-weight: 800; color: #d63031;" id="liveWrong">0</div>
+                    <div style="font-size: 11px; color: #636e72; font-weight: 600;">✗ WRONG</div>
+                </div>
+                <div style="text-align: center; min-width: 70px;">
+                    <div style="font-size: 22px; font-weight: 800; color: #667eea;" id="liveRemaining">30</div>
+                    <div style="font-size: 11px; color: #636e72; font-weight: 600;">REMAINING</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Encouragement Messages -->
+        <div id="encouragementMsg" style="text-align: center; margin-top: 8px; font-size: 14px; font-weight: 700; color: #667eea; display: none;"></div>
+    </div>
+
 
     <div class="container">
         <!-- Quiz Screen -->
@@ -437,6 +513,44 @@
             showScripture();
         }
 
+        
+        // ════════════════════════════════════════════════════════
+        // ENHANCED PROGRESS TRACKING FUNCTIONS
+        // ════════════════════════════════════════════════════════
+        let correctCount = 0;
+        let wrongCount = 0;
+
+        function updateLiveProgress() {
+            const totalQuestions = currentQuestions.length;
+            const currentQ = currentQuestionIndex + 1;
+            const remaining = totalQuestions - currentQ;
+            const progressPercent = (currentQ / totalQuestions) * 100;
+            
+            // Show the live progress bar once quiz starts
+            document.getElementById('liveProgressBar').style.display = 'block';
+            
+            // Update progress bar
+            document.getElementById('liveProgressFill').style.width = progressPercent + '%';
+            document.getElementById('liveProgressText').textContent = `Question ${currentQ}/${totalQuestions}`;
+            
+            // Update stats
+            document.getElementById('liveCorrect').textContent = correctCount;
+            document.getElementById('liveWrong').textContent = wrongCount;
+            document.getElementById('liveRemaining').textContent = remaining;
+            
+            // Show encouragement at milestones
+            const encouragement = document.getElementById('encouragementMsg');
+            if (progressPercent === 50) {
+                encouragement.textContent = '🎉 Halfway there! Keep going!';
+                encouragement.style.display = 'block';
+                setTimeout(() => { encouragement.style.display = 'none'; }, 3000);
+            } else if (progressPercent >= 83 && progressPercent < 100) {
+                encouragement.textContent = '💪 Almost done! Final push!';
+                encouragement.style.display = 'block';
+                setTimeout(() => { encouragement.style.display = 'none'; }, 3000);
+            }
+        }
+
         function showScripture() {
             const question = currentQuestions[currentQuestionIndex];
             document.getElementById('scriptureDisplay').classList.remove('hidden');
@@ -482,6 +596,7 @@
             });
 
             document.getElementById('nextBtn').disabled = true;
+            updateLiveProgress(); // Update live progress tracking
         }
 
         function selectAnswer(selectedIndex) {
@@ -498,11 +613,15 @@
                 }
                 if (index === selectedIndex && index !== question.correct) {
                     option.classList.add('incorrect');
+                    if (!isCorrect) {
+                        wrongCount++; // Track wrong answers (only once)
+                    }
                 }
             });
 
             if (isCorrect) {
                 score++;
+                correctCount++; // Track correct answers
                 document.getElementById('quizScore').textContent = score;
             }
 
@@ -529,45 +648,21 @@
         }
 
         function showResults() {
-            const timeTaken = Math.floor((Date.now() - startTime) / 1000);
-            const accuracy = Math.round((score / currentQuestions.length) * 100);
-
-            document.getElementById('quizScreen').classList.add('hidden');
-            document.getElementById('resultsScreen').classList.remove('hidden');
-
-            document.getElementById('finalScore').textContent = `${score}/${currentQuestions.length}`;
-            document.getElementById('correctAnswers').textContent = score;
-            document.getElementById('accuracyRate').textContent = accuracy + '%';
-            document.getElementById('timeSpent').textContent = timeTaken + 's';
-
-            let emoji = '🎉';
-            let message = 'Great job!';
-
-            if (accuracy >= 90) {
-                emoji = '🏆';
-                message = 'Outstanding! You\'re a Bible expert!';
-            } else if (accuracy >= 70) {
-                emoji = '🌟';
-                message = 'Excellent work! Keep it up!';
-            } else if (accuracy >= 50) {
-                emoji = '👍';
-                message = 'Good effort! Keep learning!';
-            } else {
-                emoji = '📚';
-                message = 'Keep studying God\'s Word!';
-            }
-
-            document.getElementById('resultsEmoji').textContent = emoji;
-            document.getElementById('resultsMessage').textContent = message;
-
-            // 🔥 GTM TRACKING: Quiz Completed
+            const finalScore = score + '/' + currentQuestions.length;
+            const percentage = Math.round((score / currentQuestions.length) * 100);
+            
+            // Update modal
+            document.getElementById('modalScore').textContent = finalScore;
+            document.getElementById('modalPercentage').textContent = percentage + '%';
+            
+            // Show email modal
+            document.getElementById('emailModalOverlay').classList.add('active');
+            
             window.dataLayer = window.dataLayer || [];
             window.dataLayer.push({
-                'event': 'quizCompleted',
+                'event': 'emailModalShown',
                 'quizCategory': currentCategory,
-                'quizScore': score,
-                'completionRate': accuracy,
-                'quizDuration': timeTaken
+                'quizScore': finalScore
             });
         }
 
@@ -603,9 +698,166 @@
             window.open(`https://wa.me/?text=${encodeURIComponent(text)}`, '_blank');
         }
 
+        // ════════════════════════════════════════════════════════════
+        // GOOGLE SHEETS EMAIL CAPTURE FUNCTIONS
+        // ════════════════════════════════════════════════════════════
+        
+        // 🔧 REPLACE WITH YOUR GOOGLE APPS SCRIPT URL
+        const GOOGLE_SHEETS_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE';
+        
+        function isValidEmail(email) {
+            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            return re.test(email);
+        }
+        
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return mins > 0 ? mins + 'm ' + secs + 's' : secs + 's';
+        }
+        
+        async function submitEmailCapture() {
+            const emailInput = document.getElementById('emailInput');
+            const email = emailInput.value.trim();
+            
+            if (email && !isValidEmail(email)) {
+                alert('Please enter a valid email address or skip to continue.');
+                return;
+            }
+            
+            document.getElementById('emailLoading').style.display = 'block';
+            
+            const finalScore = score + '/' + currentQuestions.length;
+            const percentage = Math.round((score / currentQuestions.length) * 100);
+            const timeElapsed = Math.floor((Date.now() - startTime) / 1000);
+            const timeFormatted = formatTime(timeElapsed);
+            
+            const data = {
+                email: email || 'Not provided',
+                category: currentCategory,
+                score: finalScore,
+                percentage: percentage + '%',
+                timeSpent: timeFormatted,
+                timestamp: new Date().toISOString()
+            };
+            
+            try {
+                await fetch(GOOGLE_SHEETS_URL, {
+                    method: 'POST',
+                    mode: 'no-cors',
+                    headers: { 'Content-Type': 'application/json' },
+                    body: JSON.stringify(data)
+                });
+                
+                window.dataLayer = window.dataLayer || [];
+                window.dataLayer.push({
+                    'event': 'emailCaptured',
+                    'quizCategory': currentCategory,
+                    'emailProvided': email ? 'yes' : 'no'
+                });
+            } catch (error) {
+                console.error('Error:', error);
+            }
+            
+            closeEmailModal();
+            displayResults();
+        }
+        
+        function skipEmailCapture() {
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'emailSkipped',
+                'quizCategory': currentCategory
+            });
+            
+            closeEmailModal();
+            displayResults();
+        }
+        
+        function closeEmailModal() {
+            document.getElementById('emailModalOverlay').classList.remove('active');
+            document.getElementById('emailLoading').style.display = 'none';
+        }
+        
+        function displayResults() {
+            const timeTaken = Math.floor((Date.now() - startTime) / 1000);
+            const accuracy = Math.round((score / currentQuestions.length) * 100);
+
+            document.getElementById('quizScreen').classList.add('hidden');
+            document.getElementById('resultsScreen').classList.remove('hidden');
+
+            document.getElementById('finalScore').textContent = `${score}/${currentQuestions.length}`;
+            document.getElementById('correctAnswers').textContent = score;
+            document.getElementById('accuracyRate').textContent = accuracy + '%';
+            document.getElementById('timeSpent').textContent = timeTaken + 's';
+
+            let emoji = '🎉';
+            let message = 'Great job!';
+
+            if (accuracy >= 90) {
+                emoji = '🏆';
+                message = 'Outstanding! You\'re a Bible expert!';
+            } else if (accuracy >= 70) {
+                emoji = '🌟';
+                message = 'Excellent work! Keep it up!';
+            } else if (accuracy >= 50) {
+                emoji = '👍';
+                message = 'Good effort! Keep learning!';
+            } else {
+                emoji = '📚';
+                message = 'Keep studying God\'s Word!';
+            }
+
+            document.getElementById('resultsEmoji').textContent = emoji;
+            document.getElementById('resultsMessage').textContent = message;
+
+            window.dataLayer = window.dataLayer || [];
+            window.dataLayer.push({
+                'event': 'quizCompleted',
+                'quizCategory': currentCategory,
+                'quizScore': score,
+                'completionRate': accuracy,
+                'quizDuration': timeTaken
+            });
+        }
+
         function tryAgain() {
             window.location.href = `quiz.html?category=${currentCategory}`;
         }
     </script>
+    
+    <!-- EMAIL CAPTURE MODAL -->
+    <div id="emailModalOverlay" class="email-modal-overlay">
+        <div class="email-modal">
+            <h2>🎉 Quiz Complete!</h2>
+            <div class="score-display" id="modalScore">24/30</div>
+            <div id="modalPercentage" style="font-size: 20px; color: #666; margin-bottom: 20px;">80%</div>
+            
+            <div class="email-prompt">📧 Want Weekly Bible Quiz Challenges?</div>
+            
+            <input 
+                type="email" 
+                id="emailInput" 
+                placeholder="Enter your email (optional)"
+                autocomplete="email"
+            >
+            
+            <div class="privacy-note">
+                ✓ Optional • No spam • Unsubscribe anytime<br>
+                We'll send you new quizzes & Bible study resources
+            </div>
+            
+            <div class="loading" id="emailLoading">Saving... ⏳</div>
+            
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="submitEmailCapture()">
+                    📧 Submit
+                </button>
+                <button class="btn btn-secondary" onclick="skipEmailCapture()">
+                    Skip & See Results
+                </button>
+            </div>
+        </div>
+    </div>
 </body>
 </html>
