@@ -2,7 +2,12 @@
 // Target: All Ages | Difficulty: Mix (10 Easy, 15 Medium, 5 Hard)
 // Format: Multiple Choice, True/False Mix
 
-const psalmsPro­verbsQuestions = [
+var psalmsProverbsQuestions = [
+
+
+
+
+
     // ==================== EASY QUESTIONS (1-10) ====================
     {
         question: "Complete this famous verse from Psalm 23: 'The Lord is my ____; I shall not want.'",
@@ -250,4 +255,4 @@ const psalmsPro­verbsQuestions = [
     }
 ];
 
-export default psalmsPro­verbsQuestions;
+window.psalmsProverbsQuestions = psalmsProverbsQuestions;

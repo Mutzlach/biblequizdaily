@@ -2,7 +2,7 @@
 // Target: All Ages | Difficulty: Mix (10 Easy, 15 Medium, 5 Hard)
 // Format: Multiple Choice, True/False Mix
 
-const mosesQuestions = [
+var mosesQuestions = [
     // ==================== EASY QUESTIONS (1-10) ====================
     {
         question: "Why did Moses' mother hide him as a baby?",
@@ -250,4 +250,4 @@ const mosesQuestions = [
     }
 ];
 
-export default mosesQuestions;
+window.mosesQuestions = mosesQuestions;

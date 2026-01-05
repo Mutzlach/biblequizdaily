@@ -2,7 +2,7 @@
 // Target: All Ages | Difficulty: Mix (10 Easy, 15 Medium, 5 Hard)
 // Format: Multiple Choice, True/False Mix
 
-const parablesQuestions = [
+var parablesQuestions = [
     // ==================== EASY QUESTIONS (1-10) ====================
     {
         question: "In the parable of the Good Samaritan, who was beaten and left on the road?",
@@ -250,4 +250,4 @@ const parablesQuestions = [
     }
 ];
 
-export default parablesQuestions;
+window.parablesQuestions = parablesQuestions;

@@ -3,7 +3,7 @@
 // Format: Multiple Choice, True/False Mix
 // UNIQUE: Life Application Focus - "What Does God Say About Your Worry?"
 
-const anxietyBibleQuestions = [
+var anxietyBibleQuestions = [
     // ==================== EASY QUESTIONS (1-10) ====================
     {
         question: "Complete this famous verse: 'Do not be anxious about anything, but in every situation, by prayer and petition, with thanksgiving, present your requests to ____.'",
@@ -251,4 +251,4 @@ const anxietyBibleQuestions = [
     }
 ];
 
-export default anxietyBibleQuestions;
+window.anxietyBibleQuestions = anxietyBibleQuestions;

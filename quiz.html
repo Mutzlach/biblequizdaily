@@ -271,6 +271,22 @@
             display: none;
         }
         
+        .loading {
+            text-align: center;
+            padding: 40px;
+            color: #2d3436;
+            font-size: 18px;
+        }
+        
+        .error-message {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 20px;
+            border-radius: 12px;
+            border-left: 4px solid #dc3545;
+            margin: 20px 0;
+        }
+        
         @media (max-width: 768px) {
             .quiz-card {
                 padding: 25px;
@@ -294,8 +310,15 @@
 <body>
     <div class="container">
         <div class="quiz-card">
-            <div class="quiz-header">
-                <h1 class="quiz-title" id="quizTitle">Loading Quiz...</h1>
+            <div class="loading" id="loadingMessage">
+                <div style="font-size: 24px; margin-bottom: 10px;">📖</div>
+                Loading your Bible quiz...
+            </div>
+            
+            <div id="errorMessage" class="error-message hidden"></div>
+            
+            <div class="quiz-header hidden" id="quizHeader">
+                <h1 class="quiz-title" id="quizTitle">Bible Quiz</h1>
                 <div class="quiz-progress">
                     <span id="currentQuestion">0</span> of <span id="totalQuestions">0</span>
                 </div>
@@ -304,7 +327,7 @@
                 </div>
             </div>
             
-            <div id="questionSection">
+            <div id="questionSection" class="hidden">
                 <div class="question-section">
                     <div class="question-number" id="questionNumber">Question 1</div>
                     <div class="question-text" id="questionText"></div>
@@ -349,44 +372,75 @@
         </div>
     </div>
 
-    <script type="module">
-        // ==================== QUIZ DATA IMPORTS ====================
-        // FIXED: Import from ROOT folder (no ./data/ prefix)
-        import genesisQuestions from './genesis-quiz.js';
-        import miraclesOfJesusQuestions from './miracles-of-jesus-quiz.js';
-        import parablesQuestions from './parables-quiz.js';
-        import anxietyBibleQuestions from './anxiety-bible-quiz.js';
-        import mosesQuestions from './moses-quiz.js';
-        import psalmsPro­verbsQuestions from './psalms-proverbs-quiz.js';
-
-        // Create the quiz category mapping
-        const quizCategories = {
-            'genesis': {
-                questions: genesisQuestions,
-                title: 'Genesis Quiz'
-            },
-            'miracles-of-jesus': {
-                questions: miraclesOfJesusQuestions,
-                title: 'Miracles of Jesus Quiz'
-            },
-            'parables': {
-                questions: parablesQuestions,
-                title: 'Parables Quiz'
-            },
-            'anxiety-bible': {
-                questions: anxietyBibleQuestions,
-                title: 'Anxiety Bible Quiz'
-            },
-            'moses': {
-                questions: mosesQuestions,
-                title: 'Moses Quiz'
-            },
-            'psalms-proverbs': {
-                questions: psalmsPro­verbsQuestions,
-                title: 'Psalms & Proverbs Quiz'
-            }
+    <!-- Load the specific quiz file based on category -->
+    <script id="quizScript"></script>
+    
+    <script>
+        // Get category from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const category = urlParams.get('category');
+        
+        // Quiz configuration
+        const quizConfig = {
+            'genesis': { file: 'genesis-quiz.js', title: 'Genesis Quiz', variable: 'genesisQuestions' },
+            'miracles-of-jesus': { file: 'miracles-of-jesus-quiz.js', title: 'Miracles of Jesus Quiz', variable: 'miraclesOfJesusQuestions' },
+            'parables': { file: 'parables-quiz.js', title: 'Parables Quiz', variable: 'parablesQuestions' },
+            'anxiety-bible': { file: 'anxiety-bible-quiz.js', title: 'Anxiety Bible Quiz', variable: 'anxietyBibleQuestions' },
+            'moses': { file: 'moses-quiz.js', title: 'Moses Quiz', variable: 'mosesQuestions' },
+            'psalms-proverbs': { file: 'psalms-proverbs-quiz.js', title: 'Psalms & Proverbs Quiz', variable: 'psalmsPro­verbsQuestions' }
         };
-
+        
+        if (!category || !quizConfig[category]) {
+            showError('Quiz not found! Redirecting to homepage...');
+            setTimeout(() => window.location.href = 'index.html', 2000);
+        } else {
+            loadQuiz(category);
+        }
+        
+        function showError(message) {
+            document.getElementById('loadingMessage').classList.add('hidden');
+            const errorDiv = document.getElementById('errorMessage');
+            errorDiv.textContent = message;
+            errorDiv.classList.remove('hidden');
+        }
+        
+        function loadQuiz(category) {
+            const config = quizConfig[category];
+            
+            // Load the quiz JavaScript file
+            const script = document.createElement('script');
+            script.src = config.file;
+            script.onload = () => {
+                // Wait a moment for the variable to be defined
+                setTimeout(() => {
+                    try {
+                        const questions = window[config.variable];
+                        if (!questions || !Array.isArray(questions) || questions.length === 0) {
+                            throw new Error('Questions not found or invalid');
+                        }
+                        startQuiz(questions, config.title);
+                    } catch (e) {
+                        console.error('Error loading quiz:', e);
+                        showError('Error loading quiz questions. Please refresh the page or try another quiz.');
+                    }
+                }, 100);
+            };
+            script.onerror = () => {
+                console.error('Failed to load quiz file:', config.file);
+                showError('Failed to load quiz file. Please check your internet connection and try again.');
+            };
+            
+            document.body.appendChild(script);
+        }
+        
+        function startQuiz(questions, title) {
+            document.getElementById('loadingMessage').classList.add('hidden');
+            document.getElementById('quizHeader').classList.remove('hidden');
+            document.getElementById('questionSection').classList.remove('hidden');
+            
+            new BibleQuiz(questions, title);
+        }
+        
         // ==================== QUIZ ENGINE ====================
         class BibleQuiz {
             constructor(questions, title) {
@@ -410,16 +464,13 @@
                 const question = this.questions[this.currentQuestionIndex];
                 const questionNumber = this.currentQuestionIndex + 1;
                 
-                // Update progress
                 document.getElementById('currentQuestion').textContent = questionNumber;
                 document.getElementById('questionNumber').textContent = `Question ${questionNumber}`;
                 document.getElementById('questionText').textContent = question.question;
                 
-                // Update progress bar
                 const progress = (questionNumber / this.questions.length) * 100;
                 document.getElementById('progressFill').style.width = progress + '%';
                 
-                // Load options
                 const optionsContainer = document.getElementById('optionsContainer');
                 optionsContainer.innerHTML = '';
                 
@@ -431,7 +482,6 @@
                     optionsContainer.appendChild(optionDiv);
                 });
                 
-                // Hide feedback and next button
                 document.getElementById('feedbackSection').classList.add('hidden');
                 document.getElementById('nextBtn').classList.add('hidden');
                 
@@ -439,19 +489,15 @@
             }
             
             selectAnswer(answerIndex) {
-                if (this.selectedAnswer !== null) return; // Already answered
+                if (this.selectedAnswer !== null) return;
                 
                 this.selectedAnswer = answerIndex;
                 const question = this.questions[this.currentQuestionIndex];
                 const options = document.querySelectorAll('.option');
                 
-                // Disable all options
                 options.forEach(opt => opt.classList.add('disabled'));
-                
-                // Mark selected answer
                 options[answerIndex].classList.add('selected');
                 
-                // Check if correct
                 const isCorrect = answerIndex === question.correct;
                 
                 if (isCorrect) {
@@ -465,11 +511,8 @@
                 }
                 
                 this.answeredQuestions++;
-                
-                // Show feedback
                 this.showFeedback(question, isCorrect);
                 
-                // Show next button
                 document.getElementById('nextBtn').classList.remove('hidden');
                 document.getElementById('nextBtn').onclick = () => this.nextQuestion();
             }
@@ -500,6 +543,7 @@
             
             showResults() {
                 document.getElementById('questionSection').classList.add('hidden');
+                document.getElementById('quizHeader').classList.add('hidden');
                 document.getElementById('resultsSection').classList.remove('hidden');
                 
                 const percentage = Math.round((this.score / this.questions.length) * 100);
@@ -510,7 +554,6 @@
                 document.getElementById('incorrectCount').textContent = incorrect;
                 document.getElementById('accuracyPercent').textContent = percentage + '%';
                 
-                // Set message based on score
                 let message = '';
                 if (percentage >= 90) {
                     message = 'Outstanding! You have excellent Bible knowledge! 🌟';
@@ -526,37 +569,16 @@
                 
                 document.getElementById('resultsMessage').textContent = message;
                 
-                // Track completion in Google Analytics
-                gtag('event', 'quiz_complete', {
-                    'quiz_category': new URLSearchParams(window.location.search).get('category'),
-                    'score': percentage,
-                    'correct_answers': this.score,
-                    'total_questions': this.questions.length
-                });
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'quiz_complete', {
+                        'quiz_category': category,
+                        'score': percentage,
+                        'correct_answers': this.score,
+                        'total_questions': this.questions.length
+                    });
+                }
             }
         }
-
-        // ==================== INITIALIZE QUIZ ====================
-        window.addEventListener('DOMContentLoaded', () => {
-            // Get category from URL
-            const urlParams = new URLSearchParams(window.location.search);
-            const category = urlParams.get('category');
-            
-            if (!category || !quizCategories[category]) {
-                alert('Quiz not found! Redirecting to homepage...');
-                window.location.href = 'index.html';
-                return;
-            }
-            
-            const quizData = quizCategories[category];
-            new BibleQuiz(quizData.questions, quizData.title);
-            
-            // Track quiz start in Google Analytics
-            gtag('event', 'quiz_start', {
-                'quiz_category': category,
-                'total_questions': quizData.questions.length
-            });
-        });
     </script>
 </body>
 </html>

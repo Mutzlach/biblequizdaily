@@ -2,7 +2,7 @@
 // Target: All Ages | Difficulty: Mix (10 Easy, 15 Medium, 5 Hard)
 // Format: Multiple Choice, True/False Mix
 
-const genesisQuestions = [
+var genesisQuestions = [
     // ==================== EASY QUESTIONS (1-10) ====================
     {
         question: "How many days did it take God to create the world?",
@@ -250,4 +250,4 @@ const genesisQuestions = [
     }
 ];
 
-export default genesisQuestions;
+window.genesisQuestions = genesisQuestions;

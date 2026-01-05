@@ -2,7 +2,7 @@
 // Target: All Ages | Difficulty: Mix (10 Easy, 15 Medium, 5 Hard)
 // Format: Multiple Choice, True/False Mix
 
-const miraclesOfJesusQuestions = [
+var miraclesOfJesusQuestions = [
     // ==================== EASY QUESTIONS (1-10) ====================
     {
         question: "What was Jesus's first miracle?",
@@ -250,4 +250,4 @@ const miraclesOfJesusQuestions = [
     }
 ];
 
-export default miraclesOfJesusQuestions;
+window.miraclesOfJesusQuestions = miraclesOfJesusQuestions;
