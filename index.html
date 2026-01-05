@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Bible Quiz - 420+ Interactive Bible Trivia Questions & Answers</title>
-    <meta name="description" content="Test your Bible knowledge with 420+ free Bible quiz questions across 15 categories. Interactive Bible trivia for kids, adults, Sunday School. Old Testament, New Testament, Jesus' life quizzes. No signup required!">
-    <meta name="keywords" content="bible quiz, bible trivia, free bible quiz, bible questions, bible test, old testament quiz, new testament quiz, bible quiz for kids, bible trivia questions, online bible quiz, interactive bible quiz">
+    <title>Free Bible Quiz - 500+ Interactive Bible Trivia Questions & Answers</title>
+    <meta name="description" content="Test your Bible knowledge with 500+ free Bible quiz questions across 20+ categories. Interactive Bible trivia for kids, adults, Sunday School. Old Testament, New Testament, Jesus' life, Genesis, Moses, Parables. No signup required!">
+    <meta name="keywords" content="bible quiz, bible trivia, free bible quiz, bible questions, genesis quiz, moses quiz, miracles of jesus, parables quiz, anxiety bible verses, old testament quiz, new testament quiz, bible quiz for kids, sunday school quiz">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Free Bible Quiz - 420+ Bible Trivia Questions">
-    <meta property="og:description" content="Challenge yourself with 420+ Bible trivia questions! Test your knowledge of Old Testament, New Testament, Jesus' life. Perfect for Sunday School, kids, adults.">
+    <meta property="og:title" content="Free Bible Quiz - 500+ Bible Trivia Questions">
+    <meta property="og:description" content="Challenge yourself with 500+ Bible trivia questions! Test your knowledge of Old Testament, New Testament, Jesus' life, Genesis, Moses, Parables. Perfect for Sunday School.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://biblequizdaily.com">
     
@@ -51,6 +51,8 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
         }
         .logo {
             font-family: 'Merriweather', serif;
@@ -64,8 +66,9 @@
         }
         .nav-menu {
             display: flex;
-            gap: 32px;
+            gap: 24px;
             list-style: none;
+            flex-wrap: wrap;
         }
         .nav-menu a {
             color: #2d3436;
@@ -97,6 +100,9 @@
             margin-bottom: 32px;
             opacity: 0.95;
             font-weight: 500;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
         }
         .hero-cta {
             display: inline-block;
@@ -121,35 +127,11 @@
             padding: 48px 24px;
         }
         
-        /* SEO CONTENT SECTION */
-        .seo-intro {
-            background: white;
-            border-radius: 16px;
-            padding: 36px;
-            margin-bottom: 48px;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-        }
-        .seo-intro h2 {
-            font-family: 'Merriweather', serif;
-            font-size: 28px;
-            color: #2d3436;
-            margin-bottom: 16px;
-        }
-        .seo-intro p {
-            font-size: 16px;
-            color: #636e72;
-            line-height: 1.7;
-            margin-bottom: 12px;
-        }
-        .seo-intro strong {
-            color: #2d3436;
-        }
-        
         /* STATS */
         .stats {
-            display: flex;
-            justify-content: center;
-            gap: 60px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 24px;
             padding: 36px;
             background: white;
             border-radius: 16px;
@@ -174,188 +156,216 @@
             color: #636e72;
             font-weight: 600;
         }
-        
-        /* FEATURED QUIZ */
-        .featured-quiz {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            border-radius: 20px;
-            padding: 48px;
-            margin-bottom: 48px;
+
+        /* NEW QUIZ HIGHLIGHT */
+        .new-quizzes-banner {
+            background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
             color: white;
-            text-align: center;
-            box-shadow: 0 8px 32px rgba(102,126,234,0.3);
-        }
-        .featured-badge {
-            display: inline-block;
-            background: rgba(255,255,255,0.25);
-            padding: 8px 20px;
-            border-radius: 20px;
-            font-size: 13px;
-            font-weight: 700;
-            margin-bottom: 16px;
-            letter-spacing: 0.5px;
-        }
-        .featured-title {
-            font-family: 'Merriweather', serif;
-            font-size: 36px;
-            font-weight: 900;
-            margin-bottom: 12px;
-        }
-        .featured-desc {
-            font-size: 18px;
-            margin-bottom: 28px;
-            opacity: 0.95;
-        }
-        .featured-btn {
-            display: inline-block;
-            background: white;
-            color: #667eea;
-            padding: 16px 40px;
-            border-radius: 12px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 17px;
-            transition: all 0.3s;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-        .featured-btn:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-        }
-        
-        /* SECTION TITLE */
-        .section-title {
-            font-family: 'Merriweather', serif;
-            font-size: 32px;
-            font-weight: 900;
-            color: #2d3436;
-            margin-bottom: 32px;
-            text-align: center;
-        }
-        
-        /* QUIZ GRID */
-        .quiz-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 24px;
-            margin-bottom: 48px;
-        }
-        .quiz-card {
-            background: white;
             padding: 32px;
             border-radius: 16px;
-            text-decoration: none;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
-            transition: all 0.3s;
-            border: 2px solid transparent;
-            display: flex;
-            flex-direction: column;
-            gap: 16px;
+            margin-bottom: 48px;
+            box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
         }
-        .quiz-card:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 12px 40px rgba(102,126,234,0.25);
-            border-color: #667eea;
-        }
-        .quiz-header {
+        .new-quizzes-banner h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            margin-bottom: 20px;
             display: flex;
             align-items: center;
+            gap: 12px;
+        }
+        .new-quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 16px;
         }
+        .new-quiz-link {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 16px;
+            border-radius: 12px;
+            text-decoration: none;
+            color: #2d3436;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.2s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .new-quiz-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+        .new-quiz-icon {
+            font-size: 32px;
+        }
+        .new-quiz-text {
+            flex: 1;
+        }
+        .new-quiz-title {
+            font-weight: 700;
+            font-size: 16px;
+            margin-bottom: 4px;
+        }
+        .new-quiz-desc {
+            font-size: 13px;
+            color: #636e72;
+        }
+        
+        /* CATEGORY SECTIONS */
+        .category-section {
+            margin-bottom: 48px;
+        }
+        .category-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+            padding-bottom: 16px;
+            border-bottom: 3px solid #e1e8ed;
+        }
+        .category-icon {
+            font-size: 36px;
+        }
+        .category-title {
+            font-family: 'Merriweather', serif;
+            font-size: 28px;
+            font-weight: 900;
+            color: #2d3436;
+        }
+        
+        .quiz-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .quiz-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            text-decoration: none;
+            color: inherit;
+            transition: all 0.3s;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            border: 2px solid transparent;
+        }
+        .quiz-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+            border-color: #667eea;
+        }
+        
+        .quiz-header {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin-bottom: 12px;
+        }
         .quiz-icon {
-            font-size: 48px;
+            font-size: 32px;
             line-height: 1;
         }
         .quiz-title-group {
             flex: 1;
         }
         .quiz-title {
-            font-size: 22px;
-            font-weight: 800;
+            font-size: 18px;
+            font-weight: 700;
             color: #2d3436;
             margin-bottom: 6px;
-            line-height: 1.3;
-        }
-        .difficulty-badge {
-            display: inline-block;
-            padding: 4px 12px;
-            border-radius: 12px;
-            font-size: 12px;
-            font-weight: 700;
-            letter-spacing: 0.3px;
-        }
-        .badge-easy {
-            background: #d4edda;
-            color: #155724;
-        }
-        .badge-medium {
-            background: #fff3cd;
-            color: #856404;
-        }
-        .badge-hard {
-            background: #f8d7da;
-            color: #721c24;
         }
         .quiz-desc {
-            font-size: 16px;
+            font-size: 14px;
             color: #636e72;
             line-height: 1.5;
+            margin-bottom: 16px;
+        }
+        .quiz-meta {
+            display: flex;
+            gap: 12px;
+            font-size: 13px;
+            color: #636e72;
+            margin-bottom: 12px;
         }
         .quiz-cta {
+            color: #667eea;
+            font-weight: 600;
+            font-size: 15px;
             display: flex;
             align-items: center;
-            gap: 8px;
-            color: #667eea;
-            font-weight: 700;
-            font-size: 15px;
+            justify-content: space-between;
+        }
+        .quiz-cta span {
+            transition: transform 0.2s;
+        }
+        .quiz-card:hover .quiz-cta span {
+            transform: translateX(4px);
         }
         
-        /* FAQ */
+        .difficulty-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        .badge-easy { background: #d4edda; color: #155724; }
+        .badge-medium { background: #fff3cd; color: #856404; }
+        .badge-hard { background: #f8d7da; color: #721c24; }
+        
+        /* FAQ SECTION */
         .faq-section {
             background: white;
-            border-radius: 20px;
-            padding: 48px;
-            margin: 48px 0;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            border-radius: 16px;
+            padding: 40px;
+            margin-top: 48px;
+            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+        }
+        .section-title {
+            font-family: 'Merriweather', serif;
+            font-size: 32px;
+            font-weight: 900;
+            color: #2d3436;
+            text-align: center;
+            margin-bottom: 36px;
         }
         .faq-item {
-            border-bottom: 1px solid #e0e0e0;
-            padding: 20px 0;
-        }
-        .faq-item:last-child {
-            border-bottom: none;
+            border-bottom: 1px solid #e1e8ed;
+            margin-bottom: 16px;
         }
         .faq-question {
+            padding: 20px;
             cursor: pointer;
-            font-weight: 700;
+            font-weight: 600;
             font-size: 17px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            color: #2d3436;
+            transition: all 0.2s;
         }
         .faq-question:hover {
+            background: #f8f9fa;
             color: #667eea;
-        }
-        .faq-answer {
-            max-height: 0;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            color: #636e72;
-            font-size: 15px;
-            line-height: 1.6;
-        }
-        .faq-answer.open {
-            padding-top: 12px;
-            max-height: 500px;
         }
         .faq-icon {
             transition: transform 0.3s;
             font-size: 14px;
-            color: #667eea;
         }
         .faq-icon.open {
             transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.3s;
+            padding: 0 20px;
+            color: #636e72;
+            line-height: 1.7;
+        }
+        .faq-answer.open {
+            max-height: 500px;
+            padding: 0 20px 20px 20px;
         }
         
         /* FOOTER */
@@ -363,7 +373,7 @@
             background: #2d3436;
             color: white;
             padding: 60px 24px 32px;
-            margin-top: 60px;
+            margin-top: 80px;
         }
         .footer-content {
             max-width: 1400px;
@@ -371,24 +381,24 @@
         }
         .footer-grid {
             display: grid;
-            grid-template-columns: 2fr 1fr 1fr 1fr;
-            gap: 48px;
-            margin-bottom: 48px;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
         }
         .footer-about h3 {
             font-family: 'Merriweather', serif;
-            font-size: 24px;
             margin-bottom: 16px;
+            font-size: 24px;
         }
         .footer-about p {
             color: #b2bec3;
-            line-height: 1.6;
-            margin-bottom: 20px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-size: 14px;
         }
         .footer-column h4 {
-            font-weight: 700;
-            font-size: 16px;
             margin-bottom: 16px;
+            font-weight: 700;
         }
         .footer-links {
             list-style: none;
@@ -400,264 +410,414 @@
             color: #b2bec3;
             text-decoration: none;
             transition: color 0.2s;
-            font-size: 15px;
+            font-size: 14px;
         }
         .footer-links a:hover {
             color: white;
         }
         .footer-bottom {
-            border-top: 1px solid #636e72;
-            padding-top: 24px;
+            border-top: 1px solid #4a4a4a;
+            padding-top: 32px;
             text-align: center;
             color: #b2bec3;
             font-size: 14px;
         }
         
-        @media (max-width: 1024px) {
-            .footer-grid {
-                grid-template-columns: 1fr 1fr;
-            }
-        }
-        
+        /* RESPONSIVE */
         @media (max-width: 768px) {
-            .nav-menu { display: none; }
             .hero h1 { font-size: 36px; }
             .hero p { font-size: 18px; }
+            .nav-menu { gap: 16px; font-size: 14px; }
+            .category-title { font-size: 24px; }
             .quiz-grid { grid-template-columns: 1fr; }
-            .stats { flex-direction: column; gap: 24px; }
-            .footer-grid { grid-template-columns: 1fr; gap: 32px; }
+            .new-quiz-grid { grid-template-columns: 1fr; }
         }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">📖 BibleQuizDaily</a>
+            <a href="index.html" class="logo">BibleQuizDaily</a>
             <ul class="nav-menu">
-                <li><a href="#quizzes">Bible Quizzes</a></li>
-                <li><a href="past-quizzes.html">Past Quizzes</a></li>
-                <li><a href="free-resources.html">Download Free Christian Resources</a></li>
-                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#new-quizzes">🆕 New Quizzes</a></li>
+                <li><a href="#old-testament">Old Testament</a></li>
+                <li><a href="#new-testament">New Testament</a></li>
+                <li><a href="#special-topics">Topics</a></li>
+                <li><a href="free-resources.html">Free Resources</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="hero">
-        <div class="hero-content">
-            <h1>Free Bible Quiz - 420+ Questions</h1>
-            <p>Interactive Bible trivia • 15 categories • Perfect for Sunday School & personal study</p>
-            <a href="#quizzes" class="hero-cta">🎯 Take a Free Bible Quiz Now</a>
-        </div>
+        <h1>📖 Free Bible Quiz Questions</h1>
+        <p>Test your Scripture knowledge with 500+ free Bible trivia questions. Perfect for Sunday School, Bible study, or personal growth!</p>
+        <a href="#new-quizzes" class="hero-cta">🆕 Try Our Newest Quizzes</a>
     </div>
 
     <div class="container">
-        <!-- SEO CONTENT BLOCK -->
-        <div class="seo-intro">
-            <h2>Test Your Bible Knowledge with Free Interactive Quizzes</h2>
-            <p>Welcome to <strong>BibleQuizDaily.com</strong>, your free online resource for <strong>Bible trivia questions and answers</strong>. Whether you're a Sunday School teacher looking for <strong>Bible quiz questions for kids</strong>, a Bible study leader seeking challenging questions, or someone who wants to <strong>test your Bible knowledge</strong>, we have the perfect quiz for you.</p>
-            <p>Our comprehensive collection includes <strong>Old Testament quizzes</strong>, <strong>New Testament quizzes</strong>, questions about <strong>Jesus' life and ministry</strong>, and specialized topics like Bible prophets, women of the Bible, and Biblical miracles. All quizzes are completely free with no signup or registration required.</p>
-        </div>
-
         <div class="stats">
             <div class="stat-item">
-                <div class="stat-number">420+</div>
-                <div class="stat-label">Bible Trivia Questions</div>
+                <div class="stat-number">500+</div>
+                <div class="stat-label">Quiz Questions</div>
             </div>
             <div class="stat-item">
-                <div class="stat-number">15</div>
-                <div class="stat-label">Quiz Categories</div>
+                <div class="stat-number">20+</div>
+                <div class="stat-label">Categories</div>
             </div>
             <div class="stat-item">
                 <div class="stat-number">100%</div>
                 <div class="stat-label">Free Forever</div>
             </div>
+            <div class="stat-item">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Signup Required</div>
+            </div>
         </div>
 
-        <div class="featured-quiz">
-            <div class="featured-badge">📅 FEATURED BIBLE QUIZ OF THE WEEK</div>
-            <h2 class="featured-title">🎄 Christmas Bible Quiz</h2>
-            <p class="featured-desc">Test your knowledge of Jesus' birth story with our nativity quiz! Updated every Wednesday</p>
-            <a href="christmas-bible-quiz.html" class="featured-btn">Take This Week's Quiz →</a>
+        <!-- NEW QUIZZES HIGHLIGHT -->
+        <div class="new-quizzes-banner" id="new-quizzes">
+            <h2>🆕 <span>Just Added - New Bible Quizzes!</span></h2>
+            <div class="new-quiz-grid">
+                <a href="genesis-quiz.html" class="new-quiz-link">
+                    <div class="new-quiz-icon">📖</div>
+                    <div class="new-quiz-text">
+                        <div class="new-quiz-title">Genesis Quiz</div>
+                        <div class="new-quiz-desc">Creation to Joseph's story</div>
+                    </div>
+                </a>
+                <a href="miracles-of-jesus-quiz.html" class="new-quiz-link">
+                    <div class="new-quiz-icon">✨</div>
+                    <div class="new-quiz-text">
+                        <div class="new-quiz-title">Miracles of Jesus</div>
+                        <div class="new-quiz-desc">Signs & wonders of Christ</div>
+                    </div>
+                </a>
+                <a href="parables-quiz.html" class="new-quiz-link">
+                    <div class="new-quiz-icon">📚</div>
+                    <div class="new-quiz-text">
+                        <div class="new-quiz-title">Parables Quiz</div>
+                        <div class="new-quiz-desc">Jesus's teaching stories</div>
+                    </div>
+                </a>
+                <a href="anxiety-bible-quiz.html" class="new-quiz-link">
+                    <div class="new-quiz-icon">🙏</div>
+                    <div class="new-quiz-text">
+                        <div class="new-quiz-title">Anxiety Bible Quiz</div>
+                        <div class="new-quiz-desc">Verses for peace & comfort</div>
+                    </div>
+                </a>
+                <a href="moses-quiz.html" class="new-quiz-link">
+                    <div class="new-quiz-icon">⚡</div>
+                    <div class="new-quiz-text">
+                        <div class="new-quiz-title">Moses Quiz</div>
+                        <div class="new-quiz-desc">The great deliverer</div>
+                    </div>
+                </a>
+            </div>
         </div>
 
-        <h2 class="section-title" id="quizzes">Browse All Bible Quiz Categories</h2>
-        
-        <div class="quiz-grid">
-            <!-- EASY BIBLE QUIZZES -->
-            <a href="kids-bible-quiz.html" class="quiz-card">
-                <div class="quiz-header">
-                    <span class="quiz-icon">🌟</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Kids Bible Quiz</div>
-                        <span class="difficulty-badge badge-easy">🟢 EASY</span>
+        <!-- OLD TESTAMENT QUIZZES -->
+        <div class="category-section" id="old-testament">
+            <div class="category-header">
+                <span class="category-icon">📜</span>
+                <h2 class="category-title">Old Testament Bible Quizzes</h2>
+            </div>
+            <div class="quiz-grid">
+                <a href="genesis-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">📖</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Genesis Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
                     </div>
-                </div>
-                <p class="quiz-desc">Fun Bible quiz for kids ages 6-12. Learn about Bible heroes, stories, and foundational Christian teachings.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
+                    <p class="quiz-desc">Test your knowledge of Genesis from Creation to Joseph's story in Egypt. Covers all 50 chapters!</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Genesis Quiz <span>→</span></div>
+                </a>
 
-            <a href="easy-bible-quiz.html" class="quiz-card">
-                <div class="quiz-header">
-                    <span class="quiz-icon">📖</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Easy Bible Trivia</div>
-                        <span class="difficulty-badge badge-easy">🟢 EASY</span>
+                <a href="moses-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">⚡</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Moses Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
                     </div>
-                </div>
-                <p class="quiz-desc">Perfect for beginners! Test basic Bible knowledge with simple, friendly questions about Scripture.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
+                    <p class="quiz-desc">Journey from baby in a basket to Mount Sinai. Ten plagues, Red Sea, and the Law.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Moses Quiz <span>→</span></div>
+                </a>
 
-            <!-- OLD & NEW TESTAMENT QUIZZES -->
-            <a href="old-testament-quiz.html" class="quiz-card">
-                <div class="quiz-header">
-                    <span class="quiz-icon">📜</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Old Testament Quiz</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                <a href="old-testament-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">📜</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Old Testament Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
                     </div>
-                </div>
-                <p class="quiz-desc">Journey from Genesis to Malachi. Test knowledge of prophets, kings, and God's covenant with Israel.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
+                    <p class="quiz-desc">Comprehensive Old Testament trivia covering Genesis through Malachi, prophets, kings, and history.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
 
-            <a href="new-testament-quiz.html" class="quiz-card">
-                <div class="quiz-header">
-                    <span class="quiz-icon">✝️</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">New Testament Quiz</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                <a href="prophets-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">🔮</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Bible Prophets Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
                     </div>
-                </div>
-                <p class="quiz-desc">From the Gospels to Revelation. Explore Jesus' ministry, early church history, and Paul's epistles.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
+                    <p class="quiz-desc">Test knowledge of Isaiah, Jeremiah, Ezekiel, Daniel, and the twelve minor prophets.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
 
-            <a href="jesus-life-quiz.html" class="quiz-card">
-                <div class="quiz-header">
-                    <span class="quiz-icon">🙏</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Life of Jesus Quiz</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                <a href="psalms-proverbs-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">📖</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Psalms & Proverbs Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
                     </div>
-                </div>
-                <p class="quiz-desc">Follow Jesus from birth to resurrection. Test your knowledge of His miracles, parables, and teachings.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
-
-            <a href="#" class="quiz-card" onclick="alert('Coming soon! This Bible quiz is being prepared.'); return false;">
-                <div class="quiz-header">
-                    <span class="quiz-icon">👑</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Bible Prophets Quiz</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                    <p class="quiz-desc">Test Bible wisdom literature knowledge: Psalms, Proverbs, and Solomon's teachings.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
                     </div>
-                </div>
-                <p class="quiz-desc">Test knowledge of Isaiah, Jeremiah, Ezekiel, Daniel, and the twelve minor prophets of Scripture.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
-
-            <a href="#" class="quiz-card" onclick="alert('Coming soon! This Bible quiz is being prepared.'); return false;">
-                <div class="quiz-header">
-                    <span class="quiz-icon">📿</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Psalms & Proverbs Quiz</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
-                    </div>
-                </div>
-                <p class="quiz-desc">Explore Bible wisdom literature, worship songs, and practical life principles from God's Word.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
-
-            <a href="women-bible-quiz.html" class="quiz-card">
-                <div class="quiz-header">
-                    <span class="quiz-icon">👩</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Women of the Bible</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
-                    </div>
-                </div>
-                <p class="quiz-desc">Celebrate faithful women in Scripture: Ruth, Esther, Mary, Deborah, and many more Biblical heroines.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
-
-            <a href="#" class="quiz-card" onclick="alert('Coming soon! This Bible quiz is being prepared.'); return false;">
-                <div class="quiz-header">
-                    <span class="quiz-icon">⚡</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Bible Miracles Quiz</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
-                    </div>
-                </div>
-                <p class="quiz-desc">Discover supernatural acts of God from parting the Red Sea to resurrection power in the Bible.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
-
-            <a href="#" class="quiz-card" onclick="alert('Coming soon! This Bible quiz is being prepared.'); return false;">
-                <div class="quiz-header">
-                    <span class="quiz-icon">📚</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Bible Parables Quiz</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
-                    </div>
-                </div>
-                <p class="quiz-desc">Study Jesus' teaching stories: Good Samaritan, Prodigal Son, Sower, and other Biblical parables.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
-
-            <a href="#" class="quiz-card" onclick="alert('Coming soon! This Bible quiz is being prepared.'); return false;">
-                <div class="quiz-header">
-                    <span class="quiz-icon">🎓</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">General Bible Knowledge</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
-                    </div>
-                </div>
-                <p class="quiz-desc">Comprehensive Bible trivia covering history, geography, culture, and key Biblical facts.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
-
-            <!-- SEASONAL BIBLE QUIZZES -->
-            <a href="christmas-bible-quiz.html" class="quiz-card">
-                <div class="quiz-header">
-                    <span class="quiz-icon">🎄</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Christmas Bible Quiz</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
-                    </div>
-                </div>
-                <p class="quiz-desc">Test knowledge of the nativity story, wise men, shepherds, and the birth of Jesus Christ.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
-
-            <a href="easter-bible-quiz.html" class="quiz-card">
-                <div class="quiz-header">
-                    <span class="quiz-icon">✝️</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Easter Bible Quiz</div>
-                        <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
-                    </div>
-                </div>
-                <p class="quiz-desc">Explore Jesus' crucifixion, resurrection, and Easter week events in this Biblical quiz.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
-
-            <!-- HARD BIBLE QUIZ -->
-            <a href="hard-bible-quiz.html" class="quiz-card">
-                <div class="quiz-header">
-                    <span class="quiz-icon">🎯</span>
-                    <div class="quiz-title-group">
-                        <div class="quiz-title">Hard Bible Quiz</div>
-                        <span class="difficulty-badge badge-hard">🔴 HARD</span>
-                    </div>
-                </div>
-                <p class="quiz-desc">Challenge yourself! Deep Bible questions for serious Bible students, scholars, and trivia experts.</p>
-                <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
-            </a>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
+            </div>
         </div>
 
+        <!-- NEW TESTAMENT QUIZZES -->
+        <div class="category-section" id="new-testament">
+            <div class="category-header">
+                <span class="category-icon">✝️</span>
+                <h2 class="category-title">New Testament Bible Quizzes</h2>
+            </div>
+            <div class="quiz-grid">
+                <a href="miracles-of-jesus-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">✨</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Miracles of Jesus Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">From water to wine to raising the dead. Test your knowledge of Christ's mighty works.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Miracles Quiz <span>→</span></div>
+                </a>
+
+                <a href="parables-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">📚</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Parables Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Good Samaritan, Prodigal Son, Lost Sheep, and more of Jesus's powerful teaching stories.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Parables Quiz <span>→</span></div>
+                </a>
+
+                <a href="jesus-life-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">✝️</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Life of Jesus Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Birth, ministry, miracles, teachings, crucifixion, and resurrection of Jesus Christ.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
+
+                <a href="new-testament-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">📖</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">New Testament Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Comprehensive New Testament Bible trivia covering gospels, Acts, epistles, Revelation.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
+
+                <a href="christmas-bible-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">🎄</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Christmas Bible Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Nativity story, wise men, shepherds, and the birth of Jesus Christ for Christmas season.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
+
+                <a href="easter-bible-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">✝️</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Easter Bible Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Jesus' crucifixion, resurrection, and Easter week events in this Biblical quiz.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- SPECIAL TOPICS -->
+        <div class="category-section" id="special-topics">
+            <div class="category-header">
+                <span class="category-icon">🎯</span>
+                <h2 class="category-title">Special Topics & Difficulty Levels</h2>
+            </div>
+            <div class="quiz-grid">
+                <a href="anxiety-bible-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">🙏</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Anxiety Bible Quiz</div>
+                            <span class="difficulty-badge badge-easy">🟢 EASY</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Bible verses for anxiety, worry, and finding peace. Philippians 4:6, Matthew 6:25-34, 1 Peter 5:7.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Peace Quiz <span>→</span></div>
+                </a>
+
+                <a href="women-of-the-bible-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">👩</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Women of the Bible Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Test knowledge of Ruth, Esther, Mary, Sarah, Deborah, and other Biblical women.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
+
+                <a href="miracles-wonders-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">⚡</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Miracles & Wonders Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Biblical miracles from both testaments: Red Sea, resurrection, healings, supernatural events.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
+
+                <a href="kids-bible-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">👶</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Kids Bible Quiz</div>
+                            <span class="difficulty-badge badge-easy">🟢 EASY</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Easy Bible trivia for children! Fun questions about Noah, David, Daniel, and Bible stories.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
+
+                <a href="easy-bible-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">📗</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Easy Bible Quiz</div>
+                            <span class="difficulty-badge badge-easy">🟢 EASY</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Perfect for beginners! Basic Bible questions covering well-known stories and characters.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 10 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
+
+                <a href="hard-bible-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">🎯</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Hard Bible Quiz</div>
+                            <span class="difficulty-badge badge-hard">🔴 HARD</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Challenge yourself! Deep Bible questions for serious students, scholars, and trivia experts.</p>
+                    <div class="quiz-meta">
+                        <span>📊 30 Questions</span>
+                        <span>⏱️ 15 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
+                </a>
+            </div>
+        </div>
+
+        <!-- FAQ SECTION -->
         <div class="faq-section" id="faq">
-            <h2 class="section-title">Frequently Asked Questions About Our Bible Quizzes</h2>
+            <h2 class="section-title">Frequently Asked Questions</h2>
             
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
@@ -665,7 +825,7 @@
                     <span class="faq-icon">▼</span>
                 </div>
                 <div class="faq-answer">
-                    We offer 420+ free Bible trivia questions and answers across 15 different categories including Old Testament quiz questions, New Testament quiz questions, Jesus' life, Women of the Bible, Bible prophets, and more. All Bible quizzes are completely free with no signup, registration, or email required. Perfect for Sunday School, Bible study groups, homeschooling, or personal devotional time.
+                    We offer 500+ free Bible trivia questions across 20+ categories including Genesis Quiz, Moses Quiz, Miracles of Jesus, Parables, Old Testament, New Testament, and specialized topics like Anxiety Bible Quiz. All quizzes are 100% free with no signup required—perfect for Sunday School, Bible study groups, or personal devotions.
                 </div>
             </div>
 
@@ -675,7 +835,7 @@
                     <span class="faq-icon">▼</span>
                 </div>
                 <div class="faq-answer">
-                    No! All our Bible quiz questions are 100% free with no signup, no registration, and no email required. Just click any Bible trivia quiz and start playing instantly. We believe Bible knowledge should be accessible to everyone.
+                    No! All our Bible quiz questions are 100% free with no signup, no registration, and no email required. Just click any quiz and start playing instantly. We believe Bible knowledge should be accessible to everyone.
                 </div>
             </div>
 
@@ -685,7 +845,7 @@
                     <span class="faq-icon">▼</span>
                 </div>
                 <div class="faq-answer">
-                    All Bible quiz questions are based on the King James Version (KJV) of the Holy Bible. Each question includes the Scripture reference so you can look up the passage yourself and verify the answer in your own Bible.
+                    All Bible quiz questions are based on the King James Version (KJV) of the Holy Bible. Each question includes the Scripture reference so you can verify the answer in your own Bible translation.
                 </div>
             </div>
 
@@ -695,17 +855,17 @@
                     <span class="faq-icon">▼</span>
                 </div>
                 <div class="faq-answer">
-                    Absolutely! Our free Bible trivia questions are perfect for Sunday School classes, youth groups, Bible study sessions, homeschooling curriculum, church events, or personal devotional time. Feel free to use them in any way that helps strengthen faith and Bible knowledge in your community.
+                    Absolutely! Our free Bible trivia questions are perfect for Sunday School classes, youth groups, Bible study sessions, homeschooling curriculum, church events, or personal devotional time. All content is freely available for ministry and educational purposes.
                 </div>
             </div>
 
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFAQ(this)">
-                    <span>How often do you add new Bible quiz questions?</span>
+                    <span>What new quizzes have you recently added?</span>
                     <span class="faq-icon">▼</span>
                 </div>
                 <div class="faq-answer">
-                    We feature a new "Bible Quiz of the Week" every Wednesday! Plus, we're constantly expanding our library with new Bible trivia questions, quiz categories, and Biblical topics. Check back regularly for fresh Bible quiz content to test your Scripture knowledge.
+                    We just added 5 brand new quizzes: Genesis Quiz (Creation to Joseph), Moses Quiz (Exodus and the Law), Miracles of Jesus Quiz, Parables Quiz (Jesus's teaching stories), and Anxiety Bible Quiz (verses for peace and comfort). Each contains 30 carefully crafted questions!
                 </div>
             </div>
         </div>
@@ -716,48 +876,50 @@
             <div class="footer-grid">
                 <div class="footer-about">
                     <h3>📖 BibleQuizDaily.com</h3>
-                    <p>Free Bible quiz questions and interactive Bible trivia for strengthening faith. Join thousands of believers growing in Scripture knowledge every day through our comprehensive Bible quizzes.</p>
-                    <p style="font-size: 13px; opacity: 0.7;">Scripture quotations taken from the King James Version of the Holy Bible. Used by permission. All Bible quiz content is educational and non-commercial.</p>
+                    <p>Free Bible quiz questions and interactive Bible trivia for strengthening faith. Join thousands of believers growing in Scripture knowledge through our comprehensive Bible quizzes covering Genesis, Moses, Jesus's miracles, parables, and more.</p>
+                    <p style="font-size: 13px; opacity: 0.7;">Scripture quotations from the King James Version. All Bible quiz content is educational and non-commercial.</p>
                 </div>
                 
                 <div class="footer-column">
-                    <h4>Popular Bible Quizzes</h4>
+                    <h4>New Quizzes</h4>
+                    <ul class="footer-links">
+                        <li><a href="genesis-quiz.html">Genesis Quiz</a></li>
+                        <li><a href="miracles-of-jesus-quiz.html">Miracles of Jesus</a></li>
+                        <li><a href="parables-quiz.html">Parables Quiz</a></li>
+                        <li><a href="anxiety-bible-quiz.html">Anxiety Bible Quiz</a></li>
+                        <li><a href="moses-quiz.html">Moses Quiz</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Popular Quizzes</h4>
                     <ul class="footer-links">
                         <li><a href="kids-bible-quiz.html">Kids Bible Quiz</a></li>
+                        <li><a href="easy-bible-quiz.html">Easy Bible Quiz</a></li>
                         <li><a href="christmas-bible-quiz.html">Christmas Bible Quiz</a></li>
                         <li><a href="easter-bible-quiz.html">Easter Bible Quiz</a></li>
                         <li><a href="hard-bible-quiz.html">Hard Bible Quiz</a></li>
-                        <li><a href="old-testament-quiz.html">Old Testament Quiz</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-column">
-                    <h4>Free Resources</h4>
+                    <h4>Resources</h4>
                     <ul class="footer-links">
-                        <li><a href="free-resources.html">Download Free Christian Resources</a></li>
-                        <li><a href="past-quizzes.html">Past Bible Quizzes</a></li>
-                        <li><a href="#quizzes">All Bible Quizzes</a></li>
-                        <li><a href="#faq">Bible Quiz FAQ</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-column">
-                    <h4>Connect With Us</h4>
-                    <ul class="footer-links">
-                        <li><a href="https://pinterest.com/biblequizdaily" target="_blank" rel="noopener">Pinterest - Bible Quizzes</a></li>
-                        <li><a href="https://instagram.com/biblequizdaily" target="_blank" rel="noopener">Instagram - Daily Bible Trivia</a></li>
-                        <li><a href="/cdn-cgi/l/email-protection#b8d0ddd4d4d7f8dad1dad4ddc9cdd1c2dcd9d1d4c196dbd7d5">Contact Us</a></li>
+                        <li><a href="free-resources.html">Free Bible Resources</a></li>
+                        <li><a href="old-testament-quiz.html">Old Testament</a></li>
+                        <li><a href="new-testament-quiz.html">New Testament</a></li>
+                        <li><a href="#faq">FAQ</a></li>
                     </ul>
                 </div>
             </div>
             
             <div class="footer-bottom">
-                <p>&copy; 2025 BibleQuizDaily.com • Free Bible Quiz Questions & Answers • All Rights Reserved • Made with ❤️ for Bible learners everywhere</p>
+                <p>&copy; 2026 BibleQuizDaily.com • Free Bible Quiz Questions & Answers • Made with ❤️ for Bible learners everywhere</p>
             </div>
         </div>
     </footer>
 
-    <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    <script>
         function toggleFAQ(element) {
             const answer = element.nextElementSibling;
             const icon = element.querySelector('.faq-icon');
@@ -767,4 +929,11 @@
             });
             document.querySelectorAll('.faq-icon').forEach(i => {
                 if (i !== icon) i.classList.remove('open');
-  
+            });
+            
+            answer.classList.toggle('open');
+            icon.classList.toggle('open');
+        }
+    </script>
+</body>
+</html>
