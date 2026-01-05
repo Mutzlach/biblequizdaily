@@ -157,6 +157,16 @@
         .explanation-text {
             color: #636e72;
             line-height: 1.6;
+            margin-bottom: 10px;
+        }
+        
+        .scripture-text {
+            background: #fff;
+            padding: 15px;
+            border-radius: 8px;
+            font-style: italic;
+            color: #495057;
+            margin-top: 10px;
         }
         
         .reference {
@@ -372,7 +382,9 @@
         </div>
     </div>
 
-    <!-- Load the specific quiz file based on category -->
+    <!-- Load questions.js for OLD quizzes -->
+    <script src="questions.js"></script>
+    
     <script id="quizScript"></script>
     
     <script>
@@ -380,21 +392,44 @@
         const urlParams = new URLSearchParams(window.location.search);
         const category = urlParams.get('category');
         
-        // Quiz configuration
-        const quizConfig = {
+        // NEW quiz configuration (individual JS files)
+        const newQuizConfig = {
             'genesis': { file: 'genesis-quiz.js', title: 'Genesis Quiz', variable: 'genesisQuestions' },
             'miracles-of-jesus': { file: 'miracles-of-jesus-quiz.js', title: 'Miracles of Jesus Quiz', variable: 'miraclesOfJesusQuestions' },
-            'parables': { file: 'parables-quiz.js', title: 'Parables Quiz', variable: 'parablesQuestions' },
             'anxiety-bible': { file: 'anxiety-bible-quiz.js', title: 'Anxiety Bible Quiz', variable: 'anxietyBibleQuestions' },
-            'moses': { file: 'moses-quiz.js', title: 'Moses Quiz', variable: 'mosesQuestions' },
-            'psalms-proverbs': { file: 'psalms-proverbs-quiz.js', title: 'Psalms & Proverbs Quiz', variable: 'psalmsPro­verbsQuestions' }
+            'moses': { file: 'moses-quiz.js', title: 'Moses Quiz', variable: 'mosesQuestions' }
         };
         
-        if (!category || !quizConfig[category]) {
+        // OLD quiz configuration (from questions.js)
+        const oldQuizConfig = {
+            'old-testament': 'Old Testament Quiz',
+            'new-testament': 'New Testament Quiz',
+            'jesus-life': 'Life of Jesus Quiz',
+            'prophets': 'Prophets Quiz',
+            'psalms-proverbs': 'Psalms & Proverbs Quiz',
+            'bible-knowledge': 'Bible Knowledge Quiz',
+            'women-of-the-bible': 'Women of the Bible Quiz',
+            'miracles': 'Miracles & Wonders Quiz',
+            'parables': 'Parables Quiz',
+            'easter': 'Easter Bible Quiz',
+            'christmas': 'Christmas Bible Quiz',
+            'kids': 'Kids Bible Quiz',
+            'easy': 'Easy Bible Quiz',
+            'hard': 'Hard Bible Quiz'
+        };
+        
+        if (!category) {
+            showError('No quiz selected! Redirecting to homepage...');
+            setTimeout(() => window.location.href = 'index.html', 2000);
+        } else if (newQuizConfig[category]) {
+            // Load NEW quiz system
+            loadNewQuiz(category);
+        } else if (oldQuizConfig[category]) {
+            // Load OLD quiz system
+            loadOldQuiz(category);
+        } else {
             showError('Quiz not found! Redirecting to homepage...');
             setTimeout(() => window.location.href = 'index.html', 2000);
-        } else {
-            loadQuiz(category);
         }
         
         function showError(message) {
@@ -404,53 +439,65 @@
             errorDiv.classList.remove('hidden');
         }
         
-        function loadQuiz(category) {
-            const config = quizConfig[category];
+        // ========== NEW QUIZ SYSTEM ==========
+        function loadNewQuiz(category) {
+            const config = newQuizConfig[category];
             
-            // Load the quiz JavaScript file
             const script = document.createElement('script');
             script.src = config.file;
             script.onload = () => {
-                // Wait a moment for the variable to be defined
                 setTimeout(() => {
                     try {
                         const questions = window[config.variable];
                         if (!questions || !Array.isArray(questions) || questions.length === 0) {
-                            throw new Error('Questions not found or invalid');
+                            throw new Error('Questions not found');
                         }
-                        startQuiz(questions, config.title);
+                        startNewQuiz(questions, config.title);
                     } catch (e) {
-                        console.error('Error loading quiz:', e);
-                        showError('Error loading quiz questions. Please refresh the page or try another quiz.');
+                        console.error('Error loading new quiz:', e);
+                        showError('Error loading quiz. Please refresh and try again.');
                     }
                 }, 100);
             };
-            script.onerror = () => {
-                console.error('Failed to load quiz file:', config.file);
-                showError('Failed to load quiz file. Please check your internet connection and try again.');
-            };
-            
+            script.onerror = () => showError('Failed to load quiz file.');
             document.body.appendChild(script);
         }
         
-        function startQuiz(questions, title) {
+        function startNewQuiz(questions, title) {
             document.getElementById('loadingMessage').classList.add('hidden');
             document.getElementById('quizHeader').classList.remove('hidden');
             document.getElementById('questionSection').classList.remove('hidden');
             
-            new BibleQuiz(questions, title);
+            new NewBibleQuiz(questions, title);
         }
         
-        // ==================== QUIZ ENGINE ====================
-        class BibleQuiz {
+        // ========== OLD QUIZ SYSTEM ==========
+        function loadOldQuiz(category) {
+            setTimeout(() => {
+                if (!window.quizQuestions || !window.quizQuestions[category]) {
+                    showError('Quiz questions not found. Please refresh the page.');
+                    return;
+                }
+                
+                const questions = window.quizQuestions[category];
+                const title = oldQuizConfig[category];
+                
+                document.getElementById('loadingMessage').classList.add('hidden');
+                document.getElementById('quizHeader').classList.remove('hidden');
+                document.getElementById('questionSection').classList.remove('hidden');
+                
+                new OldBibleQuiz(questions, title);
+            }, 100);
+        }
+        
+        // ==================== NEW QUIZ ENGINE ====================
+        class NewBibleQuiz {
             constructor(questions, title) {
                 this.questions = questions;
                 this.title = title;
                 this.currentQuestionIndex = 0;
                 this.score = 0;
-                this.answeredQuestions = 0;
                 this.selectedAnswer = null;
-                
                 this.init();
             }
             
@@ -484,7 +531,6 @@
                 
                 document.getElementById('feedbackSection').classList.add('hidden');
                 document.getElementById('nextBtn').classList.add('hidden');
-                
                 this.selectedAnswer = null;
             }
             
@@ -510,7 +556,6 @@
                     options[question.correct].classList.add('correct');
                 }
                 
-                this.answeredQuestions++;
                 this.showFeedback(question, isCorrect);
                 
                 document.getElementById('nextBtn').classList.remove('hidden');
@@ -521,11 +566,9 @@
                 const feedbackSection = document.getElementById('feedbackSection');
                 feedbackSection.innerHTML = `
                     <div class="explanation">
-                        <div class="explanation-title">
-                            ${isCorrect ? '✅ Correct!' : '❌ Incorrect'}
-                        </div>
+                        <div class="explanation-title">${isCorrect ? '✅ Correct!' : '❌ Incorrect'}</div>
                         <div class="explanation-text">${question.explanation}</div>
-                        <div class="reference">📖 Reference: ${question.reference}</div>
+                        <div class="reference">📖 ${question.reference}</div>
                     </div>
                 `;
                 feedbackSection.classList.remove('hidden');
@@ -533,7 +576,6 @@
             
             nextQuestion() {
                 this.currentQuestionIndex++;
-                
                 if (this.currentQuestionIndex < this.questions.length) {
                     this.loadQuestion();
                 } else {
@@ -554,18 +596,136 @@
                 document.getElementById('incorrectCount').textContent = incorrect;
                 document.getElementById('accuracyPercent').textContent = percentage + '%';
                 
-                let message = '';
-                if (percentage >= 90) {
-                    message = 'Outstanding! You have excellent Bible knowledge! 🌟';
-                } else if (percentage >= 80) {
-                    message = 'Great job! You know your Scripture well! 📖';
-                } else if (percentage >= 70) {
-                    message = 'Good work! Keep studying God\'s Word! ✝️';
-                } else if (percentage >= 60) {
-                    message = 'Not bad! There\'s room to grow in your knowledge! 📚';
-                } else {
-                    message = 'Keep studying! God\'s Word is a treasure! 💎';
+                let message = percentage >= 90 ? 'Outstanding! You have excellent Bible knowledge! 🌟' :
+                              percentage >= 80 ? 'Great job! You know your Scripture well! 📖' :
+                              percentage >= 70 ? 'Good work! Keep studying God\'s Word! ✝️' :
+                              percentage >= 60 ? 'Not bad! There\'s room to grow! 📚' :
+                              'Keep studying! God\'s Word is a treasure! 💎';
+                
+                document.getElementById('resultsMessage').textContent = message;
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'quiz_complete', {
+                        'quiz_category': category,
+                        'score': percentage,
+                        'correct_answers': this.score,
+                        'total_questions': this.questions.length
+                    });
                 }
+            }
+        }
+        
+        // ==================== OLD QUIZ ENGINE ====================
+        class OldBibleQuiz {
+            constructor(questions, title) {
+                this.questions = questions;
+                this.title = title;
+                this.currentQuestionIndex = 0;
+                this.score = 0;
+                this.selectedAnswer = null;
+                this.init();
+            }
+            
+            init() {
+                document.getElementById('quizTitle').textContent = this.title;
+                document.getElementById('totalQuestions').textContent = this.questions.length;
+                this.loadQuestion();
+            }
+            
+            loadQuestion() {
+                const question = this.questions[this.currentQuestionIndex];
+                const questionNumber = this.currentQuestionIndex + 1;
+                
+                document.getElementById('currentQuestion').textContent = questionNumber;
+                document.getElementById('questionNumber').textContent = `Question ${questionNumber}`;
+                document.getElementById('questionText').textContent = question.question;
+                
+                const progress = (questionNumber / this.questions.length) * 100;
+                document.getElementById('progressFill').style.width = progress + '%';
+                
+                const optionsContainer = document.getElementById('optionsContainer');
+                optionsContainer.innerHTML = '';
+                
+                question.answers.forEach((option, index) => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'option';
+                    optionDiv.textContent = option;
+                    optionDiv.onclick = () => this.selectAnswer(index);
+                    optionsContainer.appendChild(optionDiv);
+                });
+                
+                document.getElementById('feedbackSection').classList.add('hidden');
+                document.getElementById('nextBtn').classList.add('hidden');
+                this.selectedAnswer = null;
+            }
+            
+            selectAnswer(answerIndex) {
+                if (this.selectedAnswer !== null) return;
+                
+                this.selectedAnswer = answerIndex;
+                const question = this.questions[this.currentQuestionIndex];
+                const options = document.querySelectorAll('.option');
+                
+                options.forEach(opt => opt.classList.add('disabled'));
+                options[answerIndex].classList.add('selected');
+                
+                const isCorrect = answerIndex === question.correct;
+                
+                if (isCorrect) {
+                    options[answerIndex].classList.remove('selected');
+                    options[answerIndex].classList.add('correct');
+                    this.score++;
+                } else {
+                    options[answerIndex].classList.remove('selected');
+                    options[answerIndex].classList.add('incorrect');
+                    options[question.correct].classList.add('correct');
+                }
+                
+                this.showFeedback(question, isCorrect);
+                
+                document.getElementById('nextBtn').classList.remove('hidden');
+                document.getElementById('nextBtn').onclick = () => this.nextQuestion();
+            }
+            
+            showFeedback(question, isCorrect) {
+                const feedbackSection = document.getElementById('feedbackSection');
+                feedbackSection.innerHTML = `
+                    <div class="explanation">
+                        <div class="explanation-title">${isCorrect ? '✅ Correct!' : '❌ Incorrect'}</div>
+                        ${question.scripture ? `<div class="scripture-text">"${question.scripture}"</div>` : ''}
+                        <div class="reference">📖 ${question.reference}</div>
+                    </div>
+                `;
+                feedbackSection.classList.remove('hidden');
+            }
+            
+            nextQuestion() {
+                this.currentQuestionIndex++;
+                if (this.currentQuestionIndex < this.questions.length) {
+                    this.loadQuestion();
+                } else {
+                    this.showResults();
+                }
+            }
+            
+            showResults() {
+                document.getElementById('questionSection').classList.add('hidden');
+                document.getElementById('quizHeader').classList.add('hidden');
+                document.getElementById('resultsSection').classList.remove('hidden');
+                
+                const percentage = Math.round((this.score / this.questions.length) * 100);
+                const incorrect = this.questions.length - this.score;
+                
+                document.getElementById('scoreText').textContent = percentage + '%';
+                document.getElementById('correctCount').textContent = this.score;
+                document.getElementById('incorrectCount').textContent = incorrect;
+                document.getElementById('accuracyPercent').textContent = percentage + '%';
+                
+                let message = percentage >= 90 ? 'Outstanding! You have excellent Bible knowledge! 🌟' :
+                              percentage >= 80 ? 'Great job! You know your Scripture well! 📖' :
+                              percentage >= 70 ? 'Good work! Keep studying God\'s Word! ✝️' :
+                              percentage >= 60 ? 'Not bad! There\'s room to grow! 📚' :
+                              'Keep studying! God\'s Word is a treasure! 💎';
                 
                 document.getElementById('resultsMessage').textContent = message;
                 
