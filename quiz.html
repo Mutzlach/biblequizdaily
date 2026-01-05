@@ -351,13 +351,13 @@
 
     <script type="module">
         // ==================== QUIZ DATA IMPORTS ====================
-        // Import all quiz question files
-        import genesisQuestions from './data/genesis-quiz.js';
-        import miraclesOfJesusQuestions from './data/miracles-of-jesus-quiz.js';
-        import parablesQuestions from './data/parables-quiz.js';
-        import anxietyBibleQuestions from './data/anxiety-bible-quiz.js';
-        import mosesQuestions from './data/moses-quiz.js';
-        import psalmsPro­verbsQuestions from './data/psalms-proverbs-quiz.js';
+        // FIXED: Import from ROOT folder (no ./data/ prefix)
+        import genesisQuestions from './genesis-quiz.js';
+        import miraclesOfJesusQuestions from './miracles-of-jesus-quiz.js';
+        import parablesQuestions from './parables-quiz.js';
+        import anxietyBibleQuestions from './anxiety-bible-quiz.js';
+        import mosesQuestions from './moses-quiz.js';
+        import psalmsPro­verbsQuestions from './psalms-proverbs-quiz.js';
 
         // Create the quiz category mapping
         const quizCategories = {
