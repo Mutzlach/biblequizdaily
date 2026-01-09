@@ -22,7 +22,6 @@
     <link rel="stylesheet" href="biblequiz-gamification.css">
     <script src="biblequiz-gamification.js"></script>
     <script src="biblequiz-ui.js"></script>
-    <script src="biblequiz-auto-gamification.js"></script>
     
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -777,12 +776,22 @@
         (function() {
             console.log('🎮 Integrating Gamification...');
             
-            // Store original classes
-            const OriginalNewQuiz = window.NewBibleQuiz;
-            const OriginalOldQuiz = window.OldBibleQuiz;
-            
-            // Enhanced NEW Quiz Class
-            window.NewBibleQuiz = class extends OriginalNewQuiz {
+            // Wait for quiz classes to be defined
+            function enhanceClasses() {
+                // Store original classes (only if they exist)
+                const OriginalNewQuiz = window.NewBibleQuiz;
+                const OriginalOldQuiz = window.OldBibleQuiz;
+                
+                // Only enhance if classes exist
+                if (!OriginalNewQuiz && !OriginalOldQuiz) {
+                    console.log('⏳ Waiting for quiz classes...');
+                    setTimeout(enhanceClasses, 100);
+                    return;
+                }
+                
+                // Enhanced NEW Quiz Class
+                if (OriginalNewQuiz) {
+                    window.NewBibleQuiz = class extends OriginalNewQuiz {
                 constructor(questions, title) {
                     super(questions, title);
                     this.startTime = Date.now();
@@ -913,9 +922,11 @@
                     }
                 }
             };
+                }
             
-            // Enhanced OLD Quiz Class  
-            window.OldBibleQuiz = class extends OriginalOldQuiz {
+            // Enhanced OLD Quiz Class
+            if (OriginalOldQuiz) {  
+                window.OldBibleQuiz = class extends OriginalOldQuiz {
                 constructor(questions, title) {
                     super(questions, title);
                     this.startTime = Date.now();
@@ -1046,8 +1057,13 @@
                     }
                 }
             };
+            }
             
             console.log('✅ Gamification integration complete!');
+        }
+        
+        // Start enhancement
+        enhanceClasses();
         })();
     </script>
 </body>
