@@ -17,6 +17,13 @@
     </script>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+    
+    <!-- GAMIFICATION SYSTEM -->
+    <link rel="stylesheet" href="biblequiz-gamification.css">
+    <script src="biblequiz-gamification.js"></script>
+    <script src="biblequiz-ui.js"></script>
+    <script src="biblequiz-auto-gamification.js"></script>
+    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -498,6 +505,11 @@
                 this.currentQuestionIndex = 0;
                 this.score = 0;
                 this.selectedAnswer = null;
+                
+                // GAMIFICATION: Track quiz start time and streak
+                this.startTime = Date.now();
+                this.correctStreak = 0;
+                
                 this.init();
             }
             
@@ -510,6 +522,23 @@
             loadQuestion() {
                 const question = this.questions[this.currentQuestionIndex];
                 const questionNumber = this.currentQuestionIndex + 1;
+                
+                // GAMIFICATION: Show in-quiz progress
+                const progressHTML = window.BibleQuizUIInstance.createInQuizProgress(
+                    questionNumber,
+                    this.questions.length,
+                    this.score,
+                    this.correctStreak
+                );
+                
+                const questionSection = document.getElementById('questionSection');
+                let progressDiv = document.getElementById('in-quiz-progress');
+                if (!progressDiv) {
+                    progressDiv = document.createElement('div');
+                    progressDiv.id = 'in-quiz-progress';
+                    questionSection.insertBefore(progressDiv, questionSection.firstChild);
+                }
+                progressDiv.innerHTML = progressHTML;
                 
                 document.getElementById('currentQuestion').textContent = questionNumber;
                 document.getElementById('questionNumber').textContent = `Question ${questionNumber}`;
