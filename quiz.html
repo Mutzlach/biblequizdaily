@@ -770,28 +770,23 @@
                 }
             }
         }
-        
-        // ==================== GAMIFICATION INTEGRATION ====================
-        // This runs AFTER quiz classes are defined
+    </script>
+    
+    <!-- GAMIFICATION INTEGRATION - Runs AFTER quiz classes are defined -->
+    <script>
         (function() {
             console.log('🎮 Integrating Gamification...');
             
-            // Wait for quiz classes to be defined
-            function enhanceClasses() {
-                // Store original classes (only if they exist)
+            // Check if classes exist
+            if (!window.NewBibleQuiz && !window.OldBibleQuiz) {
+                console.log('⚠️ No quiz classes found - skipping gamification');
+                return;
+            }
+            
+            // Enhanced NEW Quiz Class
+            if (window.NewBibleQuiz) {
                 const OriginalNewQuiz = window.NewBibleQuiz;
-                const OriginalOldQuiz = window.OldBibleQuiz;
-                
-                // Only enhance if classes exist
-                if (!OriginalNewQuiz && !OriginalOldQuiz) {
-                    console.log('⏳ Waiting for quiz classes...');
-                    setTimeout(enhanceClasses, 100);
-                    return;
-                }
-                
-                // Enhanced NEW Quiz Class
-                if (OriginalNewQuiz) {
-                    window.NewBibleQuiz = class extends OriginalNewQuiz {
+                window.NewBibleQuiz = class extends OriginalNewQuiz {
                 constructor(questions, title) {
                     super(questions, title);
                     this.startTime = Date.now();
@@ -922,10 +917,11 @@
                     }
                 }
             };
-                }
+            }
             
             // Enhanced OLD Quiz Class
-            if (OriginalOldQuiz) {  
+            if (window.OldBibleQuiz) {
+                const OriginalOldQuiz = window.OldBibleQuiz;
                 window.OldBibleQuiz = class extends OriginalOldQuiz {
                 constructor(questions, title) {
                     super(questions, title);
@@ -1060,10 +1056,6 @@
             }
             
             console.log('✅ Gamification integration complete!');
-        }
-        
-        // Start enhancement
-        enhanceClasses();
         })();
     </script>
 </body>
