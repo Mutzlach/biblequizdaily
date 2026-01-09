@@ -335,7 +335,10 @@
             <div id="errorMessage" class="error-message hidden"></div>
             
             <div class="quiz-header hidden" id="quizHeader">
-                <h1 class="quiz-title" id="quizTitle">Bible Quiz</h1>
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 15px;">
+                    <h1 class="quiz-title" id="quizTitle" style="margin: 0;">Bible Quiz</h1>
+                    <a href="index.html" style="background: #6c757d; color: white; padding: 8px 20px; border-radius: 8px; text-decoration: none; font-weight: 600; font-size: 14px;">🏠 Home</a>
+                </div>
                 <div class="quiz-progress">
                     <span id="currentQuestion">0</span> of <span id="totalQuestions">0</span>
                 </div>
@@ -768,6 +771,284 @@
                 }
             }
         }
+        
+        // ==================== GAMIFICATION INTEGRATION ====================
+        // This runs AFTER quiz classes are defined
+        (function() {
+            console.log('🎮 Integrating Gamification...');
+            
+            // Store original classes
+            const OriginalNewQuiz = window.NewBibleQuiz;
+            const OriginalOldQuiz = window.OldBibleQuiz;
+            
+            // Enhanced NEW Quiz Class
+            window.NewBibleQuiz = class extends OriginalNewQuiz {
+                constructor(questions, title) {
+                    super(questions, title);
+                    this.startTime = Date.now();
+                    this.correctStreak = 0;
+                    console.log('✅ NewBibleQuiz enhanced with gamification');
+                }
+                
+                loadQuestion() {
+                    const question = this.questions[this.currentQuestionIndex];
+                    const questionNumber = this.currentQuestionIndex + 1;
+                    
+                    // Show in-quiz progress
+                    if (window.BibleQuizUIInstance) {
+                        const progressHTML = window.BibleQuizUIInstance.createInQuizProgress(
+                            questionNumber,
+                            this.questions.length,
+                            this.score,
+                            this.correctStreak
+                        );
+                        
+                        const questionSection = document.getElementById('questionSection');
+                        let progressDiv = document.getElementById('in-quiz-progress');
+                        if (!progressDiv) {
+                            progressDiv = document.createElement('div');
+                            progressDiv.id = 'in-quiz-progress';
+                            questionSection.insertBefore(progressDiv, questionSection.firstChild);
+                        }
+                        progressDiv.innerHTML = progressHTML;
+                    }
+                    
+                    // Call original loadQuestion
+                    document.getElementById('currentQuestion').textContent = questionNumber;
+                    document.getElementById('questionNumber').textContent = `Question ${questionNumber}`;
+                    document.getElementById('questionText').textContent = question.question;
+                    
+                    const progress = (questionNumber / this.questions.length) * 100;
+                    document.getElementById('progressFill').style.width = progress + '%';
+                    
+                    const optionsContainer = document.getElementById('optionsContainer');
+                    optionsContainer.innerHTML = '';
+                    
+                    question.options.forEach((option, index) => {
+                        const optionDiv = document.createElement('div');
+                        optionDiv.className = 'option';
+                        optionDiv.textContent = option;
+                        optionDiv.onclick = () => this.selectAnswer(index);
+                        optionsContainer.appendChild(optionDiv);
+                    });
+                    
+                    document.getElementById('feedbackSection').classList.add('hidden');
+                    document.getElementById('nextBtn').classList.add('hidden');
+                    this.selectedAnswer = null;
+                }
+                
+                selectAnswer(answerIndex) {
+                    if (this.selectedAnswer !== null) return;
+                    
+                    this.selectedAnswer = answerIndex;
+                    const question = this.questions[this.currentQuestionIndex];
+                    const options = document.querySelectorAll('.option');
+                    
+                    options.forEach(opt => opt.classList.add('disabled'));
+                    options[answerIndex].classList.add('selected');
+                    
+                    const isCorrect = answerIndex === question.correct;
+                    
+                    if (isCorrect) {
+                        options[answerIndex].classList.remove('selected');
+                        options[answerIndex].classList.add('correct');
+                        this.score++;
+                        this.correctStreak++;
+                        
+                        // Show streak message
+                        if (this.correctStreak >= 3 && window.BibleQuizUIInstance) {
+                            const message = window.BibleQuizUIInstance.getEncouragementMessage(
+                                this.currentQuestionIndex + 1,
+                                this.questions.length,
+                                this.score,
+                                this.correctStreak
+                            );
+                            
+                            if (message) {
+                                const popup = document.createElement('div');
+                                popup.style.cssText = `
+                                    position: fixed; top: 20px; right: 20px;
+                                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                                    color: white; padding: 15px 25px; border-radius: 12px;
+                                    font-weight: 700; font-size: 16px; z-index: 9999;
+                                    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                                `;
+                                popup.textContent = message;
+                                document.body.appendChild(popup);
+                                setTimeout(() => popup.remove(), 3000);
+                            }
+                        }
+                    } else {
+                        options[answerIndex].classList.remove('selected');
+                        options[answerIndex].classList.add('incorrect');
+                        options[question.correct].classList.add('correct');
+                        this.correctStreak = 0;
+                    }
+                    
+                    this.showFeedback(question, isCorrect);
+                    document.getElementById('nextBtn').classList.remove('hidden');
+                    document.getElementById('nextBtn').onclick = () => this.nextQuestion();
+                }
+                
+                showResults() {
+                    document.getElementById('questionSection').classList.add('hidden');
+                    document.getElementById('quizHeader').classList.add('hidden');
+                    
+                    const timeInSeconds = Math.floor((Date.now() - this.startTime) / 1000);
+                    const quizName = category || 'bible';
+                    
+                    const resultsSection = document.getElementById('resultsSection');
+                    if (window.BibleQuizUIInstance) {
+                        resultsSection.innerHTML = window.BibleQuizUIInstance.createEnhancedResults(
+                            quizName, this.score, this.questions.length, timeInSeconds
+                        );
+                    }
+                    resultsSection.classList.remove('hidden');
+                    
+                    if (typeof gtag !== 'undefined') {
+                        gtag('event', 'quiz_complete', {
+                            'quiz_category': quizName,
+                            'score': Math.round((this.score / this.questions.length) * 100)
+                        });
+                    }
+                }
+            };
+            
+            // Enhanced OLD Quiz Class  
+            window.OldBibleQuiz = class extends OriginalOldQuiz {
+                constructor(questions, title) {
+                    super(questions, title);
+                    this.startTime = Date.now();
+                    this.correctStreak = 0;
+                    console.log('✅ OldBibleQuiz enhanced with gamification');
+                }
+                
+                loadQuestion() {
+                    const question = this.questions[this.currentQuestionIndex];
+                    const questionNumber = this.currentQuestionIndex + 1;
+                    
+                    // Show in-quiz progress
+                    if (window.BibleQuizUIInstance) {
+                        const progressHTML = window.BibleQuizUIInstance.createInQuizProgress(
+                            questionNumber,
+                            this.questions.length,
+                            this.score,
+                            this.correctStreak
+                        );
+                        
+                        const questionSection = document.getElementById('questionSection');
+                        let progressDiv = document.getElementById('in-quiz-progress');
+                        if (!progressDiv) {
+                            progressDiv = document.createElement('div');
+                            progressDiv.id = 'in-quiz-progress';
+                            questionSection.insertBefore(progressDiv, questionSection.firstChild);
+                        }
+                        progressDiv.innerHTML = progressHTML;
+                    }
+                    
+                    // Original loadQuestion
+                    document.getElementById('currentQuestion').textContent = questionNumber;
+                    document.getElementById('questionNumber').textContent = `Question ${questionNumber}`;
+                    document.getElementById('questionText').textContent = question.question;
+                    
+                    const progress = (questionNumber / this.questions.length) * 100;
+                    document.getElementById('progressFill').style.width = progress + '%';
+                    
+                    const optionsContainer = document.getElementById('optionsContainer');
+                    optionsContainer.innerHTML = '';
+                    
+                    question.answers.forEach((option, index) => {
+                        const optionDiv = document.createElement('div');
+                        optionDiv.className = 'option';
+                        optionDiv.textContent = option;
+                        optionDiv.onclick = () => this.selectAnswer(index);
+                        optionsContainer.appendChild(optionDiv);
+                    });
+                    
+                    document.getElementById('feedbackSection').classList.add('hidden');
+                    document.getElementById('nextBtn').classList.add('hidden');
+                    this.selectedAnswer = null;
+                }
+                
+                selectAnswer(answerIndex) {
+                    if (this.selectedAnswer !== null) return;
+                    
+                    this.selectedAnswer = answerIndex;
+                    const question = this.questions[this.currentQuestionIndex];
+                    const options = document.querySelectorAll('.option');
+                    
+                    options.forEach(opt => opt.classList.add('disabled'));
+                    options[answerIndex].classList.add('selected');
+                    
+                    const isCorrect = answerIndex === question.correct;
+                    
+                    if (isCorrect) {
+                        options[answerIndex].classList.remove('selected');
+                        options[answerIndex].classList.add('correct');
+                        this.score++;
+                        this.correctStreak++;
+                        
+                        if (this.correctStreak >= 3 && window.BibleQuizUIInstance) {
+                            const message = window.BibleQuizUIInstance.getEncouragementMessage(
+                                this.currentQuestionIndex + 1,
+                                this.questions.length,
+                                this.score,
+                                this.correctStreak
+                            );
+                            
+                            if (message) {
+                                const popup = document.createElement('div');
+                                popup.style.cssText = `
+                                    position: fixed; top: 20px; right: 20px;
+                                    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+                                    color: white; padding: 15px 25px; border-radius: 12px;
+                                    font-weight: 700; font-size: 16px; z-index: 9999;
+                                    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+                                `;
+                                popup.textContent = message;
+                                document.body.appendChild(popup);
+                                setTimeout(() => popup.remove(), 3000);
+                            }
+                        }
+                    } else {
+                        options[answerIndex].classList.remove('selected');
+                        options[answerIndex].classList.add('incorrect');
+                        options[question.correct].classList.add('correct');
+                        this.correctStreak = 0;
+                    }
+                    
+                    this.showFeedback(question, isCorrect);
+                    document.getElementById('nextBtn').classList.remove('hidden');
+                    document.getElementById('nextBtn').onclick = () => this.nextQuestion();
+                }
+                
+                showResults() {
+                    document.getElementById('questionSection').classList.add('hidden');
+                    document.getElementById('quizHeader').classList.add('hidden');
+                    
+                    const timeInSeconds = Math.floor((Date.now() - this.startTime) / 1000);
+                    const quizName = category || 'bible';
+                    
+                    const resultsSection = document.getElementById('resultsSection');
+                    if (window.BibleQuizUIInstance) {
+                        resultsSection.innerHTML = window.BibleQuizUIInstance.createEnhancedResults(
+                            quizName, this.score, this.questions.length, timeInSeconds
+                        );
+                    }
+                    resultsSection.classList.remove('hidden');
+                    
+                    if (typeof gtag !== 'undefined') {
+                        const cat = new URLSearchParams(window.location.search).get('category');
+                        gtag('event', 'quiz_complete', {
+                            'quiz_category': cat,
+                            'score': Math.round((this.score / this.questions.length) * 100)
+                        });
+                    }
+                }
+            };
+            
+            console.log('✅ Gamification integration complete!');
+        })();
     </script>
 </body>
 </html>

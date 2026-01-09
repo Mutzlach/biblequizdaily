@@ -483,6 +483,9 @@
             </div>
         </div>
 
+        <!-- PERSONAL PROGRESS DASHBOARD -->
+        <div id="progress-dashboard-container"></div>
+
         <!-- NEW QUIZZES HIGHLIGHT -->
         <div class="new-quizzes-banner" id="new-quizzes">
             <h2>🆕 <span>Just Added - New Bible Quizzes!</span></h2>
@@ -946,6 +949,25 @@
             answer.classList.toggle('open');
             icon.classList.toggle('open');
         }
+    </script>
+    
+    <!-- GAMIFICATION: Populate Dashboard -->
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+        // Wait for gamification systems to load
+        function loadDashboard() {
+            if (typeof window.BibleQuizUIInstance !== 'undefined' && typeof window.BibleQuizGame !== 'undefined') {
+                const container = document.getElementById('progress-dashboard-container');
+                if (container) {
+                    container.innerHTML = window.BibleQuizUIInstance.createProgressDashboard();
+                    console.log('✅ Homepage dashboard loaded!');
+                }
+            } else {
+                setTimeout(loadDashboard, 100);
+            }
+        }
+        loadDashboard();
+    });
     </script>
 </body>
 </html>
