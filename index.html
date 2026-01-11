@@ -26,13 +26,6 @@
     </script>
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
-    
-    <!-- GAMIFICATION SYSTEM -->
-    <link rel="stylesheet" href="biblequiz-gamification.css">
-    <script src="biblequiz-gamification.js"></script>
-    <script src="biblequiz-ui.js"></script>
-    <script src="biblequiz-auto-gamification.js"></script>
-    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -451,8 +444,6 @@
                 <li><a href="#new-testament">New Testament</a></li>
                 <li><a href="#special-topics">Topics</a></li>
                 <li><a href="free-resources.html">Free Resources</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="contact.html">Contact</a></li>
             </ul>
         </nav>
     </header>
@@ -482,9 +473,6 @@
                 <div class="stat-label">Signup Required</div>
             </div>
         </div>
-
-        <!-- PERSONAL PROGRESS DASHBOARD -->
-        <div id="progress-dashboard-container"></div>
 
         <!-- NEW QUIZZES HIGHLIGHT -->
         <div class="new-quizzes-banner" id="new-quizzes">
@@ -583,7 +571,7 @@
                     <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
                 </a>
 
-                <a href="quiz.html?category=prophets" class="quiz-card">
+                <a href="prophets-quiz.html" class="quiz-card">
                     <div class="quiz-header">
                         <span class="quiz-icon">🔮</span>
                         <div class="quiz-title-group">
@@ -745,7 +733,7 @@
                     <div class="quiz-cta">Start Peace Quiz <span>→</span></div>
                 </a>
 
-                <a href="women-bible-quiz.html" class="quiz-card">
+                <a href="women-of-the-bible-quiz.html" class="quiz-card">
                     <div class="quiz-header">
                         <span class="quiz-icon">👩</span>
                         <div class="quiz-title-group">
@@ -761,7 +749,7 @@
                     <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
                 </a>
 
-                <a href="quiz.html?category=miracles" class="quiz-card">
+                <a href="miracles-wonders-quiz.html" class="quiz-card">
                     <div class="quiz-header">
                         <span class="quiz-icon">⚡</span>
                         <div class="quiz-title-group">
@@ -921,9 +909,6 @@
                         <li><a href="old-testament-quiz.html">Old Testament</a></li>
                         <li><a href="new-testament-quiz.html">New Testament</a></li>
                         <li><a href="#faq">FAQ</a></li>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
                     </ul>
                 </div>
             </div>
@@ -949,25 +934,6 @@
             answer.classList.toggle('open');
             icon.classList.toggle('open');
         }
-    </script>
-    
-    <!-- GAMIFICATION: Populate Dashboard -->
-    <script>
-    document.addEventListener('DOMContentLoaded', () => {
-        // Wait for gamification systems to load
-        function loadDashboard() {
-            if (typeof window.BibleQuizUIInstance !== 'undefined' && typeof window.BibleQuizGame !== 'undefined') {
-                const container = document.getElementById('progress-dashboard-container');
-                if (container) {
-                    container.innerHTML = window.BibleQuizUIInstance.createProgressDashboard();
-                    console.log('✅ Homepage dashboard loaded!');
-                }
-            } else {
-                setTimeout(loadDashboard, 100);
-            }
-        }
-        loadDashboard();
-    });
     </script>
 </body>
 </html>
