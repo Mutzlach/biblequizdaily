@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Check Test</title>
+</head>
+<body>
+    <h1>Testing File Loads</h1>
+    <div id="results"></div>
+    
+    <script>
+        const files = [
+            'questions.js',
+            'genesis-quiz.js',
+            'moses-quiz.js',
+            'anxiety-bible-quiz.js',
+            'miracles-of-jesus-quiz.js',
+            'parables-quiz.js'
+        ];
+        
+        const results = document.getElementById('results');
+        
+        files.forEach(file => {
+            fetch(file)
+                .then(response => {
+                    if (response.ok) {
+                        results.innerHTML += `<p style="color: green;">✅ ${file} - FOUND</p>`;
+                    } else {
+                        results.innerHTML += `<p style="color: red;">❌ ${file} - NOT FOUND (${response.status})</p>`;
+                    }
+                })
+                .catch(error => {
+                    results.innerHTML += `<p style="color: red;">❌ ${file} - ERROR: ${error.message}</p>`;
+                });
+        });
+    </script>
+</body>
+</html>
