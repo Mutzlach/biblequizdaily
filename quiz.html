@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bible Quiz - BibleQuizDaily.com</title>
-    <meta name="description" content="Take our free interactive Bible quiz! Test your Scripture knowledge with instant feedback and detailed explanations.">
-    <meta name="p:domain_verify" content="ff2dce6f2aa45e6f2689b853350c789a"/>
+    <title>Bible Quiz - Test Your Knowledge</title>
+    <meta name="description" content="Take free Bible quizzes and test your knowledge of Scripture. Multiple categories available.">
     
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRXEYD2W4M"></script>
@@ -18,20 +17,61 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
     
-    
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         
         body {
-            font-family: 'Inter', -apple-system, sans-serif;
+            font-family: 'Inter', sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
+            line-height: 1.6;
+        }
+        
+        header {
+            background: rgba(255,255,255,0.98);
             padding: 20px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .logo {
+            font-family: 'Merriweather', serif;
+            font-size: 24px;
+            font-weight: 900;
+            color: #667eea;
+            text-decoration: none;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        
+        .nav-links a {
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        
+        .nav-links a:hover {
+            color: #667eea;
         }
         
         .container {
             max-width: 900px;
-            margin: 0 auto;
+            margin: 40px auto;
+            padding: 0 20px;
         }
         
         .quiz-card {
@@ -39,7 +79,6 @@
             border-radius: 20px;
             padding: 40px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-            margin-bottom: 20px;
         }
         
         .quiz-header {
@@ -55,9 +94,9 @@
         }
         
         .quiz-progress {
-            font-size: 16px;
+            font-size: 18px;
             color: #636e72;
-            font-weight: 600;
+            margin-bottom: 20px;
         }
         
         .progress-bar {
@@ -65,15 +104,15 @@
             height: 8px;
             background: #e1e8ed;
             border-radius: 10px;
-            margin: 20px 0;
             overflow: hidden;
+            margin-bottom: 30px;
         }
         
         .progress-fill {
             height: 100%;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: linear-gradient(90deg, #667eea, #764ba2);
             transition: width 0.3s ease;
-            border-radius: 10px;
+            width: 0%;
         }
         
         .question-section {
@@ -82,40 +121,41 @@
         
         .question-number {
             font-size: 14px;
-            font-weight: 700;
             color: #667eea;
-            margin-bottom: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
         }
         
         .question-text {
-            font-size: 22px;
+            font-size: 24px;
             color: #2d3436;
             font-weight: 600;
-            line-height: 1.5;
-            margin-bottom: 25px;
+            margin-bottom: 30px;
+            line-height: 1.4;
         }
         
-        .options {
+        .options-container {
             display: flex;
             flex-direction: column;
-            gap: 12px;
+            gap: 15px;
         }
         
         .option {
-            padding: 18px 24px;
             background: #f8f9fa;
-            border: 2px solid transparent;
+            padding: 20px;
             border-radius: 12px;
             cursor: pointer;
             transition: all 0.2s;
-            font-size: 16px;
-            font-weight: 500;
-            color: #2d3436;
+            border: 3px solid transparent;
+            font-size: 18px;
         }
         
         .option:hover {
             background: #e9ecef;
             border-color: #667eea;
+            transform: translateX(5px);
         }
         
         .option.selected {
@@ -125,71 +165,68 @@
         }
         
         .option.correct {
-            background: #28a745;
+            background: #51cf66;
             color: white;
-            border-color: #28a745;
+            border-color: #51cf66;
         }
         
         .option.incorrect {
-            background: #dc3545;
+            background: #ff6b6b;
             color: white;
-            border-color: #dc3545;
+            border-color: #ff6b6b;
         }
         
         .option.disabled {
             cursor: not-allowed;
-            opacity: 0.6;
+            opacity: 0.7;
         }
         
-        .explanation {
-            background: #e7f3ff;
+        .feedback-section {
+            margin-top: 20px;
             padding: 20px;
             border-radius: 12px;
-            margin-top: 20px;
-            border-left: 4px solid #667eea;
+            background: #f8f9fa;
         }
         
-        .explanation-title {
+        .feedback-section.correct {
+            background: #d3f9d8;
+            border-left: 4px solid #51cf66;
+        }
+        
+        .feedback-section.incorrect {
+            background: #ffe3e3;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .feedback-title {
             font-weight: 700;
-            color: #2d3436;
-            margin-bottom: 8px;
-            font-size: 16px;
-        }
-        
-        .explanation-text {
-            color: #636e72;
-            line-height: 1.6;
+            font-size: 18px;
             margin-bottom: 10px;
         }
         
-        .scripture-text {
-            background: #fff;
-            padding: 15px;
-            border-radius: 8px;
-            font-style: italic;
+        .feedback-text {
             color: #495057;
-            margin-top: 10px;
+            line-height: 1.6;
         }
         
         .reference {
-            background: #fff3cd;
-            padding: 12px 16px;
-            border-radius: 8px;
-            margin-top: 12px;
-            font-size: 14px;
+            margin-top: 10px;
+            font-style: italic;
+            color: #667eea;
             font-weight: 600;
-            color: #856404;
         }
         
         .btn {
-            padding: 16px 40px;
+            padding: 15px 40px;
             border: none;
-            border-radius: 12px;
+            border-radius: 30px;
             font-size: 18px;
             font-weight: 700;
             cursor: pointer;
             transition: all 0.3s;
             display: inline-block;
+            text-decoration: none;
+            text-align: center;
         }
         
         .btn-primary {
@@ -199,7 +236,7 @@
         
         .btn-primary:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
         }
         
         .btn-secondary {
@@ -214,112 +251,111 @@
         .button-group {
             display: flex;
             gap: 15px;
-            margin-top: 25px;
-            flex-wrap: wrap;
+            justify-content: center;
+            margin-top: 20px;
         }
         
         .results-card {
             text-align: center;
-            padding: 40px;
         }
         
         .score-circle {
             width: 200px;
             height: 200px;
+            margin: 0 auto 30px;
             border-radius: 50%;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
-            margin: 0 auto 30px;
-            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.4);
         }
         
         .score-text {
-            color: white;
-            font-size: 48px;
+            font-size: 60px;
             font-weight: 900;
+            color: white;
         }
         
         .results-title {
             font-family: 'Merriweather', serif;
-            font-size: 32px;
+            font-size: 36px;
             color: #2d3436;
             margin-bottom: 15px;
         }
         
         .results-subtitle {
-            font-size: 18px;
+            font-size: 20px;
             color: #636e72;
-            margin-bottom: 30px;
+            margin-bottom: 40px;
         }
         
         .stats-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            grid-template-columns: repeat(3, 1fr);
             gap: 20px;
-            margin: 30px 0;
+            margin-bottom: 40px;
         }
         
         .stat-item {
             background: #f8f9fa;
-            padding: 20px;
-            border-radius: 12px;
+            padding: 25px;
+            border-radius: 15px;
         }
         
         .stat-number {
             font-size: 36px;
-            font-weight: 900;
+            font-weight: 800;
             color: #667eea;
+            margin-bottom: 5px;
         }
         
         .stat-label {
-            font-size: 14px;
+            font-size: 16px;
             color: #636e72;
-            font-weight: 600;
-        }
-        
-        .hidden {
-            display: none;
         }
         
         .loading {
             text-align: center;
-            padding: 40px;
-            color: #2d3436;
-            font-size: 18px;
+            padding: 60px 20px;
+            font-size: 20px;
+            color: white;
         }
         
         .error-message {
-            background: #f8d7da;
-            color: #721c24;
+            background: #ff6b6b;
+            color: white;
             padding: 20px;
             border-radius: 12px;
-            border-left: 4px solid #dc3545;
+            text-align: center;
             margin: 20px 0;
         }
         
+        .hidden {
+            display: none !important;
+        }
+        
         @media (max-width: 768px) {
-            .quiz-card {
-                padding: 25px;
-            }
-            .quiz-title {
-                font-size: 24px;
-            }
-            .question-text {
-                font-size: 18px;
-            }
-            .score-circle {
-                width: 150px;
-                height: 150px;
-            }
-            .score-text {
-                font-size: 36px;
-            }
+            .quiz-title { font-size: 24px; }
+            .question-text { font-size: 20px; }
+            .stats-grid { grid-template-columns: 1fr; }
+            .button-group { flex-direction: column; }
+            .btn { width: 100%; }
         }
     </style>
 </head>
 <body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">BibleQuizDaily</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+    
     <div class="container">
         <div class="quiz-card">
             <div class="loading" id="loadingMessage">
@@ -345,12 +381,16 @@
                     <div class="question-text" id="questionText"></div>
                 </div>
                 
-                <div class="options" id="optionsContainer"></div>
+                <div class="options-container" id="optionsContainer"></div>
                 
-                <div id="feedbackSection" class="hidden"></div>
+                <div id="feedbackSection" class="feedback-section hidden">
+                    <div class="feedback-title" id="feedbackTitle"></div>
+                    <div class="feedback-text" id="feedbackText"></div>
+                    <div class="reference" id="referenceText"></div>
+                </div>
                 
                 <div class="button-group">
-                    <button class="btn btn-primary hidden" id="nextBtn">Next Question</button>
+                    <button id="nextBtn" class="btn btn-primary hidden">Next Question →</button>
                 </div>
             </div>
             
@@ -376,392 +416,222 @@
                     </div>
                 </div>
                 
-                <div class="button-group" style="justify-content: center;">
+                <div class="button-group">
                     <button class="btn btn-primary" onclick="location.reload()">Retake Quiz</button>
                     <button class="btn btn-secondary" onclick="window.location.href='index.html'">All Quizzes</button>
                 </div>
             </div>
         </div>
     </div>
-
-    <!-- Load questions.js for OLD quizzes -->
+    
     <script src="questions.js"></script>
-    
-    <script id="quizScript"></script>
-    
     <script>
         // Get category from URL
         const urlParams = new URLSearchParams(window.location.search);
         const category = urlParams.get('category');
         
-        // NEW quiz configuration (individual JS files)
-        const newQuizConfig = {
-            'genesis': { file: 'genesis-quiz.js', title: 'Genesis Quiz', variable: 'genesisQuestions' },
-            'miracles-of-jesus': { file: 'miracles-of-jesus-quiz.js', title: 'Miracles of Jesus Quiz', variable: 'miraclesOfJesusQuestions' },
-            'anxiety-bible': { file: 'anxiety-bible-quiz.js', title: 'Anxiety Bible Quiz', variable: 'anxietyBibleQuestions' },
-            'moses': { file: 'moses-quiz.js', title: 'Moses Quiz', variable: 'mosesQuestions' }
+        if (!category) {
+            showError('No quiz category specified. Please select a quiz from the homepage.');
+        }
+        
+        function showError(message) {
+            document.getElementById('loadingMessage').classList.add('hidden');
+            document.getElementById('errorMessage').textContent = message;
+            document.getElementById('errorMessage').classList.remove('hidden');
+        }
+        
+        // Quiz class
+        class BibleQuiz {
+            constructor(questions, title) {
+                this.questions = questions;
+                this.title = title;
+                this.currentQuestionIndex = 0;
+                this.score = 0;
+                this.selectedAnswer = null;
+                
+                this.init();
+            }
+            
+            init() {
+                document.getElementById('loadingMessage').classList.add('hidden');
+                document.getElementById('quizHeader').classList.remove('hidden');
+                document.getElementById('questionSection').classList.remove('hidden');
+                
+                document.getElementById('quizTitle').textContent = this.title;
+                document.getElementById('totalQuestions').textContent = this.questions.length;
+                this.loadQuestion();
+            }
+            
+            loadQuestion() {
+                const question = this.questions[this.currentQuestionIndex];
+                const questionNumber = this.currentQuestionIndex + 1;
+                
+                document.getElementById('currentQuestion').textContent = questionNumber;
+                document.getElementById('questionNumber').textContent = `Question ${questionNumber}`;
+                document.getElementById('questionText').textContent = question.question;
+                
+                const progress = (questionNumber / this.questions.length) * 100;
+                document.getElementById('progressFill').style.width = progress + '%';
+                
+                const optionsContainer = document.getElementById('optionsContainer');
+                optionsContainer.innerHTML = '';
+                
+                const options = question.options || question.answers;
+                options.forEach((option, index) => {
+                    const optionDiv = document.createElement('div');
+                    optionDiv.className = 'option';
+                    optionDiv.textContent = option;
+                    optionDiv.onclick = () => this.selectAnswer(index);
+                    optionsContainer.appendChild(optionDiv);
+                });
+                
+                document.getElementById('feedbackSection').classList.add('hidden');
+                document.getElementById('nextBtn').classList.add('hidden');
+                this.selectedAnswer = null;
+            }
+            
+            selectAnswer(answerIndex) {
+                if (this.selectedAnswer !== null) return;
+                
+                this.selectedAnswer = answerIndex;
+                const question = this.questions[this.currentQuestionIndex];
+                const options = document.querySelectorAll('.option');
+                
+                options.forEach(opt => opt.classList.add('disabled'));
+                options[answerIndex].classList.add('selected');
+                
+                const isCorrect = answerIndex === question.correct;
+                
+                if (isCorrect) {
+                    options[answerIndex].classList.remove('selected');
+                    options[answerIndex].classList.add('correct');
+                    this.score++;
+                } else {
+                    options[answerIndex].classList.remove('selected');
+                    options[answerIndex].classList.add('incorrect');
+                    options[question.correct].classList.add('correct');
+                }
+                
+                this.showFeedback(question, isCorrect);
+                document.getElementById('nextBtn').classList.remove('hidden');
+                document.getElementById('nextBtn').onclick = () => this.nextQuestion();
+            }
+            
+            showFeedback(question, isCorrect) {
+                const feedbackSection = document.getElementById('feedbackSection');
+                feedbackSection.className = 'feedback-section ' + (isCorrect ? 'correct' : 'incorrect');
+                feedbackSection.classList.remove('hidden');
+                
+                document.getElementById('feedbackTitle').textContent = isCorrect ? '✓ Correct!' : '✗ Incorrect';
+                document.getElementById('feedbackText').textContent = question.explanation || '';
+                document.getElementById('referenceText').textContent = question.reference || '';
+            }
+            
+            nextQuestion() {
+                this.currentQuestionIndex++;
+                
+                if (this.currentQuestionIndex < this.questions.length) {
+                    this.loadQuestion();
+                } else {
+                    this.showResults();
+                }
+            }
+            
+            showResults() {
+                document.getElementById('questionSection').classList.add('hidden');
+                document.getElementById('quizHeader').classList.add('hidden');
+                document.getElementById('resultsSection').classList.remove('hidden');
+                
+                const percentage = Math.round((this.score / this.questions.length) * 100);
+                const incorrect = this.questions.length - this.score;
+                
+                document.getElementById('scoreText').textContent = percentage + '%';
+                document.getElementById('correctCount').textContent = this.score;
+                document.getElementById('incorrectCount').textContent = incorrect;
+                document.getElementById('accuracyPercent').textContent = percentage + '%';
+                
+                let message = '';
+                if (percentage >= 90) {
+                    message = 'Outstanding! You have excellent Bible knowledge! 🌟';
+                } else if (percentage >= 80) {
+                    message = 'Great job! You know your Scripture well! 📖';
+                } else if (percentage >= 70) {
+                    message = 'Good work! Keep studying God\'s Word! ✝️';
+                } else if (percentage >= 60) {
+                    message = 'Not bad! There\'s room to grow! 📚';
+                } else {
+                    message = 'Keep studying! God\'s Word is a treasure! 💎';
+                }
+                
+                document.getElementById('resultsMessage').textContent = message;
+                
+                if (typeof gtag !== 'undefined') {
+                    gtag('event', 'quiz_complete', {
+                        'quiz_category': category,
+                        'score': percentage,
+                        'correct_answers': this.score,
+                        'total_questions': this.questions.length
+                    });
+                }
+            }
+        }
+        
+        // NEW quiz files (individual .js files)
+        const newQuizzes = {
+            'genesis': { file: 'genesis-quiz.js', variable: 'genesisQuestions', title: 'Genesis Quiz' },
+            'moses': { file: 'moses-quiz.js', variable: 'mosesQuestions', title: 'Moses Quiz' },
+            'miracles-of-jesus': { file: 'miracles-of-jesus-quiz.js', variable: 'miraclesOfJesusQuestions', title: 'Miracles of Jesus Quiz' },
+            'anxiety-bible': { file: 'anxiety-bible-quiz.js', variable: 'anxietyBibleQuestions', title: 'Anxiety Bible Quiz' },
+            'parables': { file: 'parables-quiz.js', variable: 'parablesQuestions', title: 'Parables Quiz' }
         };
         
-        // OLD quiz configuration (from questions.js)
-        const oldQuizConfig = {
+        // OLD quiz categories (from questions.js)
+        const oldQuizzes = {
             'old-testament': 'Old Testament Quiz',
             'new-testament': 'New Testament Quiz',
             'jesus-life': 'Life of Jesus Quiz',
             'prophets': 'Prophets Quiz',
             'psalms-proverbs': 'Psalms & Proverbs Quiz',
-            'bible-knowledge': 'Bible Knowledge Quiz',
             'women-of-the-bible': 'Women of the Bible Quiz',
-            'miracles': 'Miracles & Wonders Quiz',
-            'parables': 'Parables Quiz',
-            'easter': 'Easter Bible Quiz',
-            'christmas': 'Christmas Bible Quiz',
+            'miracles': 'Miracles Quiz',
+            'christmas': 'Christmas Quiz',
+            'easter': 'Easter Quiz',
             'kids': 'Kids Bible Quiz',
             'easy': 'Easy Bible Quiz',
             'hard': 'Hard Bible Quiz'
         };
         
-        if (!category) {
-            showError('No quiz selected! Redirecting to homepage...');
-            setTimeout(() => window.location.href = 'index.html', 2000);
-        } else if (newQuizConfig[category]) {
-            // Load NEW quiz system
-            loadNewQuiz(category);
-        } else if (oldQuizConfig[category]) {
-            // Load OLD quiz system
-            loadOldQuiz(category);
-        } else {
-            showError('Quiz not found! Redirecting to homepage...');
-            setTimeout(() => window.location.href = 'index.html', 2000);
-        }
-        
-        function showError(message) {
-            document.getElementById('loadingMessage').classList.add('hidden');
-            const errorDiv = document.getElementById('errorMessage');
-            errorDiv.textContent = message;
-            errorDiv.classList.remove('hidden');
-        }
-        
-        // ========== NEW QUIZ SYSTEM ==========
-        function loadNewQuiz(category) {
-            const config = newQuizConfig[category];
-            
+        // Load quiz based on category
+        if (newQuizzes[category]) {
+            // Load new quiz from individual file
+            const config = newQuizzes[category];
             const script = document.createElement('script');
             script.src = config.file;
             script.onload = () => {
                 setTimeout(() => {
-                    try {
-                        const questions = window[config.variable];
-                        if (!questions || !Array.isArray(questions) || questions.length === 0) {
-                            throw new Error('Questions not found');
-                        }
-                        startNewQuiz(questions, config.title);
-                    } catch (e) {
-                        console.error('Error loading new quiz:', e);
-                        showError('Error loading quiz. Please refresh and try again.');
+                    const questions = window[config.variable];
+                    if (questions && questions.length > 0) {
+                        new BibleQuiz(questions, config.title);
+                    } else {
+                        showError('Quiz questions not found. Please try again.');
                     }
                 }, 100);
             };
-            script.onerror = () => showError('Failed to load quiz file.');
+            script.onerror = () => showError('Failed to load quiz. Please try again.');
             document.body.appendChild(script);
-        }
-        
-        function startNewQuiz(questions, title) {
-            document.getElementById('loadingMessage').classList.add('hidden');
-            document.getElementById('quizHeader').classList.remove('hidden');
-            document.getElementById('questionSection').classList.remove('hidden');
             
-            new NewBibleQuiz(questions, title);
-        }
-        
-        // ========== OLD QUIZ SYSTEM ==========
-        function loadOldQuiz(category) {
+        } else if (oldQuizzes[category]) {
+            // Load old quiz from questions.js
             setTimeout(() => {
-                if (!window.quizQuestions || !window.quizQuestions[category]) {
-                    showError('Quiz questions not found. Please refresh the page.');
-                    return;
+                if (window.quizQuestions && window.quizQuestions[category]) {
+                    new BibleQuiz(window.quizQuestions[category], oldQuizzes[category]);
+                } else {
+                    showError('Quiz not found. Please select a valid quiz.');
                 }
-                
-                const questions = window.quizQuestions[category];
-                const title = oldQuizConfig[category];
-                
-                document.getElementById('loadingMessage').classList.add('hidden');
-                document.getElementById('quizHeader').classList.remove('hidden');
-                document.getElementById('questionSection').classList.remove('hidden');
-                
-                new OldBibleQuiz(questions, title);
             }, 100);
-        }
-        
-        // ==================== NEW QUIZ ENGINE ====================
-        class NewBibleQuiz {
-            constructor(questions, title) {
-                this.questions = questions;
-                this.title = title;
-                this.currentQuestionIndex = 0;
-                this.score = 0;
-                this.selectedAnswer = null;
-                
-                // GAMIFICATION: Track quiz start time and streak
-                this.startTime = Date.now();
-                this.correctStreak = 0;
-                
-                this.init();
-            }
             
-            init() {
-                document.getElementById('quizTitle').textContent = this.title;
-                document.getElementById('totalQuestions').textContent = this.questions.length;
-                this.loadQuestion();
-            }
-            
-            loadQuestion() {
-                const question = this.questions[this.currentQuestionIndex];
-                const questionNumber = this.currentQuestionIndex + 1;
-                
-                // GAMIFICATION: Show in-quiz progress
-                const progressHTML = window.BibleQuizUIInstance.createInQuizProgress(
-                    questionNumber,
-                    this.questions.length,
-                    this.score,
-                    this.correctStreak
-                );
-                
-                const questionSection = document.getElementById('questionSection');
-                let progressDiv = document.getElementById('in-quiz-progress');
-                if (!progressDiv) {
-                    progressDiv = document.createElement('div');
-                    progressDiv.id = 'in-quiz-progress';
-                    questionSection.insertBefore(progressDiv, questionSection.firstChild);
-                }
-                progressDiv.innerHTML = progressHTML;
-                
-                document.getElementById('currentQuestion').textContent = questionNumber;
-                document.getElementById('questionNumber').textContent = `Question ${questionNumber}`;
-                document.getElementById('questionText').textContent = question.question;
-                
-                const progress = (questionNumber / this.questions.length) * 100;
-                document.getElementById('progressFill').style.width = progress + '%';
-                
-                const optionsContainer = document.getElementById('optionsContainer');
-                optionsContainer.innerHTML = '';
-                
-                question.options.forEach((option, index) => {
-                    const optionDiv = document.createElement('div');
-                    optionDiv.className = 'option';
-                    optionDiv.textContent = option;
-                    optionDiv.onclick = () => this.selectAnswer(index);
-                    optionsContainer.appendChild(optionDiv);
-                });
-                
-                document.getElementById('feedbackSection').classList.add('hidden');
-                document.getElementById('nextBtn').classList.add('hidden');
-                this.selectedAnswer = null;
-            }
-            
-            selectAnswer(answerIndex) {
-                if (this.selectedAnswer !== null) return;
-                
-                this.selectedAnswer = answerIndex;
-                const question = this.questions[this.currentQuestionIndex];
-                const options = document.querySelectorAll('.option');
-                
-                options.forEach(opt => opt.classList.add('disabled'));
-                options[answerIndex].classList.add('selected');
-                
-                const isCorrect = answerIndex === question.correct;
-                
-                if (isCorrect) {
-                    options[answerIndex].classList.remove('selected');
-                    options[answerIndex].classList.add('correct');
-                    this.score++;
-                } else {
-                    options[answerIndex].classList.remove('selected');
-                    options[answerIndex].classList.add('incorrect');
-                    options[question.correct].classList.add('correct');
-                }
-                
-                this.showFeedback(question, isCorrect);
-                
-                document.getElementById('nextBtn').classList.remove('hidden');
-                document.getElementById('nextBtn').onclick = () => this.nextQuestion();
-            }
-            
-            showFeedback(question, isCorrect) {
-                const feedbackSection = document.getElementById('feedbackSection');
-                feedbackSection.innerHTML = `
-                    <div class="explanation">
-                        <div class="explanation-title">${isCorrect ? '✅ Correct!' : '❌ Incorrect'}</div>
-                        <div class="explanation-text">${question.explanation}</div>
-                        <div class="reference">📖 ${question.reference}</div>
-                    </div>
-                `;
-                feedbackSection.classList.remove('hidden');
-            }
-            
-            nextQuestion() {
-                this.currentQuestionIndex++;
-                if (this.currentQuestionIndex < this.questions.length) {
-                    this.loadQuestion();
-                } else {
-                    this.showResults();
-                }
-            }
-            
-            showResults() {
-                document.getElementById('questionSection').classList.add('hidden');
-                document.getElementById('quizHeader').classList.add('hidden');
-                document.getElementById('resultsSection').classList.remove('hidden');
-                
-                const percentage = Math.round((this.score / this.questions.length) * 100);
-                const incorrect = this.questions.length - this.score;
-                
-                document.getElementById('scoreText').textContent = percentage + '%';
-                document.getElementById('correctCount').textContent = this.score;
-                document.getElementById('incorrectCount').textContent = incorrect;
-                document.getElementById('accuracyPercent').textContent = percentage + '%';
-                
-                let message = percentage >= 90 ? 'Outstanding! You have excellent Bible knowledge! 🌟' :
-                              percentage >= 80 ? 'Great job! You know your Scripture well! 📖' :
-                              percentage >= 70 ? 'Good work! Keep studying God\'s Word! ✝️' :
-                              percentage >= 60 ? 'Not bad! There\'s room to grow! 📚' :
-                              'Keep studying! God\'s Word is a treasure! 💎';
-                
-                document.getElementById('resultsMessage').textContent = message;
-                
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'quiz_complete', {
-                        'quiz_category': category,
-                        'score': percentage,
-                        'correct_answers': this.score,
-                        'total_questions': this.questions.length
-                    });
-                }
-            }
-        }
-        
-        // ==================== OLD QUIZ ENGINE ====================
-        class OldBibleQuiz {
-            constructor(questions, title) {
-                this.questions = questions;
-                this.title = title;
-                this.currentQuestionIndex = 0;
-                this.score = 0;
-                this.selectedAnswer = null;
-                this.init();
-            }
-            
-            init() {
-                document.getElementById('quizTitle').textContent = this.title;
-                document.getElementById('totalQuestions').textContent = this.questions.length;
-                this.loadQuestion();
-            }
-            
-            loadQuestion() {
-                const question = this.questions[this.currentQuestionIndex];
-                const questionNumber = this.currentQuestionIndex + 1;
-                
-                document.getElementById('currentQuestion').textContent = questionNumber;
-                document.getElementById('questionNumber').textContent = `Question ${questionNumber}`;
-                document.getElementById('questionText').textContent = question.question;
-                
-                const progress = (questionNumber / this.questions.length) * 100;
-                document.getElementById('progressFill').style.width = progress + '%';
-                
-                const optionsContainer = document.getElementById('optionsContainer');
-                optionsContainer.innerHTML = '';
-                
-                question.answers.forEach((option, index) => {
-                    const optionDiv = document.createElement('div');
-                    optionDiv.className = 'option';
-                    optionDiv.textContent = option;
-                    optionDiv.onclick = () => this.selectAnswer(index);
-                    optionsContainer.appendChild(optionDiv);
-                });
-                
-                document.getElementById('feedbackSection').classList.add('hidden');
-                document.getElementById('nextBtn').classList.add('hidden');
-                this.selectedAnswer = null;
-            }
-            
-            selectAnswer(answerIndex) {
-                if (this.selectedAnswer !== null) return;
-                
-                this.selectedAnswer = answerIndex;
-                const question = this.questions[this.currentQuestionIndex];
-                const options = document.querySelectorAll('.option');
-                
-                options.forEach(opt => opt.classList.add('disabled'));
-                options[answerIndex].classList.add('selected');
-                
-                const isCorrect = answerIndex === question.correct;
-                
-                if (isCorrect) {
-                    options[answerIndex].classList.remove('selected');
-                    options[answerIndex].classList.add('correct');
-                    this.score++;
-                } else {
-                    options[answerIndex].classList.remove('selected');
-                    options[answerIndex].classList.add('incorrect');
-                    options[question.correct].classList.add('correct');
-                }
-                
-                this.showFeedback(question, isCorrect);
-                
-                document.getElementById('nextBtn').classList.remove('hidden');
-                document.getElementById('nextBtn').onclick = () => this.nextQuestion();
-            }
-            
-            showFeedback(question, isCorrect) {
-                const feedbackSection = document.getElementById('feedbackSection');
-                feedbackSection.innerHTML = `
-                    <div class="explanation">
-                        <div class="explanation-title">${isCorrect ? '✅ Correct!' : '❌ Incorrect'}</div>
-                        ${question.scripture ? `<div class="scripture-text">"${question.scripture}"</div>` : ''}
-                        <div class="reference">📖 ${question.reference}</div>
-                    </div>
-                `;
-                feedbackSection.classList.remove('hidden');
-            }
-            
-            nextQuestion() {
-                this.currentQuestionIndex++;
-                if (this.currentQuestionIndex < this.questions.length) {
-                    this.loadQuestion();
-                } else {
-                    this.showResults();
-                }
-            }
-            
-            showResults() {
-                document.getElementById('questionSection').classList.add('hidden');
-                document.getElementById('quizHeader').classList.add('hidden');
-                document.getElementById('resultsSection').classList.remove('hidden');
-                
-                const percentage = Math.round((this.score / this.questions.length) * 100);
-                const incorrect = this.questions.length - this.score;
-                
-                document.getElementById('scoreText').textContent = percentage + '%';
-                document.getElementById('correctCount').textContent = this.score;
-                document.getElementById('incorrectCount').textContent = incorrect;
-                document.getElementById('accuracyPercent').textContent = percentage + '%';
-                
-                let message = percentage >= 90 ? 'Outstanding! You have excellent Bible knowledge! 🌟' :
-                              percentage >= 80 ? 'Great job! You know your Scripture well! 📖' :
-                              percentage >= 70 ? 'Good work! Keep studying God\'s Word! ✝️' :
-                              percentage >= 60 ? 'Not bad! There\'s room to grow! 📚' :
-                              'Keep studying! God\'s Word is a treasure! 💎';
-                
-                document.getElementById('resultsMessage').textContent = message;
-                
-                if (typeof gtag !== 'undefined') {
-                    gtag('event', 'quiz_complete', {
-                        'quiz_category': category,
-                        'score': percentage,
-                        'correct_answers': this.score,
-                        'total_questions': this.questions.length
-                    });
-                }
-            }
+        } else {
+            showError('Invalid quiz category. Please select a quiz from the homepage.');
         }
     </script>
 </body>
