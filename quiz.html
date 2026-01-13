@@ -301,18 +301,20 @@
             background: #f8f9fa;
             padding: 25px;
             border-radius: 15px;
+            border: 3px solid #667eea;
         }
         
         .stat-number {
-            font-size: 36px;
-            font-weight: 800;
+            font-size: 48px;
+            font-weight: 900;
             color: #667eea;
-            margin-bottom: 5px;
+            margin-bottom: 10px;
         }
         
         .stat-label {
-            font-size: 16px;
-            color: #636e72;
+            font-size: 18px;
+            color: #2d3436;
+            font-weight: 700;
         }
         
         .loading {
@@ -369,6 +371,16 @@
                 <h1 class="quiz-title" id="quizTitle">Bible Quiz</h1>
                 <div class="quiz-progress">
                     <span id="currentQuestion">0</span> of <span id="totalQuestions">0</span>
+                </div>
+                <div style="display: flex; justify-content: center; gap: 40px; margin: 20px 0; padding: 15px; background: #f8f9fa; border-radius: 12px;">
+                    <div style="font-size: 20px;">
+                        <span style="color: #51cf66; font-weight: 800;">✓ <span id="runningScore">0</span></span>
+                        <span style="color: #636e72; font-size: 16px; margin-left: 5px;">Correct</span>
+                    </div>
+                    <div style="font-size: 20px;">
+                        <span style="color: #ff6b6b; font-weight: 800;">✗ <span id="runningIncorrect">0</span></span>
+                        <span style="color: #636e72; font-size: 16px; margin-left: 5px;">Wrong</span>
+                    </div>
                 </div>
                 <div class="progress-bar">
                     <div class="progress-fill" id="progressFill"></div>
@@ -447,6 +459,7 @@
                 this.title = title;
                 this.currentQuestionIndex = 0;
                 this.score = 0;
+                this.incorrectCount = 0;
                 this.selectedAnswer = null;
                 
                 this.init();
@@ -510,7 +523,12 @@
                     options[answerIndex].classList.remove('selected');
                     options[answerIndex].classList.add('incorrect');
                     options[question.correct].classList.add('correct');
+                    this.incorrectCount++;
                 }
+                
+                // Update running score display
+                document.getElementById('runningScore').textContent = this.score;
+                document.getElementById('runningIncorrect').textContent = this.incorrectCount;
                 
                 this.showFeedback(question, isCorrect);
                 document.getElementById('nextBtn').classList.remove('hidden');
@@ -543,11 +561,17 @@
                 document.getElementById('resultsSection').classList.remove('hidden');
                 
                 const percentage = Math.round((this.score / this.questions.length) * 100);
-                const incorrect = this.questions.length - this.score;
+                
+                console.log('Quiz Results:', {
+                    score: this.score,
+                    total: this.questions.length,
+                    percentage: percentage,
+                    incorrect: this.incorrectCount
+                });
                 
                 document.getElementById('scoreText').textContent = percentage + '%';
                 document.getElementById('correctCount').textContent = this.score;
-                document.getElementById('incorrectCount').textContent = incorrect;
+                document.getElementById('incorrectCount').textContent = this.incorrectCount;
                 document.getElementById('accuracyPercent').textContent = percentage + '%';
                 
                 let message = '';
