@@ -428,6 +428,21 @@
                     </div>
                 </div>
                 
+                <div style="text-align: center; margin-bottom: 30px;">
+                    <p style="font-size: 18px; color: #636e72; margin-bottom: 15px; font-weight: 600;">Share Your Results:</p>
+                    <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                        <button onclick="shareTwitter()" class="btn" style="background: #1DA1F2; color: white; padding: 12px 25px; font-size: 16px;">
+                            🐦 Share on Twitter
+                        </button>
+                        <button onclick="shareFacebook()" class="btn" style="background: #4267B2; color: white; padding: 12px 25px; font-size: 16px;">
+                            📘 Share on Facebook
+                        </button>
+                        <button onclick="shareWhatsApp()" class="btn" style="background: #25D366; color: white; padding: 12px 25px; font-size: 16px;">
+                            💬 Share on WhatsApp
+                        </button>
+                    </div>
+                </div>
+                
                 <div class="button-group">
                     <button class="btn btn-primary" onclick="location.reload()">Retake Quiz</button>
                     <button class="btn btn-secondary" onclick="window.location.href='index.html'">All Quizzes</button>
@@ -656,6 +671,57 @@
             
         } else {
             showError('Invalid quiz category. Please select a quiz from the homepage.');
+        }
+        
+        // Social share functions
+        function getShareUrl() {
+            // Map categories to their landing pages
+            const landingPages = {
+                'genesis': 'genesis-quiz.html',
+                'moses': 'moses-quiz.html',
+                'miracles-of-jesus': 'miracles-of-jesus-quiz.html',
+                'anxiety-bible': 'anxiety-bible-quiz.html',
+                'parables': 'parables-quiz.html',
+                'prophets': 'prophets-quiz.html',
+                'old-testament': 'old-testament-quiz.html',
+                'new-testament': 'new-testament-quiz.html',
+                'jesus-life': 'jesus-life-quiz.html',
+                'psalms-proverbs': 'psalms-proverbs-quiz.html',
+                'women-of-the-bible': 'women-of-the-bible-quiz.html',
+                'miracles': 'miracles-quiz.html',
+                'christmas': 'christmas-quiz.html',
+                'easter': 'easter-quiz.html',
+                'kids': 'kids-bible-quiz.html',
+                'easy': 'easy-bible-quiz.html',
+                'hard': 'hard-bible-quiz.html'
+            };
+            
+            const landingPage = landingPages[category];
+            const baseUrl = window.location.origin;
+            
+            // If landing page exists, use it; otherwise use homepage
+            return landingPage ? `${baseUrl}/${landingPage}` : `${baseUrl}/index.html`;
+        }
+        
+        function shareTwitter() {
+            const score = document.getElementById('scoreText').textContent;
+            const quizTitle = document.getElementById('quizTitle').textContent;
+            const text = `I scored ${score} on the ${quizTitle} at BibleQuizDaily! Test your Bible knowledge too! 📖`;
+            const url = getShareUrl();
+            window.open(`https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`, '_blank');
+        }
+        
+        function shareFacebook() {
+            const url = getShareUrl();
+            window.open(`https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`, '_blank');
+        }
+        
+        function shareWhatsApp() {
+            const score = document.getElementById('scoreText').textContent;
+            const quizTitle = document.getElementById('quizTitle').textContent;
+            const text = `I scored ${score} on the ${quizTitle} at BibleQuizDaily! Test your Bible knowledge too! 📖`;
+            const url = getShareUrl();
+            window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
         }
     </script>
 </body>
