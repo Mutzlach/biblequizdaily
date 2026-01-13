@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bible Prophets Quiz - Test Your Knowledge of Old Testament Prophets</title>
+    <meta name="description" content="Take our free Bible Prophets quiz! Test your knowledge of Isaiah, Jeremiah, Ezekiel, Daniel, and the minor prophets. 30 questions covering major and minor prophets.">
+    <meta name="keywords" content="prophets quiz, bible prophets quiz, old testament prophets, isaiah quiz, jeremiah quiz, ezekiel quiz, daniel quiz, minor prophets quiz">
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRXEYD2W4M"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-JRXEYD2W4M');
+    </script>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #4CAF50; --primary-dark: #388E3C; --secondary: #66BB6A; --text-dark: #2d3436; --text-light: #636e72; --bg-light: #f1f8f4; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); min-height: 100vh; line-height: 1.6; }
+        header { background: rgba(255,255,255,0.98); padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .logo { font-family: 'Merriweather', serif; font-size: 24px; font-weight: 900; color: var(--primary); text-decoration: none; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 15px; }
+        .nav-links a:hover { color: var(--primary); }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .intro-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+        .intro-card h1 { font-family: 'Merriweather', serif; color: var(--text-dark); font-size: 36px; margin-bottom: 15px; }
+        .intro-card p { color: var(--text-light); font-size: 18px; margin-bottom: 15px; line-height: 1.8; }
+        .quiz-stats { display: flex; gap: 20px; margin: 25px 0; flex-wrap: wrap; }
+        .stat-item { background: var(--bg-light); padding: 15px 25px; border-radius: 10px; text-align: center; }
+        .stat-number { font-size: 28px; font-weight: 800; color: var(--primary); }
+        .stat-label { font-size: 14px; color: var(--text-light); }
+        .btn { padding: 18px 45px; border: none; border-radius: 30px; font-size: 20px; font-weight: 700; cursor: pointer; transition: all 0.3s; display: inline-block; text-decoration: none; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(76, 175, 80, 0.5); }
+        .topics-covered { background: #f8fff9; padding: 30px; border-radius: 15px; margin-top: 30px; }
+        .topics-covered h2 { color: var(--text-dark); margin-bottom: 15px; font-size: 24px; }
+        .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .topic-item { background: white; padding: 15px; border-radius: 10px; border-left: 4px solid var(--primary); font-weight: 600; color: var(--text-dark); }
+        @media (max-width: 768px) { .intro-card h1 { font-size: 28px; } .quiz-stats { flex-direction: column; } }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">BibleQuizDaily</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="intro-card">
+            <h1>📜 Bible Prophets Quiz</h1>
+            <p><strong>Test your knowledge of the Old Testament prophets!</strong> From Isaiah to Malachi, the prophets delivered God's message to His people. How well do you know their stories, prophecies, and messages?</p>
+            
+            <div class="quiz-stats">
+                <div class="stat-item">
+                    <div class="stat-number">30</div>
+                    <div class="stat-label">Questions</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Mix</div>
+                    <div class="stat-label">Difficulty</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5-10</div>
+                    <div class="stat-label">Minutes</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">Free</div>
+                    <div class="stat-label">Always</div>
+                </div>
+            </div>
+
+            <a href="quiz.html?category=prophets" class="btn btn-primary">📜 Start Prophets Quiz</a>
+
+            <div class="topics-covered">
+                <h2>Prophets Covered in This Quiz</h2>
+                <div class="topics-grid">
+                    <div class="topic-item">📖 Isaiah - Major Prophet</div>
+                    <div class="topic-item">📖 Jeremiah - Weeping Prophet</div>
+                    <div class="topic-item">📖 Ezekiel - Visionary Prophet</div>
+                    <div class="topic-item">📖 Daniel - Prophet in Exile</div>
+                    <div class="topic-item">📖 Hosea - Prophet of Love</div>
+                    <div class="topic-item">📖 Joel - Prophet of Pentecost</div>
+                    <div class="topic-item">📖 Amos - Shepherd Prophet</div>
+                    <div class="topic-item">📖 Jonah - Reluctant Prophet</div>
+                    <div class="topic-item">📖 Micah - Prophet of Justice</div>
+                    <div class="topic-item">📖 Malachi - Final Prophet</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 900px; margin: 60px auto 0; padding: 0 20px;">
+        <div style="background: white; padding: 40px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <h2 style="font-family: 'Merriweather', serif; font-size: 28px; color: #2d3436; margin-bottom: 20px;">Why Take a Bible Prophets Quiz?</h2>
+            
+            <p style="font-size: 17px; color: #636e72; line-height: 1.8; margin-bottom: 16px;">The prophets of the Old Testament were God's messengers who spoke His words to His people. Their messages of warning, hope, judgment, and restoration are still relevant today. Understanding the prophets helps us understand God's character and His plan for humanity.</p>
+
+            <p style="font-size: 17px; color: #636e72; line-height: 1.8; margin-bottom: 16px;">Our <strong>Bible Prophets quiz</strong> covers both major prophets (Isaiah, Jeremiah, Ezekiel, Daniel) and minor prophets (Hosea through Malachi). Test your knowledge of their prophecies, their historical contexts, and the messages they delivered to Israel and Judah.</p>
+
+            <h3 style="font-size: 22px; color: #2d3436; margin: 30px 0 15px;">What You'll Learn:</h3>
+            <ul style="font-size: 17px; color: #636e72; line-height: 2; padding-left: 25px;">
+                <li>Key prophecies from major and minor prophets</li>
+                <li>Historical context of prophetic ministry</li>
+                <li>Messianic prophecies pointing to Jesus</li>
+                <li>Messages of judgment and restoration</li>
+                <li>The role of prophets in Israel's history</li>
+                <li>Prophetic visions and symbolic actions</li>
+            </ul>
+
+            <p style="font-size: 17px; color: #636e72; line-height: 1.8; margin-top: 20px;">Whether you're studying the prophets for personal growth, preparing to teach, or just curious about these powerful messengers of God, this quiz will challenge and inform you. Each question includes the biblical reference so you can dive deeper into God's Word!</p>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="quiz.html?category=prophets" class="btn btn-primary">📜 Start Prophets Quiz Now</a>
+            </div>
+        </div>
+    </div>
+
+    <div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <div style="background: rgba(255,255,255,0.95); padding: 30px; border-radius: 16px; box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+            <h3 style="font-family: 'Merriweather', serif; font-size: 24px; color: #2d3436; margin-bottom: 20px; text-align: center;">📚 More Bible Quizzes</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 15px; margin-top: 20px;">
+                <a href="old-testament-quiz.html" style="background: white; padding: 12px 16px; border-radius: 10px; text-decoration: none; border: 2px solid transparent; transition: all 0.2s; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                    <span style="font-size: 24px;">📖</span>
+                    <div>
+                        <div style="font-weight: 700; color: #2d3436; font-size: 16px;">Old Testament</div>
+                        <div style="font-size: 13px; color: #636e72;">Complete OT trivia</div>
+                    </div>
+                </a>
+                <a href="genesis-quiz.html" style="background: white; padding: 12px 16px; border-radius: 10px; text-decoration: none; border: 2px solid transparent; transition: all 0.2s; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                    <span style="font-size: 24px;">🌍</span>
+                    <div>
+                        <div style="font-weight: 700; color: #2d3436; font-size: 16px;">Genesis Quiz</div>
+                        <div style="font-size: 13px; color: #636e72;">Creation to Joseph</div>
+                    </div>
+                </a>
+                <a href="moses-quiz.html" style="background: white; padding: 12px 16px; border-radius: 10px; text-decoration: none; border: 2px solid transparent; transition: all 0.2s; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);">
+                    <span style="font-size: 24px;">⚡</span>
+                    <div>
+                        <div style="font-weight: 700; color: #2d3436; font-size: 16px;">Moses Quiz</div>
+                        <div style="font-size: 13px; color: #636e72;">Exodus and leadership</div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <footer style="background: rgba(255,255,255,0.95); margin-top: 60px; padding: 40px 20px; text-align: center;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <p style="color: #636e72; margin-bottom: 15px;">© 2024 BibleQuizDaily.com - Free Bible Quizzes for Everyone</p>
+            <div style="display: flex; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                <a href="index.html" style="color: #4CAF50; text-decoration: none; font-weight: 600;">Home</a>
+                <a href="about.html" style="color: #4CAF50; text-decoration: none; font-weight: 600;">About</a>
+                <a href="contact.html" style="color: #4CAF50; text-decoration: none; font-weight: 600;">Contact</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
