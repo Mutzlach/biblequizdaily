@@ -125,6 +125,62 @@
             border-left: 4px solid var(--primary);
             margin: 25px 0;
         }
+        
+        /* FOOTER */
+        footer {
+            background: #2d3436;
+            color: white;
+            padding: 60px 24px 32px;
+            margin-top: 80px;
+        }
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer-about h3 {
+            font-family: 'Merriweather', serif;
+            margin-bottom: 16px;
+            font-size: 24px;
+        }
+        .footer-about p {
+            color: #b2bec3;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            font-size: 14px;
+        }
+        .footer-column h4 {
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+        .footer-links {
+            list-style: none;
+        }
+        .footer-links li {
+            margin-bottom: 12px;
+        }
+        .footer-links a {
+            color: #b2bec3;
+            text-decoration: none;
+            transition: color 0.2s;
+            font-size: 14px;
+        }
+        .footer-links a:hover {
+            color: white;
+        }
+        .footer-bottom {
+            border-top: 1px solid #4a4a4a;
+            padding-top: 32px;
+            text-align: center;
+            color: #b2bec3;
+            font-size: 14px;
+        }
+        
         @media (max-width: 768px) {
             .page-content { padding: 30px 20px; }
             h1 { font-size: 32px; }
@@ -369,3 +425,70 @@
                 <li>Updating the "Last Updated" date at the top of this policy</li>
                 <li>Sending an email notification (if you have an account)</li>
             </ul>
+
+            <p>We encourage you to review this Privacy Policy periodically to stay informed about how we are protecting your information. Your continued use of Bible Quiz Daily after any changes indicates your acceptance of the updated Privacy Policy.</p>
+
+            <h2>14. Contact Us</h2>
+
+            <p>If you have any questions, concerns, or requests regarding this Privacy Policy or our privacy practices, please contact us:</p>
+
+            <div style="background: var(--bg-light); padding: 20px; border-radius: 8px; margin: 20px 0;">
+                <p><strong>Email:</strong> <a href="contact.html" style="color: var(--primary);">Use our contact form</a></p>
+                <p><strong>Response Time:</strong> We typically respond within 24-48 business hours</p>
+            </div>
+
+            <p style="margin-top: 40px; padding-top: 30px; border-top: 2px solid #e0e0e0; text-align: center;">
+                <em>Thank you for trusting Bible Quiz Daily with your information. We are committed to protecting your privacy and providing a safe, educational environment for biblical learning.</em>
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <h3>📖 BibleQuizDaily.com</h3>
+                    <p>Free Bible quiz questions and interactive Bible trivia for strengthening faith. Join thousands of believers growing in Scripture knowledge through our comprehensive Bible quizzes covering Genesis, Moses, Jesus's miracles, parables, and more.</p>
+                    <p style="font-size: 13px; opacity: 0.7;">Scripture quotations from the King James Version. All Bible quiz content is educational and non-commercial.</p>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>New Quizzes</h4>
+                    <ul class="footer-links">
+                        <li><a href="genesis-quiz.html">Genesis Quiz</a></li>
+                        <li><a href="miracles-of-jesus-quiz.html">Miracles of Jesus</a></li>
+                        <li><a href="parables-quiz.html">Parables Quiz</a></li>
+                        <li><a href="anxiety-bible-quiz.html">Anxiety Bible Quiz</a></li>
+                        <li><a href="moses-quiz.html">Moses Quiz</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Popular Quizzes</h4>
+                    <ul class="footer-links">
+                        <li><a href="kids-bible-quiz.html">Kids Bible Quiz</a></li>
+                        <li><a href="easy-bible-quiz.html">Easy Bible Quiz</a></li>
+                        <li><a href="christmas-bible-quiz.html">Christmas Bible Quiz</a></li>
+                        <li><a href="easter-bible-quiz.html">Easter Bible Quiz</a></li>
+                        <li><a href="hard-bible-quiz.html">Hard Bible Quiz</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-column">
+                    <h4>Resources</h4>
+                    <ul class="footer-links">
+                        <li><a href="free-resources.html">Free Bible Resources</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="privacy.html">Privacy Policy</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2026 BibleQuizDaily.com • Free Bible Quiz Questions & Answers • Made with ❤️ for Bible learners everywhere</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
