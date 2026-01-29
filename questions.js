@@ -1,5 +1,7 @@
 // Bible Quiz Daily - Complete Question Database
-// 270 questions across 9 categories (30 questions each)
+// 520 questions across 14 categories
+// Original 9 categories: 270 questions (30 each)
+// New 5 categories: 250 questions (50 each)
 
 window.quizQuestions = {
     "old-testament": [
@@ -2960,4 +2962,1905 @@ window.quizQuestions = {
             correct: 1
         }
     ]
+,
+
+    // Bible Geography Quiz - 50 Questions
+    "bible-geography": [
+    // ===== EASY QUESTIONS (1-15) =====
+    {
+        scripture: "And she brought forth her firstborn son, and wrapped him in swaddling clothes, and laid him in a manger; because there was no room for them in the inn.",
+        reference: "Luke 2:7",
+        question: "In which city was Jesus born?",
+        answers: ["Nazareth", "Jerusalem", "Bethlehem", "Capernaum"],
+        correct: 2
+    },
+    {
+        scripture: "And he came and dwelt in a city called Nazareth: that it might be fulfilled which was spoken by the prophets, He shall be called a Nazarene.",
+        reference: "Matthew 2:23",
+        question: "In which town did Jesus grow up?",
+        answers: ["Bethlehem", "Nazareth", "Jerusalem", "Cana"],
+        correct: 1
+    },
+    {
+        scripture: "And the LORD said unto Moses, Come up to me into the mount, and be there: and I will give thee tables of stone.",
+        reference: "Exodus 24:12",
+        question: "On which mountain did Moses receive the Ten Commandments?",
+        answers: ["Mount Carmel", "Mount Sinai", "Mount Nebo", "Mount Zion"],
+        correct: 1
+    },
+    {
+        scripture: "Then Jesus came from Galilee to Jordan unto John, to be baptized of him.",
+        reference: "Matthew 3:13",
+        question: "In which river was Jesus baptized?",
+        answers: ["Euphrates River", "Nile River", "Jordan River", "Tigris River"],
+        correct: 2
+    },
+    {
+        scripture: "And Moses stretched out his hand over the sea; and the LORD caused the sea to go back by a strong east wind all that night.",
+        reference: "Exodus 14:21",
+        question: "Which sea did Moses part to lead the Israelites out of Egypt?",
+        answers: ["Dead Sea", "Red Sea", "Mediterranean Sea", "Sea of Galilee"],
+        correct: 1
+    },
+    {
+        scripture: "And the ark rested in the seventh month, on the seventeenth day of the month, upon the mountains of Ararat.",
+        reference: "Genesis 8:4",
+        question: "On which mountains did Noah's ark come to rest?",
+        answers: ["Mountains of Sinai", "Mountains of Ararat", "Mountains of Lebanon", "Mountains of Gilead"],
+        correct: 1
+    },
+    {
+        scripture: "And David took the strong hold of Zion: the same is the city of David.",
+        reference: "2 Samuel 5:7",
+        question: "What is the most frequently mentioned city in the Bible?",
+        answers: ["Bethlehem", "Nazareth", "Jerusalem", "Babylon"],
+        correct: 2
+    },
+    {
+        scripture: "Now when Jesus had heard that John was cast into prison, he departed into Galilee; And leaving Nazareth, he came and dwelt in Capernaum.",
+        reference: "Matthew 4:12-13",
+        question: "Which city became the headquarters of Jesus's ministry in Galilee?",
+        answers: ["Nazareth", "Bethsaida", "Capernaum", "Cana"],
+        correct: 2
+    },
+    {
+        scripture: "And the children of Israel journeyed from Rameses to Succoth, about six hundred thousand on foot that were men, beside children.",
+        reference: "Exodus 12:37",
+        question: "From which country did God deliver the Israelites in the Exodus?",
+        answers: ["Babylon", "Assyria", "Egypt", "Persia"],
+        correct: 2
+    },
+    {
+        scripture: "So the people shouted when the priests blew with the trumpets: and it came to pass, when the people heard the sound of the trumpet, and the people shouted with a great shout, that the wall fell down flat.",
+        reference: "Joshua 6:20",
+        question: "Which city's walls fell down after Joshua's army marched around it?",
+        answers: ["Jerusalem", "Jericho", "Ai", "Hebron"],
+        correct: 1
+    },
+    {
+        scripture: "And in the fourth watch of the night Jesus went unto them, walking on the sea.",
+        reference: "Matthew 14:25",
+        question: "What sea did Jesus walk on during a storm?",
+        answers: ["Dead Sea", "Red Sea", "Sea of Galilee", "Mediterranean Sea"],
+        correct: 2
+    },
+    {
+        scripture: "And the LORD God planted a garden eastward in Eden; and there he put the man whom he had formed.",
+        reference: "Genesis 2:8",
+        question: "In which garden did Adam and Eve live before the Fall?",
+        answers: ["Garden of Gethsemane", "Garden of Eden", "Garden of Joseph", "Hanging Gardens"],
+        correct: 1
+    },
+    {
+        scripture: "Then cometh Jesus with them unto a place called Gethsemane, and saith unto the disciples, Sit ye here, while I go and pray yonder.",
+        reference: "Matthew 26:36",
+        question: "In which garden did Jesus pray before His crucifixion?",
+        answers: ["Garden of Eden", "Garden of Joseph", "Garden of Gethsemane", "King's Garden"],
+        correct: 2
+    },
+    {
+        scripture: "For thus saith the LORD, That after seventy years be accomplished at Babylon I will visit you.",
+        reference: "Jeremiah 29:10",
+        question: "Which empire held the Israelites captive for 70 years?",
+        answers: ["Egyptian Empire", "Assyrian Empire", "Babylonian Empire", "Persian Empire"],
+        correct: 2
+    },
+    {
+        scripture: "And Lot lifted up his eyes, and beheld all the plain of Jordan, that it was well watered every where.",
+        reference: "Genesis 13:10",
+        question: "Which river flows from the Sea of Galilee to the Dead Sea?",
+        answers: ["Euphrates River", "Jordan River", "Nile River", "Arnon River"],
+        correct: 1
+    },
+
+    // ===== MEDIUM QUESTIONS (16-35) =====
+    {
+        scripture: "The word that came to Jeremiah concerning all the people of Judah in the fourth year of Jehoiakim the son of Josiah king of Judah, that was the first year of Nebuchadrezzar king of Babylon.",
+        reference: "Jeremiah 25:1",
+        question: "What was the capital city of the Babylonian Empire?",
+        answers: ["Nineveh", "Babylon", "Ur", "Damascus"],
+        correct: 1
+    },
+    {
+        scripture: "Now the word of the LORD came unto Jonah the son of Amittai, saying, Arise, go to Nineveh, that great city, and cry against it.",
+        reference: "Jonah 1:1-2",
+        question: "To which great city did God send Jonah to preach?",
+        answers: ["Babylon", "Damascus", "Nineveh", "Tyre"],
+        correct: 2
+    },
+    {
+        scripture: "And Elijah said unto Ahab, Get thee up, eat and drink; for there is a sound of abundance of rain. So Ahab went up to eat and to drink. And Elijah went up to the top of Carmel.",
+        reference: "1 Kings 18:41-42",
+        question: "On which mountain did Elijah challenge the prophets of Baal?",
+        answers: ["Mount Sinai", "Mount Carmel", "Mount Hermon", "Mount Tabor"],
+        correct: 1
+    },
+    {
+        scripture: "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee.",
+        reference: "Genesis 12:1",
+        question: "From which city did Abraham originally come before God called him?",
+        answers: ["Ur of the Chaldees", "Haran", "Damascus", "Hebron"],
+        correct: 0
+    },
+    {
+        scripture: "Then Jacob went on his journey, and came into the land of the people of the east.",
+        reference: "Genesis 29:1",
+        question: "To which region did Jacob flee to escape from Esau?",
+        answers: ["Egypt", "Midian", "Padanaram", "Canaan"],
+        correct: 2
+    },
+    {
+        scripture: "And when they were come to the place, which is called Calvary, there they crucified him.",
+        reference: "Luke 23:33",
+        question: "What is another name for the place where Jesus was crucified?",
+        answers: ["Golgotha", "Mount Zion", "Bethany", "Gethsemane"],
+        correct: 0
+    },
+    {
+        scripture: "And it came to pass, as they still went on, and talked, that, behold, there appeared a chariot of fire, and horses of fire, and parted them both asunder; and Elijah went up by a whirlwind into heaven.",
+        reference: "2 Kings 2:11",
+        question: "Near which river did Elijah ascend to heaven in a whirlwind?",
+        answers: ["Euphrates River", "Jordan River", "Arnon River", "Jabbok River"],
+        correct: 1
+    },
+    {
+        scripture: "But he, willing to justify himself, said unto Jesus, And who is my neighbour? And Jesus answering said, A certain man went down from Jerusalem to Jericho.",
+        reference: "Luke 10:29-30",
+        question: "What region did the Samaritans inhabit between Judea and Galilee?",
+        answers: ["Perea", "Decapolis", "Samaria", "Idumea"],
+        correct: 2
+    },
+    {
+        scripture: "And the third day there was a marriage in Cana of Galilee; and the mother of Jesus was there.",
+        reference: "John 2:1",
+        question: "In which town did Jesus perform His first miracle?",
+        answers: ["Capernaum", "Nazareth", "Cana", "Bethsaida"],
+        correct: 2
+    },
+    {
+        scripture: "Then cometh he to a city of Samaria, which is called Sychar, near to the parcel of ground that Jacob gave to his son Joseph.",
+        reference: "John 4:5",
+        question: "At which city did Jesus meet the Samaritan woman at the well?",
+        answers: ["Samaria", "Shechem", "Sychar", "Sebaste"],
+        correct: 2
+    },
+    {
+        scripture: "And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven.",
+        reference: "Acts 9:3",
+        question: "On the road to which city was Saul (Paul) converted?",
+        answers: ["Jerusalem", "Damascus", "Antioch", "Tarsus"],
+        correct: 1
+    },
+    {
+        scripture: "And the disciples were called Christians first in Antioch.",
+        reference: "Acts 11:26",
+        question: "In which city were believers first called 'Christians'?",
+        answers: ["Jerusalem", "Damascus", "Antioch", "Ephesus"],
+        correct: 2
+    },
+    {
+        scripture: "I am verily a man which am a Jew, born in Tarsus, a city in Cilicia, yet brought up in this city at the feet of Gamaliel.",
+        reference: "Acts 22:3",
+        question: "What was Paul's hometown?",
+        answers: ["Damascus", "Antioch", "Tarsus", "Athens"],
+        correct: 2
+    },
+    {
+        scripture: "After these things Paul departed from Athens, and came to Corinth.",
+        reference: "Acts 18:1",
+        question: "Which Greek city did Paul visit where he reasoned with philosophers?",
+        answers: ["Sparta", "Corinth", "Athens", "Thessalonica"],
+        correct: 2
+    },
+    {
+        scripture: "Now when they had passed through Amphipolis and Apollonia, they came to Thessalonica, where was a synagogue of the Jews.",
+        reference: "Acts 17:1",
+        question: "In which city did Paul write two epistles to the church there?",
+        answers: ["Philippi", "Thessalonica", "Berea", "Athens"],
+        correct: 1
+    },
+    {
+        scripture: "And he went into the synagogue, and spake boldly for the space of three months, disputing and persuading the things concerning the kingdom of God.",
+        reference: "Acts 19:8",
+        question: "Where did Paul spend three years teaching and establishing a strong church?",
+        answers: ["Antioch", "Corinth", "Ephesus", "Rome"],
+        correct: 2
+    },
+    {
+        scripture: "And when it was determined that we should sail into Italy, they delivered Paul and certain other prisoners unto one named Julius, a centurion of Augustus' band.",
+        reference: "Acts 27:1",
+        question: "To which city was Paul taken as a prisoner to stand trial before Caesar?",
+        answers: ["Athens", "Alexandria", "Rome", "Corinth"],
+        correct: 2
+    },
+    {
+        scripture: "And Moses stretched out his hand over the sea; and the LORD caused the sea to go back by a strong east wind all that night, and made the sea dry land, and the waters were divided.",
+        reference: "Exodus 14:21",
+        question: "Through which body of water did Moses lead Israel on dry ground?",
+        answers: ["Gulf of Aqaba", "Red Sea", "Dead Sea", "Mediterranean Sea"],
+        correct: 1
+    },
+    {
+        scripture: "And the coast shall go down from Shepham to Riblah, on the east side of Ain; and the border shall descend, and shall reach unto the side of the sea of Chinnereth eastward.",
+        reference: "Numbers 34:11",
+        question: "What is the lowest point on Earth, mentioned in the Bible as the Salt Sea?",
+        answers: ["Sea of Galilee", "Dead Sea", "Jordan Valley", "Red Sea"],
+        correct: 1
+    },
+    {
+        scripture: "And it came to pass after this, that David smote the Philistines, and subdued them: and David took Methegammah out of the hand of the Philistines.",
+        reference: "2 Samuel 8:1",
+        question: "What coastal region did the Philistines control in ancient Israel?",
+        answers: ["Plain of Sharon", "Coastal plain southwest of Israel", "Plain of Esdraelon", "Jezreel Valley"],
+        correct: 1
+    },
+
+    // ===== HARD QUESTIONS (36-50) =====
+    {
+        scripture: "I John, who also am your brother, and companion in tribulation, and in the kingdom and patience of Jesus Christ, was in the isle that is called Patmos, for the word of God, and for the testimony of Jesus Christ.",
+        reference: "Revelation 1:9",
+        question: "On which island was John exiled when he wrote Revelation?",
+        answers: ["Cyprus", "Crete", "Patmos", "Malta"],
+        correct: 2
+    },
+    {
+        scripture: "And a certain woman named Lydia, a seller of purple, of the city of Thyatira, which worshipped God, heard us.",
+        reference: "Acts 16:14",
+        question: "From which city did Lydia, the seller of purple cloth, come?",
+        answers: ["Thyatira", "Ephesus", "Smyrna", "Laodicea"],
+        correct: 0
+    },
+    {
+        scripture: "Now a certain man was sick, named Lazarus, of Bethany, the town of Mary and her sister Martha.",
+        reference: "John 11:1",
+        question: "In which town did Jesus raise Lazarus from the dead?",
+        answers: ["Bethany", "Bethphage", "Bethlehem", "Bethsaida"],
+        correct: 0
+    },
+    {
+        scripture: "And when they were come to Marah, they could not drink of the waters of Marah, for they were bitter: therefore the name of it was called Marah.",
+        reference: "Exodus 15:23",
+        question: "What was the first place where Israel found bitter water after crossing the Red Sea?",
+        answers: ["Elim", "Marah", "Rephidim", "Kadesh"],
+        correct: 1
+    },
+    {
+        scripture: "So they went up, and searched the land from the wilderness of Zin unto Rehob, as men come to Hamath.",
+        reference: "Numbers 13:21",
+        question: "From which southern location did the twelve spies begin their reconnaissance of Canaan?",
+        answers: ["Kadesh-barnea", "Wilderness of Zin", "Beersheba", "Hebron"],
+        correct: 1
+    },
+    {
+        scripture: "And the LORD appeared unto him in the plains of Mamre: and he sat in the tent door in the heat of the day.",
+        reference: "Genesis 18:1",
+        question: "Near which city did Abraham live in the plains of Mamre?",
+        answers: ["Beersheba", "Bethel", "Hebron", "Shechem"],
+        correct: 2
+    },
+    {
+        scripture: "And Lot lifted up his eyes, and beheld all the plain of Jordan, that it was well watered every where, before the LORD destroyed Sodom and Gomorrah.",
+        reference: "Genesis 13:10",
+        question: "In which valley were Sodom and Gomorrah located?",
+        answers: ["Jordan Valley", "Valley of Siddim", "Valley of Jezreel", "Valley of Elah"],
+        correct: 1
+    },
+    {
+        scripture: "And Jacob came to Shalem, a city of Shechem, which is in the land of Canaan, when he came from Padanaram; and pitched his tent before the city.",
+        reference: "Genesis 33:18",
+        question: "Near which city did Jacob buy land where he later dug a well?",
+        answers: ["Bethel", "Shechem", "Hebron", "Beersheba"],
+        correct: 1
+    },
+    {
+        scripture: "And Joshua gathered all the tribes of Israel to Shechem, and called for the elders of Israel, and for their heads, and for their judges, and for their officers.",
+        reference: "Joshua 24:1",
+        question: "Where did Joshua gather Israel to renew their covenant with God?",
+        answers: ["Shiloh", "Shechem", "Gilgal", "Bethel"],
+        correct: 1
+    },
+    {
+        scripture: "And the whole congregation of the children of Israel assembled together at Shiloh, and set up the tabernacle of the congregation there. And the land was subdued before them.",
+        reference: "Joshua 18:1",
+        question: "Where was the tabernacle located during the period of the Judges?",
+        answers: ["Bethel", "Shiloh", "Mizpah", "Ramah"],
+        correct: 1
+    },
+    {
+        scripture: "Then Samuel took a vial of oil, and poured it upon his head, and kissed him, and said, Is it not because the LORD hath anointed thee to be captain over his inheritance?",
+        reference: "1 Samuel 10:1",
+        question: "In which town was Saul privately anointed as Israel's first king by Samuel?",
+        answers: ["Gibeah", "Ramah", "Mizpah", "Bethlehem"],
+        correct: 1
+    },
+    {
+        scripture: "And Hiram king of Tyre sent messengers to David, and cedar trees, and carpenters, and masons: and they built David an house.",
+        reference: "2 Samuel 5:11",
+        question: "Which Phoenician city maintained peace with David and supplied cedar?",
+        answers: ["Sidon", "Damascus", "Tyre", "Byblos"],
+        correct: 2
+    },
+    {
+        scripture: "And when the queen of Sheba heard of the fame of Solomon concerning the name of the LORD, she came to prove him with hard questions.",
+        reference: "1 Kings 10:1",
+        question: "From which region in southern Arabia did the Queen who visited Solomon come?",
+        answers: ["Egypt", "Sheba", "Ethiopia", "Phoenicia"],
+        correct: 1
+    },
+    {
+        scripture: "And he said, Take the arrows. And he took them. And he said unto the king of Israel, Smite upon the ground. And he smote thrice, and stayed.",
+        reference: "2 Kings 13:18",
+        question: "Where did Elisha perform the miracle of making poisonous stew edible?",
+        answers: ["Bethel", "Jericho", "Gilgal", "Samaria"],
+        correct: 2
+    },
+    {
+        scripture: "And the king of Assyria brought men from Babylon, and from Cuthah, and from Ava, and from Hamath, and from Sepharvaim, and placed them in the cities of Samaria instead of the children of Israel.",
+        reference: "2 Kings 17:24",
+        question: "What was the capital of the northern kingdom of Israel before its fall to Assyria?",
+        answers: ["Shechem", "Samaria", "Bethel", "Tirzah"],
+        correct: 1
+    },
+    {
+        scripture: "Now it came to pass in the thirtieth year, in the fourth month, in the fifth day of the month, as I was among the captives by the river of Chebar, that the heavens were opened, and I saw visions of God.",
+        reference: "Ezekiel 1:1",
+        question: "By which river (canal) in Babylon did Ezekiel receive his visions?",
+        answers: ["Euphrates", "Tigris", "Chebar", "Ulai"],
+        correct: 2
+    },
+    {
+        scripture: "And it came to pass in the month Nisan, in the twentieth year of Artaxerxes the king, that wine was before him: and I took up the wine, and gave it unto the king.",
+        reference: "Nehemiah 2:1",
+        question: "Where did Nehemiah serve as cupbearer before returning to Jerusalem?",
+        answers: ["Babylon", "Shushan", "Persepolis", "Ecbatana"],
+        correct: 1
+    },
+    {
+        scripture: "So it came to pass, when the king's commandment and his decree was heard, and when many maidens were gathered together unto Shushan the palace, to the custody of Hegai, that Esther was brought also unto the king's house.",
+        reference: "Esther 2:8",
+        question: "In which Persian capital was Esther made queen?",
+        answers: ["Babylon", "Persepolis", "Shushan", "Ecbatana"],
+        correct: 2
+    },
+    {
+        scripture: "But Jonah rose up to flee unto Tarshish from the presence of the LORD, and went down to Joppa; and he found a ship going to Tarshish.",
+        reference: "Jonah 1:3",
+        question: "Through which port city did Jonah attempt to flee from God?",
+        answers: ["Joppa", "Tyre", "Sidon", "Caesarea"],
+        correct: 0
+    },
+    {
+        scripture: "On the morrow, as they went on their journey, and drew nigh unto the city, Peter went up upon the housetop to pray about the sixth hour.",
+        reference: "Acts 10:9",
+        question: "In which coastal city did Peter receive the vision of the sheet with unclean animals?",
+        answers: ["Joppa", "Caesarea", "Ptolemais", "Tyre"],
+        correct: 0
+    }
+],
+
+    // Books of the Bible Quiz - 50 Questions
+    "books-of-bible": [
+    // ===== EASY QUESTIONS (1-15) - Well-known books =====
+    {
+        scripture: "In the beginning God created the heaven and the earth.",
+        reference: "Genesis 1:1",
+        question: "What is the first book of the Bible?",
+        answers: ["Exodus", "Genesis", "Matthew", "Job"],
+        correct: 1
+    },
+    {
+        scripture: "The Revelation of Jesus Christ, which God gave unto him, to shew unto his servants things which must shortly come to pass.",
+        reference: "Revelation 1:1",
+        question: "What is the last book of the Bible?",
+        answers: ["Jude", "Revelation", "3 John", "Malachi"],
+        correct: 1
+    },
+    {
+        scripture: "The LORD is my shepherd; I shall not want.",
+        reference: "Psalm 23:1",
+        question: "Which book contains 150 chapters of songs and prayers?",
+        answers: ["Proverbs", "Psalms", "Song of Solomon", "Lamentations"],
+        correct: 1
+    },
+    {
+        scripture: "The beginning of the gospel of Jesus Christ, the Son of God.",
+        reference: "Mark 1:1",
+        question: "How many Gospel books are in the New Testament?",
+        answers: ["3", "4", "5", "12"],
+        correct: 1
+    },
+    {
+        scripture: "For God so loved the world, that he gave his only begotten Son.",
+        reference: "John 3:16",
+        question: "Which Gospel is known for emphasizing Jesus's deity and divine nature?",
+        answers: ["Matthew", "Mark", "Luke", "John"],
+        correct: 3
+    },
+    {
+        scripture: "Paul, a servant of Jesus Christ, called to be an apostle, separated unto the gospel of God.",
+        reference: "Romans 1:1",
+        question: "Which book contains the most systematic explanation of Christian doctrine?",
+        answers: ["Acts", "Romans", "Hebrews", "James"],
+        correct: 1
+    },
+    {
+        scripture: "And Moses went up unto God, and the LORD called unto him out of the mountain.",
+        reference: "Exodus 19:3",
+        question: "Which book tells the story of Israel's deliverance from Egypt?",
+        answers: ["Genesis", "Exodus", "Numbers", "Deuteronomy"],
+        correct: 1
+    },
+    {
+        scripture: "Trust in the LORD with all thine heart; and lean not unto thine own understanding.",
+        reference: "Proverbs 3:5",
+        question: "Which book is known for its wisdom sayings and practical advice?",
+        answers: ["Ecclesiastes", "Proverbs", "Job", "Psalms"],
+        correct: 1
+    },
+    {
+        scripture: "The former treatise have I made, O Theophilus, of all that Jesus began both to do and teach.",
+        reference: "Acts 1:1",
+        question: "Which book records the history of the early church?",
+        answers: ["Romans", "Acts", "1 Corinthians", "Revelation"],
+        correct: 1
+    },
+    {
+        scripture: "And the LORD spake unto Moses in the wilderness of Sinai.",
+        reference: "Numbers 1:1",
+        question: "How many books are in the Old Testament?",
+        answers: ["27", "39", "46", "66"],
+        correct: 1
+    },
+    {
+        scripture: "Paul, an apostle of Jesus Christ by the will of God, to the saints which are at Ephesus.",
+        reference: "Ephesians 1:1",
+        question: "How many books are in the New Testament?",
+        answers: ["22", "24", "27", "30"],
+        correct: 2
+    },
+    {
+        scripture: "The words of the Preacher, the son of David, king in Jerusalem.",
+        reference: "Ecclesiastes 1:1",
+        question: "Which book begins with 'Vanity of vanities, all is vanity'?",
+        answers: ["Job", "Ecclesiastes", "Proverbs", "Song of Solomon"],
+        correct: 1
+    },
+    {
+        scripture: "And the LORD called unto Moses, and spake unto him out of the tabernacle of the congregation.",
+        reference: "Leviticus 1:1",
+        question: "What are the first five books of the Bible called?",
+        answers: ["The Gospels", "The Pentateuch", "The Prophets", "The Epistles"],
+        correct: 1
+    },
+    {
+        scripture: "In those days there was no king in Israel: every man did that which was right in his own eyes.",
+        reference: "Judges 21:25",
+        question: "Which book comes after Joshua in the Old Testament?",
+        answers: ["Ruth", "Judges", "1 Samuel", "2 Samuel"],
+        correct: 1
+    },
+    {
+        scripture: "The word of the LORD that came to Joel the son of Pethuel.",
+        reference: "Joel 1:1",
+        question: "How many books did the Apostle Paul write?",
+        answers: ["9", "11", "13", "15"],
+        correct: 2
+    },
+
+    // ===== MEDIUM QUESTIONS (16-35) - Book order, categories, less common books =====
+    {
+        scripture: "Now these are the names of the children of Israel, which came into Egypt.",
+        reference: "Exodus 1:1",
+        question: "Which book comes immediately after Genesis?",
+        answers: ["Leviticus", "Exodus", "Numbers", "Deuteronomy"],
+        correct: 1
+    },
+    {
+        scripture: "Then Samuel took a vial of oil, and poured it upon his head.",
+        reference: "1 Samuel 10:1",
+        question: "Which two books are named after the prophet Samuel?",
+        answers: ["1 & 2 Samuel", "1 & 2 Kings", "1 & 2 Chronicles", "Samuel & Saul"],
+        correct: 0
+    },
+    {
+        scripture: "The burden of the word of the LORD to Israel by Malachi.",
+        reference: "Malachi 1:1",
+        question: "What is the last book of the Old Testament?",
+        answers: ["Zechariah", "Malachi", "Haggai", "Revelation"],
+        correct: 1
+    },
+    {
+        scripture: "The book of the generation of Jesus Christ, the son of David, the son of Abraham.",
+        reference: "Matthew 1:1",
+        question: "What is the first book of the New Testament?",
+        answers: ["Mark", "Matthew", "Luke", "John"],
+        correct: 1
+    },
+    {
+        scripture: "Now in the first year of Cyrus king of Persia, that the word of the LORD by the mouth of Jeremiah might be fulfilled.",
+        reference: "Ezra 1:1",
+        question: "Which book tells of the Jews returning from Babylonian exile to rebuild the temple?",
+        answers: ["Nehemiah", "Ezra", "Esther", "Daniel"],
+        correct: 1
+    },
+    {
+        scripture: "The words of Nehemiah the son of Hachaliah.",
+        reference: "Nehemiah 1:1",
+        question: "Which book describes the rebuilding of Jerusalem's walls?",
+        answers: ["Ezra", "Nehemiah", "Esther", "Haggai"],
+        correct: 1
+    },
+    {
+        scripture: "Now it came to pass in the days of Ahasuerus.",
+        reference: "Esther 1:1",
+        question: "Which book does NOT mention God's name but shows His providence?",
+        answers: ["Ruth", "Esther", "Song of Solomon", "Obadiah"],
+        correct: 1
+    },
+    {
+        scripture: "And Naomi said unto her two daughters in law, Go, return each to her mother's house.",
+        reference: "Ruth 1:8",
+        question: "Which short book tells the story of a Moabite woman who became King David's great-grandmother?",
+        answers: ["Esther", "Ruth", "Judges", "1 Samuel"],
+        correct: 1
+    },
+    {
+        scripture: "The vision of Isaiah the son of Amoz, which he saw concerning Judah and Jerusalem.",
+        reference: "Isaiah 1:1",
+        question: "How many Major Prophets are in the Old Testament?",
+        answers: ["4", "5", "7", "12"],
+        correct: 1
+    },
+    {
+        scripture: "The words of Jeremiah the son of Hilkiah, of the priests that were in Anathoth.",
+        reference: "Jeremiah 1:1",
+        question: "Which prophet is known as the 'weeping prophet'?",
+        answers: ["Isaiah", "Jeremiah", "Ezekiel", "Daniel"],
+        correct: 1
+    },
+    {
+        scripture: "How doth the city sit solitary, that was full of people!",
+        reference: "Lamentations 1:1",
+        question: "Which book is Jeremiah's poetic lament over Jerusalem's destruction?",
+        answers: ["Jeremiah", "Lamentations", "Ezekiel", "Daniel"],
+        correct: 1
+    },
+    {
+        scripture: "In the third year of the reign of Jehoiakim king of Judah came Nebuchadnezzar king of Babylon unto Jerusalem.",
+        reference: "Daniel 1:1",
+        question: "Which book contains the stories of the fiery furnace and the lion's den?",
+        answers: ["Ezekiel", "Daniel", "Jeremiah", "2 Kings"],
+        correct: 1
+    },
+    {
+        scripture: "The word of the LORD that came unto Hosea, the son of Beeri.",
+        reference: "Hosea 1:1",
+        question: "How many Minor Prophets are there?",
+        answers: ["5", "10", "12", "15"],
+        correct: 2
+    },
+    {
+        scripture: "The word of the LORD that came to Micah the Morasthite.",
+        reference: "Micah 1:1",
+        question: "Which Minor Prophet predicted Jesus would be born in Bethlehem?",
+        answers: ["Micah", "Nahum", "Habakkuk", "Haggai"],
+        correct: 0
+    },
+    {
+        scripture: "The burden which Habakkuk the prophet did see.",
+        reference: "Habakkuk 1:1",
+        question: "Which book comes between Nahum and Zephaniah?",
+        answers: ["Micah", "Habakkuk", "Haggai", "Jonah"],
+        correct: 1
+    },
+    {
+        scripture: "In the second year of Darius the king, in the sixth month, came the word of the LORD by Haggai the prophet.",
+        reference: "Haggai 1:1",
+        question: "Which two prophets encouraged the Jews to rebuild the temple after exile?",
+        answers: ["Haggai and Zechariah", "Ezra and Nehemiah", "Isaiah and Jeremiah", "Malachi and Joel"],
+        correct: 0
+    },
+    {
+        scripture: "Paul and Timotheus, the servants of Jesus Christ, to all the saints in Christ Jesus which are at Philippi.",
+        reference: "Philippians 1:1",
+        question: "Which book contains Paul's famous passage 'I can do all things through Christ'?",
+        answers: ["Ephesians", "Philippians", "Colossians", "1 Thessalonians"],
+        correct: 1
+    },
+    {
+        scripture: "Paul, an apostle of Jesus Christ by the commandment of God our Saviour.",
+        reference: "1 Timothy 1:1",
+        question: "Which three books are known as the 'Pastoral Epistles'?",
+        answers: ["Romans, 1 & 2 Corinthians", "1 & 2 Timothy, Titus", "Ephesians, Philippians, Colossians", "1, 2, 3 John"],
+        correct: 1
+    },
+    {
+        scripture: "James, a servant of God and of the Lord Jesus Christ, to the twelve tribes which are scattered abroad.",
+        reference: "James 1:1",
+        question: "Which book emphasizes that 'faith without works is dead'?",
+        answers: ["James", "Hebrews", "Romans", "Galatians"],
+        correct: 0
+    },
+    {
+        scripture: "Peter, an apostle of Jesus Christ, to the strangers scattered throughout Pontus, Galatia.",
+        reference: "1 Peter 1:1",
+        question: "How many epistles did Peter write?",
+        answers: ["1", "2", "3", "4"],
+        correct: 1
+    },
+
+    // ===== HARD QUESTIONS (36-50) - Obscure books, detailed knowledge =====
+    {
+        scripture: "The burden of Nineveh. The book of the vision of Nahum the Elkoshite.",
+        reference: "Nahum 1:1",
+        question: "Which Minor Prophet prophesied the destruction of Nineveh?",
+        answers: ["Jonah", "Nahum", "Micah", "Habakkuk"],
+        correct: 1
+    },
+    {
+        scripture: "The vision of Obadiah. Thus saith the Lord GOD concerning Edom.",
+        reference: "Obadiah 1:1",
+        question: "Which is the shortest book in the Old Testament (only 21 verses)?",
+        answers: ["Obadiah", "Jonah", "Haggai", "Malachi"],
+        correct: 0
+    },
+    {
+        scripture: "Jude, the servant of Jesus Christ, and brother of James, to them that are sanctified by God the Father.",
+        reference: "Jude 1:1",
+        question: "Which is the second-shortest book in the New Testament?",
+        answers: ["2 John", "3 John", "Jude", "Philemon"],
+        correct: 2
+    },
+    {
+        scripture: "The elder unto the wellbeloved Gaius, whom I love in the truth.",
+        reference: "3 John 1:1",
+        question: "Which is the shortest book in the New Testament (only 13 verses)?",
+        answers: ["2 John", "3 John", "Philemon", "Jude"],
+        correct: 1
+    },
+    {
+        scripture: "The word of the LORD that came to Zephaniah the son of Cushi.",
+        reference: "Zephaniah 1:1",
+        question: "Which book comes immediately before Haggai?",
+        answers: ["Habakkuk", "Zephaniah", "Zechariah", "Nahum"],
+        correct: 1
+    },
+    {
+        scripture: "Paul, a prisoner of Jesus Christ, and Timothy our brother, unto Philemon our dearly beloved.",
+        reference: "Philemon 1:1",
+        question: "Which short epistle discusses a runaway slave returning to his master?",
+        answers: ["Titus", "Philemon", "2 Timothy", "Jude"],
+        correct: 1
+    },
+    {
+        scripture: "In the eighth month, in the second year of Darius, came the word of the LORD unto Zechariah.",
+        reference: "Zechariah 1:1",
+        question: "Which prophet had visions of flying scrolls, lampstands, and olive trees?",
+        answers: ["Ezekiel", "Daniel", "Zechariah", "Haggai"],
+        correct: 2
+    },
+    {
+        scripture: "Now the word of the LORD came unto Jonah the son of Amittai, saying, Arise, go to Nineveh.",
+        reference: "Jonah 1:1-2",
+        question: "Which Minor Prophet was swallowed by a great fish?",
+        answers: ["Jonah", "Hosea", "Joel", "Amos"],
+        correct: 0
+    },
+    {
+        scripture: "The words of Amos, who was among the herdmen of Tekoa.",
+        reference: "Amos 1:1",
+        question: "Which prophet was a shepherd before God called him to prophesy?",
+        answers: ["Amos", "Hosea", "Micah", "Joel"],
+        correct: 0
+    },
+    {
+        scripture: "God, who at sundry times and in divers manners spake in time past unto the fathers by the prophets.",
+        reference: "Hebrews 1:1",
+        question: "Which book has an unknown author but emphasizes Jesus as High Priest?",
+        answers: ["James", "Hebrews", "1 Peter", "Jude"],
+        correct: 1
+    },
+    {
+        scripture: "Simon Peter, a servant and an apostle of Jesus Christ, to them that have obtained like precious faith.",
+        reference: "2 Peter 1:1",
+        question: "Which book warns about false teachers and the Day of the Lord?",
+        answers: ["1 Peter", "2 Peter", "Jude", "1 John"],
+        correct: 1
+    },
+    {
+        scripture: "That which was from the beginning, which we have heard, which we have seen with our eyes.",
+        reference: "1 John 1:1",
+        question: "How many epistles did the Apostle John write?",
+        answers: ["1", "2", "3", "4"],
+        correct: 2
+    },
+    {
+        scripture: "The elder unto the elect lady and her children, whom I love in the truth.",
+        reference: "2 John 1:1",
+        question: "Which epistle is addressed to 'the elect lady'?",
+        answers: ["1 John", "2 John", "3 John", "1 Peter"],
+        correct: 1
+    },
+    {
+        scripture: "Paul, called to be an apostle of Jesus Christ through the will of God, and Sosthenes our brother.",
+        reference: "1 Corinthians 1:1",
+        question: "Which church received two letters from Paul addressing divisions and spiritual gifts?",
+        answers: ["Ephesus", "Philippi", "Corinth", "Thessalonica"],
+        correct: 2
+    },
+    {
+        scripture: "Paul, an apostle, (not of men, neither by man, but by Jesus Christ, and God the Father).",
+        reference: "Galatians 1:1",
+        question: "Which epistle strongly defends salvation by grace through faith, not works?",
+        answers: ["Romans", "Galatians", "Ephesians", "Philippians"],
+        correct: 1
+    },
+    {
+        scripture: "Paul, an apostle of Jesus Christ by the will of God, to the saints which are at Ephesus.",
+        reference: "Ephesians 1:1",
+        question: "Which three epistles are called the 'Prison Epistles'?",
+        answers: ["Romans, 1 & 2 Corinthians", "Galatians, Ephesians, Philippians", "Ephesians, Philippians, Colossians", "1 & 2 Timothy, Titus"],
+        correct: 2
+    },
+    {
+        scripture: "Paul and Silvanus and Timotheus, unto the church of the Thessalonians.",
+        reference: "1 Thessalonians 1:1",
+        question: "Which two epistles discuss the return of Christ and the 'Day of the Lord'?",
+        answers: ["1 & 2 Thessalonians", "1 & 2 Peter", "1 & 2 Timothy", "1 & 2 Corinthians"],
+        correct: 0
+    },
+    {
+        scripture: "Paul, an apostle of Jesus Christ by the commandment of God our Saviour, and Lord Jesus Christ.",
+        reference: "1 Timothy 1:1",
+        question: "To which young pastor did Paul write two letters of instruction?",
+        answers: ["Titus", "Timothy", "Philemon", "Silas"],
+        correct: 1
+    },
+    {
+        scripture: "Now there was a man of the Pharisees, named Nicodemus, a ruler of the Jews.",
+        reference: "John 3:1",
+        question: "Which Gospel was written last and emphasizes Jesus as the Word made flesh?",
+        answers: ["Matthew", "Mark", "Luke", "John"],
+        correct: 3
+    },
+    {
+        scripture: "The former treatise have I made, O Theophilus, of all that Jesus began both to do and teach.",
+        reference: "Acts 1:1",
+        question: "Which Gospel writer also wrote the book of Acts?",
+        answers: ["Matthew", "Mark", "Luke", "John"],
+        correct: 2
+    }
+],
+
+    // 12 Disciples Quiz - 50 Questions
+    "12-disciples": [
+    // ===== EASY QUESTIONS (1-15) - Basic facts every Christian should know =====
+    {
+        scripture: "And Jesus, walking by the sea of Galilee, saw two brethren, Simon called Peter, and Andrew his brother, casting a net into the sea: for they were fishers.",
+        reference: "Matthew 4:18",
+        question: "What were Peter and Andrew doing when Jesus called them?",
+        answers: ["Mending nets", "Fishing", "Building boats", "Selling fish"],
+        correct: 1
+    },
+    {
+        scripture: "And going on from thence, he saw other two brethren, James the son of Zebedee, and John his brother, in a ship with Zebedee their father, mending their nets; and he called them.",
+        reference: "Matthew 4:21",
+        question: "Which two disciples were brothers and sons of Zebedee?",
+        answers: ["Peter and Andrew", "James and John", "Philip and Bartholomew", "James and Judas"],
+        correct: 1
+    },
+    {
+        scripture: "And he ordained twelve, that they should be with him, and that he might send them forth to preach.",
+        reference: "Mark 3:14",
+        question: "How many disciples did Jesus choose to be His closest followers?",
+        answers: ["7", "10", "12", "70"],
+        correct: 2
+    },
+    {
+        scripture: "And Simon he surnamed Peter.",
+        reference: "Mark 3:16",
+        question: "What name did Jesus give to Simon?",
+        answers: ["The Rock", "Peter", "Cephas", "Simon Peter"],
+        correct: 1
+    },
+    {
+        scripture: "And James the son of Zebedee, and John the brother of James; and he surnamed them Boanerges, which is, The sons of thunder.",
+        reference: "Mark 3:17",
+        question: "What nickname did Jesus give to James and John?",
+        answers: ["Sons of Thunder", "Sons of Light", "Sons of the Kingdom", "Fishers of Men"],
+        correct: 0
+    },
+    {
+        scripture: "And as Jesus passed forth from thence, he saw a man, named Matthew, sitting at the receipt of custom: and he saith unto him, Follow me. And he arose, and followed him.",
+        reference: "Matthew 9:9",
+        question: "What was Matthew's occupation before Jesus called him?",
+        answers: ["Fisherman", "Tax collector", "Carpenter", "Pharisee"],
+        correct: 1
+    },
+    {
+        scripture: "Then saith he to Thomas, Reach hither thy finger, and behold my hands; and reach hither thy hand, and thrust it into my side: and be not faithless, but believing.",
+        reference: "John 20:27",
+        question: "Which disciple doubted Jesus's resurrection until he saw Jesus's wounds?",
+        answers: ["Peter", "Philip", "Thomas", "Andrew"],
+        correct: 2
+    },
+    {
+        scripture: "And he said unto them, Follow me, and I will make you fishers of men.",
+        reference: "Matthew 4:19",
+        question: "What did Jesus promise to make Peter and Andrew?",
+        answers: ["Fishers of men", "Mighty warriors", "Great teachers", "Royal priests"],
+        correct: 0
+    },
+    {
+        scripture: "Then one of the twelve, called Judas Iscariot, went unto the chief priests, And said unto them, What will ye give me, and I will deliver him unto you? And they covenanted with him for thirty pieces of silver.",
+        reference: "Matthew 26:14-15",
+        question: "Which disciple betrayed Jesus for thirty pieces of silver?",
+        answers: ["Judas Iscariot", "Judas Thaddaeus", "Simon the Zealot", "Bartholomew"],
+        correct: 0
+    },
+    {
+        scripture: "And he cometh unto the disciples, and findeth them asleep, and saith unto Peter, What, could ye not watch with me one hour?",
+        reference: "Matthew 26:40",
+        question: "In which garden did the disciples fall asleep while Jesus prayed?",
+        answers: ["Garden of Eden", "Garden of Gethsemane", "Olive Garden", "King's Garden"],
+        correct: 1
+    },
+    {
+        scripture: "But Peter said, Man, I know not what thou sayest. And immediately, while he yet spake, the cock crew.",
+        reference: "Luke 22:60",
+        question: "How many times did Peter deny knowing Jesus?",
+        answers: ["One time", "Two times", "Three times", "Seven times"],
+        correct: 2
+    },
+    {
+        scripture: "Now there was leaning on Jesus' bosom one of his disciples, whom Jesus loved.",
+        reference: "John 13:23",
+        question: "Which disciple is referred to as 'the one whom Jesus loved'?",
+        answers: ["Peter", "James", "John", "Andrew"],
+        correct: 2
+    },
+    {
+        scripture: "And when he had called unto him his twelve disciples, he gave them power against unclean spirits, to cast them out, and to heal all manner of sickness and all manner of disease.",
+        reference: "Matthew 10:1",
+        question: "What power did Jesus give to His twelve disciples?",
+        answers: ["To heal the sick and cast out demons", "To raise the dead only", "To control the weather", "To read minds"],
+        correct: 0
+    },
+    {
+        scripture: "And Simon Peter answered and said, Thou art the Christ, the Son of the living God.",
+        reference: "Matthew 16:16",
+        question: "Which disciple declared 'Thou art the Christ, the Son of the living God'?",
+        answers: ["John", "Peter", "James", "Philip"],
+        correct: 1
+    },
+    {
+        scripture: "And the day following Jesus would go forth into Galilee, and findeth Philip, and saith unto him, Follow me.",
+        reference: "John 1:43",
+        question: "From which region were most of the disciples originally from?",
+        answers: ["Judea", "Samaria", "Galilee", "Perea"],
+        correct: 2
+    },
+
+    // ===== MEDIUM QUESTIONS (16-35) - Deeper knowledge of disciples =====
+    {
+        scripture: "Philip saith unto him, Lord, shew us the Father, and it sufficeth us.",
+        reference: "John 14:8",
+        question: "Which disciple asked Jesus to 'show us the Father'?",
+        answers: ["Thomas", "Philip", "Andrew", "Bartholomew"],
+        correct: 1
+    },
+    {
+        scripture: "Philip findeth Nathanael, and saith unto him, We have found him, of whom Moses in the law, and the prophets, did write, Jesus of Nazareth, the son of Joseph.",
+        reference: "John 1:45",
+        question: "Which disciple did Philip bring to Jesus?",
+        answers: ["Andrew", "Bartholomew (Nathanael)", "Matthew", "James"],
+        correct: 1
+    },
+    {
+        scripture: "Jesus saw Nathanael coming to him, and saith of him, Behold an Israelite indeed, in whom is no guile!",
+        reference: "John 1:47",
+        question: "What did Jesus say about Nathanael when He first saw him?",
+        answers: ["He is a man of faith", "He is an Israelite with no deceit", "He will be a great fisher", "He will write many books"],
+        correct: 1
+    },
+    {
+        scripture: "One of his disciples, Andrew, Simon Peter's brother, saith unto him, There is a lad here, which hath five barley loaves, and two small fishes.",
+        reference: "John 6:8-9",
+        question: "Which disciple found the boy with five loaves and two fish?",
+        answers: ["Peter", "Andrew", "Philip", "John"],
+        correct: 1
+    },
+    {
+        scripture: "And he said, Come. And when Peter was come down out of the ship, he walked on the water, to go to Jesus.",
+        reference: "Matthew 14:29",
+        question: "Which disciple walked on water with Jesus?",
+        answers: ["John", "James", "Peter", "Andrew"],
+        correct: 2
+    },
+    {
+        scripture: "And after six days Jesus taketh Peter, James, and John his brother, and bringeth them up into an high mountain apart, And was transfigured before them.",
+        reference: "Matthew 17:1-2",
+        question: "Which three disciples witnessed Jesus's transfiguration?",
+        answers: ["Peter, James, and John", "Peter, Andrew, and John", "James, John, and Philip", "Peter, James, and Andrew"],
+        correct: 0
+    },
+    {
+        scripture: "Then said Thomas, which is called Didymus, unto his fellowdisciples, Let us also go, that we may die with him.",
+        reference: "John 11:16",
+        question: "What does Thomas's surname 'Didymus' mean?",
+        answers: ["The Believer", "The Twin", "The Zealous", "The Brave"],
+        correct: 1
+    },
+    {
+        scripture: "Judas saith unto him, not Iscariot, Lord, how is it that thou wilt manifest thyself unto us, and not unto the world?",
+        reference: "John 14:22",
+        question: "What was the other Judas (not Iscariot) also called?",
+        answers: ["Judas Zealot", "Judas Barsabbas", "Judas Thaddaeus", "Judas Alpheus"],
+        correct: 2
+    },
+    {
+        scripture: "And they prayed, and said, Thou, Lord, which knowest the hearts of all men, shew whether of these two thou hast chosen, That he may take part of this ministry and apostleship, from which Judas by transgression fell.",
+        reference: "Acts 1:24-25",
+        question: "Who replaced Judas Iscariot as the twelfth apostle?",
+        answers: ["Paul", "Barnabas", "Matthias", "Silas"],
+        correct: 2
+    },
+    {
+        scripture: "Then came the day of unleavened bread, when the passover must be killed. And he sent Peter and John, saying, Go and prepare us the passover, that we may eat.",
+        reference: "Luke 22:7-8",
+        question: "Which two disciples did Jesus send to prepare the Last Supper?",
+        answers: ["Peter and Andrew", "James and John", "Peter and John", "Philip and Bartholomew"],
+        correct: 2
+    },
+    {
+        scripture: "And when it was day, he called unto him his disciples: and of them he chose twelve, whom also he named apostles.",
+        reference: "Luke 6:13",
+        question: "What did Jesus call His chosen twelve disciples?",
+        answers: ["The Twelve", "Apostles", "The Sent Ones", "The Foundation"],
+        correct: 1
+    },
+    {
+        scripture: "Now about that time Herod the king stretched forth his hands to vex certain of the church. And he killed James the brother of John with the sword.",
+        reference: "Acts 12:1-2",
+        question: "Which disciple was killed by Herod with a sword?",
+        answers: ["James son of Zebedee", "James son of Alphaeus", "John", "Peter"],
+        correct: 0
+    },
+    {
+        scripture: "Then Peter said, Silver and gold have I none; but such as I have give I thee: In the name of Jesus Christ of Nazareth rise up and walk.",
+        reference: "Acts 3:6",
+        question: "With which disciple did Peter heal the lame beggar at the temple gate?",
+        answers: ["James", "John", "Andrew", "Philip"],
+        correct: 1
+    },
+    {
+        scripture: "Now when they saw the boldness of Peter and John, and perceived that they were unlearned and ignorant men, they marvelled; and they took knowledge of them, that they had been with Jesus.",
+        reference: "Acts 4:13",
+        question: "What did the Jewish leaders notice about Peter and John?",
+        answers: ["They were educated scribes", "They were unlearned but had been with Jesus", "They were Roman citizens", "They were Pharisees"],
+        correct: 1
+    },
+    {
+        scripture: "When Simon Peter saw it, he fell down at Jesus' knees, saying, Depart from me; for I am a sinful man, O Lord.",
+        reference: "Luke 5:8",
+        question: "What miracle caused Peter to recognize his sinfulness?",
+        answers: ["Walking on water", "The miraculous catch of fish", "Jesus calming the storm", "The feeding of 5,000"],
+        correct: 1
+    },
+    {
+        scripture: "Then Simon Peter having a sword drew it, and smote the high priest's servant, and cut off his right ear. The servant's name was Malchus.",
+        reference: "John 18:10",
+        question: "Which disciple cut off the servant's ear in Gethsemane?",
+        answers: ["James", "Peter", "Simon the Zealot", "John"],
+        correct: 1
+    },
+    {
+        scripture: "And Andrew, and Philip, and Bartholomew, and Matthew, and Thomas, and James the son of Alphaeus, and Thaddaeus, and Simon the Canaanite.",
+        reference: "Mark 3:18",
+        question: "What was Simon the Zealot also called?",
+        answers: ["Simon the Canaanite", "Simon the Rock", "Simon the Faithful", "Simon the Strong"],
+        correct: 0
+    },
+    {
+        scripture: "The first, Simon, who is called Peter, and Andrew his brother; James the son of Zebedee, and John his brother.",
+        reference: "Matthew 10:2",
+        question: "Which disciple is always listed first in the lists of the twelve?",
+        answers: ["John", "James", "Peter", "Andrew"],
+        correct: 2
+    },
+    {
+        scripture: "And they cast lots; and the lot fell upon Matthias; and he was numbered with the eleven apostles.",
+        reference: "Acts 1:26",
+        question: "How was Matthias chosen to replace Judas?",
+        answers: ["Jesus appeared and chose him", "Peter appointed him", "They cast lots", "The disciples voted"],
+        correct: 2
+    },
+    {
+        scripture: "Philip answered him, Two hundred pennyworth of bread is not sufficient for them, that every one of them may take a little.",
+        reference: "John 6:7",
+        question: "When Jesus asked how to feed 5,000, which disciple mentioned the cost would be 200 denarii?",
+        answers: ["Andrew", "Philip", "Matthew", "Judas"],
+        correct: 1
+    },
+
+    // ===== HARD QUESTIONS (36-50) - Detailed knowledge, books written, martyrdoms =====
+    {
+        scripture: "These twelve Jesus sent forth, and commanded them, saying, Go not into the way of the Gentiles, and into any city of the Samaritans enter ye not.",
+        reference: "Matthew 10:5",
+        question: "In their first mission, where did Jesus tell the twelve NOT to go?",
+        answers: ["To Judea", "To the Gentiles and Samaritans", "To Jerusalem", "To foreign lands"],
+        correct: 1
+    },
+    {
+        scripture: "And John answered him, saying, Master, we saw one casting out devils in thy name, and he followeth not us: and we forbad him, because he followeth not us.",
+        reference: "Mark 9:38",
+        question: "Which disciple told Jesus they stopped someone from casting out demons in Jesus's name?",
+        answers: ["Peter", "James", "John", "Andrew"],
+        correct: 2
+    },
+    {
+        scripture: "Then came to him the mother of Zebedee's children with her sons, worshipping him, and desiring a certain thing of him.",
+        reference: "Matthew 20:20",
+        question: "Who asked Jesus that her sons might sit at His right and left hand in His kingdom?",
+        answers: ["Mary, Jesus's mother", "The mother of James and John", "Peter's wife", "Mary Magdalene"],
+        correct: 1
+    },
+    {
+        scripture: "Then saith one of his disciples, Judas Iscariot, Simon's son, which should betray him, Why was not this ointment sold for three hundred pence, and given to the poor?",
+        reference: "John 12:4-5",
+        question: "Whose son was Judas Iscariot?",
+        answers: ["James's son", "Simon's son", "Alphaeus's son", "Zebedee's son"],
+        correct: 1
+    },
+    {
+        scripture: "Jesus answered, He it is, to whom I shall give a sop, when I have dipped it. And when he had dipped the sop, he gave it to Judas Iscariot, the son of Simon.",
+        reference: "John 13:26",
+        question: "How did Jesus indicate which disciple would betray Him at the Last Supper?",
+        answers: ["He pointed at him", "He gave him a piece of bread", "He called his name", "He looked at him"],
+        correct: 1
+    },
+    {
+        scripture: "But Thomas, one of the twelve, called Didymus, was not with them when Jesus came.",
+        reference: "John 20:24",
+        question: "Why did Thomas miss Jesus's first appearance after the resurrection?",
+        answers: ["He was fishing", "He was hiding", "He was not with the others", "He was in Galilee"],
+        correct: 2
+    },
+    {
+        scripture: "And Thomas answered and said unto him, My Lord and my God.",
+        reference: "John 20:28",
+        question: "What did Thomas say when he saw the risen Jesus?",
+        answers: ["I believe", "My Master", "My Lord and my God", "Blessed be His name"],
+        correct: 2
+    },
+    {
+        scripture: "Simon Peter, a servant and an apostle of Jesus Christ, to them that have obtained like precious faith with us.",
+        reference: "2 Peter 1:1",
+        question: "How many epistles (letters) did Peter write in the New Testament?",
+        answers: ["One", "Two", "Three", "None"],
+        correct: 1
+    },
+    {
+        scripture: "The elder unto the elect lady and her children, whom I love in the truth.",
+        reference: "2 John 1:1",
+        question: "How many books of the New Testament did John write?",
+        answers: ["One (Gospel)", "Three (Gospel and two letters)", "Four (Gospel, three letters)", "Five (Gospel, three letters, Revelation)"],
+        correct: 3
+    },
+    {
+        scripture: "The book of the generation of Jesus Christ, the son of David, the son of Abraham.",
+        reference: "Matthew 1:1",
+        question: "Which disciple wrote the Gospel that begins with Jesus's genealogy?",
+        answers: ["Mark", "Matthew", "Luke", "John"],
+        correct: 1
+    },
+    {
+        scripture: "The former treatise have I made, O Theophilus, of all that Jesus began both to do and teach.",
+        reference: "Acts 1:1",
+        question: "Though not written by a disciple, whose testimony is believed to be recorded in the Gospel of Mark?",
+        answers: ["Paul's", "Peter's", "James's", "Philip's"],
+        correct: 1
+    },
+    {
+        scripture: "Then Peter and the other apostles answered and said, We ought to obey God rather than men.",
+        reference: "Acts 5:29",
+        question: "What did Peter say when commanded to stop preaching about Jesus?",
+        answers: ["We cannot but speak", "We will never stop", "We ought to obey God rather than men", "God has sent us"],
+        correct: 2
+    },
+    {
+        scripture: "And he took with him Peter and the two sons of Zebedee, and began to be sorrowful and very heavy.",
+        reference: "Matthew 26:37",
+        question: "Which three disciples did Jesus take with Him to pray in Gethsemane?",
+        answers: ["Peter, James, and John", "Peter, Andrew, and James", "John, James, and Philip", "Peter, John, and Matthew"],
+        correct: 0
+    },
+    {
+        scripture: "And they prayed, and said, Thou, Lord, which knowest the hearts of all men, shew whether of these two thou hast chosen.",
+        reference: "Acts 1:24",
+        question: "Between which two men did the disciples choose Judas's replacement?",
+        answers: ["Paul and Barnabas", "Joseph Barsabas and Matthias", "Silas and Timothy", "Mark and Luke"],
+        correct: 1
+    },
+    {
+        scripture: "Now when they saw the boldness of Peter and John, and perceived that they were unlearned and ignorant men, they marvelled.",
+        reference: "Acts 4:13",
+        question: "What amazed the Jewish council about Peter and John's preaching?",
+        answers: ["Their education", "Their boldness despite being unlearned", "Their miracles", "Their knowledge of Scripture"],
+        correct: 1
+    },
+    {
+        scripture: "And the Lord said, Simon, Simon, behold, Satan hath desired to have you, that he may sift you as wheat.",
+        reference: "Luke 22:31",
+        question: "What did Jesus warn Peter that Satan wanted to do?",
+        answers: ["Tempt him", "Sift him as wheat", "Destroy his faith", "Make him deny Christ"],
+        correct: 1
+    },
+    {
+        scripture: "So when they had dined, Jesus saith to Simon Peter, Simon, son of Jonas, lovest thou me more than these?",
+        reference: "John 21:15",
+        question: "How many times did Jesus ask Peter 'Do you love me?' after the resurrection?",
+        answers: ["One time", "Two times", "Three times", "Seven times"],
+        correct: 2
+    },
+    {
+        scripture: "Jesus saith unto him, If I will that he tarry till I come, what is that to thee? follow thou me.",
+        reference: "John 21:22",
+        question: "About which disciple did Jesus say 'If I will that he remain until I come'?",
+        answers: ["Peter", "James", "John", "Andrew"],
+        correct: 2
+    },
+    {
+        scripture: "When Jesus saw Nathanael coming to him, he saith of him, Behold an Israelite indeed, in whom is no guile!",
+        reference: "John 1:47",
+        question: "Another name for Nathanael is:",
+        answers: ["Matthew", "Bartholomew", "Thaddaeus", "Levi"],
+        correct: 1
+    },
+    {
+        scripture: "And as they came down from the mountain, Jesus charged them, saying, Tell the vision to no man, until the Son of man be risen again from the dead.",
+        reference: "Matthew 17:9",
+        question: "After the Transfiguration, what did Jesus tell Peter, James, and John not to do?",
+        answers: ["Tell anyone what they saw", "Return to the mountain", "Tell the other disciples", "Leave Galilee"],
+        correct: 0
+    }
+],
+
+    // Bible Verse Quiz - 50 Questions (Fill-in-the-Blank)
+    "bible-verses": [
+    // ===== EASY QUESTIONS (1-15) - Most famous verses every Christian knows =====
+    {
+        scripture: "For God so loved the world, that he gave his only begotten Son, that whosoever believeth in him should not perish, but have everlasting life.",
+        reference: "John 3:16",
+        question: "For God so loved the world, that he gave his only begotten ___, that whosoever believeth in him should not perish, but have everlasting life.",
+        answers: ["Son", "Child", "Lamb", "Gift"],
+        correct: 0
+    },
+    {
+        scripture: "The LORD is my shepherd; I shall not want.",
+        reference: "Psalm 23:1",
+        question: "The LORD is my ___, I shall not want.",
+        answers: ["guide", "shepherd", "father", "keeper"],
+        correct: 1
+    },
+    {
+        scripture: "I can do all things through Christ which strengtheneth me.",
+        reference: "Philippians 4:13",
+        question: "I can do all things through Christ which ___ me.",
+        answers: ["helpeth", "loveth", "strengtheneth", "saveth"],
+        correct: 2
+    },
+    {
+        scripture: "Trust in the LORD with all thine heart; and lean not unto thine own understanding.",
+        reference: "Proverbs 3:5",
+        question: "Trust in the LORD with all thine heart; and lean not unto thine own ___.",
+        answers: ["wisdom", "understanding", "knowledge", "ways"],
+        correct: 1
+    },
+    {
+        scripture: "For all have sinned, and come short of the glory of God.",
+        reference: "Romans 3:23",
+        question: "For all have ___, and come short of the glory of God.",
+        answers: ["sinned", "fallen", "failed", "erred"],
+        correct: 0
+    },
+    {
+        scripture: "Jesus saith unto him, I am the way, the truth, and the life: no man cometh unto the Father, but by me.",
+        reference: "John 14:6",
+        question: "Jesus saith unto him, I am the way, the truth, and the ___: no man cometh unto the Father, but by me.",
+        answers: ["light", "life", "love", "Lord"],
+        correct: 1
+    },
+    {
+        scripture: "For the wages of sin is death; but the gift of God is eternal life through Jesus Christ our Lord.",
+        reference: "Romans 6:23",
+        question: "For the wages of sin is death; but the gift of God is ___ through Jesus Christ our Lord.",
+        answers: ["salvation", "eternal life", "grace", "mercy"],
+        correct: 1
+    },
+    {
+        scripture: "And we know that all things work together for good to them that love God, to them who are the called according to his purpose.",
+        reference: "Romans 8:28",
+        question: "And we know that all things work together for ___ to them that love God.",
+        answers: ["good", "blessing", "righteousness", "peace"],
+        correct: 0
+    },
+    {
+        scripture: "For by grace are ye saved through faith; and that not of yourselves: it is the gift of God.",
+        reference: "Ephesians 2:8",
+        question: "For by grace are ye saved through ___; and that not of yourselves: it is the gift of God.",
+        answers: ["works", "faith", "love", "obedience"],
+        correct: 1
+    },
+    {
+        scripture: "In the beginning was the Word, and the Word was with God, and the Word was God.",
+        reference: "John 1:1",
+        question: "In the beginning was the Word, and the Word was with God, and the Word ___ God.",
+        answers: ["became", "was", "created", "knew"],
+        correct: 1
+    },
+    {
+        scripture: "Be still, and know that I am God: I will be exalted among the heathen, I will be exalted in the earth.",
+        reference: "Psalm 46:10",
+        question: "Be still, and know that I am ___: I will be exalted among the heathen.",
+        answers: ["Lord", "God", "King", "Holy"],
+        correct: 1
+    },
+    {
+        scripture: "The LORD is my light and my salvation; whom shall I fear? the LORD is the strength of my life; of whom shall I be afraid?",
+        reference: "Psalm 27:1",
+        question: "The LORD is my light and my ___; whom shall I fear?",
+        answers: ["salvation", "shield", "fortress", "defender"],
+        correct: 0
+    },
+    {
+        scripture: "Thy word is a lamp unto my feet, and a light unto my path.",
+        reference: "Psalm 119:105",
+        question: "Thy word is a lamp unto my feet, and a light unto my ___.",
+        answers: ["way", "path", "soul", "life"],
+        correct: 1
+    },
+    {
+        scripture: "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+        reference: "Matthew 6:33",
+        question: "But seek ye first the kingdom of God, and his ___; and all these things shall be added unto you.",
+        answers: ["glory", "righteousness", "will", "truth"],
+        correct: 1
+    },
+    {
+        scripture: "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+        reference: "Matthew 11:28",
+        question: "Come unto me, all ye that labour and are heavy laden, and I will give you ___.",
+        answers: ["peace", "rest", "comfort", "strength"],
+        correct: 1
+    },
+
+    // ===== MEDIUM QUESTIONS (16-35) - Well-known verses requiring more study =====
+    {
+        scripture: "For I know the thoughts that I think toward you, saith the LORD, thoughts of peace, and not of evil, to give you an expected end.",
+        reference: "Jeremiah 29:11",
+        question: "For I know the thoughts that I think toward you, saith the LORD, thoughts of ___, and not of evil.",
+        answers: ["hope", "peace", "love", "blessing"],
+        correct: 1
+    },
+    {
+        scripture: "He maketh me to lie down in green pastures: he leadeth me beside the still waters.",
+        reference: "Psalm 23:2",
+        question: "He maketh me to lie down in green pastures: he leadeth me beside the ___ waters.",
+        answers: ["quiet", "still", "calm", "deep"],
+        correct: 1
+    },
+    {
+        scripture: "The fear of the LORD is the beginning of wisdom: and the knowledge of the holy is understanding.",
+        reference: "Proverbs 9:10",
+        question: "The fear of the LORD is the beginning of ___.",
+        answers: ["knowledge", "wisdom", "understanding", "righteousness"],
+        correct: 1
+    },
+    {
+        scripture: "And thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind, and with all thy strength.",
+        reference: "Mark 12:30",
+        question: "And thou shalt love the Lord thy God with all thy heart, and with all thy soul, and with all thy mind, and with all thy ___.",
+        answers: ["strength", "being", "power", "might"],
+        correct: 0
+    },
+    {
+        scripture: "If my people, which are called by my name, shall humble themselves, and pray, and seek my face, and turn from their wicked ways; then will I hear from heaven, and will forgive their sin, and will heal their land.",
+        reference: "2 Chronicles 7:14",
+        question: "If my people, which are called by my name, shall humble themselves, and pray, and seek my face, and turn from their wicked ways; then will I hear from heaven, and will ___ their sin.",
+        answers: ["forgive", "pardon", "cleanse", "remove"],
+        correct: 0
+    },
+    {
+        scripture: "But they that wait upon the LORD shall renew their strength; they shall mount up with wings as eagles.",
+        reference: "Isaiah 40:31",
+        question: "But they that wait upon the LORD shall renew their ___; they shall mount up with wings as eagles.",
+        answers: ["hope", "strength", "faith", "courage"],
+        correct: 1
+    },
+    {
+        scripture: "Fear thou not; for I am with thee: be not dismayed; for I am thy God: I will strengthen thee; yea, I will help thee.",
+        reference: "Isaiah 41:10",
+        question: "Fear thou not; for I am with thee: be not dismayed; for I am thy ___.",
+        answers: ["Lord", "God", "Father", "King"],
+        correct: 1
+    },
+    {
+        scripture: "Now faith is the substance of things hoped for, the evidence of things not seen.",
+        reference: "Hebrews 11:1",
+        question: "Now faith is the substance of things hoped for, the evidence of things not ___.",
+        answers: ["seen", "known", "understood", "revealed"],
+        correct: 0
+    },
+    {
+        scripture: "Be careful for nothing; but in every thing by prayer and supplication with thanksgiving let your requests be made known unto God.",
+        reference: "Philippians 4:6",
+        question: "Be careful for nothing; but in every thing by ___ and supplication with thanksgiving let your requests be made known unto God.",
+        answers: ["fasting", "prayer", "worship", "petition"],
+        correct: 1
+    },
+    {
+        scripture: "And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+        reference: "Philippians 4:7",
+        question: "And the peace of God, which passeth all ___, shall keep your hearts and minds through Christ Jesus.",
+        answers: ["knowledge", "understanding", "wisdom", "comprehension"],
+        correct: 1
+    },
+    {
+        scripture: "Casting all your care upon him; for he careth for you.",
+        reference: "1 Peter 5:7",
+        question: "Casting all your ___ upon him; for he careth for you.",
+        answers: ["burdens", "care", "worries", "troubles"],
+        correct: 1
+    },
+    {
+        scripture: "If we confess our sins, he is faithful and just to forgive us our sins, and to cleanse us from all unrighteousness.",
+        reference: "1 John 1:9",
+        question: "If we confess our sins, he is faithful and just to forgive us our sins, and to ___ us from all unrighteousness.",
+        answers: ["cleanse", "purify", "wash", "heal"],
+        correct: 0
+    },
+    {
+        scripture: "Greater love hath no man than this, that a man lay down his life for his friends.",
+        reference: "John 15:13",
+        question: "Greater love hath no man than this, that a man lay down his ___ for his friends.",
+        answers: ["life", "soul", "body", "all"],
+        correct: 0
+    },
+    {
+        scripture: "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.",
+        reference: "Galatians 5:22",
+        question: "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, ___, faith.",
+        answers: ["kindness", "goodness", "mercy", "patience"],
+        correct: 1
+    },
+    {
+        scripture: "Train up a child in the way he should go: and when he is old, he will not depart from it.",
+        reference: "Proverbs 22:6",
+        question: "Train up a child in the way he should go: and when he is old, he will not ___ from it.",
+        answers: ["stray", "depart", "leave", "turn"],
+        correct: 1
+    },
+    {
+        scripture: "The name of the LORD is a strong tower: the righteous runneth into it, and is safe.",
+        reference: "Proverbs 18:10",
+        question: "The name of the LORD is a strong ___: the righteous runneth into it, and is safe.",
+        answers: ["fortress", "tower", "refuge", "castle"],
+        correct: 1
+    },
+    {
+        scripture: "This is the day which the LORD hath made; we will rejoice and be glad in it.",
+        reference: "Psalm 118:24",
+        question: "This is the day which the LORD hath made; we will ___ and be glad in it.",
+        answers: ["rejoice", "celebrate", "praise", "worship"],
+        correct: 0
+    },
+    {
+        scripture: "For where two or three are gathered together in my name, there am I in the midst of them.",
+        reference: "Matthew 18:20",
+        question: "For where two or three are gathered together in my name, there am I in the ___ of them.",
+        answers: ["presence", "midst", "center", "company"],
+        correct: 1
+    },
+    {
+        scripture: "Let your light so shine before men, that they may see your good works, and glorify your Father which is in heaven.",
+        reference: "Matthew 5:16",
+        question: "Let your light so shine before men, that they may see your good works, and ___ your Father which is in heaven.",
+        answers: ["praise", "glorify", "honor", "worship"],
+        correct: 1
+    },
+    {
+        scripture: "Delight thyself also in the LORD: and he shall give thee the desires of thine heart.",
+        reference: "Psalm 37:4",
+        question: "Delight thyself also in the LORD: and he shall give thee the ___ of thine heart.",
+        answers: ["desires", "wishes", "requests", "longings"],
+        correct: 0
+    },
+
+    // ===== HARD QUESTIONS (36-50) - Important but less commonly quoted verses =====
+    {
+        scripture: "And be ye kind one to another, tenderhearted, forgiving one another, even as God for Christ's sake hath forgiven you.",
+        reference: "Ephesians 4:32",
+        question: "And be ye kind one to another, tenderhearted, ___ one another, even as God for Christ's sake hath forgiven you.",
+        answers: ["forgiving", "loving", "accepting", "helping"],
+        correct: 0
+    },
+    {
+        scripture: "Draw nigh to God, and he will draw nigh to you. Cleanse your hands, ye sinners; and purify your hearts, ye double minded.",
+        reference: "James 4:8",
+        question: "Draw nigh to God, and he will draw ___ to you.",
+        answers: ["close", "nigh", "near", "beside"],
+        correct: 1
+    },
+    {
+        scripture: "If any of you lack wisdom, let him ask of God, that giveth to all men liberally, and upbraideth not; and it shall be given him.",
+        reference: "James 1:5",
+        question: "If any of you lack ___, let him ask of God, that giveth to all men liberally.",
+        answers: ["knowledge", "wisdom", "understanding", "discernment"],
+        correct: 1
+    },
+    {
+        scripture: "Blessed are the pure in heart: for they shall see God.",
+        reference: "Matthew 5:8",
+        question: "Blessed are the pure in heart: for they shall see ___.",
+        answers: ["God", "heaven", "glory", "truth"],
+        correct: 0
+    },
+    {
+        scripture: "For we walk by faith, not by sight.",
+        reference: "2 Corinthians 5:7",
+        question: "For we walk by faith, not by ___.",
+        answers: ["sight", "feeling", "sense", "seeing"],
+        correct: 0
+    },
+    {
+        scripture: "But he answered and said, It is written, Man shall not live by bread alone, but by every word that proceedeth out of the mouth of God.",
+        reference: "Matthew 4:4",
+        question: "Man shall not live by bread alone, but by every word that proceedeth out of the ___ of God.",
+        answers: ["mouth", "lips", "tongue", "voice"],
+        correct: 0
+    },
+    {
+        scripture: "Therefore if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
+        reference: "2 Corinthians 5:17",
+        question: "Therefore if any man be in Christ, he is a new ___: old things are passed away.",
+        answers: ["creation", "creature", "being", "person"],
+        correct: 1
+    },
+    {
+        scripture: "Submit yourselves therefore to God. Resist the devil, and he will flee from you.",
+        reference: "James 4:7",
+        question: "Submit yourselves therefore to God. Resist the devil, and he will ___ from you.",
+        answers: ["flee", "depart", "run", "leave"],
+        correct: 0
+    },
+    {
+        scripture: "Humble yourselves in the sight of the Lord, and he shall lift you up.",
+        reference: "James 4:10",
+        question: "Humble yourselves in the sight of the Lord, and he shall ___ you up.",
+        answers: ["lift", "raise", "exalt", "bring"],
+        correct: 0
+    },
+    {
+        scripture: "There hath no temptation taken you but such as is common to man: but God is faithful, who will not suffer you to be tempted above that ye are able.",
+        reference: "1 Corinthians 10:13",
+        question: "There hath no temptation taken you but such as is common to man: but God is ___, who will not suffer you to be tempted above that ye are able.",
+        answers: ["faithful", "just", "true", "merciful"],
+        correct: 0
+    },
+    {
+        scripture: "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
+        reference: "Galatians 6:9",
+        question: "And let us not be weary in well doing: for in due season we shall ___, if we faint not.",
+        answers: ["reap", "harvest", "prosper", "succeed"],
+        correct: 0
+    },
+    {
+        scripture: "A soft answer turneth away wrath: but grievous words stir up anger.",
+        reference: "Proverbs 15:1",
+        question: "A soft answer turneth away ___: but grievous words stir up anger.",
+        answers: ["wrath", "fury", "rage", "anger"],
+        correct: 0
+    },
+    {
+        scripture: "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are pure, whatsoever things are lovely, whatsoever things are of good report; if there be any virtue, and if there be any praise, think on these things.",
+        reference: "Philippians 4:8",
+        question: "Finally, brethren, whatsoever things are true, whatsoever things are honest, whatsoever things are just, whatsoever things are ___, whatsoever things are lovely...",
+        answers: ["pure", "holy", "righteous", "good"],
+        correct: 0
+    },
+    {
+        scripture: "Wherefore take unto you the whole armour of God, that ye may be able to withstand in the evil day, and having done all, to stand.",
+        reference: "Ephesians 6:13",
+        question: "Wherefore take unto you the whole ___ of God, that ye may be able to withstand in the evil day.",
+        answers: ["armor", "armour", "shield", "protection"],
+        correct: 1
+    },
+    {
+        scripture: "Let all bitterness, and wrath, and anger, and clamour, and evil speaking, be put away from you, with all malice.",
+        reference: "Ephesians 4:31",
+        question: "Let all bitterness, and wrath, and anger, and clamour, and evil speaking, be put away from you, with all ___.",
+        answers: ["malice", "hatred", "wickedness", "evil"],
+        correct: 0
+    }
+],
+
+    // Paul's Missionary Journeys Quiz - 50 Questions
+    "paul-journeys": [
+    // ===== EASY QUESTIONS (1-15) - Major events everyone should know =====
+    {
+        scripture: "And as he journeyed, he came near Damascus: and suddenly there shined round about him a light from heaven.",
+        reference: "Acts 9:3",
+        question: "On the road to which city did Paul (Saul) have his conversion experience?",
+        answers: ["Jerusalem", "Damascus", "Antioch", "Rome"],
+        correct: 1
+    },
+    {
+        scripture: "So they, being sent forth by the Holy Ghost, departed unto Seleucia; and from thence they sailed to Cyprus.",
+        reference: "Acts 13:4",
+        question: "Who was Paul's companion on the first missionary journey?",
+        answers: ["Silas", "Barnabas", "Timothy", "Luke"],
+        correct: 1
+    },
+    {
+        scripture: "And there they preached the gospel. And there sat a certain man at Lystra, impotent in his feet, being a cripple from his mother's womb, who never had walked.",
+        reference: "Acts 14:7-8",
+        question: "In which city did Paul heal a man who had been lame from birth?",
+        answers: ["Iconium", "Derbe", "Lystra", "Antioch"],
+        correct: 2
+    },
+    {
+        scripture: "And there came thither certain Jews from Antioch and Iconium, who persuaded the people, and having stoned Paul, drew him out of the city, supposing he had been dead.",
+        reference: "Acts 14:19",
+        question: "In which city was Paul stoned and left for dead?",
+        answers: ["Lystra", "Derbe", "Iconium", "Antioch"],
+        correct: 0
+    },
+    {
+        scripture: "And Paul chose Silas, and departed, being recommended by the brethren unto the grace of God.",
+        reference: "Acts 15:40",
+        question: "Who was Paul's main companion on the second missionary journey?",
+        answers: ["Barnabas", "Silas", "Timothy", "Titus"],
+        correct: 1
+    },
+    {
+        scripture: "Then came he to Derbe and Lystra: and, behold, a certain disciple was there, named Timotheus, the son of a certain woman, which was a Jewess, and believed.",
+        reference: "Acts 16:1",
+        question: "In which city did Timothy join Paul's missionary team?",
+        answers: ["Lystra", "Derbe", "Iconium", "Troas"],
+        correct: 0
+    },
+    {
+        scripture: "And a vision appeared to Paul in the night; There stood a man of Macedonia, and prayed him, saying, Come over into Macedonia, and help us.",
+        reference: "Acts 16:9",
+        question: "What vision led Paul to take the gospel into Europe?",
+        answers: ["An angel calling", "A Macedonian man asking for help", "Jesus commanding him", "A burning bush"],
+        correct: 1
+    },
+    {
+        scripture: "And at midnight Paul and Silas prayed, and sang praises unto God: and the prisoners heard them.",
+        reference: "Acts 16:25",
+        question: "In which city were Paul and Silas imprisoned and sang hymns at midnight?",
+        answers: ["Thessalonica", "Philippi", "Berea", "Athens"],
+        correct: 1
+    },
+    {
+        scripture: "And the keeper of the prison awaking out of his sleep, and seeing the prison doors open, he drew out his sword, and would have killed himself, supposing that the prisoners had been fled.",
+        reference: "Acts 16:27",
+        question: "What happened to the Philippian jailer after the earthquake?",
+        answers: ["He fled the city", "He wanted to kill himself", "He beat Paul and Silas", "He released them"],
+        correct: 1
+    },
+    {
+        scripture: "These were more noble than those in Thessalonica, in that they received the word with all readiness of mind, and searched the scriptures daily, whether those things were so.",
+        reference: "Acts 17:11",
+        question: "Which city's people were called 'more noble' because they searched the Scriptures daily?",
+        answers: ["Athens", "Berea", "Corinth", "Ephesus"],
+        correct: 1
+    },
+    {
+        scripture: "Then Paul stood in the midst of Mars' hill, and said, Ye men of Athens, I perceive that in all things ye are too superstitious.",
+        reference: "Acts 17:22",
+        question: "In which city did Paul preach on Mars Hill to Greek philosophers?",
+        answers: ["Corinth", "Athens", "Ephesus", "Rome"],
+        correct: 1
+    },
+    {
+        scripture: "And he continued there a year and six months, teaching the word of God among them.",
+        reference: "Acts 18:11",
+        question: "In which city did Paul stay for 18 months during his second journey?",
+        answers: ["Ephesus", "Athens", "Corinth", "Philippi"],
+        correct: 2
+    },
+    {
+        scripture: "And he began to speak boldly in the synagogue: whom when Aquila and Priscilla had heard, they took him unto them, and expounded unto him the way of God more perfectly.",
+        reference: "Acts 18:26",
+        question: "Who were the tentmaker couple that worked with Paul?",
+        answers: ["Aquila and Priscilla", "Ananias and Sapphira", "Felix and Drusilla", "Timothy and Phoebe"],
+        correct: 0
+    },
+    {
+        scripture: "And God wrought special miracles by the hands of Paul: So that from his body were brought unto the sick handkerchiefs or aprons, and the diseases departed from them.",
+        reference: "Acts 19:11-12",
+        question: "In which city did handkerchiefs touched by Paul heal the sick?",
+        answers: ["Corinth", "Athens", "Ephesus", "Philippi"],
+        correct: 2
+    },
+    {
+        scripture: "And when they heard these sayings, they were full of wrath, and cried out, saying, Great is Diana of the Ephesians.",
+        reference: "Acts 19:28",
+        question: "Which city had a riot because Paul's preaching threatened the idol-making business?",
+        answers: ["Athens", "Corinth", "Ephesus", "Thessalonica"],
+        correct: 2
+    },
+
+    // ===== MEDIUM QUESTIONS (16-35) - Detailed knowledge of journeys =====
+    {
+        scripture: "And when they had preached the gospel to that city, and had taught many, they returned again to Lystra, and to Iconium, and Antioch.",
+        reference: "Acts 14:21",
+        question: "Which was the last city Paul and Barnabas visited before returning on their first journey?",
+        answers: ["Lystra", "Iconium", "Derbe", "Antioch in Pisidia"],
+        correct: 2
+    },
+    {
+        scripture: "And some days after Paul said unto Barnabas, Let us go again and visit our brethren in every city where we have preached the word of the Lord, and see how they do.",
+        reference: "Acts 15:36",
+        question: "What caused Paul and Barnabas to split up before the second journey?",
+        answers: ["Disagreement about taking John Mark", "Different destinations", "Barnabas was too old", "Money disputes"],
+        correct: 0
+    },
+    {
+        scripture: "Him would Paul have to go forth with him; and took and circumcised him because of the Jews which were in those quarters.",
+        reference: "Acts 16:3",
+        question: "Why did Paul circumcise Timothy?",
+        answers: ["Because God commanded it", "Because of the Jews in that region", "To become a priest", "Timothy requested it"],
+        correct: 1
+    },
+    {
+        scripture: "Now when they had gone throughout Phrygia and the region of Galatia, and were forbidden of the Holy Ghost to preach the word in Asia.",
+        reference: "Acts 16:6",
+        question: "What prevented Paul from preaching in Asia during his second journey?",
+        answers: ["Roman soldiers", "The Holy Spirit forbade him", "Illness", "Lack of funds"],
+        correct: 1
+    },
+    {
+        scripture: "And a certain woman named Lydia, a seller of purple, of the city of Thyatira, which worshipped God, heard us: whose heart the Lord opened.",
+        reference: "Acts 16:14",
+        question: "What was Lydia's occupation in Philippi?",
+        answers: ["Tentmaker", "Seller of purple", "Physician", "Teacher"],
+        correct: 1
+    },
+    {
+        scripture: "And it came to pass, as we went to prayer, a certain damsel possessed with a spirit of divination met us, which brought her masters much gain by soothsaying.",
+        reference: "Acts 16:16",
+        question: "What did Paul do to the demon-possessed girl in Philippi?",
+        answers: ["Ignored her", "Cast out the demon", "Healed her", "Paid her masters"],
+        correct: 1
+    },
+    {
+        scripture: "But the Jews which believed not, moved with envy, took unto them certain lewd fellows of the baser sort, and gathered a company, and set all the city on an uproar.",
+        reference: "Acts 17:5",
+        question: "Where did Jason provide housing for Paul and Silas?",
+        answers: ["Athens", "Thessalonica", "Berea", "Corinth"],
+        correct: 1
+    },
+    {
+        scripture: "For as I passed by, and beheld your devotions, I found an altar with this inscription, TO THE UNKNOWN GOD. Whom therefore ye ignorantly worship, him declare I unto you.",
+        reference: "Acts 17:23",
+        question: "What did Paul use as a starting point for his Mars Hill sermon?",
+        answers: ["A Scripture verse", "An altar to an unknown god", "Greek philosophy", "A vision"],
+        correct: 1
+    },
+    {
+        scripture: "And Paul after this tarried there yet a good while, and then took his leave of the brethren, and sailed thence into Syria, and with him Priscilla and Aquila.",
+        reference: "Acts 18:18",
+        question: "What trade did Paul share with Aquila and Priscilla?",
+        answers: ["Fishing", "Carpentry", "Tentmaking", "Metalworking"],
+        correct: 2
+    },
+    {
+        scripture: "And he said unto them, Have ye received the Holy Ghost since ye believed? And they said unto him, We have not so much as heard whether there be any Holy Ghost.",
+        reference: "Acts 19:2",
+        question: "How many disciples in Ephesus had not heard of the Holy Spirit?",
+        answers: ["Seven", "Ten", "Twelve", "Seventy"],
+        correct: 2
+    },
+    {
+        scripture: "Many of them also which used curious arts brought their books together, and burned them before all men: and they counted the price of them, and found it fifty thousand pieces of silver.",
+        reference: "Acts 19:19",
+        question: "What did new converts in Ephesus burn?",
+        answers: ["Idols", "Books of magic", "Money", "Tents"],
+        correct: 1
+    },
+    {
+        scripture: "And when he had thus spoken, he took bread, and gave thanks to God in presence of them all: and when he had broken it, he began to eat.",
+        reference: "Acts 27:35",
+        question: "During which journey did Paul's ship get caught in a storm?",
+        answers: ["First journey", "Second journey", "Third journey", "Journey to Rome"],
+        correct: 3
+    },
+    {
+        scripture: "And when Paul had gathered a bundle of sticks, and laid them on the fire, there came a viper out of the heat, and fastened on his hand.",
+        reference: "Acts 28:3",
+        question: "On which island was Paul bitten by a poisonous snake?",
+        answers: ["Cyprus", "Crete", "Malta", "Sicily"],
+        correct: 2
+    },
+    {
+        scripture: "And Paul dwelt two whole years in his own hired house, and received all that came in unto him.",
+        reference: "Acts 28:30",
+        question: "How long did Paul preach under house arrest in Rome?",
+        answers: ["One year", "Two years", "Three years", "Five years"],
+        correct: 1
+    },
+    {
+        scripture: "For we cannot but speak the things which we have seen and heard.",
+        reference: "Acts 4:20",
+        question: "Which of Paul's companions was a physician?",
+        answers: ["Silas", "Timothy", "Luke", "Titus"],
+        correct: 2
+    },
+    {
+        scripture: "And upon the first day of the week, when the disciples came together to break bread, Paul preached unto them, ready to depart on the morrow; and continued his speech until midnight.",
+        reference: "Acts 20:7",
+        question: "In which city did Eutychus fall from a window during Paul's long sermon?",
+        answers: ["Troas", "Ephesus", "Miletus", "Philippi"],
+        correct: 0
+    },
+    {
+        scripture: "And from Miletus he sent to Ephesus, and called the elders of the church.",
+        reference: "Acts 20:17",
+        question: "To which group did Paul give his emotional farewell speech in Miletus?",
+        answers: ["Corinthian elders", "Ephesian elders", "Philippian elders", "Thessalonian elders"],
+        correct: 1
+    },
+    {
+        scripture: "And as we tarried there many days, there came down from Judaea a certain prophet, named Agabus.",
+        reference: "Acts 21:10",
+        question: "Who prophesied that Paul would be imprisoned in Jerusalem?",
+        answers: ["Timothy", "Agabus", "Silas", "Philip"],
+        correct: 1
+    },
+    {
+        scripture: "And they gave him audience unto this word, and then lifted up their voices, and said, Away with such a fellow from the earth: for it is not fit that he should live.",
+        reference: "Acts 22:22",
+        question: "Where was Paul when the crowd shouted for his death?",
+        answers: ["Ephesus", "Jerusalem", "Rome", "Athens"],
+        correct: 1
+    },
+    {
+        scripture: "And when it was day, certain of the Jews banded together, and bound themselves under a curse, saying that they would neither eat nor drink till they had killed Paul.",
+        reference: "Acts 23:12",
+        question: "How many Jews made a vow not to eat until they killed Paul?",
+        answers: ["Ten", "Twenty", "Forty", "Seventy"],
+        correct: 2
+    },
+
+    // ===== HARD QUESTIONS (36-50) - Specific details requiring careful study =====
+    {
+        scripture: "Then said Paul, I wist not, brethren, that he was the high priest: for it is written, Thou shalt not speak evil of the ruler of thy people.",
+        reference: "Acts 23:5",
+        question: "Who was the high priest when Paul was on trial in Jerusalem?",
+        answers: ["Caiaphas", "Annas", "Ananias", "Alexander"],
+        correct: 2
+    },
+    {
+        scripture: "And he called unto him two centurions, saying, Make ready two hundred soldiers to go to Caesarea, and horsemen threescore and ten, and spearmen two hundred.",
+        reference: "Acts 23:23",
+        question: "How many soldiers escorted Paul from Jerusalem to Caesarea?",
+        answers: ["200", "270", "470", "1000"],
+        correct: 2
+    },
+    {
+        scripture: "And after certain days, when Felix came with his wife Drusilla, which was a Jewess, he sent for Paul, and heard him concerning the faith in Christ.",
+        reference: "Acts 24:24",
+        question: "Who was the Roman governor that kept Paul imprisoned in Caesarea for two years?",
+        answers: ["Festus", "Felix", "Pilate", "Gallio"],
+        correct: 1
+    },
+    {
+        scripture: "But after two years Porcius Festus came into Felix' room: and Felix, willing to shew the Jews a pleasure, left Paul bound.",
+        reference: "Acts 24:27",
+        question: "Who replaced Felix as governor?",
+        answers: ["Pontius Pilate", "Porcius Festus", "Claudius Lysias", "Sergius Paulus"],
+        correct: 1
+    },
+    {
+        scripture: "Then Agrippa said unto Paul, Thou art permitted to speak for thyself. Then Paul stretched forth the hand, and answered for himself.",
+        reference: "Acts 26:1",
+        question: "Before which king did Paul testify about his conversion?",
+        answers: ["King Herod", "King Agrippa", "King Aretas", "King Ptolemy"],
+        correct: 1
+    },
+    {
+        scripture: "Then said Agrippa unto Paul, Almost thou persuadest me to be a Christian.",
+        reference: "Acts 26:28",
+        question: "What was King Agrippa's response to Paul's testimony?",
+        answers: ["He believed immediately", "He was angry", "Almost persuaded", "He mocked Paul"],
+        correct: 2
+    },
+    {
+        scripture: "And when it was determined that we should sail into Italy, they delivered Paul and certain other prisoners unto one named Julius, a centurion of Augustus' band.",
+        reference: "Acts 27:1",
+        question: "What was the name of the centurion who guarded Paul on the journey to Rome?",
+        answers: ["Cornelius", "Julius", "Marcus", "Claudius"],
+        correct: 1
+    },
+    {
+        scripture: "And when we came to Rome, the centurion delivered the prisoners to the captain of the guard: but Paul was suffered to dwell by himself with a soldier that kept him.",
+        reference: "Acts 28:16",
+        question: "What type of custody did Paul have in Rome?",
+        answers: ["In chains in prison", "House arrest", "Complete freedom", "In the palace"],
+        correct: 1
+    },
+    {
+        scripture: "And entering into a ship of Adramyttium, we launched, meaning to sail by the coasts of Asia.",
+        reference: "Acts 27:2",
+        question: "Which companion stayed with Paul throughout his journey to Rome?",
+        answers: ["Silas", "Timothy", "Aristarchus", "Titus"],
+        correct: 2
+    },
+    {
+        scripture: "And when we had sailed slowly many days, and scarce were come over against Cnidus, the wind not suffering us, we sailed under Crete, over against Salmone.",
+        reference: "Acts 27:7",
+        question: "At which harbor did Paul warn against continuing the voyage?",
+        answers: ["Fair Havens", "Phoenix", "Three Taverns", "Puteoli"],
+        correct: 0
+    },
+    {
+        scripture: "And when the south wind blew softly, supposing that they had obtained their purpose, loosing thence, they sailed close by Crete.",
+        reference: "Acts 27:13",
+        question: "What was the name of the tempestuous wind that struck the ship?",
+        answers: ["Euroclydon", "Sirocco", "Boreas", "Zephyrus"],
+        correct: 0
+    },
+    {
+        scripture: "And when they had eaten enough, they lightened the ship, and cast out the wheat into the sea.",
+        reference: "Acts 27:38",
+        question: "How many people were on the ship during Paul's voyage to Rome?",
+        answers: ["76", "176", "276", "376"],
+        correct: 2
+    },
+    {
+        scripture: "And the soldiers' counsel was to kill the prisoners, lest any of them should swim out, and escape.",
+        reference: "Acts 27:42",
+        question: "Who prevented the soldiers from killing Paul during the shipwreck?",
+        answers: ["The captain", "Julius the centurion", "The sailors", "God's angel"],
+        correct: 1
+    },
+    {
+        scripture: "And when they were escaped, then they knew that the island was called Melita.",
+        reference: "Acts 28:1",
+        question: "What is the modern name for the island of Melita?",
+        answers: ["Cyprus", "Crete", "Malta", "Sicily"],
+        correct: 2
+    },
+    {
+        scripture: "And it came to pass, that the father of Publius lay sick of a fever and of a bloody flux: to whom Paul entered in, and prayed, and laid his hands on him, and healed him.",
+        reference: "Acts 28:8",
+        question: "Whom did Paul heal on the island of Malta?",
+        answers: ["Publius's father", "The governor", "A centurion", "A ship captain"],
+        correct: 0
+    }
+]
 };
