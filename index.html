@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Bible Quiz - 500+ Interactive Bible Trivia Questions & Answers</title>
-    <meta name="description" content="Test your Bible knowledge with 500+ free Bible quiz questions across 20+ categories. Interactive Bible trivia for kids, adults, Sunday School. Old Testament, New Testament, Jesus' life, Genesis, Moses, Parables. No signup required!">
+    <title>Free Bible Quiz - 750+ Interactive Bible Trivia Questions & Answers</title>
+    <meta name="description" content="Test your Bible knowledge with 750+ free Bible quiz questions across 25+ categories. Interactive Bible trivia for kids, adults, Sunday School. Old Testament, New Testament, Jesus' life, Genesis, Moses, Parables. No signup required!">
     <meta name="keywords" content="bible quiz, bible trivia, free bible quiz, bible questions, genesis quiz, moses quiz, miracles of jesus, parables quiz, anxiety bible verses, old testament quiz, new testament quiz, bible quiz for kids, sunday school quiz">
     
     <!-- Open Graph -->
-    <meta property="og:title" content="Free Bible Quiz - 500+ Bible Trivia Questions">
-    <meta property="og:description" content="Challenge yourself with 500+ Bible trivia questions! Test your knowledge of Old Testament, New Testament, Jesus' life, Genesis, Moses, Parables. Perfect for Sunday School.">
+    <meta property="og:title" content="Free Bible Quiz - 750+ Bible Trivia Questions">
+    <meta property="og:description" content="Challenge yourself with 750+ Bible trivia questions! Test your knowledge of Old Testament, New Testament, Jesus' life, Genesis, Moses, Parables. Perfect for Sunday School.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://biblequizdaily.com">
     
@@ -39,7 +39,7 @@
         /* HEADER */
         header {
             background: white;
-            padding: 18px 5%;
+            padding: 18px 80px;
             box-shadow: 0 2px 12px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
@@ -53,7 +53,6 @@
             align-items: center;
             flex-wrap: wrap;
             gap: 20px;
-            padding: 0;
         }
         .logo {
             font-family: 'Merriweather', serif;
@@ -86,7 +85,7 @@
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 60px 5%;
+            padding: 60px 80px;
             text-align: center;
         }
         .hero h1 {
@@ -125,7 +124,7 @@
         .container {
             max-width: 1400px;
             margin: 0 auto;
-            padding: 48px 5%;
+            padding: 48px 80px;
         }
         
         /* STATS */
@@ -133,7 +132,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 24px;
-            padding: 36px;
+            padding: 40px 32px;
             background: white;
             border-radius: 16px;
             margin-bottom: 48px;
@@ -162,7 +161,7 @@
         .new-quizzes-banner {
             background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
             color: white;
-            padding: 32px;
+            padding: 40px 32px;
             border-radius: 16px;
             margin-bottom: 48px;
             box-shadow: 0 4px 20px rgba(76, 175, 80, 0.3);
@@ -237,13 +236,13 @@
         .quiz-grid {
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 24px;
         }
         
         .quiz-card {
             background: white;
             border-radius: 12px;
-            padding: 24px;
+            padding: 28px;
             text-decoration: none;
             color: inherit;
             transition: all 0.3s;
@@ -432,23 +431,36 @@
             .category-title { font-size: 24px; }
             .quiz-grid { grid-template-columns: 1fr; }
             .new-quiz-grid { grid-template-columns: 1fr; }
-            header { padding: 18px 20px; }
-            .hero { padding: 48px 20px; }
             .container { padding: 32px 20px; }
+            header { padding: 16px 20px; }
+            .hero { padding: 48px 20px; }
         }
         
-        /* Tablet spacing */
-        @media (min-width: 769px) and (max-width: 1200px) {
-            header { padding: 18px 6%; }
-            .hero { padding: 60px 6%; }
-            .container { padding: 48px 6%; }
+        /* Better spacing on tablets */
+        @media (min-width: 769px) and (max-width: 1024px) {
+            .container { padding: 48px 60px; }
+            header { padding: 18px 60px; }
+            .hero { padding: 60px 60px; }
         }
         
-        /* Desktop spacing */
-        @media (min-width: 1201px) {
-            header { padding: 18px 8%; }
-            .hero { padding: 60px 8%; }
-            .container { padding: 48px 8%; }
+        /* Optimal spacing on desktop */
+        @media (min-width: 1025px) {
+            .container { padding: 48px 100px; }
+            header { padding: 18px 100px; }
+            .hero { padding: 60px 100px; }
+        }
+        
+        /* Extra large screens - prevent content from getting too wide */
+        @media (min-width: 1600px) {
+            .container { 
+                padding: 48px 150px;
+                max-width: 1600px;
+            }
+            header { padding: 18px 150px; }
+            .hero { padding: 60px 150px; }
+            header nav {
+                max-width: 1600px;
+            }
         }
     </style>
 </head>
@@ -468,14 +480,14 @@
 
     <div class="hero">
         <h1>📖 Free Bible Quiz Questions</h1>
-        <p>Test your Scripture knowledge with 500+ free Bible trivia questions. Perfect for Sunday School, Bible study, or personal growth!</p>
+        <p>Test your Scripture knowledge with 750+ free Bible trivia questions. Perfect for Sunday School, Bible study, or personal growth!</p>
         <a href="#new-quizzes" class="hero-cta">🆕 Try Our Newest Quizzes</a>
     </div>
 
     <div class="container">
         <div class="stats">
             <div class="stat-item">
-                <div class="stat-number">500+</div>
+                <div class="stat-number">750+</div>
                 <div class="stat-label">Quiz Questions</div>
             </div>
             <div class="stat-item">
@@ -492,16 +504,47 @@
             </div>
         </div>
 
-        <!-- NEW QUIZZES HIGHLIGHT -->
+                <!-- NEW QUIZZES HIGHLIGHT -->
         <div class="new-quizzes-banner" id="new-quizzes">
-            <h2>🆕 <span>Just Added - New Bible Quizzes!</span></h2>
+            <h2>🆕 <span>Just Added - 5 New Bible Quizzes!</span></h2>
             <div class="new-quiz-grid">
-                <a href="genesis-quiz.html" class="new-quiz-link">
+                <a href="bible-geography-quiz.html" class="new-quiz-link">
+                    <div class="new-quiz-icon">🗺️</div>
+                    <div class="new-quiz-text">
+                        <div class="new-quiz-title">Bible Geography Quiz</div>
+                        <div class="new-quiz-desc">Biblical places & locations</div>
+                    </div>
+                </a>
+                <a href="books-of-the-bible-quiz.html" class="new-quiz-link">
+                    <div class="new-quiz-icon">📚</div>
+                    <div class="new-quiz-text">
+                        <div class="new-quiz-title">Books of the Bible</div>
+                        <div class="new-quiz-desc">All 66 books - names & order</div>
+                    </div>
+                </a>
+                <a href="12-disciples-quiz.html" class="new-quiz-link">
+                    <div class="new-quiz-icon">✝️</div>
+                    <div class="new-quiz-text">
+                        <div class="new-quiz-title">12 Disciples Quiz</div>
+                        <div class="new-quiz-desc">Jesus's apostles & ministry</div>
+                    </div>
+                </a>
+                <a href="bible-verse-quiz.html" class="new-quiz-link">
                     <div class="new-quiz-icon">📖</div>
                     <div class="new-quiz-text">
-                        <div class="new-quiz-title">Genesis Quiz</div>
-                        <div class="new-quiz-desc">Creation to Joseph's story</div>
+                        <div class="new-quiz-title">Bible Verse Quiz</div>
+                        <div class="new-quiz-desc">Fill-in-the-blank verses</div>
                     </div>
+                </a>
+                <a href="paul-missionary-journeys-quiz.html" class="new-quiz-link">
+                    <div class="new-quiz-icon">⛵</div>
+                    <div class="new-quiz-text">
+                        <div class="new-quiz-title">Paul's Journeys Quiz</div>
+                        <div class="new-quiz-desc">Acts 13-28, all 3 journeys</div>
+                    </div>
+                </a>
+            </div>
+        </div>
                 </a>
                 <a href="miracles-of-jesus-quiz.html" class="new-quiz-link">
                     <div class="new-quiz-icon">✨</div>
@@ -571,6 +614,36 @@
                         <span>⏱️ 10 min</span>
                     </div>
                     <div class="quiz-cta">Start Moses Quiz <span>→</span></div>
+                </a>
+                <a href="bible-geography-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">🗺️</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Bible Geography Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Biblical cities, mountains, rivers, and regions from Genesis to Revelation. Where did key events occur?</p>
+                    <div class="quiz-meta">
+                        <span>📊 50 Questions</span>
+                        <span>⏱️ 15 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Geography Quiz <span>→</span></div>
+                </a>
+                <a href="books-of-the-bible-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">📚</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Books of the Bible Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Can you name all 66 books? Test your knowledge of book names, order, categories, and authors.</p>
+                    <div class="quiz-meta">
+                        <span>📊 50 Questions</span>
+                        <span>⏱️ 15 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Books Quiz <span>→</span></div>
                 </a>
 
                 <a href="old-testament-quiz.html" class="quiz-card">
@@ -660,6 +733,51 @@
                         <span>⏱️ 10 min</span>
                     </div>
                     <div class="quiz-cta">Start Parables Quiz <span>→</span></div>
+                </a>
+                <a href="12-disciples-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">✝️</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">12 Disciples Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Test your knowledge of Jesus's twelve apostles - their callings, ministries, and martyrdoms.</p>
+                    <div class="quiz-meta">
+                        <span>📊 50 Questions</span>
+                        <span>⏱️ 15 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Disciples Quiz <span>→</span></div>
+                </a>
+                <a href="bible-verse-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">📖</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Bible Verse Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Fill-in-the-blank memory verses! Complete famous passages from John 3:16 to Psalm 23.</p>
+                    <div class="quiz-meta">
+                        <span>📊 50 Questions</span>
+                        <span>⏱️ 15 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Verse Quiz <span>→</span></div>
+                </a>
+                <a href="paul-missionary-journeys-quiz.html" class="quiz-card">
+                    <div class="quiz-header">
+                        <span class="quiz-icon">⛵</span>
+                        <div class="quiz-title-group">
+                            <div class="quiz-title">Paul's Journeys Quiz</div>
+                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                        </div>
+                    </div>
+                    <p class="quiz-desc">Follow Paul's three missionary journeys across the Roman Empire. Cities, companions, miracles!</p>
+                    <div class="quiz-meta">
+                        <span>📊 50 Questions</span>
+                        <span>⏱️ 20 min</span>
+                    </div>
+                    <div class="quiz-cta">Start Paul Quiz <span>→</span></div>
                 </a>
 
                 <a href="jesus-life-quiz.html" class="quiz-card">
@@ -843,7 +961,7 @@
                     <span class="faq-icon">▼</span>
                 </div>
                 <div class="faq-answer">
-                    We offer 500+ free Bible trivia questions across 20+ categories including Genesis Quiz, Moses Quiz, Miracles of Jesus, Parables, Old Testament, New Testament, and specialized topics like Anxiety Bible Quiz. All quizzes are 100% free with no signup required—perfect for Sunday School, Bible study groups, or personal devotions.
+                    We offer 750+ free Bible trivia questions across 25+ categories including Genesis Quiz, Moses Quiz, Miracles of Jesus, Parables, Old Testament, New Testament, and specialized topics like Anxiety Bible Quiz. All quizzes are 100% free with no signup required—perfect for Sunday School, Bible study groups, or personal devotions.
                 </div>
             </div>
 
@@ -883,7 +1001,7 @@
                     <span class="faq-icon">▼</span>
                 </div>
                 <div class="faq-answer">
-                    We just added 5 brand new quizzes: Genesis Quiz (Creation to Joseph), Moses Quiz (Exodus and the Law), Miracles of Jesus Quiz, Parables Quiz (Jesus's teaching stories), and Anxiety Bible Quiz (verses for peace and comfort). Each contains 30 carefully crafted questions!
+                    We recently added 5 powerful new quizzes with 50 questions each: Bible Geography Quiz (biblical cities, mountains, and locations), Books of the Bible Quiz (all 66 books), 12 Disciples Quiz (apostles and their ministries), Bible Verse Quiz (fill-in-the-blank memory verses), and Paul's Missionary Journeys Quiz (Acts 13-28). These join our existing favorites like Genesis, Moses, Miracles of Jesus, Parables, and more!
                 </div>
             </div>
         </div>
