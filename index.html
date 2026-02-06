@@ -16,6 +16,12 @@
     <!-- Pinterest -->
     <meta name="p:domain_verify" content="ff2dce6f2aa45e6f2689b853350c789a"/>
     
+    <!-- Favicons -->
+    <link rel="icon" type="image/png" sizes="512x512" href="favicon_512.png">
+    <link rel="icon" type="image/png" sizes="256x256" href="favicon_256.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="favicon_128.png">
+    <link rel="shortcut icon" href="favicon_128.png">
+    
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRXEYD2W4M"></script>
     <script>
@@ -39,7 +45,7 @@
         /* HEADER */
         header {
             background: white;
-            padding: 18px 0;
+            padding: 20px 0;
             box-shadow: 0 2px 12px rgba(0,0,0,0.08);
             position: sticky;
             top: 0;
@@ -52,31 +58,32 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
+            flex-wrap: nowrap;
+            gap: 30px;
         }
         .logo {
-            font-family: 'Merriweather', serif;
-            font-size: 26px;
-            font-weight: 900;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
+            display: flex;
+            align-items: center;
             text-decoration: none;
+        }
+        .logo img {
+            height: 80px;
+            width: auto;
         }
         .nav-menu {
             display: flex;
-            gap: 24px;
+            gap: 20px;
             list-style: none;
-            flex-wrap: wrap;
+            flex-wrap: nowrap;
+            align-items: center;
         }
         .nav-menu a {
             color: #2d3436;
             text-decoration: none;
             font-weight: 600;
-            font-size: 15px;
+            font-size: 14px;
             transition: color 0.2s;
+            white-space: nowrap;
         }
         .nav-menu a:hover {
             color: #667eea;
@@ -394,6 +401,15 @@
             margin-bottom: 16px;
             font-size: 24px;
         }
+        .footer-logo {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .footer-logo img {
+            height: 70px;
+            width: auto;
+        }
         .footer-about p {
             color: #b2bec3;
             line-height: 1.7;
@@ -468,7 +484,9 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">BibleQuizDaily</a>
+            <a href="index.html" class="logo">
+                <img src="_Header_Logo_.png" alt="BibleQuizDaily - Free Bible Quiz Questions">
+            </a>
             <ul class="nav-menu">
                 <li><a href="#popular">🔥 Most Popular</a></li>
                 <li><a href="#new-quizzes">🆕 New Quizzes</a></li>
@@ -1110,7 +1128,10 @@
         <div class="footer-content">
             <div class="footer-grid">
                 <div class="footer-about">
-                    <h3>📖 BibleQuizDaily.com</h3>
+                    <div class="footer-logo">
+                        <img src="_Header_Logo_.png" alt="BibleQuizDaily Logo">
+                    </div>
+                    <h3 style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: none;">BibleQuizDaily.com</h3>
                     <p>Free Bible quiz questions and interactive Bible trivia for strengthening faith. Join thousands of believers growing in Scripture knowledge through our comprehensive Bible quizzes covering Genesis, Moses, Jesus's miracles, parables, and more.</p>
                     <p style="font-size: 13px; opacity: 0.7;">Scripture quotations from the King James Version. All Bible quiz content is educational and non-commercial.</p>
                 </div>
