@@ -131,11 +131,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --primary: #8e44ad; --primary-dark: #6c3483; --secondary: #a569bd; --text-dark: #2d3436; --text-light: #636e72; --bg-light: #f4ecf7; }
-        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); min-height: 100vh; line-height: 1.6; }
+        :root { --primary: #667eea; --primary-dark: #764ba2; --secondary: #8b9dff; --text-dark: #2d3436; --text-light: #636e72; --bg-light: #f0f3ff; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); min-height: 100vh; line-height: 1.6; }
         header { background: rgba(255,255,255,0.98); padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-        .logo { font-family: 'Merriweather', serif; font-size: 24px; font-weight: 900; color: var(--primary); text-decoration: none; }
+        .logo img { height: 80px; width: auto; }
         .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
         .nav-links a { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 15px; }
         .nav-links a:hover { color: var(--primary); }
@@ -148,9 +148,9 @@
         .stat-number { font-size: 28px; font-weight: 800; color: var(--primary); }
         .stat-label { font-size: 14px; color: var(--text-light); }
         .btn { padding: 18px 45px; border: none; border-radius: 30px; font-size: 20px; font-weight: 700; cursor: pointer; transition: all 0.3s; display: inline-block; text-decoration: none; }
-        .btn-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); color: white; }
-        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(142, 68, 173, 0.5); }
-        .topics-covered { background: #f4ecf7; padding: 30px; border-radius: 15px; margin-top: 30px; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5); }
+        .topics-covered { background: #f8f9ff; padding: 30px; border-radius: 15px; margin-top: 30px; }
         .topics-covered h2 { color: var(--text-dark); margin-bottom: 15px; font-size: 24px; }
         .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
         .topic-item { background: white; padding: 15px; border-radius: 10px; border-left: 4px solid var(--primary); font-weight: 600; color: var(--text-dark); }
@@ -160,7 +160,9 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">BibleQuizDaily</a>
+            <a href="index.html" class="logo">
+                <img src="_Header_Logo_.png" alt="BibleQuizDaily - Free Bible Quiz Questions">
+            </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="old-testament-quiz.html">Old Testament</a>
@@ -238,6 +240,133 @@
                     <div class="topic-item">🔢 Testaments & Divisions</div>
                 </div>
             </div>
+
+<!-- AMAZON AFFILIATE DISCLAIMER - REQUIRED BEFORE LINKS -->
+    <div style="max-width: 900px; margin: 30px auto 20px; padding: 0 20px;">
+        <div style="background: #fff3cd; border: 2px solid #ffc107; border-radius: 12px; padding: 18px 25px; text-align: center; box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);">
+            <p style="font-size: 15px; color: #856404; margin: 0; font-weight: 600;">
+                <span style="font-size: 20px;">⚠️</span> <strong>AFFILIATE DISCLOSURE:</strong> As an Amazon Associate, BibleQuizDaily earns from qualifying purchases. This helps us keep all Bible quizzes 100% free!
+            </p>
+        </div>
+    </div>
+
+    <!-- 📦 BIBLE TABS PRODUCT RECOMMENDATION -->
+    <div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 32px;">
+            <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 16px;">✨</span> RECOMMENDED FOR YOU
+            </div>
+            
+            <div style="display: grid; grid-template-columns: 400px 1fr; gap: 24px; align-items: start;">
+                <!-- Product Images -->
+                <div>
+                    <img src="bhoho_theme1.jpg" alt="Mr. Pen Bible Tabs - Boho Theme" id="mainProductImage" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); cursor: pointer; transition: transform 0.2s;">
+                    
+                    <div style="display: flex; gap: 12px; margin-top: 12px;">
+                        <img src="bhoho_theme1.jpg" alt="Bible Tabs View 1" onclick="changeProductImage(this)" style="width: 90px; height: 90px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
+                        <img src="boho_theme2.jpg" alt="Bible Tabs View 2" onclick="changeProductImage(this)" style="width: 90px; height: 90px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                        <img src="boho_theme3.jpg" alt="Bible Tabs View 3" onclick="changeProductImage(this)" style="width: 90px; height: 90px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                        <img src="boho_theme4.jpg" alt="Bible Tabs View 4" onclick="changeProductImage(this)" style="width: 90px; height: 90px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                    </div>
+                </div>
+                
+                <!-- Product Content -->
+                <div>
+                    <h3 style="font-size: 22px; font-weight: 700; color: #2d3436; margin-bottom: 12px; line-height: 1.3;">
+                        📖 Can't Find All 66 Books Quickly in Your Bible?
+                    </h3>
+                    <p style="color: #636e72; margin-bottom: 16px; font-size: 15px;">
+                        These beautiful boho-themed tabs make navigation instant! Bible teachers swear by these.
+                    </p>
+                    
+                    <ul style="list-style: none; margin-bottom: 16px; padding: 0;">
+                        <li style="color: #636e72; font-size: 15px; margin-bottom: 8px; padding-left: 24px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                            <strong>75 tabs</strong> - All 66 books + 9 blank custom tabs
+                        </li>
+                        <li style="color: #636e72; font-size: 15px; margin-bottom: 8px; padding-left: 24px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                            <strong>No bleed-through</strong> - Won't damage your Bible pages
+                        </li>
+                        <li style="color: #636e72; font-size: 15px; margin-bottom: 8px; padding-left: 24px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                            <strong>Self-adhesive</strong> - Easy peel & stick application
+                        </li>
+                        <li style="color: #636e72; font-size: 15px; margin-bottom: 8px; padding-left: 24px; position: relative;">
+                            <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                            <strong>Beautiful colors</strong> - Boho aesthetic design
+                        </li>
+                    </ul>
+                    
+                    <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 16px;">
+                        <div style="color: #FFD700; font-size: 16px;">★★★★★</div>
+                        <span style="color: #636e72; font-size: 14px;">4.7 out of 5 stars (2,300+ reviews)</span>
+                    </div>
+                    
+                    <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                        <span style="background: #667eea; color: white; padding: 4px 12px; border-radius: 6px; font-size: 12px; font-weight: 700;">BESTSELLER</span>
+                    </div>
+                    
+                    <a href="https://amzn.to/4qsf4FN" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 16px 40px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 16px; transition: all 0.3s; box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);">
+                        🛒 Get Your Bible Tabs on Amazon
+                    </a>
+                    
+                    <div style="display: inline-flex; align-items: center; gap: 8px; background: #232F3E; color: white; padding: 8px 16px; border-radius: 6px; font-size: 13px; font-weight: 600; margin-top: 12px; margin-left: 12px;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M.045 18.02c.072-.116.187-.124.348-.022 3.636 2.11 7.594 3.166 11.87 3.166 2.852 0 5.668-.533 8.447-1.595l.315-.14c.138-.06.234-.1.293-.13.226-.088.39-.046.525.13.12.174.09.336-.12.48-.256.19-.6.41-1.006.654-1.244.73-2.594 1.294-4.058 1.696-1.464.4-2.935.602-4.41.602-1.066 0-2.122-.095-3.168-.29-1.045-.19-2.052-.476-3.02-.85-.968-.38-1.885-.86-2.747-1.44-.863-.58-1.56-1.17-2.09-1.77-.53-.6-.806-1.15-.83-1.64-.02-.49.15-.73.51-.73zm23.775-1.06c.28-.24.59-.26.93-.07.34.19.49.46.44.81-.04.35-.25.73-.62 1.15-.37.42-1.07.91-2.09 1.46s-2.11.91-3.26 1.1c-1.15.19-2.29.29-3.42.29-1.13 0-2.25-.1-3.36-.29s-2.16-.46-3.16-.81c-1-.35-1.94-.79-2.82-1.32-.88-.53-1.56-1.08-2.04-1.64-.48-.56-.73-1.08-.76-1.56-.03-.48.13-.74.48-.78.35-.04.73.05 1.14.27.41.22.88.53 1.41.93s1.11.82 1.73 1.26c.62.44 1.27.83 1.95 1.17.68.34 1.38.61 2.1.81.72.2 1.44.34 2.16.42.72.08 1.43.12 2.13.12s1.41-.04 2.13-.12c.72-.08 1.44-.22 2.16-.42.72-.2 1.42-.47 2.1-.81.68-.34 1.33-.73 1.95-1.17.62-.44 1.2-.86 1.73-1.26.53-.4 1-.71 1.41-.93z"/></svg>
+                        Prime Eligible
+                    </div>
+                </div>
+            </div>
+            
+            <div style="background: white; padding: 20px; border-radius: 12px; margin-top: 24px; border-left: 4px solid #667eea;">
+                <h4 style="font-size: 16px; color: #667eea; margin-bottom: 8px; font-weight: 700;">💡 Why We Recommend This</h4>
+                <p style="color: #636e72; font-size: 14px; line-height: 1.6; margin: 0;">
+                    You're about to test your Genesis knowledge - make sure you can find those passages quickly! These tabs turn minutes of searching into seconds. Perfect for quiz retakes, Sunday School prep, or daily devotions. Plus, the boho colors match perfectly with your Bible study aesthetic! ✨
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+    function changeProductImage(thumb) {
+        const mainImg = document.getElementById('mainProductImage');
+        mainImg.src = thumb.src;
+        
+        // Update active thumbnail border
+        const thumbs = thumb.parentElement.querySelectorAll('img');
+        thumbs.forEach(t => t.style.border = '2px solid transparent');
+        thumb.style.border = '2px solid #667eea';
+    }
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        :root { --primary: #667eea; --primary-dark: #764ba2; --secondary: #8b9dff; --text-dark: #2d3436; --text-light: #636e72; --bg-light: #f0f3ff; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); min-height: 100vh; line-height: 1.6; }
+        header { background: rgba(255,255,255,0.98); padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+        nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        .logo img { height: 80px; width: auto; }
+        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
+        .nav-links a { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 15px; }
+        .nav-links a:hover { color: var(--primary); }
+        .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
+        .intro-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
+        .intro-card h1 { font-family: 'Merriweather', serif; color: var(--text-dark); font-size: 36px; margin-bottom: 15px; }
+        .intro-card p { color: var(--text-light); font-size: 18px; margin-bottom: 15px; line-height: 1.8; }
+        .quiz-stats { display: flex; gap: 20px; margin: 25px 0; flex-wrap: wrap; }
+        .stat-item { background: var(--bg-light); padding: 15px 25px; border-radius: 10px; text-align: center; }
+        .stat-number { font-size: 28px; font-weight: 800; color: var(--primary); }
+        .stat-label { font-size: 14px; color: var(--text-light); }
+        .btn { padding: 18px 45px; border: none; border-radius: 30px; font-size: 20px; font-weight: 700; cursor: pointer; transition: all 0.3s; display: inline-block; text-decoration: none; }
+        .btn-primary { background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); color: white; }
+        .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 12px 30px rgba(102, 126, 234, 0.5); }
+        .topics-covered { background: #f8f9ff; padding: 30px; border-radius: 15px; margin-top: 30px; }
+        .topics-covered h2 { color: var(--text-dark); margin-bottom: 15px; font-size: 24px; }
+        .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
+        .topic-item { background: white; padding: 15px; border-radius: 10px; border-left: 4px solid var(--primary); font-weight: 600; color: var(--text-dark); }
+        @media (max-width: 768px) { .intro-card h1 { font-size: 28px; } .quiz-stats { flex-direction: column; } }
+    </style>
+
             
             <h2 style="font-family: 'Merriweather', serif; font-size: 28px; color: #2d3436; margin-bottom: 20px; margin-top: 40px;">About This Books of the Bible Quiz</h2>
             

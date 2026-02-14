@@ -436,72 +436,170 @@
                         <span style="font-size: 18px;">⚠️</span> <strong>AFFILIATE DISCLOSURE:</strong> As an Amazon Associate, BibleQuizDaily earns from qualifying purchases. This helps us keep all Bible quizzes 100% free!
                     </p>
                 </div>
-                                <!-- AMAZON AFFILIATE PRODUCT RECOMMENDATION -->
-                <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 32px; margin: 30px 0;">
-                    <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-                        <span style="font-size: 16px;">✨</span> RECOMMENDED FOR YOU
-                    </div>
-                    
-                    <div style="display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start;">
-                        <!-- Product Images -->
-                        <div>
-                            <img src="bhoho_theme1.jpg" alt="Mr. Pen Bible Tabs - Boho Theme" id="productImage" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                            
-                            <div style="display: flex; gap: 10px; margin-top: 10px;">
-                                <img src="bhoho_theme1.jpg" alt="View 1" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
-                                <img src="boho_theme2.jpg" alt="View 2" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
-                                <img src="boho_theme3.jpg" alt="View 3" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
-                                <img src="boho_theme4.jpg" alt="View 4" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
-                            </div>
+                
+                <!-- DEFAULT PRODUCT (Bible Tabs - All Quizzes) -->
+                <div id="defaultProduct">
+                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 32px; margin-bottom: 25px;">
+                        <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 16px;">✨</span> RECOMMENDED FOR YOU
                         </div>
                         
-                        <!-- Product Content -->
-                        <div>
-                            <h3 style="font-size: 20px; font-weight: 700; color: #2d3436; margin-bottom: 12px; line-height: 1.3;">
-                                📖 Want to Score Higher Next Time?
-                            </h3>
-                            <p style="color: #636e72; margin-bottom: 16px; font-size: 14px;">
-                                Find Bible passages instantly with these beautiful boho tabs! Perfect for quiz retakes and daily study.
-                            </p>
-                            
-                            <ul style="list-style: none; margin-bottom: 16px; padding: 0;">
-                                <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                    <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                    <strong>75 tabs</strong> - All 66 books + 9 custom
-                                </li>
-                                <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                    <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                    <strong>No bleed-through</strong> - Safe for pages
-                                </li>
-                                <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                    <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                    <strong>Self-adhesive</strong> - Easy application
-                                </li>
-                            </ul>
-                            
-                            <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
-                                <div style="color: #FFD700; font-size: 14px;">★★★★★</div>
-                                <span style="color: #636e72; font-size: 13px;">4.7 stars (2,300+ reviews)</span>
+                        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start;">
+                            <div>
+                                <img src="bhoho_theme1.jpg" alt="Mr. Pen Bible Tabs" id="productImage" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                    <img src="bhoho_theme1.jpg" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
+                                    <img src="boho_theme2.jpg" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="boho_theme3.jpg" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="boho_theme4.jpg" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                </div>
                             </div>
-                            
-                            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                                <span style="font-size: 24px; font-weight: 900; color: #2d3436;">$6.99</span>
-                                <span style="background: #667eea; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700;">BESTSELLER</span>
-                            </div>
-                            
-                            <a href="https://amzn.to/4qsf4FN" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 15px; transition: all 0.3s; box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);">
-                                🛒 Get Bible Tabs on Amazon
-                            </a>
-                            
-                            <div style="display: inline-flex; align-items: center; gap: 6px; background: #232F3E; color: white; padding: 6px 12px; border-radius: 6px; font-size: 12px; font-weight: 600; margin-top: 10px; margin-left: 10px;">
-                                Prime Eligible
+                            <div>
+                                <h3 style="font-size: 20px; font-weight: 700; color: #2d3436; margin-bottom: 12px;">
+                                    📖 Want to Score Higher Next Time?
+                                </h3>
+                                <p style="color: #636e72; margin-bottom: 16px; font-size: 14px;">
+                                    Find Bible passages instantly with these beautiful tabs!
+                                </p>
+                                <ul style="list-style: none; margin-bottom: 16px; padding: 0;">
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
+                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                                        <strong>75 tabs</strong> - All 66 books + 9 custom
+                                    </li>
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
+                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                                        <strong>No bleed-through</strong> - Safe for pages
+                                    </li>
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
+                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                                        <strong>Self-adhesive</strong> - Easy application
+                                    </li>
+                                </ul>
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                    <div style="color: #FFD700; font-size: 14px;">★★★★★</div>
+                                    <span style="color: #636e72; font-size: 13px;">4.7 stars (2,300+ reviews)</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                                    
+                                    <span style="background: #667eea; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700;">BESTSELLER</span>
+                                </div>
+                                <a href="https://amzn.to/4qsf4FN" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 15px;">
+                                    🛒 Get Bible Tabs on Amazon
+                                </a>
                             </div>
                         </div>
                     </div>
-                    
-
                 </div>
-                
+
+                <!-- FLASH CARDS PRODUCT (Books of Bible Quiz Only) -->
+                <div id="flashCardsProduct" style="display: none;">
+                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 32px; margin-bottom: 25px;">
+                        <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 16px;">✨</span> PERFECT FOR MEMORIZATION
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start;">
+                            <div>
+                                <img src="bristol_card1.jpg" alt="Books of the Bible Flash Cards" id="flashCardImage" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                    <img src="bristol_card1.jpg" onclick="changeFlashCardImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
+                                    <img src="bristol_card2.jpg" onclick="changeFlashCardImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="bristol_card3.jpg" onclick="changeFlashCardImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="bristol_card4.jpg" onclick="changeFlashCardImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 style="font-size: 20px; font-weight: 700; color: #2d3436; margin-bottom: 12px;">
+                                    📚 Memorize All 66 Books Faster with Flash Cards!
+                                </h3>
+                                <p style="color: #636e72; margin-bottom: 16px; font-size: 14px;">
+                                    Master book names, order, and categories. Perfect for quiz retakes!
+                                </p>
+                                <ul style="list-style: none; margin-bottom: 16px; padding: 0;">
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
+                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                                        <strong>170 cards</strong> - All 66 books covered
+                                    </li>
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
+                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                                        <strong>Color-coded</strong> - By testament & category
+                                    </li>
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
+                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                                        <strong>Durable</strong> - Quality card stock
+                                    </li>
+                                </ul>
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                    <div style="color: #FFD700; font-size: 14px;">★★★★★</div>
+                                    <span style="color: #636e72; font-size: 13px;">4.8 stars (850+ reviews)</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                                    
+                                </div>
+                                <a href="https://amzn.to/4qEIRey" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 15px;">
+                                    🛒 Get Flash Cards on Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- BIBLE GUIDE PRODUCT (Books of Bible Quiz Only) -->
+                <div id="bibleGuideProduct" style="display: none;">
+                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 32px; margin-bottom: 25px;">
+                        <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                            <span style="font-size: 16px;">✨</span> COMPLETE STUDY GUIDE
+                        </div>
+                        
+                        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start;">
+                            <div>
+                                <img src="bible_guide1.jpg" alt="Bible Study Guide" id="bibleGuideImage" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                <div style="display: flex; gap: 10px; margin-top: 10px;">
+                                    <img src="bible_guide1.jpg" onclick="changeBibleGuideImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
+                                    <img src="bible_guide2.jpg" onclick="changeBibleGuideImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="bible_guide3.jpg" onclick="changeBibleGuideImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="bible_guide4.jpg" onclick="changeBibleGuideImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                </div>
+                            </div>
+                            
+                            <div>
+                                <h3 style="font-size: 20px; font-weight: 700; color: #2d3436; margin-bottom: 12px;">
+                                    📖 Master Every Book with This Complete Guide!
+                                </h3>
+                                <p style="color: #636e72; margin-bottom: 16px; font-size: 14px;">
+                                    Deep dive into all 66 books - authors, themes, key verses, timelines!
+                                </p>
+                                <ul style="list-style: none; margin-bottom: 16px; padding: 0;">
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
+                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                                        <strong>All 66 books</strong> - Complete overview
+                                    </li>
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
+                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                                        <strong>Visual timelines</strong> - See the big picture
+                                    </li>
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
+                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
+                                        <strong>Key themes</strong> - Understand each book
+                                    </li>
+                                </ul>
+                                <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
+                                    <div style="color: #FFD700; font-size: 14px;">★★★★★</div>
+                                    <span style="color: #636e72; font-size: 13px;">4.7 stars (1,200+ reviews)</span>
+                                </div>
+                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
+                                    
+                                    <span style="background: #667eea; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700;">TOP RATED</span>
+                                </div>
+                                <a href="https://amzn.to/3ZBefzK" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 15px;">
+                                    🛒 Get Bible Guide on Amazon
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <style>
                 @media (max-width: 768px) {
                     div[style*="grid-template-columns: 280px 1fr"] {
@@ -653,6 +751,7 @@
             }
             
             showResults() {
+                showCategoryProducts();
                 document.getElementById('questionSection').classList.add('hidden');
                 document.getElementById('quizHeader').classList.add('hidden');
                 document.getElementById('resultsSection').classList.remove('hidden');
@@ -816,6 +915,38 @@
             window.open(`https://wa.me/?text=${encodeURIComponent(text + ' ' + url)}`, '_blank');
         }
 
+        
+
+        
+        // Show category-specific products
+        function showCategoryProducts() {
+            const category = new URLSearchParams(window.location.search).get('category');
+            
+            if (category === 'books-of-bible' || category === 'books_of_bible' || category === 'books-bible') {
+                // Show flash cards and bible guide for Books of Bible quiz
+                document.getElementById('defaultProduct').style.display = 'none';
+                document.getElementById('flashCardsProduct').style.display = 'block';
+                document.getElementById('bibleGuideProduct').style.display = 'block';
+            } else {
+                // Show default Bible tabs for all other quizzes
+                document.getElementById('defaultProduct').style.display = 'block';
+                document.getElementById('flashCardsProduct').style.display = 'none';
+                document.getElementById('bibleGuideProduct').style.display = 'none';
+            }
+        }
+        
+        // Image change functions
+        function changeFlashCardImage(thumb) {
+            document.getElementById('flashCardImage').src = thumb.src;
+            thumb.parentElement.querySelectorAll('img').forEach(t => t.style.border = '2px solid transparent');
+            thumb.style.border = '2px solid #667eea';
+        }
+        
+        function changeBibleGuideImage(thumb) {
+            document.getElementById('bibleGuideImage').src = thumb.src;
+            thumb.parentElement.querySelectorAll('img').forEach(t => t.style.border = '2px solid transparent');
+            thumb.style.border = '2px solid #667eea';
+        }
         
         // Product image change function
         function changeResultsProductImage(thumb) {
