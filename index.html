@@ -502,53 +502,154 @@
     
         /* EASTER PRODUCTS BANNER */
         .easter-banner {
-            background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%);
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 40%, #388e3c 100%);
             color: white;
-            padding: 25px 35px;
-            text-align: center;
+            padding: 28px 36px;
             margin: 30px 0;
-            border-radius: 12px;
-            box-shadow: 0 4px 20px rgba(46, 125, 50, 0.3);
+            border-radius: 16px;
+            box-shadow: 0 6px 28px rgba(27,94,32,0.45);
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            position: relative;
+            overflow: hidden;
         }
-        .easter-banner h2 {
-            font-size: 24px;
-            font-weight: 900;
-            margin-bottom: 8px;
+        .easter-banner::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 220px; height: 220px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
         }
-        .easter-banner p {
-            font-size: 15px;
-            margin-bottom: 18px;
-            opacity: 0.95;
+        .easter-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -40px; left: 30%;
+            width: 140px; height: 140px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+        }
+        .eb-left {
+            flex: 1;
+            min-width: 0;
+            position: relative;
+            z-index: 1;
+        }
+        .eb-right {
+            display: flex;
+            gap: 10px;
+            align-items: flex-end;
+            flex-shrink: 0;
+            position: relative;
+            z-index: 1;
         }
         .easter-savings {
             background: #FFD700;
-            color: #2d3436;
-            display: inline-block;
-            padding: 4px 16px;
+            color: #1b5e20;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+            padding: 4px 14px;
             border-radius: 50px;
-            font-size: 12px;
+            font-size: 11px;
             font-weight: 900;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
             margin-bottom: 10px;
         }
-        .easter-cta {
-            display: inline-block;
-            background: white;
-            color: #2e7d32;
-            padding: 12px 30px;
-            font-size: 16px;
+        .easter-banner h2 {
+            font-family: 'Merriweather', serif;
+            font-size: 22px;
+            font-weight: 900;
+            margin-bottom: 6px;
+            line-height: 1.25;
+        }
+        .easter-banner .eb-sub {
+            font-size: 13px;
+            opacity: 0.88;
+            margin-bottom: 14px;
+            line-height: 1.5;
+        }
+        .easter-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 6px;
+            margin-bottom: 16px;
+        }
+        .easter-feat {
+            background: rgba(255,255,255,0.15);
+            border: 1px solid rgba(255,255,255,0.25);
+            border-radius: 20px;
+            font-size: 11px;
             font-weight: 700;
+            padding: 3px 10px;
+            white-space: nowrap;
+        }
+        .easter-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #FFD700;
+            color: #1b5e20;
+            padding: 13px 26px;
+            font-size: 15px;
+            font-weight: 900;
             text-decoration: none;
             border-radius: 10px;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+            transition: all 0.25s;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.25);
+            letter-spacing: 0.3px;
         }
         .easter-cta:hover {
+            background: white;
             transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.3);
         }
-        @media (max-width: 768px) {
-            .easter-banner { padding: 20px; }
-            .easter-banner h2 { font-size: 20px; }
+        .easter-cta-sub {
+            font-size: 12px;
+            opacity: 0.75;
+            margin-top: 8px;
+        }
+        .easter-cta-sub a {
+            color: white;
+            text-decoration: underline;
+        }
+        .eb-product {
+            text-align: center;
+            text-decoration: none;
+        }
+        .eb-product img {
+            display: block;
+            border-radius: 10px;
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+            transition: transform 0.25s, box-shadow 0.25s;
+        }
+        .eb-product:hover img {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.5);
+        }
+        .eb-product-label {
+            font-size: 10px;
+            font-weight: 800;
+            color: rgba(255,255,255,0.85);
+            margin-top: 5px;
+            letter-spacing: 0.3px;
+        }
+        .eb-product-price {
+            font-size: 11px;
+            font-weight: 900;
+            color: #FFD700;
+        }
+        @media (max-width: 900px) {
+            .easter-banner {
+                flex-direction: column;
+                text-align: center;
+                padding: 24px 20px;
+            }
+            .eb-left { width: 100%; }
+            .easter-features { justify-content: center; }
+            .eb-right { justify-content: center; }
         }
     </style>
 </head>
@@ -565,6 +666,7 @@
                 <li><a href="#old-testament">Old Testament</a></li>
                 <li><a href="#new-testament">New Testament</a></li>
                 <li><a href="free-resources.html">Free Resources</a></li>
+                <li><a href="ultimate-easter-sunday-school-kit.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 8px 14px; border-radius: 8px; font-weight: 700;">✍️ Blog</a></li>
             </ul>
         </nav>
     </header>
@@ -598,11 +700,47 @@
 
         <!-- EASTER PRODUCTS BANNER -->
         <div class="easter-banner">
-            <div class="easter-savings">💎 SAVE $3.98</div>
-            <h2>🌟 Complete Easter Ministry Kit</h2>
-            <p>120 Trivia Questions • 30 BINGO Cards • Treasure Hunt Activity</p>
-            <a href="complete-easter-bundle.html" class="easter-cta">Get Bundle for $12.99 →</a>
-            <p style="font-size: 13px; margin-top: 12px; opacity: 0.85;">Or <a href="easter-bible-trivia.html" style="color: white; text-decoration: underline;">buy individually</a></p>
+
+            <!-- LEFT: Headline, bullets, CTA -->
+            <div class="eb-left">
+                <div class="easter-savings">⏰ Easter April 5 &nbsp;·&nbsp; Save $3.98</div>
+                <h2>Complete Easter Ministry Kit</h2>
+                <p class="eb-sub">3 done-for-you printable activities — KJV, instant download, unlimited copies</p>
+                <div class="easter-features">
+                    <span class="easter-feat">📋 120 Trivia Questions</span>
+                    <span class="easter-feat">🎲 30 BINGO Cards</span>
+                    <span class="easter-feat">🗺 Treasure Hunt + Certificate</span>
+                    <span class="easter-feat">✅ KJV Throughout</span>
+                    <span class="easter-feat">🖨 Print at Home</span>
+                </div>
+                <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="easter-cta">
+                    🎁 Get All 3 — $12.99
+                </a>
+                <div class="easter-cta-sub">
+                    <span style="text-decoration:line-through; opacity:0.6;">$16.97</span> &nbsp;·&nbsp;
+                    <a href="ultimate-easter-sunday-school-kit.html">See what's inside →</a>
+                </div>
+            </div>
+
+            <!-- RIGHT: Product covers -->
+            <div class="eb-right">
+                <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="eb-product">
+                    <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia printable KJV" style="height:130px; width:auto;">
+                    <div class="eb-product-label">Bible Trivia</div>
+                    <div class="eb-product-price">$5.99</div>
+                </a>
+                <a href="https://biblequizdaily.gumroad.com/l/easterbiblebingo" target="_blank" class="eb-product">
+                    <img src="EASTER_BIBLE_BINGO.png" alt="Easter Bible BINGO printable" style="height:140px; width:auto;">
+                    <div class="eb-product-label">Bible BINGO</div>
+                    <div class="eb-product-price">$5.99</div>
+                </a>
+                <a href="https://biblequizdaily.gumroad.com/l/EASTERSTORYTREASUREHUNT" target="_blank" class="eb-product">
+                    <img src="Easter_story_hunt.png" alt="Easter Story Treasure Hunt printable" style="height:130px; width:auto;">
+                    <div class="eb-product-label">Treasure Hunt</div>
+                    <div class="eb-product-price">$4.99</div>
+                </a>
+            </div>
+
         </div>
 
                 <!-- MOST POPULAR QUIZZES SECTION -->
@@ -1239,6 +1377,15 @@
                     </ul>
                 </div>
                 
+                <div class="footer-column">
+                    <h4>Blog</h4>
+                    <ul class="footer-links">
+                        <li><a href="ultimate-easter-sunday-school-kit.html">🎁 Complete Easter Kit Guide</a></li>
+                        <li><a href="easter-bible-trivia-questions-printable.html">📋 Easter Bible Trivia Post</a></li>
+                        <li><a href="easter-bible-bingo-printable.html">🎲 Easter BINGO Post</a></li>
+                        <li><a href="easter-story-treasure-hunt-kids-printable.html">🗺 Easter Treasure Hunt Post</a></li>
+                    </ul>
+                </div>
                 <div class="footer-column">
                     <h4>Resources</h4>
                     <ul class="footer-links">
