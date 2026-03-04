@@ -112,11 +112,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Merriweather:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
-        :root { --primary: #667eea; --primary-dark: #5568d3; --secondary: #764ba2; --text-dark: #2d3436; --text-light: #636e72; --bg-light: #f7f7ff; }
-        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%); min-height: 100vh; line-height: 1.6; }
+        :root { --primary: #667eea; --primary-dark: #764ba2; --secondary: #8b9dff; --text-dark: #2d3436; --text-light: #636e72; --bg-light: #f0f3ff; }
+        body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); min-height: 100vh; line-height: 1.6; }
         header { background: rgba(255,255,255,0.98); padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
         nav { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
-        .logo { font-family: 'Merriweather', serif; font-size: 24px; font-weight: 900; color: var(--primary); text-decoration: none; }
+        .logo img { height: 80px; width: auto; }
         .nav-links { display: flex; gap: 20px; flex-wrap: wrap; }
         .nav-links a { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 15px; }
         .nav-links a:hover { color: var(--primary); }
@@ -141,18 +141,75 @@
         .quiz-link { background: var(--bg-light); padding: 20px; border-radius: 12px; text-decoration: none; color: var(--text-dark); font-weight: 600; transition: all 0.3s; border: 2px solid transparent; }
         .quiz-link:hover { border-color: var(--primary); transform: translateX(5px); }
         @media (max-width: 768px) { .intro-card h1 { font-size: 28px; } .quiz-stats { flex-direction: column; } }
+    
+        /* EASTER PRODUCTS BANNER */
+        .easter-banner {
+            background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 40%, #388e3c 100%);
+            color: white;
+            padding: 28px 36px;
+            margin: 20px 0;
+            border-radius: 16px;
+            box-shadow: 0 6px 28px rgba(27,94,32,0.45);
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            position: relative;
+            overflow: hidden;
+        }
+        .easter-banner::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 220px; height: 220px;
+            background: rgba(255,255,255,0.05);
+            border-radius: 50%;
+        }
+        .easter-banner::after {
+            content: '';
+            position: absolute;
+            bottom: -40px; left: 30%;
+            width: 140px; height: 140px;
+            background: rgba(255,255,255,0.04);
+            border-radius: 50%;
+        }
+        .eb-left { flex: 1; min-width: 0; position: relative; z-index: 1; }
+        .eb-right { display: flex; gap: 10px; align-items: flex-end; flex-shrink: 0; position: relative; z-index: 1; }
+        .easter-savings { background: #FFD700; color: #1b5e20; display: inline-flex; align-items: center; gap: 5px; padding: 4px 14px; border-radius: 50px; font-size: 11px; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px; }
+        .easter-banner h2 { font-family: 'Merriweather', serif; font-size: 22px; font-weight: 900; margin-bottom: 6px; line-height: 1.25; }
+        .easter-banner .eb-sub { font-size: 13px; opacity: 0.88; margin-bottom: 14px; line-height: 1.5; }
+        .easter-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
+        .easter-feat { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; font-size: 11px; font-weight: 700; padding: 3px 10px; white-space: nowrap; }
+        .easter-cta { display: inline-flex; align-items: center; gap: 8px; background: #FFD700; color: #1b5e20; padding: 13px 26px; font-size: 15px; font-weight: 900; text-decoration: none; border-radius: 10px; transition: all 0.25s; box-shadow: 0 4px 18px rgba(0,0,0,0.25); letter-spacing: 0.3px; }
+        .easter-cta:hover { background: white; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(0,0,0,0.3); }
+        .easter-cta-sub { font-size: 12px; opacity: 0.75; margin-top: 8px; }
+        .easter-cta-sub a { color: white; text-decoration: underline; }
+        .eb-product { text-align: center; text-decoration: none; }
+        .eb-product img { display: block; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.4); transition: transform 0.25s, box-shadow 0.25s; }
+        .eb-product:hover img { transform: translateY(-5px) scale(1.03); box-shadow: 0 12px 28px rgba(0,0,0,0.5); }
+        .eb-product-label { font-size: 10px; font-weight: 800; color: rgba(255,255,255,0.85); margin-top: 5px; letter-spacing: 0.3px; }
+        .eb-product-price { font-size: 11px; font-weight: 900; color: #FFD700; }
+        @media (max-width: 900px) {
+            .easter-banner { flex-direction: column; text-align: center; padding: 24px 20px; }
+            .eb-left { width: 100%; }
+            .easter-features { justify-content: center; }
+            .eb-right { justify-content: center; }
+        }
     </style>
 </head>
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">BibleQuizDaily</a>
+            <a href="index.html" class="logo">
+                <img src="_Header_Logo_.png" alt="BibleQuizDaily - Free Bible Quiz Questions">
+            </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="old-testament-quiz.html">Old Testament</a>
                 <a href="new-testament-quiz.html">New Testament</a>
                 <a href="jesus-life-quiz.html">Jesus's Life</a>
-                <a href="free-resources.html">Resources</a>
+                <a href="free-resources.html">Free Resources</a>
+                <a href="complete-easter-bundle.html" style="background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); color: white; padding: 8px 16px; border-radius: 8px; font-weight: 700;">🎁 Easter Products</a>
+                <a href="ultimate-easter-sunday-school-kit.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 8px 14px; border-radius: 8px; font-weight: 700;">✍️ Blog</a>
             </div>
         </nav>
     </header>
@@ -210,6 +267,48 @@
                 <a href="index.html#quizzes" style="background: white; padding: 12px 16px; border-radius: 10px; text-decoration: none; border: 2px solid transparent; transition: all 0.2s; display: flex; align-items: center; gap: 10px; box-shadow: 0 2px 8px rgba(0,0,0,0.05);" onmouseover="this.style.borderColor='#667eea'; this.style.transform='translateX(4px)'; this.style.boxShadow='0 4px 12px rgba(102,126,234,0.15)'" onmouseout="this.style.borderColor='transparent'; this.style.transform='translateX(0)'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
                     <span style="font-size: 24px;">📚</span>
                     <span style="font-size: 15px; font-weight: 700; color: #2d3436;">View All 15 Quizzes</span>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- EASTER PRODUCTS BANNER -->
+    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
+        <div class="easter-banner">
+            <div class="eb-left">
+                <div class="easter-savings">⏰ Easter April 5 &nbsp;·&nbsp; Save $3.98</div>
+                <h2>Complete Easter Ministry Kit</h2>
+                <p class="eb-sub">3 done-for-you printable activities — KJV, instant download, unlimited copies</p>
+                <div class="easter-features">
+                    <span class="easter-feat">📋 120 Trivia Questions</span>
+                    <span class="easter-feat">🎲 30 BINGO Cards</span>
+                    <span class="easter-feat">🗺 Treasure Hunt + Certificate</span>
+                    <span class="easter-feat">✅ KJV Throughout</span>
+                    <span class="easter-feat">🖨 Print at Home</span>
+                </div>
+                <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="easter-cta">
+                    🎁 Get All 3 — $12.99
+                </a>
+                <div class="easter-cta-sub">
+                    <span style="text-decoration:line-through; opacity:0.6;">$16.97</span> &nbsp;·&nbsp;
+                    <a href="ultimate-easter-sunday-school-kit.html">See what's inside →</a>
+                </div>
+            </div>
+            <div class="eb-right">
+                <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="eb-product">
+                    <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia printable KJV" style="height:130px; width:auto;">
+                    <div class="eb-product-label">Bible Trivia</div>
+                    <div class="eb-product-price">$5.99</div>
+                </a>
+                <a href="https://biblequizdaily.gumroad.com/l/easterbiblebingo" target="_blank" class="eb-product">
+                    <img src="EASTER_BIBLE_BINGO.png" alt="Easter Bible BINGO printable" style="height:140px; width:auto;">
+                    <div class="eb-product-label">Bible BINGO</div>
+                    <div class="eb-product-price">$5.99</div>
+                </a>
+                <a href="https://biblequizdaily.gumroad.com/l/EASTERSTORYTREASUREHUNT" target="_blank" class="eb-product">
+                    <img src="Easter_story_hunt.png" alt="Easter Story Treasure Hunt printable" style="height:130px; width:auto;">
+                    <div class="eb-product-label">Treasure Hunt</div>
+                    <div class="eb-product-price">$4.99</div>
                 </a>
             </div>
         </div>
