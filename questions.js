@@ -4862,5 +4862,218 @@ window.quizQuestions = {
         answers: ["Publius's father", "The governor", "A centurion", "A ship captain"],
         correct: 0
     }
-]
+],
+
+    "armor-of-god": [
+        {
+            scripture: "Finally, my brethren, be strong in the Lord, and in the power of his might.",
+            reference: "Ephesians 6:10",
+            question: "In what book of the Bible is the Armor of God found?",
+            answers: ["Romans", "Ephesians", "Colossians", "Philippians"],
+            correct: 1
+        },
+        {
+            scripture: "Finally, my brethren, be strong in the Lord, and in the power of his might.",
+            reference: "Ephesians 6:10",
+            question: "What does Paul command believers to be strong in?",
+            answers: ["Their own strength", "The Lord and His mighty power", "Numbers", "Wisdom"],
+            correct: 1
+        },
+        {
+            scripture: "Put on the whole armour of God, that ye may be able to stand against the wiles of the devil.",
+            reference: "Ephesians 6:11",
+            question: "What are believers commanded to put on?",
+            answers: ["The armor of God", "Priestly garments", "Robes of righteousness", "Holy attire"],
+            correct: 0
+        },
+        {
+            scripture: "Put on the whole armour of God, that ye may be able to stand against the wiles of the devil.",
+            reference: "Ephesians 6:11",
+            question: "Why should we put on God's armor?",
+            answers: ["To look spiritual", "To stand against the wiles of the devil", "To impress others", "To earn salvation"],
+            correct: 1
+        },
+        {
+            scripture: "For we wrestle not against flesh and blood.",
+            reference: "Ephesians 6:12",
+            question: "Our wrestling is not against what?",
+            answers: ["Flesh and blood", "Temptation", "Sin", "The world"],
+            correct: 0
+        },
+        {
+            scripture: "But against principalities, against powers, against the rulers of the darkness of this world, against spiritual wickedness in high places.",
+            reference: "Ephesians 6:12",
+            question: "Who are we actually wrestling against?",
+            answers: ["Other people", "Ourselves", "Principalities and powers", "Physical enemies"],
+            correct: 2
+        },
+        {
+            scripture: "Stand therefore, having your loins girt about with truth.",
+            reference: "Ephesians 6:14",
+            question: "What is the first piece of armor mentioned?",
+            answers: ["Shield", "Helmet", "Belt of truth", "Breastplate"],
+            correct: 2
+        },
+        {
+            scripture: "Stand therefore, having your loins girt about with truth.",
+            reference: "Ephesians 6:14",
+            question: "What does the belt represent?",
+            answers: ["Love", "Truth", "Faith", "Hope"],
+            correct: 1
+        },
+        {
+            scripture: "And having on the breastplate of righteousness.",
+            reference: "Ephesians 6:14",
+            question: "What is the breastplate in the armor of God?",
+            answers: ["Breastplate of faith", "Breastplate of love", "Breastplate of righteousness", "Breastplate of holiness"],
+            correct: 2
+        },
+        {
+            scripture: "And having on the breastplate of righteousness.",
+            reference: "Ephesians 6:14",
+            question: "What does the breastplate protect in Roman armor?",
+            answers: ["The shield", "The helmet", "The vital organs", "The belt"],
+            correct: 2
+        },
+        {
+            scripture: "And your feet shod with the preparation of the gospel of peace.",
+            reference: "Ephesians 6:15",
+            question: "What should our feet be shod with?",
+            answers: ["Preparation of the gospel of peace", "Shoes of faith", "Sandals of truth", "Boots of righteousness"],
+            correct: 0
+        },
+        {
+            scripture: "And your feet shod with the preparation of the gospel of peace.",
+            reference: "Ephesians 6:15",
+            question: "The shoes represent readiness to share what?",
+            answers: ["The Law", "The gospel of peace", "Our testimony", "God's judgment"],
+            correct: 1
+        },
+        {
+            scripture: "Above all, taking the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked.",
+            reference: "Ephesians 6:16",
+            question: "What piece of armor is mentioned 'above all'?",
+            answers: ["Helmet", "Sword", "Shield of faith", "Breastplate"],
+            correct: 2
+        },
+        {
+            scripture: "Above all, taking the shield of faith, wherewith ye shall be able to quench all the fiery darts of the wicked.",
+            reference: "Ephesians 6:16",
+            question: "What does the shield of faith quench?",
+            answers: ["Doubts", "Fears", "Fiery darts of the wicked", "Temptations"],
+            correct: 2
+        },
+        {
+            scripture: "And take the helmet of salvation.",
+            reference: "Ephesians 6:17",
+            question: "What is the helmet in the armor of God?",
+            answers: ["Helmet of faith", "Helmet of salvation", "Helmet of hope", "Helmet of truth"],
+            correct: 1
+        },
+        {
+            scripture: "And take the helmet of salvation.",
+            reference: "Ephesians 6:17",
+            question: "What does the helmet protect?",
+            answers: ["The heart", "The head and mind", "The soul", "The spirit"],
+            correct: 1
+        },
+        {
+            scripture: "And the sword of the Spirit, which is the word of God.",
+            reference: "Ephesians 6:17",
+            question: "What is the sword of the Spirit?",
+            answers: ["Prayer", "Faith", "The Word of God", "Love"],
+            correct: 2
+        },
+        {
+            scripture: "And the sword of the Spirit, which is the word of God.",
+            reference: "Ephesians 6:17",
+            question: "How many offensive weapons are in the armor of God?",
+            answers: ["None", "One", "Two", "Three"],
+            correct: 1
+        },
+        {
+            scripture: "Praying always with all prayer and supplication in the Spirit.",
+            reference: "Ephesians 6:18",
+            question: "What should we do with all prayer and supplication?",
+            answers: ["Pray monthly", "Pray weekly", "Pray always", "Pray when needed"],
+            correct: 2
+        },
+        {
+            scripture: "Watching thereunto with all perseverance and supplication for all saints.",
+            reference: "Ephesians 6:18",
+            question: "What should we do while praying?",
+            answers: ["Watch with all perseverance", "Fast regularly", "Give generously", "Serve diligently"],
+            correct: 0
+        },
+        {
+            scripture: "Watching thereunto with all perseverance and supplication for all saints.",
+            reference: "Ephesians 6:18",
+            question: "Who should we pray for according to Ephesians 6?",
+            answers: ["Ourselves only", "Our families", "All saints", "Church leaders only"],
+            correct: 2
+        },
+        {
+            scripture: "Wherefore take unto you the whole armour of God, that ye may be able to withstand in the evil day.",
+            reference: "Ephesians 6:13",
+            question: "What enables us to withstand in the evil day?",
+            answers: ["Our own strength", "The whole armor of God", "Good works", "Religious rituals"],
+            correct: 1
+        },
+        {
+            scripture: "And having done all, to stand.",
+            reference: "Ephesians 6:13",
+            question: "After withstanding, what should we be able to do?",
+            answers: ["Rest", "Stand", "Attack", "Retreat"],
+            correct: 1
+        },
+        {
+            scripture: "Put on the whole armour of God, that ye may be able to stand against the wiles of the devil.",
+            reference: "Ephesians 6:11",
+            question: "How much of the armor should we put on?",
+            answers: ["The essential pieces", "Whatever we prefer", "The whole armor", "Just the sword"],
+            correct: 2
+        },
+        {
+            scripture: "Finally, my brethren, be strong in the Lord, and in the power of his might.",
+            reference: "Ephesians 6:10",
+            question: "Whose power gives us strength for spiritual warfare?",
+            answers: ["Our own might", "The church", "God's might", "Angels"],
+            correct: 2
+        },
+        {
+            scripture: "Against spiritual wickedness in high places.",
+            reference: "Ephesians 6:12",
+            question: "What type of wickedness do we fight against?",
+            answers: ["Physical wickedness", "Spiritual wickedness in high places", "Human wickedness", "Cultural wickedness"],
+            correct: 1
+        },
+        {
+            scripture: "Then was Jesus led up of the Spirit into the wilderness to be tempted of the devil.",
+            reference: "Matthew 4:1",
+            question: "How did Jesus use the Word of God against Satan?",
+            answers: ["To teach only", "To defeat Satan's temptations", "To heal the sick", "To raise the dead"],
+            correct: 1
+        },
+        {
+            scripture: "Praying always with all prayer and supplication in the Spirit, and watching thereunto with all perseverance.",
+            reference: "Ephesians 6:18",
+            question: "What does standing firm require besides the armor?",
+            answers: ["Nothing else", "Prayer and watchfulness", "Fasting", "Good deeds"],
+            correct: 1
+        },
+        {
+            scripture: "Stand therefore, having your loins girt about with truth, and having on the breastplate of righteousness.",
+            reference: "Ephesians 6:14",
+            question: "What is our ultimate goal in spiritual warfare?",
+            answers: ["To defeat demons", "To stand firm", "To become strong", "To gain territory"],
+            correct: 1
+        },
+        {
+            scripture: "But let us, who are of the day, be sober, putting on the breastplate of faith and love; and for an helmet, the hope of salvation.",
+            reference: "1 Thessalonians 5:8",
+            question: "Where else in Scripture is spiritual armor mentioned?",
+            answers: ["Romans 13", "1 Thessalonians 5", "Colossians 3", "Philippians 4"],
+            correct: 1
+        }
+    ]
 };
