@@ -429,28 +429,107 @@
                 </div>
 
                 <!-- EASTER PRODUCTS BANNER -->
-                <div style="max-width: 100%; margin: 0 0 25px 0;">
-                    <div style="background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 40%, #388e3c 100%); color: white; padding: 24px 28px; border-radius: 16px; box-shadow: 0 6px 28px rgba(27,94,32,0.45); display: flex; align-items: center; gap: 24px; position: relative; overflow: hidden; flex-wrap: wrap;">
-                        <div style="flex: 1; min-width: 200px; position: relative; z-index: 1;">
-                            <div style="background: #FFD700; color: #1b5e20; display: inline-flex; align-items: center; padding: 3px 12px; border-radius: 50px; font-size: 10px; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 8px;">⏰ Easter April 5 · Save $3.98</div>
-                            <h3 style="font-size: 18px; font-weight: 900; margin-bottom: 6px; font-family: 'Merriweather', serif;">Complete Easter Ministry Kit</h3>
-                            <p style="font-size: 12px; opacity: 0.88; margin-bottom: 12px; line-height: 1.5;">3 done-for-you KJV printable activities — instant download, unlimited copies</p>
-                            <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" style="display: inline-flex; align-items: center; gap: 8px; background: #FFD700; color: #1b5e20; padding: 11px 22px; font-size: 14px; font-weight: 900; text-decoration: none; border-radius: 8px; box-shadow: 0 4px 14px rgba(0,0,0,0.2);">🎁 Get All 3 — $12.99</a>
-                            <div style="font-size: 11px; opacity: 0.75; margin-top: 7px;"><span style="text-decoration:line-through;">$16.97</span> &nbsp;·&nbsp; <a href="ultimate-easter-sunday-school-kit.html" style="color:white; text-decoration:underline;">See what's inside →</a></div>
+                <style>
+                .eb-results {
+                    background: linear-gradient(135deg, #5a3e8a 0%, #7c52b8 50%, #4a2d7a 100%);
+                    border-radius: 16px;
+                    overflow: hidden;
+                    position: relative;
+                    border: 2px solid rgba(255,215,0,0.5);
+                    box-shadow: 0 8px 40px rgba(90,62,138,0.4);
+                    margin: 0 0 25px 0;
+                }
+                .eb-results::before {
+                    content: '';
+                    position: absolute;
+                    top: 0; left: -100%;
+                    width: 55%; height: 3px;
+                    background: linear-gradient(90deg, transparent, #FFD700, transparent);
+                    animation: eb-shimmer 3.5s ease-in-out infinite;
+                    z-index: 3;
+                }
+                @keyframes eb-shimmer { 0%{left:-100%} 100%{left:200%} }
+                .eb-results::after {
+                    content: '';
+                    position: absolute;
+                    top: -80px; right: -80px;
+                    width: 300px; height: 300px;
+                    border-radius: 50%;
+                    background: radial-gradient(circle, rgba(255,215,0,0.12) 0%, transparent 65%);
+                    pointer-events: none;
+                }
+                .eb-results-inner {
+                    display: grid;
+                    grid-template-columns: 1fr 300px;
+                    position: relative;
+                    z-index: 2;
+                }
+                .eb-results-left { padding: 24px 28px; text-align: left; }
+                .eb-results-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+                .eb-results-eyebrow-text { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #FFE566; }
+                .eb-results-hot { background: #e74c3c; color: white; font-size: 10px; font-weight: 900; padding: 3px 9px; border-radius: 20px; letter-spacing: 0.8px; animation: eb-pulse-red 2s ease-in-out infinite; }
+                @keyframes eb-pulse-red { 0%,100%{opacity:1} 50%{opacity:0.7} }
+                .eb-results-headline { font-family: 'Merriweather', serif; font-size: 18px; font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 6px; text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
+                .eb-results-headline span { color: #FFD700; }
+                .eb-results-sub { font-size: 12px; color: #e8d8ff; margin-bottom: 16px; line-height: 1.5; font-weight: 500; }
+                .eb-results-products { display: flex; gap: 12px; align-items: flex-end; }
+                .eb-results-product { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 1; max-width: 110px; text-decoration: none; }
+                .eb-results-cover { width: 100%; aspect-ratio: 3/4; border-radius: 8px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 0 0 2px rgba(255,215,0,0.3); transition: transform 0.25s; }
+                .eb-results-cover:hover { transform: translateY(-4px) scale(1.03); }
+                .eb-results-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
+                .eb-results-plabel { font-size: 10px; font-weight: 800; color: #fff; text-align: center; text-transform: uppercase; letter-spacing: 0.3px; text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
+                .eb-results-pprice { font-size: 14px; font-weight: 900; color: #FFD700; }
+                .eb-results-right { background: rgba(0,0,0,0.2); border-left: 2px solid rgba(255,215,0,0.3); padding: 24px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
+                .eb-results-bundle-label { font-size: 11px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; color: #FFD700; background: rgba(255,215,0,0.15); padding: 5px 14px; border-radius: 20px; }
+                .eb-results-bundle-name { font-family: 'Merriweather', serif; font-size: 16px; font-weight: 900; color: #fff; text-align: center; line-height: 1.35; }
+                .eb-results-price-was { font-size: 13px; color: #dcc8ff; text-decoration: line-through; font-weight: 600; }
+                .eb-results-price-now { font-size: 44px; font-weight: 900; color: #FFD700; line-height: 1; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
+                .eb-results-price-save { font-size: 12px; font-weight: 800; color: #fff; background: #27ae60; padding: 4px 12px; border-radius: 20px; display: inline-block; }
+                .eb-results-cta { display: block; background: #FFD700; color: #3a1a6e; font-weight: 900; font-size: 16px; padding: 14px 20px; border-radius: 10px; text-decoration: none; text-align: center; width: 100%; box-shadow: 0 4px 20px rgba(255,215,0,0.5); animation: eb-glow 2.5s ease-in-out infinite; transition: transform 0.2s, background 0.2s; }
+                @keyframes eb-glow { 0%,100%{box-shadow:0 4px 20px rgba(255,215,0,0.5)} 50%{box-shadow:0 6px 36px rgba(255,215,0,0.85)} }
+                .eb-results-cta:hover { background: #ffe033; transform: translateY(-2px); }
+                .eb-results-trust { font-size: 11px; color: #dcc8ff; text-align: center; line-height: 1.7; font-weight: 600; }
+                @media (max-width: 650px) {
+                    .eb-results-inner { grid-template-columns: 1fr; }
+                    .eb-results-right { border-left: none; border-top: 2px solid rgba(255,215,0,0.25); flex-direction: row; flex-wrap: wrap; justify-content: center; padding: 16px; gap: 12px; }
+                    .eb-results-cta { width: auto; padding: 12px 28px; }
+                }
+                </style>
+                <div class="eb-results">
+                    <div class="eb-results-inner">
+                        <div class="eb-results-left">
+                            <div class="eb-results-eyebrow">
+                                <span class="eb-results-eyebrow-text">🐣 Easter Ministry Resources</span>
+                                <span class="eb-results-hot">EASTER IS COMING</span>
+                            </div>
+                            <div class="eb-results-headline">3 Ready-to-Print Easter Resources —<br><span>Download &amp; Use This Sunday</span></div>
+                            <div class="eb-results-sub">KJV-based · Instant PDF download · Print unlimited copies for your whole class</div>
+                            <div class="eb-results-products">
+                                <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="eb-results-product">
+                                    <div class="eb-results-cover"><img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia — 120 Questions PDF"></div>
+                                    <div class="eb-results-plabel">Easter Trivia</div>
+                                    <div class="eb-results-pprice">$5.99</div>
+                                </a>
+                                <a href="https://biblequizdaily.gumroad.com/l/easterbiblebingo" target="_blank" class="eb-results-product">
+                                    <div class="eb-results-cover"><img src="EASTER_BIBLE_BINGO.png" alt="Easter Bible BINGO — 30 Unique Cards PDF"></div>
+                                    <div class="eb-results-plabel">Bible BINGO</div>
+                                    <div class="eb-results-pprice">$5.99</div>
+                                </a>
+                                <a href="https://biblequizdaily.gumroad.com/l/EASTERSTORYTREASUREHUNT" target="_blank" class="eb-results-product">
+                                    <div class="eb-results-cover"><img src="Easter_story_hunt.png" alt="Easter Story Treasure Hunt PDF"></div>
+                                    <div class="eb-results-plabel">Treasure Hunt</div>
+                                    <div class="eb-results-pprice">$4.99</div>
+                                </a>
+                            </div>
                         </div>
-                        <div style="display: flex; gap: 10px; align-items: flex-end; flex-shrink: 0; position: relative; z-index: 1;">
-                            <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" style="text-align: center; text-decoration: none;">
-                                <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia" style="display: block; height: 110px; width: auto; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.4);">
-                                <div style="font-size: 10px; font-weight: 900; color: #FFD700; margin-top: 4px;">$5.99</div>
-                            </a>
-                            <a href="https://biblequizdaily.gumroad.com/l/easterbiblebingo" target="_blank" style="text-align: center; text-decoration: none;">
-                                <img src="EASTER_BIBLE_BINGO.png" alt="Easter Bible BINGO" style="display: block; height: 120px; width: auto; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.4);">
-                                <div style="font-size: 10px; font-weight: 900; color: #FFD700; margin-top: 4px;">$5.99</div>
-                            </a>
-                            <a href="https://biblequizdaily.gumroad.com/l/EASTERSTORYTREASUREHUNT" target="_blank" style="text-align: center; text-decoration: none;">
-                                <img src="Easter_story_hunt.png" alt="Easter Treasure Hunt" style="display: block; height: 110px; width: auto; border-radius: 8px; box-shadow: 0 6px 18px rgba(0,0,0,0.4);">
-                                <div style="font-size: 10px; font-weight: 900; color: #FFD700; margin-top: 4px;">$4.99</div>
-                            </a>
+                        <div class="eb-results-right">
+                            <div class="eb-results-bundle-label">⭐ Best Value</div>
+                            <div class="eb-results-bundle-name">Complete Easter<br>Ministry Kit</div>
+                            <div class="eb-results-price-was">Separately $16.97</div>
+                            <div class="eb-results-price-now">$12.99</div>
+                            <div class="eb-results-price-save">You save $3.98</div>
+                            <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="eb-results-cta">🛒 Get the Bundle →</a>
+                            <div class="eb-results-trust">✓ Instant download &nbsp;·&nbsp; ✓ Print unlimited</div>
                         </div>
                     </div>
                 </div>
