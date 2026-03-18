@@ -84,12 +84,29 @@
             color: #2d3436;
             text-decoration: none;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 16px;
             transition: color 0.2s;
             white-space: nowrap;
         }
         .nav-menu a:hover {
             color: #667eea;
+        }
+        .nav-shop-btn {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white !important;
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 800 !important;
+            font-size: 16px !important;
+            letter-spacing: 0.2px;
+            transition: all 0.25s !important;
+            box-shadow: 0 4px 14px rgba(102,126,234,0.35);
+        }
+        .nav-shop-btn:hover {
+            background: linear-gradient(135deg, #764ba2 0%, #667eea 100%) !important;
+            color: white !important;
+            box-shadow: 0 6px 20px rgba(102,126,234,0.5);
+            transform: translateY(-1px);
         }
         /* DROPDOWN */
         .nav-dropdown {
@@ -99,7 +116,7 @@
             color: #2d3436;
             text-decoration: none;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 16px;
             cursor: pointer;
             white-space: nowrap;
             display: flex;
@@ -113,8 +130,7 @@
         }
         .nav-dropdown-toggle:hover { color: #667eea; }
         .nav-dropdown-toggle::after {
-            content: '▾';
-            font-size: 11px;
+            content: '';
         }
         .nav-dropdown-menu {
             display: none;
@@ -140,7 +156,7 @@
             color: #2d3436;
             text-decoration: none;
             font-weight: 600;
-            font-size: 14px;
+            font-size: 15px;
             transition: background 0.15s, color 0.15s;
             white-space: nowrap;
         }
@@ -579,237 +595,150 @@
             .hero { padding: 60px 10%; }
         }
     
-        /* EASTER PRODUCTS BANNER */
-        /* ── EASTER PRODUCT BANNER ── */
+        /* EASTER PRODUCTS BANNER — new design */
         .easter-banner {
-            background: linear-gradient(135deg, #5a3e8a 0%, #7c52b8 50%, #4a2d7a 100%);
+            background: linear-gradient(135deg, #2d1b69 0%, #5a3e8a 50%, #3d2070 100%);
             border-radius: 16px;
             overflow: hidden;
             position: relative;
-            border: 2px solid rgba(255,215,0,0.5);
-            box-shadow: 0 8px 40px rgba(90,62,138,0.4);
+            border: 2px solid rgba(255,215,0,0.45);
+            box-shadow: 0 8px 40px rgba(90,62,138,0.45);
             margin: 30px 0 48px;
         }
+        /* shimmer top line */
         .easter-banner::before {
             content: '';
             position: absolute;
-            top: 0; left: -100%;
-            width: 55%; height: 3px;
+            top: 0; left: -120%;
+            width: 60%; height: 3px;
             background: linear-gradient(90deg, transparent, #FFD700, transparent);
-            animation: eb-shimmer 3.5s ease-in-out infinite;
+            animation: eb-shimmer 3s ease-in-out infinite;
             z-index: 3;
         }
-        @keyframes eb-shimmer { 0%{left:-100%} 100%{left:200%} }
+        @keyframes eb-shimmer { 0%{left:-120%} 100%{left:160%} }
+        /* subtle radial glow */
         .easter-banner::after {
             content: '';
             position: absolute;
-            top: -80px; right: -80px;
+            top: -60px; right: -60px;
             width: 300px; height: 300px;
             border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,215,0,0.12) 0%, transparent 65%);
+            background: radial-gradient(circle, rgba(255,215,0,0.10) 0%, transparent 65%);
             pointer-events: none;
         }
-        .eb-inner {
+        .eb-new-inner {
             display: grid;
-            grid-template-columns: 1fr 360px;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
             position: relative;
             z-index: 2;
         }
-        .eb-left {
-            padding: 28px 32px;
+        /* LEFT — bundle image */
+        .eb-new-left {
+            padding: 20px 12px 20px 24px;
         }
-        .eb-eyebrow {
+        .eb-bundle-img-link {
+            display: block;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .eb-bundle-img-link:hover {
+            transform: scale(1.02);
+            box-shadow: 0 12px 36px rgba(0,0,0,0.5);
+        }
+        .eb-bundle-img {
+            width: 100%;
+            display: block;
+            border-radius: 10px;
+        }
+        /* RIGHT — books + cta */
+        .eb-new-right {
+            padding: 28px 28px 28px 20px;
             display: flex;
+            flex-direction: column;
             align-items: center;
-            gap: 10px;
-            margin-bottom: 12px;
+            gap: 14px;
         }
-        .eb-eyebrow-text {
+        .eb-new-eyebrow {
             font-size: 11px;
-            font-weight: 800;
+            font-weight: 900;
             letter-spacing: 2px;
             text-transform: uppercase;
             color: #FFE566;
         }
-        .eb-hot {
-            background: #e74c3c;
-            color: white;
-            font-size: 10px;
-            font-weight: 900;
-            padding: 4px 10px;
-            border-radius: 20px;
-            letter-spacing: 0.8px;
-            animation: eb-pulse-red 2s ease-in-out infinite;
-        }
-        @keyframes eb-pulse-red { 0%,100%{opacity:1} 50%{opacity:0.7} }
-        .eb-headline {
+        .eb-new-kit-name {
             font-family: 'Merriweather', serif;
             font-size: 22px;
             font-weight: 900;
             color: #ffffff;
-            line-height: 1.25;
-            margin-bottom: 8px;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
-        }
-        .eb-headline span { color: #FFD700; }
-        .eb-sub {
-            font-size: 14px;
-            color: #e8d8ff;
-            margin-bottom: 22px;
-            line-height: 1.5;
-            font-weight: 500;
-        }
-        .eb-products {
-            display: flex;
-            gap: 16px;
-            align-items: flex-end;
-        }
-        .eb-product {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 8px;
-            flex: 1;
-            max-width: 130px;
-            text-decoration: none;
-        }
-        .eb-cover {
-            width: 100%;
-            aspect-ratio: 3/4;
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 8px 24px rgba(0,0,0,0.4), 0 0 0 2px rgba(255,215,0,0.3);
-            transition: transform 0.25s;
-            flex-shrink: 0;
-        }
-        .eb-cover:hover { transform: translateY(-5px) scale(1.03); }
-        .eb-cover img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .eb-product-label {
-            font-size: 12px;
-            font-weight: 800;
-            color: #ffffff;
             text-align: center;
-            line-height: 1.35;
-            text-transform: uppercase;
-            letter-spacing: 0.3px;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.4);
+            line-height: 1.3;
         }
-        .eb-product-price {
-            font-size: 17px;
-            font-weight: 900;
-            color: #FFD700;
-            text-shadow: 0 1px 4px rgba(0,0,0,0.3);
-        }
-        .eb-right {
-            background: rgba(0,0,0,0.2);
-            border-left: 2px solid rgba(255,215,0,0.3);
-            padding: 28px 32px;
+        .eb-new-price-row {
             display: flex;
-            flex-direction: column;
             align-items: center;
+            gap: 10px;
+            flex-wrap: wrap;
             justify-content: center;
-            gap: 12px;
         }
-        .eb-bundle-label {
-            font-size: 13px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #FFD700;
-            background: rgba(255,215,0,0.15);
-            padding: 6px 16px;
-            border-radius: 20px;
-        }
-        .eb-bundle-name {
-            font-family: 'Merriweather', serif;
-            font-size: 20px;
-            font-weight: 900;
-            color: #ffffff;
-            text-align: center;
-            line-height: 1.35;
-            text-shadow: 0 1px 3px rgba(0,0,0,0.3);
-        }
-        .eb-price-block { text-align: center; }
-        .eb-price-was {
-            font-size: 15px;
-            color: #dcc8ff;
-            text-decoration: line-through;
-            margin-bottom: 4px;
-            font-weight: 600;
-        }
-        .eb-price-now {
-            font-size: 56px;
+        .eb-new-price {
+            font-size: 44px;
             font-weight: 900;
             color: #FFD700;
             line-height: 1;
-            text-shadow: 0 2px 8px rgba(0,0,0,0.3);
         }
-        .eb-price-save {
-            font-size: 14px;
-            font-weight: 800;
-            color: #ffffff;
+        .eb-new-was {
+            font-size: 16px;
+            color: rgba(255,255,255,0.45);
+            text-decoration: line-through;
+        }
+        .eb-new-save-badge {
             background: #27ae60;
-            padding: 5px 14px;
+            color: white;
+            font-size: 12px;
+            font-weight: 800;
+            padding: 4px 12px;
             border-radius: 20px;
-            margin-top: 8px;
-            display: inline-block;
         }
-        .eb-cta {
-            display: block;
+        .eb-new-cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
             background: #FFD700;
-            color: #3a1a6e;
+            color: #2d1b69;
             font-weight: 900;
-            font-size: 19px;
-            padding: 18px 28px;
+            font-size: 17px;
+            padding: 15px 32px;
             border-radius: 10px;
             text-decoration: none;
-            text-align: center;
             width: 100%;
-            box-shadow: 0 4px 20px rgba(255,215,0,0.5);
-            animation: eb-glow 2.5s ease-in-out infinite;
-            transition: transform 0.2s, background 0.2s;
-            letter-spacing: 0.2px;
+            justify-content: center;
+            box-shadow: 0 4px 20px rgba(255,215,0,0.45);
+            animation: eb-pulse 2.5s ease-in-out infinite;
+            transition: background 0.2s, transform 0.2s;
         }
-        @keyframes eb-glow {
-            0%,100%{box-shadow:0 4px 20px rgba(255,215,0,0.5)}
-            50%{box-shadow:0 6px 36px rgba(255,215,0,0.85)}
+        @keyframes eb-pulse {
+            0%,100% { box-shadow: 0 4px 20px rgba(255,215,0,0.45); }
+            50%      { box-shadow: 0 6px 36px rgba(255,215,0,0.80); }
         }
-        .eb-cta:hover { background: #ffe033; transform: translateY(-2px); }
-        .eb-trust {
-            font-size: 13px;
-            color: #dcc8ff;
-            text-align: center;
-            line-height: 1.7;
-            font-weight: 600;
+        .eb-new-cta:hover {
+            background: white;
+            transform: translateY(-2px);
+            animation: none;
         }
-        @media (max-width: 900px) {
-            .eb-inner { grid-template-columns: 1fr; }
-            .eb-right {
-                border-left: none;
-                border-top: 2px solid rgba(255,215,0,0.25);
-                flex-direction: row;
-                flex-wrap: wrap;
-                justify-content: center;
-                padding: 20px 24px;
-                gap: 16px;
-            }
-            .eb-cta { width: auto; padding: 14px 36px; }
+        .eb-new-save {
+            font-size: 12px;
+            color: rgba(255,255,255,0.55);
         }
-        @media (max-width: 600px) {
-            .eb-left { padding: 20px; }
-            .eb-products { gap: 10px; }
-            .eb-headline { font-size: 18px; }
+        @media (max-width: 700px) {
+            .eb-new-inner { grid-template-columns: 1fr; }
+            .eb-new-left  { padding: 20px 20px 0; }
+            .eb-new-right { padding: 16px 20px 24px; }
+            .eb-book img  { height: 90px; }
+            .eb-book:nth-child(2) img { height: 100px; }
         }
-        @media (max-width: 420px) {
-            .eb-products { gap: 8px; }
-            .eb-product-label { font-size: 10px; }
-        }
-    </style>
+            </style>
 </head>
 <body>
     <header>
@@ -818,9 +747,8 @@
                 <img src="_Header_Logo_.png" alt="BibleQuizDaily - Free Bible Quiz Questions">
             </a>
             <ul class="nav-menu">
-                <li><a href="complete-easter-bundle.html" style="background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); color: white; padding: 8px 16px; border-radius: 8px;">🎁 Easter Products</a></li>
                 <li class="nav-dropdown">
-                    <button class="nav-dropdown-toggle">Quizzes</button>
+                    <button class="nav-dropdown-toggle">Quizzes ▾</button>
                     <div class="nav-dropdown-menu">
                         <a href="#popular">🔥 Most Popular</a>
                         <a href="#old-testament">Old Testament</a>
@@ -829,7 +757,9 @@
                     </div>
                 </li>
                 <li><a href="free-resources.html">Free Downloads</a></li>
-                <li><a href="ultimate-easter-sunday-school-kit.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 8px 14px; border-radius: 8px; font-weight: 700;">✍️ Blog</a></li>
+                <li><a href="complete-easter-bundle.html">🐣 Easter</a></li>
+                <li><a href="ultimate-easter-sunday-school-kit.html">Blog</a></li>
+                <li><a href="shop.html" class="nav-shop-btn">🛒 Shop</a></li>
             </ul>
         </nav>
     </header>
@@ -865,67 +795,28 @@
 
         <!-- EASTER PRODUCTS BANNER -->
         <div class="easter-banner">
-            <div class="eb-inner">
+            <div class="eb-new-inner">
 
-                <!-- LEFT: headline + 3 product covers -->
-                <div class="eb-left">
-                    <div class="eb-eyebrow">
-                        <span class="eb-eyebrow-text">🐣 Easter Ministry Resources</span>
-                        <span class="eb-hot">EASTER IS COMING</span>
-                    </div>
-                    <div class="eb-headline">
-                        3 Ready-to-Print Easter Resources —<br>
-                        <span>Download &amp; Use This Sunday</span>
-                    </div>
-                    <div class="eb-sub">
-                        KJV-based · Instant PDF download · Print unlimited copies for your whole class
-                    </div>
-
-                    <div class="eb-products">
-                        <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="eb-product">
-                            <div class="eb-cover">
-                                <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia — 120 Questions PDF">
-                            </div>
-                            <div class="eb-product-label">Easter Bible Trivia</div>
-                            <div class="eb-product-price">$5.99</div>
-                        </a>
-
-                        <a href="https://biblequizdaily.gumroad.com/l/easterbiblebingo" target="_blank" class="eb-product">
-                            <div class="eb-cover">
-                                <img src="EASTER_BIBLE_BINGO.png" alt="Easter Bible BINGO — 30 Unique Cards PDF">
-                            </div>
-                            <div class="eb-product-label">Easter Bible BINGO</div>
-                            <div class="eb-product-price">$5.99</div>
-                        </a>
-
-                        <a href="https://biblequizdaily.gumroad.com/l/EASTERSTORYTREASUREHUNT" target="_blank" class="eb-product">
-                            <div class="eb-cover">
-                                <img src="Easter_story_hunt.png" alt="Easter Story Treasure Hunt PDF">
-                            </div>
-                            <div class="eb-product-label">Story Treasure Hunt</div>
-                            <div class="eb-product-price">$4.99</div>
-                        </a>
-                    </div>
+                <!-- Bundle image — left side -->
+                <div class="eb-new-left">
+                    <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="eb-bundle-img-link">
+                        <img src="bundle_image.png" alt="Complete Easter Ministry Kit — Bible Trivia, BINGO & Treasure Hunt" class="eb-bundle-img">
+                    </a>
                 </div>
 
-                <!-- RIGHT: bundle CTA -->
-                <div class="eb-right">
-                    <div class="eb-bundle-label">⭐ Best Value</div>
-                    <div class="eb-bundle-name">Complete Easter<br>Ministry Kit</div>
-
-                    <div class="eb-price-block">
-                        <div class="eb-price-was">Separately $16.97</div>
-                        <div class="eb-price-now">$12.99</div>
-                        <div class="eb-price-save">You save $3.98</div>
+                <!-- Right: CTA only -->
+                <div class="eb-new-right">
+                    <div class="eb-new-eyebrow">🐣 Easter Ministry Resources</div>
+                    <div class="eb-new-kit-name">Complete Easter<br>Ministry Kit</div>
+                    <div class="eb-new-price-row">
+                        <span class="eb-new-price">$12.99</span>
+                        <span class="eb-new-was">$16.97</span>
+                        <span class="eb-new-save-badge">Save $3.98</span>
                     </div>
-
-                    <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="eb-cta">
-                        🛒 Get the Bundle →
+                    <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="eb-new-cta">
+                        🛒 Get the Bundle
                     </a>
-
-                    <div class="eb-trust">
-                        ✓ Instant download &nbsp;·&nbsp; ✓ Print unlimited
-                    </div>
+                    <div class="eb-new-save">Instant Download · Print Unlimited</div>
                 </div>
 
             </div>
