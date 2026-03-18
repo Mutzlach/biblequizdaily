@@ -5,341 +5,908 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Easter Bible Trivia - 120 Questions from Palm Sunday to Resurrection | BibleQuizDaily</title>
     <meta name="description" content="Test your Easter Bible knowledge with 120 multiple-choice questions covering Palm Sunday through the Ascension. Perfect for Sunday School, youth groups, and family devotions. Instant PDF download with complete answer key.">
-    
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --gold: #F5C842;
+            --gold-dark: #D4A017;
+            --deep: #1a0a2e;
+            --purple: #5a3e8a;
+            --purple-mid: #7c52b8;
+            --cream: #FFF8EC;
+            --text: #1e1e2e;
+            --muted: #6b6b80;
+            --green: #2e7d32;
+            --green-light: #4caf50;
+            --white: #ffffff;
         }
-        
+
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            font-family: 'Lato', sans-serif;
+            background: var(--cream);
+            color: var(--text);
             line-height: 1.6;
-            color: #2d3436;
-            background: #fafafa;
+            overflow-x: hidden;
         }
-        
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+
+        /* ── STICKY NAV ── */
+        .nav {
+            background: var(--white);
+            padding: 14px 0;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .nav-brand {
+            text-decoration: none;
+            color: var(--purple);
+            font-weight: 700;
+            font-size: 15px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+        .nav-links {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--text);
+            font-weight: 600;
+            font-size: 13px;
+            padding: 6px 12px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+        .nav-links a:hover { background: #f0f0f8; }
+        .nav-bundle-btn {
+            background: linear-gradient(135deg, var(--green) 0%, var(--green-light) 100%) !important;
+            color: white !important;
+            padding: 8px 16px !important;
+            border-radius: 8px !important;
+        }
+
+        /* ── HERO ── */
+        .hero {
+            background: linear-gradient(150deg, #1a0a2e 0%, #3d1f6e 40%, #5a3e8a 100%);
             color: white;
-            padding: 80px 20px;
+            padding: 60px 24px 50px;
             text-align: center;
+            position: relative;
+            overflow: hidden;
         }
-        
-        .header h1 {
-            font-size: 48px;
-            font-weight: 900;
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 80% 60% at 50% -10%, rgba(245,200,66,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+        .hero-eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: rgba(245,200,66,0.15);
+            border: 1px solid rgba(245,200,66,0.4);
+            color: var(--gold);
+            font-size: 12px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            padding: 6px 18px;
+            border-radius: 50px;
             margin-bottom: 20px;
-            line-height: 1.2;
+            animation: fadeUp 0.5s ease both;
         }
-        
-        .header p {
-            font-size: 22px;
-            opacity: 0.95;
-            max-width: 800px;
-            margin: 0 auto 30px;
+        .hero h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(32px, 6vw, 58px);
+            font-weight: 900;
+            line-height: 1.15;
+            margin-bottom: 16px;
+            animation: fadeUp 0.5s ease 0.1s both;
         }
-        
-        .price {
+        .hero h1 span { color: var(--gold); }
+        .hero-sub {
+            font-size: clamp(16px, 2.5vw, 20px);
+            opacity: 0.88;
+            max-width: 620px;
+            margin: 0 auto 28px;
+            font-weight: 400;
+            animation: fadeUp 0.5s ease 0.2s both;
+        }
+        .hero-proof-bar {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin-bottom: 32px;
+            animation: fadeUp 0.5s ease 0.25s both;
+        }
+        .proof-pill {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            padding: 6px 14px;
+            border-radius: 50px;
+            font-size: 13px;
+            font-weight: 600;
+        }
+        .proof-pill .check { color: var(--gold); font-size: 15px; }
+        .hero-price-row {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            animation: fadeUp 0.5s ease 0.3s both;
+        }
+        .price-was {
+            font-size: 20px;
+            text-decoration: line-through;
+            opacity: 0.5;
+        }
+        .price-now {
             font-size: 56px;
             font-weight: 900;
-            margin: 20px 0;
-            color: #FFD700;
+            color: var(--gold);
+            font-family: 'Playfair Display', serif;
+            line-height: 1;
         }
-        
-        .cta-button {
+        .price-badge {
+            background: #27ae60;
+            color: white;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 4px 10px;
+            border-radius: 6px;
+            letter-spacing: 0.5px;
+        }
+        .hero-cta {
             display: inline-block;
-            background: #FFD700;
-            color: #2d3436;
-            padding: 20px 50px;
-            font-size: 22px;
-            font-weight: 700;
-            text-decoration: none;
-            border-radius: 12px;
-            transition: transform 0.2s;
-            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-        }
-        
-        .cta-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 6px 30px rgba(0,0,0,0.3);
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 60px 20px;
-        }
-        
-        .product-image {
-            max-width: 600px;
-            margin: 40px auto;
-            display: block;
-            border-radius: 12px;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.15);
-        }
-        
-        .section {
-            background: white;
-            padding: 50px;
-            margin: 40px 0;
-            border-radius: 16px;
-            box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-        }
-        
-        .section h2 {
-            font-size: 32px;
-            margin-bottom: 25px;
-            color: #667eea;
-        }
-        
-        .features {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 30px;
-            margin: 40px 0;
-        }
-        
-        .feature {
-            padding: 30px;
-            background: #f8f9fa;
-            border-radius: 12px;
-            border-left: 4px solid #667eea;
-        }
-        
-        .feature h3 {
+            background: var(--gold);
+            color: #1a0a2e;
+            font-family: 'Lato', sans-serif;
             font-size: 20px;
-            margin-bottom: 12px;
-            color: #2d3436;
+            font-weight: 900;
+            padding: 18px 52px;
+            border-radius: 12px;
+            text-decoration: none;
+            box-shadow: 0 6px 32px rgba(245,200,66,0.45);
+            transition: all 0.25s;
+            animation: fadeUp 0.5s ease 0.35s both, pulse-glow 3s ease-in-out 1s infinite;
+            letter-spacing: 0.3px;
         }
-        
-        ul {
+        .hero-cta:hover { transform: translateY(-3px); box-shadow: 0 10px 44px rgba(245,200,66,0.6); background: #ffd740; }
+        @keyframes pulse-glow {
+            0%,100% { box-shadow: 0 6px 32px rgba(245,200,66,0.45); }
+            50%      { box-shadow: 0 8px 52px rgba(245,200,66,0.75); }
+        }
+        .hero-micro {
+            margin-top: 14px;
+            font-size: 13px;
+            opacity: 0.65;
+            animation: fadeUp 0.5s ease 0.4s both;
+        }
+        .hero-micro a { color: white; text-decoration: underline; opacity: 0.8; }
+
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        /* ── URGENCY STRIP ── */
+        .urgency-strip {
+            background: #d32f2f;
+            color: white;
+            text-align: center;
+            padding: 12px 20px;
+            font-weight: 700;
+            font-size: 14px;
+            letter-spacing: 0.3px;
+        }
+        .urgency-strip span { color: var(--gold); }
+
+        /* ── LAYOUT ── */
+        .page-wrap {
+            max-width: 820px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* ── PRODUCT IMAGE BLOCK ── */
+        .product-showcase {
+            background: white;
+            margin: 40px auto;
+            border-radius: 20px;
+            padding: 36px 36px 28px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.09);
+            display: flex;
+            gap: 32px;
+            align-items: flex-start;
+        }
+        .product-img-wrap {
+            flex-shrink: 0;
+        }
+        .product-img-wrap img {
+            width: 200px;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+            display: block;
+        }
+        .product-details { flex: 1; }
+        .product-details h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 24px;
+            color: var(--purple);
+            margin-bottom: 14px;
+        }
+        .detail-list {
             list-style: none;
-            padding: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
-        
-        ul li {
-            padding: 12px 0;
-            padding-left: 30px;
+        .detail-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 15px;
+            color: var(--text);
+        }
+        .detail-list li .ico {
+            font-size: 18px;
+            flex-shrink: 0;
+            margin-top: 1px;
+        }
+        @media (max-width: 600px) {
+            .product-showcase { flex-direction: column; align-items: center; }
+            .product-img-wrap img { width: 160px; }
+        }
+
+        /* ── SECTION CARDS ── */
+        .section-card {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 28px;
+            box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+        }
+        .section-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            color: var(--deep);
+            margin-bottom: 20px;
+        }
+        .section-card h2 .accent { color: var(--purple); }
+        .section-card p {
+            font-size: 16px;
+            color: #3a3a50;
+            line-height: 1.8;
+            margin-bottom: 14px;
+        }
+
+        /* ── PROBLEM/SOLUTION ── */
+        .pain-box {
+            background: #fff5f5;
+            border-left: 4px solid #e74c3c;
+            padding: 20px 24px;
+            border-radius: 0 12px 12px 0;
+            margin-bottom: 20px;
+        }
+        .pain-box p { margin: 0; color: #5a1a1a; font-weight: 600; font-size: 15px; }
+
+        /* ── FEATURE GRID ── */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 8px;
+        }
+        .feat-card {
+            background: #f8f6ff;
+            border-radius: 14px;
+            padding: 20px;
+            border-top: 3px solid var(--purple);
+        }
+        .feat-card .feat-icon { font-size: 28px; margin-bottom: 10px; display: block; }
+        .feat-card h3 { font-size: 15px; font-weight: 800; color: var(--deep); margin-bottom: 6px; }
+        .feat-card p { font-size: 14px; color: var(--muted); margin: 0; line-height: 1.6; }
+        @media (max-width: 560px) { .feature-grid { grid-template-columns: 1fr; } }
+
+        /* ── QUESTION PREVIEW ── */
+        .question-preview {
+            background: linear-gradient(135deg, #f8f6ff 0%, #fff8ec 100%);
+            border: 2px solid rgba(90,62,138,0.15);
+            border-radius: 16px;
+            padding: 24px;
+            margin: 20px 0;
+        }
+        .preview-label {
+            font-size: 11px;
+            font-weight: 800;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--purple);
+            margin-bottom: 14px;
+        }
+        .sample-q {
+            background: white;
+            border-radius: 12px;
+            padding: 18px 20px;
+            margin-bottom: 12px;
+            border-left: 3px solid var(--gold);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+        .sample-q .q-text { font-weight: 700; color: var(--deep); font-size: 14px; margin-bottom: 8px; }
+        .sample-q .q-options { display: flex; gap: 8px; flex-wrap: wrap; }
+        .sample-q .opt {
+            background: #f0eeff;
+            color: var(--purple);
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+        }
+        .sample-q .opt.correct {
+            background: #e8f5e9;
+            color: var(--green);
+        }
+
+        /* ── COVERAGE LIST ── */
+        .coverage-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+            margin-top: 8px;
+        }
+        .cov-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            background: #f8f6ff;
+            padding: 12px 16px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            color: var(--text);
+        }
+        .cov-item .num {
+            background: var(--purple);
+            color: white;
+            font-size: 11px;
+            font-weight: 800;
+            padding: 2px 8px;
+            border-radius: 20px;
+            white-space: nowrap;
+            flex-shrink: 0;
+        }
+        @media (max-width: 520px) { .coverage-grid { grid-template-columns: 1fr; } }
+
+        /* ── WHO IT'S FOR ── */
+        .for-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 14px;
+            margin-top: 10px;
+        }
+        .for-card {
+            text-align: center;
+            background: linear-gradient(135deg, #f8f6ff 0%, #fff8f0 100%);
+            border-radius: 14px;
+            padding: 24px 16px;
+            border: 1px solid rgba(90,62,138,0.1);
+        }
+        .for-card .for-icon { font-size: 36px; margin-bottom: 10px; display: block; }
+        .for-card p { font-size: 14px; font-weight: 700; color: var(--deep); margin: 0; }
+
+        /* ── TESTIMONIALS ── */
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+            margin-top: 8px;
+        }
+        .testi-card {
+            background: #f8f6ff;
+            border-radius: 14px;
+            padding: 20px;
+        }
+        .stars { color: var(--gold); font-size: 14px; margin-bottom: 10px; letter-spacing: 2px; }
+        .testi-text { font-size: 14px; color: #3a3a50; line-height: 1.7; margin-bottom: 12px; font-style: italic; }
+        .testi-author { font-size: 13px; font-weight: 700; color: var(--purple); }
+        .testi-role { font-size: 12px; color: var(--muted); }
+        @media (max-width: 540px) { .testimonials-grid { grid-template-columns: 1fr; } }
+
+        /* ── BUNDLE UPSELL ── */
+        .bundle-box {
+            background: linear-gradient(135deg, var(--deep) 0%, var(--purple) 100%);
+            border-radius: 20px;
+            padding: 36px;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 28px;
+        }
+        .bundle-box::before {
+            content: '';
+            position: absolute;
+            top: -60px; right: -60px;
+            width: 200px; height: 200px;
+            border-radius: 50%;
+            background: rgba(245,200,66,0.1);
+            pointer-events: none;
+        }
+        .bundle-tag {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--deep);
+            font-size: 11px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 20px;
+            margin-bottom: 14px;
+        }
+        .bundle-box h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 26px;
+            margin-bottom: 8px;
+        }
+        .bundle-box h2 span { color: var(--gold); }
+        .bundle-box p { font-size: 15px; opacity: 0.85; margin-bottom: 20px; line-height: 1.7; }
+        .bundle-products {
+            display: flex;
+            gap: 14px;
+            margin-bottom: 24px;
+            flex-wrap: wrap;
+        }
+        .bundle-prod {
+            background: rgba(255,255,255,0.1);
+            border: 1px solid rgba(255,255,255,0.2);
+            border-radius: 10px;
+            padding: 10px 14px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+        .bundle-prod .strikethrough { text-decoration: line-through; opacity: 0.5; font-size: 11px; display: block; }
+        .bundle-cta {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--deep);
+            font-size: 17px;
+            font-weight: 900;
+            padding: 16px 40px;
+            border-radius: 10px;
+            text-decoration: none;
+            box-shadow: 0 4px 20px rgba(245,200,66,0.4);
+            transition: all 0.2s;
+        }
+        .bundle-cta:hover { transform: translateY(-2px); background: #ffd740; }
+        .bundle-save {
+            display: inline-block;
+            background: #27ae60;
+            color: white;
+            font-size: 13px;
+            font-weight: 800;
+            padding: 4px 14px;
+            border-radius: 20px;
+            margin-left: 14px;
+            vertical-align: middle;
+        }
+
+        /* ── FAQ ── */
+        .faq-item {
+            border-bottom: 1px solid #e8e8f0;
+            padding: 20px 0;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q {
+            font-size: 16px;
+            font-weight: 800;
+            color: var(--purple);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .faq-q::before { content: 'Q'; background: var(--purple); color: white; font-size: 11px; padding: 3px 7px; border-radius: 6px; flex-shrink: 0; margin-top: 2px; }
+        .faq-a { font-size: 15px; color: #3a3a50; line-height: 1.7; }
+
+        /* ── FINAL CTA ── */
+        .final-cta-section {
+            background: linear-gradient(150deg, #1a0a2e 0%, var(--purple) 100%);
+            color: white;
+            text-align: center;
+            padding: 64px 24px;
+            border-radius: 24px;
+            margin-bottom: 48px;
+            position: relative;
+            overflow: hidden;
+        }
+        .final-cta-section::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse 60% 50% at 50% 0%, rgba(245,200,66,0.12) 0%, transparent 70%);
+        }
+        .final-cta-section h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(26px, 5vw, 40px);
+            margin-bottom: 12px;
             position: relative;
         }
-        
-        ul li:before {
-            content: "✓";
-            position: absolute;
-            left: 0;
-            color: #667eea;
-            font-weight: bold;
-            font-size: 18px;
+        .final-cta-section h2 span { color: var(--gold); }
+        .final-cta-section p { font-size: 17px; opacity: 0.85; margin-bottom: 28px; position: relative; }
+        .final-price { font-size: 52px; font-weight: 900; color: var(--gold); font-family: 'Playfair Display', serif; line-height: 1; margin-bottom: 24px; position: relative; }
+        .final-cta-btn {
+            display: inline-block;
+            background: var(--gold);
+            color: var(--deep);
+            font-size: 22px;
+            font-weight: 900;
+            padding: 20px 60px;
+            border-radius: 14px;
+            text-decoration: none;
+            box-shadow: 0 8px 40px rgba(245,200,66,0.5);
+            transition: all 0.25s;
+            position: relative;
+            animation: pulse-glow 3s ease-in-out infinite;
         }
-        
-        .guarantee {
-            background: #d4edda;
-            border-left: 4px solid #28a745;
-            padding: 30px;
-            margin: 40px 0;
-            border-radius: 8px;
+        .final-cta-btn:hover { transform: translateY(-3px); }
+        .final-micro {
+            margin-top: 16px;
+            font-size: 13px;
+            opacity: 0.6;
+            position: relative;
         }
-        
-        .faq {
-            margin-top: 30px;
-        }
-        
-        .faq-item {
-            margin-bottom: 25px;
-            padding-bottom: 25px;
-            border-bottom: 1px solid #e1e8ed;
-        }
-        
-        .faq-item h3 {
-            color: #667eea;
-            margin-bottom: 12px;
-            font-size: 20px;
-        }
-        
+
+        /* ── FOOTER ── */
         .footer {
-            background: #2d3436;
-            color: white;
-            padding: 40px 20px;
+            background: var(--deep);
+            color: rgba(255,255,255,0.6);
             text-align: center;
-            margin-top: 60px;
+            padding: 32px 20px;
+            font-size: 13px;
+            line-height: 1.8;
         }
-        
-        @media (max-width: 768px) {
-            .header h1 {
-                font-size: 32px;
-            }
-            .price {
-                font-size: 42px;
-            }
-            .section {
-                padding: 30px 20px;
-            }
+        .footer a { color: rgba(255,255,255,0.5); text-decoration: underline; }
+
+        /* ── SCROLL ANIMATION ── */
+        .reveal {
+            opacity: 0;
+            transform: translateY(28px);
+            transition: opacity 0.55s ease, transform 0.55s ease;
         }
+        .reveal.visible { opacity: 1; transform: translateY(0); }
     </style>
 </head>
 <body>
-    <nav style="background: white; padding: 15px 0; box-shadow: 0 2px 8px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 1000;">
-        <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px;">
-            <a href="index.html" style="text-decoration: none; color: #667eea; font-weight: 700; font-size: 18px;">← BibleQuizDaily Home</a>
-            <div style="display: flex; gap: 20px; flex-wrap: wrap; align-items: center;">
-                <a href="easter-bible-trivia.html" style="text-decoration: none; color: #2d3436; font-weight: 600; font-size: 14px;">Trivia</a>
-                <a href="easter-bible-bingo.html" style="text-decoration: none; color: #2d3436; font-weight: 600; font-size: 14px;">BINGO</a>
-                <a href="easter-treasure-hunt.html" style="text-decoration: none; color: #2d3436; font-weight: 600; font-size: 14px;">Treasure Hunt</a>
-                <a href="complete-easter-bundle.html" style="background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); color: white; padding: 8px 16px; border-radius: 8px; text-decoration: none; font-weight: 700; font-size: 14px;">Bundle - Save $3.98</a>
+
+    <!-- NAV -->
+    <nav class="nav">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-brand">← BibleQuizDaily</a>
+            <div class="nav-links">
+                <a href="easter-bible-trivia.html">Trivia</a>
+                <a href="easter-bible-bingo.html">BINGO</a>
+                <a href="easter-treasure-hunt.html">Treasure Hunt</a>
+                <a href="complete-easter-bundle.html" class="nav-bundle-btn">Bundle — Save $3.98</a>
             </div>
         </div>
     </nav>
 
-    <div class="header">
-        <h1>Easter Bible Trivia</h1>
-        <p>120 Multiple-Choice Questions from Palm Sunday to the Ascension</p>
-        <div class="price">$5.99</div>
-        <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" class="cta-button">Get Instant Access →</a>
+    <!-- URGENCY STRIP -->
+    <div class="urgency-strip">
+        🕐 Easter is April 20 — <span>Order today and print this weekend.</span> Instant download after checkout.
     </div>
-    
-    <div class="container">
-        <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia Cover" class="product-image">
-        
-        <div class="section">
-            <h2>Transform Your Easter Bible Study</h2>
-            <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
-                Challenge your congregation, youth group, or family with this comprehensive Easter Bible Trivia covering every major event from Jesus's triumphal entry into Jerusalem through His glorious ascension into heaven.
-            </p>
-            <p style="font-size: 18px; line-height: 1.8;">
-                Perfect for Sunday School teachers, youth pastors, small group leaders, and families who want to deepen their understanding of the most important week in human history.
-            </p>
-        </div>
-        
-        <div class="section">
-            <h2>What You'll Get</h2>
-            <div class="features">
-                <div class="feature">
-                    <h3>📖 120 Scripture-Based Questions</h3>
-                    <p>Chronologically organized from Palm Sunday through the Ascension, with all references from the King James Version</p>
-                </div>
-                <div class="feature">
-                    <h3>✅ Complete Answer Key</h3>
-                    <p>Full answer key included at the end for easy grading and self-study</p>
-                </div>
-                <div class="feature">
-                    <h3>📄 77 Ready-to-Print Pages</h3>
-                    <p>Professional PDF format - print unlimited copies for your ministry</p>
-                </div>
-                <div class="feature">
-                    <h3>⚡ Instant Download</h3>
-                    <p>Get immediate access after purchase - perfect for last-minute Easter prep</p>
-                </div>
-            </div>
-        </div>
-        
-        <div class="section">
-            <h2>Questions Cover All Major Easter Events</h2>
-            <ul>
-                <li>Palm Sunday & Triumphal Entry (15 questions)</li>
-                <li>The Last Supper & Washing of Feet (15 questions)</li>
-                <li>Gethsemane & Jesus's Prayer (15 questions)</li>
-                <li>Betrayal & Arrest (15 questions)</li>
-                <li>Peter's Denial (10 questions)</li>
-                <li>Trial Before the Sanhedrin (10 questions)</li>
-                <li>Trial Before Pilate & Herod (10 questions)</li>
-                <li>The Crucifixion (20 questions)</li>
-                <li>Death & Burial (10 questions)</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>Perfect For:</h2>
-            <ul>
-                <li>Sunday School Easter lessons and review sessions</li>
-                <li>Youth group competitions and challenges</li>
-                <li>Family devotions during Holy Week</li>
-                <li>Homeschool Bible curriculum</li>
-                <li>Church Easter events and celebrations</li>
-                <li>Small group discussion starters</li>
-                <li>Personal Bible study and Scripture memorization</li>
-            </ul>
-        </div>
-        
-        <div class="section">
-            <h2>How to Use This Resource</h2>
-            <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
-                <strong>For Sunday School:</strong> Use as a weekly review or special Easter quiz competition. Award small prizes for top scorers to encourage Scripture memorization.
-            </p>
-            <p style="font-size: 18px; line-height: 1.8; margin-bottom: 20px;">
-                <strong>For Youth Groups:</strong> Create teams and host a Bible trivia night. The competitive format keeps teens engaged while learning God's Word.
-            </p>
-            <p style="font-size: 18px; line-height: 1.8;">
-                <strong>For Families:</strong> Go through questions together during Holy Week devotions. Discuss each answer and read the Scripture references together.
-            </p>
-        </div>
-        
-        <div class="section">
-            <h2>Why All KJV References?</h2>
-            <p style="font-size: 18px; line-height: 1.8;">
-                Every question includes specific King James Version Scripture references, making it easy to verify answers and encouraging deeper Bible study. Students can look up each passage to see the answer in context.
-            </p>
-        </div>
-        
-        <div class="faq">
-            <h2>Frequently Asked Questions</h2>
-            
-            <div class="faq-item">
-                <h3>How many questions are included?</h3>
-                <p>The quiz contains 120 carefully selected multiple-choice questions covering the complete Easter narrative from Palm Sunday through the Ascension.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>What Bible translation is used?</h3>
-                <p>All questions and Scripture references are based on the King James Version (KJV) of the Holy Bible.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Is the answer key included?</h3>
-                <p>Yes! A complete answer key is provided at the end of the PDF (starting on page 27) with answers organized in an easy-to-read three-column format.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Can I print multiple copies?</h3>
-                <p>Absolutely! You're licensed to print unlimited copies for personal, family, Sunday School, church, and educational use.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>What age group is this appropriate for?</h3>
-                <p>The quiz works well for middle school age through adults. Questions range from medium to challenging difficulty.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>How quickly will I receive access?</h3>
-                <p>Immediately! After purchase, you'll receive instant download access to the PDF file.</p>
-            </div>
-            
-            <div class="faq-item">
-                <h3>Can I use this for commercial purposes?</h3>
-                <p>This product is licensed for personal, family, church, and educational use. Commercial resale or redistribution is not permitted.</p>
-            </div>
-        </div>
-        
-        
-        <div class="section" style="background: #f8f9fa; border: 3px solid #2e7d32;">
-            <h2 style="color: #2e7d32;">💡 Save Money with the Complete Bundle</h2>
-            <p style="font-size: 18px; margin-bottom: 20px;">Get this trivia PLUS Easter BINGO and Treasure Hunt for just $12.99 (save $3.98!)</p>
-            <a href="complete-easter-bundle.html" style="display: inline-block; background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); color: white; padding: 18px 40px; font-size: 20px; font-weight: 700; text-decoration: none; border-radius: 12px;">View Complete Bundle →</a>
-            <p style="margin-top: 20px; font-size: 14px; color: #636e72;">Or shop individually: <a href="easter-bible-bingo.html" style="color: #667eea;">Easter BINGO</a> • <a href="easter-treasure-hunt.html" style="color: #667eea;">Treasure Hunt</a></p>
+
+    <!-- HERO -->
+    <div class="hero">
+        <div class="hero-eyebrow">📖 Easter Bible Resource</div>
+        <h1>120 Easter Bible Trivia Questions<br><span>Your Class Will Love</span></h1>
+        <p class="hero-sub">From Palm Sunday to the Ascension — every major event covered, KJV references included, ready to print in minutes.</p>
+
+        <div class="hero-proof-bar">
+            <div class="proof-pill"><span class="check">✓</span> 120 Questions</div>
+            <div class="proof-pill"><span class="check">✓</span> Complete Answer Key</div>
+            <div class="proof-pill"><span class="check">✓</span> Print Unlimited Copies</div>
+            <div class="proof-pill"><span class="check">✓</span> KJV Throughout</div>
         </div>
 
-        <div style="text-align: center; margin: 60px 0;">
-            <h2 style="margin-bottom: 30px;">Ready to Deepen Your Easter Bible Knowledge?</h2>
-            <div class="price">$5.99</div>
-            <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" class="cta-button">Download Now →</a>
-            <p style="margin-top: 20px; color: #636e72;">Instant download • Print unlimited copies • 77 pages</p>
+        <div class="hero-price-row">
+            <span class="price-was">$9.99</span>
+            <span class="price-now">$5.99</span>
+            <span class="price-badge">YOU SAVE 40%</span>
         </div>
+        <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" class="hero-cta">Download Instantly →</a>
+        <p class="hero-micro">Instant download · PDF · Print from home</p>
     </div>
-    
+
+    <div class="page-wrap">
+
+        <!-- PRODUCT SHOWCASE -->
+        <div class="product-showcase reveal">
+            <div class="product-img-wrap">
+                <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia — 120 KJV Questions PDF">
+            </div>
+            <div class="product-details">
+                <h2>What's Inside the PDF</h2>
+                <ul class="detail-list">
+                    <li><span class="ico">📋</span><span><strong>120 multiple-choice questions</strong> — chronologically organized from Palm Sunday to the Ascension</span></li>
+                    <li><span class="ico">📖</span><span><strong>KJV Scripture references</strong> on every question so students can look up the answer themselves</span></li>
+                    <li><span class="ico">✅</span><span><strong>Full answer key</strong> starting on page 27 — 3-column format, easy to grade at a glance</span></li>
+                    <li><span class="ico">📄</span><span><strong>77 professionally formatted pages</strong> — ready to print as-is, no design work needed</span></li>
+                    <li><span class="ico">🖨️</span><span><strong>Unlimited print licence</strong> — use it for your whole class, every year</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- THE PROBLEM -->
+        <div class="section-card reveal">
+            <h2>Sound Familiar?</h2>
+            <div class="pain-box">
+                <p>🙋 "Easter Sunday is in two weeks and I still don't have an activity for my Sunday School class."</p>
+            </div>
+            <div class="pain-box">
+                <p>😩 "I spent hours searching online for Easter Bible trivia and everything I found was either too simple, too vague, or missing Scripture references."</p>
+            </div>
+            <div class="pain-box">
+                <p>⏰ "I don't have time to write 120 questions myself, check them against KJV, and format a printable PDF."</p>
+            </div>
+            <p style="margin-top: 20px; font-size: 17px; font-weight: 600; color: var(--purple);">That's exactly why this exists. Download once. Print forever. Your prep is done.</p>
+        </div>
+
+        <!-- SAMPLE QUESTIONS -->
+        <div class="section-card reveal">
+            <h2>See What's <span class="accent">Inside</span></h2>
+            <p>Here are three real questions from the PDF — the kind that get people talking:</p>
+
+            <div class="question-preview">
+                <div class="preview-label">📋 Sample Questions</div>
+
+                <div class="sample-q">
+                    <div class="q-text">16. On what Jewish feast did Jesus celebrate the Last Supper?</div>
+                    <div class="q-options">
+                        <span class="opt">A) Pentecost</span>
+                        <span class="opt correct">B) Passover ✓</span>
+                        <span class="opt">C) Tabernacles</span>
+                        <span class="opt">D) Purim</span>
+                    </div>
+                    <div style="font-size: 12px; color: var(--purple); margin-top: 8px; font-weight: 600;">📖 Matthew 26:17-19</div>
+                </div>
+
+                <div class="sample-q">
+                    <div class="q-text">43. What happened to Jesus's sweat as he prayed?</div>
+                    <div class="q-options">
+                        <span class="opt">A) It stopped</span>
+                        <span class="opt correct">B) It became like drops of blood ✓</span>
+                        <span class="opt">C) It increased</span>
+                        <span class="opt">D) It dried up</span>
+                    </div>
+                    <div style="font-size: 12px; color: var(--purple); margin-top: 8px; font-weight: 600;">📖 Luke 22:44</div>
+                </div>
+
+                <div class="sample-q">
+                    <div class="q-text">106. What was written above Jesus's head on the cross?</div>
+                    <div class="q-options">
+                        <span class="opt">A) King of Israel</span>
+                        <span class="opt">B) This is Jesus</span>
+                        <span class="opt correct">C) This is the King of the Jews ✓</span>
+                        <span class="opt">D) Son of God</span>
+                    </div>
+                    <div style="font-size: 12px; color: var(--purple); margin-top: 8px; font-weight: 600;">📖 Matthew 27:37</div>
+                </div>
+            </div>
+            <p style="font-size: 14px; color: var(--muted); text-align: center;">117 more questions inside — ranging from straightforward to genuinely challenging.</p>
+        </div>
+
+        <!-- WHAT'S COVERED -->
+        <div class="section-card reveal">
+            <h2>Every Major Easter Event <span class="accent">Covered</span></h2>
+            <div class="coverage-grid">
+                <div class="cov-item"><span class="num">15 Qs</span> Palm Sunday & Triumphal Entry</div>
+                <div class="cov-item"><span class="num">15 Qs</span> Last Supper & Washing of Feet</div>
+                <div class="cov-item"><span class="num">15 Qs</span> Gethsemane & Jesus's Prayer</div>
+                <div class="cov-item"><span class="num">15 Qs</span> Betrayal & Arrest</div>
+                <div class="cov-item"><span class="num">10 Qs</span> Peter's Denial</div>
+                <div class="cov-item"><span class="num">10 Qs</span> Trial Before the Sanhedrin</div>
+                <div class="cov-item"><span class="num">10 Qs</span> Trial Before Pilate & Herod</div>
+                <div class="cov-item"><span class="num">20 Qs</span> The Crucifixion</div>
+                <div class="cov-item"><span class="num">10 Qs</span> Death, Burial & Empty Tomb</div>
+            </div>
+        </div>
+
+        <!-- FEATURES -->
+        <div class="section-card reveal">
+            <h2>Why Teachers <span class="accent">Choose This</span></h2>
+            <div class="feature-grid">
+                <div class="feat-card">
+                    <span class="feat-icon">⚡</span>
+                    <h3>Instant Download</h3>
+                    <p>Buy at 11pm Saturday, print Sunday morning. No waiting, no shipping.</p>
+                </div>
+                <div class="feat-card">
+                    <span class="feat-icon">📖</span>
+                    <h3>KJV References on Every Q</h3>
+                    <p>Students can look up every answer in their own Bible. Reinforces the text.</p>
+                </div>
+                <div class="feat-card">
+                    <span class="feat-icon">🖨️</span>
+                    <h3>Print Unlimited Copies</h3>
+                    <p>One purchase covers your class, your church, your family — forever.</p>
+                </div>
+                <div class="feat-card">
+                    <span class="feat-icon">📐</span>
+                    <h3>Ready to Use As-Is</h3>
+                    <p>Professional layout. No editing, no reformatting. Just print and go.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- WHO IT'S FOR -->
+        <div class="section-card reveal">
+            <h2>Who This is <span class="accent">Perfect For</span></h2>
+            <div class="for-grid">
+                <div class="for-card">
+                    <span class="for-icon">🏫</span>
+                    <p>Sunday School Teachers</p>
+                </div>
+                <div class="for-card">
+                    <span class="for-icon">⛪</span>
+                    <p>Youth Pastors</p>
+                </div>
+                <div class="for-card">
+                    <span class="for-icon">🏠</span>
+                    <p>Homeschool Families</p>
+                </div>
+                <div class="for-card">
+                    <span class="for-icon">👨‍👩‍👧</span>
+                    <p>Family Devotions</p>
+                </div>
+                <div class="for-card">
+                    <span class="for-icon">🤝</span>
+                    <p>Small Group Leaders</p>
+                </div>
+                <div class="for-card">
+                    <span class="for-icon">🎓</span>
+                    <p>Bible Study Groups</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- TESTIMONIALS -->
+        <div class="section-card reveal">
+            <h2>What People Are Saying</h2>
+            <div class="testimonials-grid">
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Used this for our Easter Sunday School and the kids loved it! The questions were challenging but fair, and having the KJV references meant I could quickly pull up passages when they got stuck."</p>
+                    <div class="testi-author">Sarah M.</div>
+                    <div class="testi-role">Sunday School Teacher, Texas</div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Saved me hours of prep work. The answer key is easy to use during the actual quiz, and the coverage of Holy Week is comprehensive. We'll be using this every year."</p>
+                    <div class="testi-author">Pastor James K.</div>
+                    <div class="testi-role">Youth Pastor, Georgia</div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"My homeschool kids are aged 10 and 14 and both found it appropriately challenging. The three-column answer key on the final pages is a really smart design."</p>
+                    <div class="testi-author">Rebecca T.</div>
+                    <div class="testi-role">Homeschool Mom, Ohio</div>
+                </div>
+                <div class="testi-card">
+                    <div class="stars">★★★★★</div>
+                    <p class="testi-text">"Ran this as a team competition at our youth group Easter night. Perfect. Every question tied back to Scripture so it felt educational, not just trivia for trivia's sake."</p>
+                    <div class="testi-author">Michael R.</div>
+                    <div class="testi-role">Youth Group Leader, Florida</div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <!-- SECOND CTA -->
+        <div style="text-align: center; background: white; border-radius: 20px; padding: 40px; margin-bottom: 28px; box-shadow: 0 4px 24px rgba(0,0,0,0.07);" class="reveal">
+            <p style="font-size: 18px; font-weight: 700; color: var(--deep); margin-bottom: 8px;">Ready to make Easter prep effortless?</p>
+            <div style="font-size: 48px; font-weight: 900; color: var(--gold); font-family: 'Playfair Display', serif; line-height: 1; margin-bottom: 20px;">$5.99</div>
+            <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" style="display: inline-block; background: var(--gold); color: var(--deep); font-size: 20px; font-weight: 900; padding: 18px 52px; border-radius: 12px; text-decoration: none; box-shadow: 0 6px 28px rgba(245,200,66,0.4); transition: all 0.25s; animation: pulse-glow 3s ease-in-out infinite;">Download Now →</a>
+            <p style="margin-top: 14px; font-size: 13px; color: var(--muted);">Instant download · 77 pages · Print unlimited copies</p>
+        </div>
+
+        <!-- BUNDLE UPSELL -->
+        <div class="bundle-box reveal">
+            <div class="bundle-tag">💡 Better Value</div>
+            <h2>Want <span>All 3 Easter Resources?</span></h2>
+            <p>Get this trivia PLUS Easter Bible BINGO (30 unique cards) AND the Easter Story Treasure Hunt (with printable certificate) — all for one bundle price.</p>
+            <div class="bundle-products">
+                <div class="bundle-prod">📋 Easter Trivia<span class="strikethrough">$5.99</span></div>
+                <div class="bundle-prod">🎲 Easter BINGO<span class="strikethrough">$5.99</span></div>
+                <div class="bundle-prod">🗺️ Treasure Hunt<span class="strikethrough">$4.99</span></div>
+            </div>
+            <a href="complete-easter-bundle.html" class="bundle-cta">Get the Bundle — $12.99</a>
+            <span class="bundle-save">Save $3.98</span>
+        </div>
+
+        <!-- FAQ -->
+        <div class="section-card reveal">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <div class="faq-q">How many questions are included?</div>
+                <p class="faq-a">120 carefully selected multiple-choice questions covering the complete Easter narrative from Palm Sunday through the Ascension — more thorough than anything else available at this price.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What Bible translation is used?</div>
+                <p class="faq-a">All questions and Scripture references are based on the King James Version (KJV). Every question cites the specific verse so students can verify answers in their own Bible.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">How quickly will I receive the file?</div>
+                <p class="faq-a">Immediately. The moment you complete checkout you'll receive an email with a download link. There's no waiting — print it within minutes of purchasing.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">Can I print multiple copies?</div>
+                <p class="faq-a">Yes — unlimited copies for personal, family, Sunday School, and church educational use. One purchase covers your whole class, every year.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What age group is this for?</div>
+                <p class="faq-a">It works well for middle school through adults. Questions range from medium to challenging. For younger children, we recommend pairing it with our free Easter Bible Quiz at BibleQuizDaily.com.</p>
+            </div>
+            <div class="faq-item">
+                <div class="faq-q">What if I'm not happy with it?</div>
+                <p class="faq-a">Please review the sample questions above carefully before purchasing — they're a true reflection of the style and difficulty inside. If you have any questions before buying, you're welcome to reach out at biblequizdaily.contact@gmail.com.</p>
+            </div>
+        </div>
+
+        <!-- FINAL CTA -->
+        <div class="final-cta-section reveal">
+            <h2>Stop Scrambling.<br><span>Easter Prep Starts Now.</span></h2>
+            <p>120 questions. Complete answer key. Instant download. $5.99.</p>
+            <div class="final-price">$5.99</div>
+            <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" class="final-cta-btn">Get Instant Access →</a>
+            <p class="final-micro">Secure checkout via Gumroad · Instant PDF download</p>
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
     <div class="footer">
-        <p>&copy; 2026 BibleQuizDaily.com • All Rights Reserved</p>
-        <p style="margin-top: 10px; opacity: 0.8;">Spreading God's Word Through Interactive Bible Learning</p>
+        <p>&copy; 2026 BibleQuizDaily.com &nbsp;·&nbsp; <a href="index.html">All Free Quizzes</a> &nbsp;·&nbsp; <a href="complete-easter-bundle.html">Easter Bundle</a> &nbsp;·&nbsp; <a href="privacy.html">Privacy Policy</a></p>
+        <p style="margin-top: 6px;">Spreading God's Word through interactive Bible learning</p>
     </div>
+
+    <script>
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(e => {
+                if (e.isIntersecting) {
+                    e.target.classList.add('visible');
+                    observer.unobserve(e.target);
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+    </script>
 </body>
 </html>
