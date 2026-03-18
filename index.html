@@ -91,48 +91,114 @@
         .nav-menu a:hover {
             color: #667eea;
         }
+        /* DROPDOWN */
+        .nav-dropdown {
+            position: relative;
+        }
+        .nav-dropdown-toggle {
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            white-space: nowrap;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            background: none;
+            border: none;
+            padding: 0;
+            font-family: inherit;
+            transition: color 0.2s;
+        }
+        .nav-dropdown-toggle:hover { color: #667eea; }
+        .nav-dropdown-toggle::after {
+            content: '▾';
+            font-size: 11px;
+        }
+        .nav-dropdown-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 12px);
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.14);
+            min-width: 200px;
+            z-index: 2000;
+            padding: 8px 0;
+            border: 1px solid #e1e8ed;
+        }
+        .nav-dropdown:hover .nav-dropdown-menu,
+        .nav-dropdown:focus-within .nav-dropdown-menu {
+            display: block;
+        }
+        .nav-dropdown-menu a {
+            display: block;
+            padding: 10px 20px;
+            color: #2d3436;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: background 0.15s, color 0.15s;
+            white-space: nowrap;
+        }
+        .nav-dropdown-menu a:hover {
+            background: #f0f3ff;
+            color: #667eea;
+        }
         
         /* HERO */
         .hero {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 60px 5%;
+            padding: 48px 5%;
             text-align: center;
+        }
+        .hero-inner {
+            max-width: 760px;
+            margin: 0 auto;
         }
         .hero h1 {
             font-family: 'Merriweather', serif;
-            font-size: 48px;
+            font-size: 42px;
             font-weight: 900;
-            margin-bottom: 16px;
+            margin-bottom: 14px;
             letter-spacing: -0.5px;
-            max-width: 1400px;
-            margin-left: auto;
-            margin-right: auto;
+            animation: hero-fadein 0.7s ease both;
         }
         .hero p {
-            font-size: 20px;
-            margin-bottom: 32px;
+            font-size: 18px;
+            margin-bottom: 28px;
             opacity: 0.95;
             font-weight: 500;
-            max-width: 700px;
-            margin-left: auto;
-            margin-right: auto;
+            animation: hero-fadein 0.7s ease 0.15s both;
+        }
+        @keyframes hero-fadein {
+            from { opacity: 0; transform: translateY(18px); }
+            to   { opacity: 1; transform: translateY(0); }
         }
         .hero-cta {
             display: inline-block;
             background: white;
             color: #667eea;
-            padding: 18px 48px;
+            padding: 16px 40px;
             border-radius: 12px;
             text-decoration: none;
             font-weight: 700;
-            font-size: 18px;
+            font-size: 17px;
             transition: all 0.3s;
             box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+            animation: hero-fadein 0.7s ease 0.3s both, hero-pulse 3s ease-in-out 1s infinite;
         }
         .hero-cta:hover {
             transform: translateY(-3px);
             box-shadow: 0 8px 30px rgba(0,0,0,0.3);
+        }
+        @keyframes hero-pulse {
+            0%, 100% { box-shadow: 0 4px 20px rgba(0,0,0,0.2); }
+            50%       { box-shadow: 0 6px 32px rgba(255,255,255,0.35); }
         }
         
         .container {
@@ -143,32 +209,42 @@
         
         /* STATS */
         .stats {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 24px;
-            padding: 40px 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 0;
+            padding: 18px 24px;
             background: white;
-            border-radius: 16px;
+            border-radius: 14px;
             margin-bottom: 48px;
             box-shadow: 0 2px 16px rgba(0,0,0,0.08);
         }
         .stat-item {
             text-align: center;
+            padding: 10px 28px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .stat-item + .stat-item {
+            border-left: 1px solid #e1e8ed;
         }
         .stat-number {
-            font-size: 48px;
+            font-size: 28px;
             font-weight: 900;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
             line-height: 1;
-            margin-bottom: 8px;
+            white-space: nowrap;
         }
         .stat-label {
-            font-size: 15px;
+            font-size: 13px;
             color: #636e72;
             font-weight: 600;
+            white-space: nowrap;
         }
 
         /* NEW QUIZ HIGHLIGHT */
@@ -448,8 +524,8 @@
         
         /* RESPONSIVE */
         @media (max-width: 768px) {
-            .hero h1 { font-size: 36px; }
-            .hero p { font-size: 18px; }
+            .hero h1 { font-size: 30px; }
+            .hero p { font-size: 16px; }
             nav {
                 flex-direction: column;
                 align-items: flex-start;
@@ -473,7 +549,10 @@
             .new-quiz-grid { grid-template-columns: 1fr; }
             .container { padding: 32px 20px; }
             nav { padding: 0 20px; }
-            .hero { padding: 48px 20px; }
+            .hero { padding: 36px 20px; }
+            .stats { gap: 0; padding: 12px 16px; }
+            .stat-item { padding: 8px 14px; }
+            .stat-item + .stat-item { border-left: none; border-top: 1px solid #e1e8ed; width: 100%; justify-content: center; }
         }
         
         /* Better spacing on tablets */
@@ -739,22 +818,28 @@
                 <img src="_Header_Logo_.png" alt="BibleQuizDaily - Free Bible Quiz Questions">
             </a>
             <ul class="nav-menu">
-                <li><a href="index.html">🏠 Home</a></li>
-                <li><a href="#popular">🔥 Most Popular</a></li>
                 <li><a href="complete-easter-bundle.html" style="background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); color: white; padding: 8px 16px; border-radius: 8px;">🎁 Easter Products</a></li>
-                <li><a href="#old-testament">Old Testament</a></li>
-                <li><a href="#new-testament">New Testament</a></li>
-                <li><a href="#christian-living">Christian Living</a></li>
-                <li><a href="free-resources.html">Free Resources</a></li>
+                <li class="nav-dropdown">
+                    <button class="nav-dropdown-toggle">Quizzes</button>
+                    <div class="nav-dropdown-menu">
+                        <a href="#popular">🔥 Most Popular</a>
+                        <a href="#old-testament">Old Testament</a>
+                        <a href="#new-testament">New Testament</a>
+                        <a href="#special-topics">Special Topics</a>
+                    </div>
+                </li>
+                <li><a href="free-resources.html">Free Downloads</a></li>
                 <li><a href="ultimate-easter-sunday-school-kit.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 8px 14px; border-radius: 8px; font-weight: 700;">✍️ Blog</a></li>
             </ul>
         </nav>
     </header>
 
     <div class="hero">
+        <div class="hero-inner">
         <h1>📖 Free Bible Quiz Questions</h1>
         <p>Test your Scripture knowledge with 1,200+ free Bible trivia questions. Perfect for Sunday School, Bible study, or personal growth!</p>
         <a href="#new-quizzes" class="hero-cta">🆕 Try Our Newest Quizzes</a>
+        </div>
     </div>
 
     <div class="container">
@@ -955,21 +1040,21 @@
                     <div class="quiz-cta">Start Miracles Quiz <span>→</span></div>
                 </a>
 
-                <!-- Parables Quiz - Previously Strong -->
-                <a href="parables-quiz.html" class="quiz-card" style="border: 2px solid #e1e8ed;">
+                <!-- Who Am I Quiz -->
+                <a href="who-am-i-bible-quiz.html" class="quiz-card" style="border: 2px solid #e1e8ed;">
                     <div class="quiz-header">
-                        <span class="quiz-icon" style="font-size: 36px;">📚</span>
+                        <span class="quiz-icon" style="font-size: 36px;">🎭</span>
                         <div class="quiz-title-group">
-                            <div class="quiz-title" style="font-size: 18px;">Parables Quiz</div>
-                            <span class="difficulty-badge badge-medium">🟡 MEDIUM</span>
+                            <div class="quiz-title" style="font-size: 18px;">Who Am I? Riddles</div>
+                            <span class="difficulty-badge badge-hard">🔴 HARD</span>
                         </div>
                     </div>
-                    <p class="quiz-desc">Good Samaritan, Prodigal Son, Lost Sheep - Jesus's powerful teaching stories!</p>
+                    <p class="quiz-desc">Clue-based Bible character riddles — can you identify who's speaking from the hints?</p>
                     <div class="quiz-meta">
                         <span>📊 30 Questions</span>
-                        <span>⏱️ 10 min</span>
+                        <span>⏱️ 15 min</span>
                     </div>
-                    <div class="quiz-cta">Start Parables Quiz <span>→</span></div>
+                    <div class="quiz-cta">Start Who Am I Quiz <span>→</span></div>
                 </a>
             </div>
         </div>
