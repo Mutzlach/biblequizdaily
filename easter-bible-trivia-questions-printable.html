@@ -64,24 +64,42 @@
     gtag('config', 'G-JRXEYD2W4M');
   </script>
 
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
+    :root {
+      --ink:       #12091f;
+      --ink-soft:  #4a4060;
+      --ink-muted: #7a7090;
+      --purple:    #5a3e8a;
+      --purple-d:  #3b1f6e;
+      --purple-l:  #ede8fa;
+      --gold:      #c9960a;
+      --gold-l:    #fdf3d0;
+      --gold-b:    #e8c650;
+      --red:       #b91c1c;
+      --green:     #166534;
+      --white:     #ffffff;
+      --surface:   #faf9fd;
+      --border:    #e4dff5;
+      --radius:    14px;
+    }
+
+    * { margin:0; padding:0; box-sizing:border-box; }
 
     body {
-      font-family: 'Inter', -apple-system, sans-serif;
-      color: #1a1a1a;
+      font-family: 'DM Sans', system-ui, sans-serif;
+      color: var(--ink);
       line-height: 1.7;
-      background: #fafafa;
+      background: var(--surface);
       font-size: 17px;
     }
 
     /* ── HEADER ── */
     header {
       background: white;
-      padding: 20px 0;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+      padding: 18px 0;
+      box-shadow: 0 1px 0 var(--border), 0 4px 20px rgba(90,62,138,0.06);
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -93,7 +111,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 30px;
+      gap: 24px;
       flex-wrap: wrap;
     }
     .logo img { height: 70px; width: auto; }
@@ -106,24 +124,36 @@
       flex-wrap: wrap;
     }
     .nav-menu a {
-      color: #2d3436;
+      color: var(--ink-soft);
       text-decoration: none;
       font-weight: 600;
       font-size: 14px;
       transition: color 0.2s;
     }
-    .nav-menu a:hover { color: #667eea; }
+    .nav-menu a:hover { color: var(--purple); }
 
-    /* ── HERO BANNER ── */
+    /* ── URGENCY STRIP ── */
+    .urgency-strip {
+      background: var(--purple-d);
+      color: white;
+      text-align: center;
+      padding: 10px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+    }
+    .urgency-strip strong { color: var(--gold-b); }
+
+    /* ── HERO ── */
     .hero-banner {
       position: relative;
       width: 100%;
-      max-height: 440px;
+      max-height: 460px;
       overflow: hidden;
     }
     .hero-banner img {
       width: 100%;
-      height: 440px;
+      height: 460px;
       object-fit: cover;
       object-position: center 55%;
       display: block;
@@ -131,46 +161,69 @@
     .hero-overlay {
       position: absolute;
       inset: 0;
-      background: linear-gradient(to right, rgba(30,10,60,0.88) 0%, rgba(102,126,234,0.72) 50%, rgba(0,0,0,0.1) 100%);
+      background: linear-gradient(105deg, rgba(20,8,46,0.93) 0%, rgba(90,62,138,0.75) 55%, rgba(0,0,0,0.1) 100%);
       display: flex;
       align-items: center;
       padding: 0 6%;
     }
-    .hero-text { max-width: 640px; }
-    .hero-category {
-      display: inline-block;
-      background: rgba(255,215,0,0.2);
-      border: 1px solid #FFD700;
-      color: #FFD700;
+    .hero-text { max-width: 660px; }
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      background: rgba(201,150,10,0.18);
+      border: 1px solid var(--gold-b);
+      color: var(--gold-b);
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 2px;
       text-transform: uppercase;
       padding: 5px 14px;
-      border-radius: 20px;
-      margin-bottom: 16px;
+      border-radius: 30px;
+      margin-bottom: 18px;
     }
     .hero-text h1 {
-      font-family: 'Merriweather', serif;
-      font-size: clamp(22px, 3.2vw, 38px);
-      font-weight: 900;
+      font-family: 'Lora', serif;
+      font-size: clamp(22px, 3.2vw, 40px);
+      font-weight: 700;
       color: white;
-      line-height: 1.25;
-      margin-bottom: 14px;
-      text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      line-height: 1.22;
+      margin-bottom: 20px;
+      text-shadow: 0 2px 16px rgba(0,0,0,0.5);
     }
-    .hero-meta {
+    /* Pain statement in hero */
+    .hero-pain {
+      font-size: 16px;
+      color: white;
+      margin-bottom: 24px;
+      line-height: 1.6;
+      max-width: 520px;
+    }
+    .hero-cta-row {
       display: flex;
-      gap: 16px;
+      gap: 14px;
       flex-wrap: wrap;
-    }
-    .hero-meta span {
-      color: rgba(255,255,255,0.85);
-      font-size: 13px;
-      font-weight: 600;
-      display: flex;
       align-items: center;
-      gap: 5px;
+    }
+    .btn-hero {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold-b);
+      color: var(--ink);
+      font-size: 15px;
+      font-weight: 800;
+      padding: 14px 28px;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: all 0.25s;
+      box-shadow: 0 4px 20px rgba(201,150,10,0.4);
+      letter-spacing: 0.2px;
+    }
+    .btn-hero:hover { background: #f0d040; transform: translateY(-2px); box-shadow: 0 8px 28px rgba(201,150,10,0.5); }
+    .hero-trust {
+      color: white;
+      font-size: 13px;
     }
 
     /* ── BREADCRUMB ── */
@@ -179,14 +232,13 @@
       margin: 16px auto 0;
       padding: 0 5%;
       font-size: 13px;
-      color: #636e72;
+      color: var(--ink-muted);
       display: flex;
       gap: 6px;
       align-items: center;
       flex-wrap: wrap;
     }
-    .breadcrumb a { color: #667eea; text-decoration: none; font-weight: 600; }
-    .breadcrumb span { color: #b2bec3; }
+    .breadcrumb a { color: var(--purple); text-decoration: none; font-weight: 600; }
 
     /* ── LAYOUT ── */
     .page-wrapper {
@@ -201,93 +253,103 @@
 
     /* ── ARTICLE ── */
     .article-content h2 {
-      font-family: 'Merriweather', serif;
+      font-family: 'Lora', serif;
       font-size: 26px;
-      font-weight: 900;
-      color: #2d3436;
+      font-weight: 700;
+      color: var(--ink);
       margin: 44px 0 16px;
-      border-top: 3px solid #667eea;
+      border-top: 3px solid var(--purple);
       padding-top: 18px;
     }
     .article-content h3 {
       font-size: 20px;
       font-weight: 700;
-      color: #2d3436;
+      color: var(--ink);
       margin: 28px 0 12px;
     }
     .article-content p {
       margin-bottom: 18px;
-      color: #2d3436;
+      color: #2d2640;
       line-height: 1.78;
     }
+    .article-content .bundle-box p,
+    .article-content .bundle-box span,
+    .article-content .closing-cta p { color: white; }
 
-    /* ── QUICK SUMMARY ── */
-    .summary-box {
-      background: linear-gradient(135deg, #f0f3ff 0%, #faf8ff 100%);
-      border: 2px solid #667eea;
-      border-radius: 16px;
-      padding: 28px 32px;
+    /* ── PAIN-HOOK SUMMARY ── */
+    .pain-hook {
+      background: var(--purple-d);
+      border-radius: var(--radius);
+      padding: 32px 36px;
       margin-bottom: 36px;
+      position: relative;
+      overflow: hidden;
     }
-    .summary-box h3 {
-      font-family: 'Merriweather', serif;
-      font-size: 15px;
-      font-weight: 900;
-      color: #667eea;
+    .pain-hook::after {
+      content: '✝';
+      position: absolute;
+      right: 24px; top: 16px;
+      font-size: 80px;
+      color: white;
+      pointer-events: none;
+    }
+    .pain-hook-label {
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 2.5px;
       text-transform: uppercase;
-      letter-spacing: 1px;
+      color: var(--gold-b);
       margin-bottom: 14px;
     }
-    .summary-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .summary-box ul li {
-      font-size: 15px;
-      color: #2d3436;
+    .pain-hook p {
+      color: white;
+      font-size: 16px;
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .pain-hook p:last-of-type { margin-bottom: 20px; }
+    .pain-hook-links {
       display: flex;
-      align-items: flex-start;
-      gap: 10px;
-      font-style: italic;
+      flex-direction: column;
+      gap: 8px;
     }
-    .summary-box ul li::before {
-      content: '✝';
-      color: #FFD700;
+    .pain-hook-links a {
+      color: var(--gold-b);
+      font-weight: 700;
       font-size: 14px;
-      flex-shrink: 0;
-      margin-top: 2px;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
-    .summary-box a { color: #667eea; font-weight: 700; text-decoration: none; }
-    .summary-box a:hover { text-decoration: underline; }
+    .pain-hook-links a:hover { color: white; }
 
     /* ── SCRIPTURE QUOTE ── */
     .scripture-quote {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: linear-gradient(135deg, var(--purple) 0%, var(--purple-d) 100%);
       border-radius: 12px;
       padding: 26px 30px;
       margin: 32px 0;
       text-align: center;
     }
     .scripture-quote p {
-      font-family: 'Merriweather', serif;
+      font-family: 'Lora', serif;
       font-size: 17px;
       font-style: italic;
       color: white;
       margin-bottom: 8px;
       line-height: 1.65;
     }
-    .scripture-quote cite {
-      font-size: 13px;
-      color: #FFD700;
-      font-weight: 700;
-      font-style: normal;
-    }
+    .scripture-quote cite { font-size: 13px; color: var(--gold-b); font-weight: 700; font-style: normal; }
 
-    /* ── TRIVIA PREVIEW SECTION ── */
+    /* ── TRIVIA PREVIEW ── */
     .trivia-preview {
       background: white;
-      border: 2px solid #e1e8ed;
-      border-radius: 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
       padding: 32px;
       margin: 32px 0;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.06);
+      box-shadow: 0 2px 16px rgba(90,62,138,0.07);
     }
     .preview-header {
       display: flex;
@@ -295,305 +357,225 @@
       gap: 14px;
       margin-bottom: 24px;
       padding-bottom: 16px;
-      border-bottom: 2px solid #f0f3ff;
+      border-bottom: 2px solid var(--purple-l);
     }
     .preview-icon {
-      width: 48px;
-      height: 48px;
-      background: linear-gradient(135deg, #667eea, #764ba2);
+      width: 48px; height: 48px;
+      background: linear-gradient(135deg, var(--purple), var(--purple-d));
       border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 22px;
-      flex-shrink: 0;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 22px; flex-shrink: 0;
     }
-    .preview-header-text h3 {
-      font-family: 'Merriweather', serif;
-      font-size: 18px;
-      font-weight: 900;
-      color: #2d3436;
-      margin-bottom: 2px;
-    }
-    .preview-header-text p {
-      font-size: 13px;
-      color: #636e72;
-      margin: 0;
-    }
+    .preview-header-text h3 { font-family: 'Lora', serif; font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 2px; }
+    .preview-header-text p { font-size: 13px; color: var(--ink-muted); margin: 0; }
 
-    /* Category breakdown grid */
     .category-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 14px;
+      gap: 12px;
       margin-bottom: 24px;
     }
     .category-card {
-      background: linear-gradient(135deg, #f8f9ff, #f0f3ff);
-      border: 1px solid #e0e7ff;
+      background: var(--purple-l);
+      border: 1px solid var(--border);
       border-radius: 10px;
       padding: 14px 16px;
     }
-    .category-card .cat-title {
-      font-size: 13px;
-      font-weight: 800;
-      color: #667eea;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      margin-bottom: 4px;
-    }
-    .category-card .cat-desc {
-      font-size: 13px;
-      color: #636e72;
-      line-height: 1.5;
-    }
-    .category-card .cat-count {
-      font-size: 22px;
-      font-weight: 900;
-      color: #764ba2;
-      margin-bottom: 2px;
-    }
+    .category-card .cat-count { font-size: 20px; font-weight: 800; color: var(--purple); margin-bottom: 2px; }
+    .category-card .cat-title { font-size: 12px; font-weight: 800; color: var(--purple-d); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .category-card .cat-desc { font-size: 12px; color: var(--ink-soft); line-height: 1.5; }
 
-    /* Quiz page screenshot */
-    .quiz-page-img {
-      width: 100%;
-      border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,0.12);
-      border: 1px solid #e1e8ed;
-      margin-top: 16px;
-      display: block;
-    }
-    .preview-note {
-      text-align: center;
-      font-size: 13px;
-      color: #636e72;
-      font-style: italic;
-      margin-top: 12px;
-    }
+    .quiz-page-img { width: 100%; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.1); border: 1px solid var(--border); margin-top: 16px; display: block; }
+    .preview-note { text-align: center; font-size: 13px; color: var(--ink-muted); font-style: italic; margin-top: 12px; }
 
-    /* ── PRODUCT SPOTLIGHT ── */
+    /* ── PRODUCT SPOTLIGHT — Myron style ── */
     .product-spotlight {
-      background: linear-gradient(135deg, #fff9e6 0%, #fffdf5 100%);
-      border: 3px solid #FFD700;
+      background: white;
+      border: 3px solid var(--gold-b);
       border-radius: 20px;
-      padding: 32px;
+      padding: 0;
       margin: 44px 0;
-      box-shadow: 0 8px 30px rgba(255,215,0,0.2);
+      box-shadow: 0 8px 40px rgba(201,150,10,0.15);
+      overflow: hidden;
+    }
+    .spotlight-header {
+      background: var(--purple-d);
+      padding: 18px 32px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .spotlight-header-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
     .spotlight-tag {
-      display: inline-block;
-      background: #FFD700;
-      color: #1a1a1a;
+      background: var(--gold-b);
+      color: var(--ink);
       font-size: 11px;
       font-weight: 900;
-      letter-spacing: 2px;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
-      padding: 5px 16px;
-      border-radius: 20px;
-      margin-bottom: 20px;
+      padding: 5px 14px;
+      border-radius: 30px;
     }
+    .spotlight-header h3 {
+      font-family: 'Lora', serif;
+      font-size: 20px;
+      font-weight: 700;
+      color: white;
+      margin: 0;
+    }
+    .spotlight-price-badge {
+      background: var(--gold-b);
+      color: var(--ink);
+      font-size: 24px;
+      font-weight: 900;
+      padding: 8px 20px;
+      border-radius: 10px;
+      white-space: nowrap;
+    }
+
+    /* Pain statement inside spotlight */
+    .spotlight-pain {
+      padding: 24px 32px 0;
+      font-size: 16px;
+      color: var(--ink-soft);
+      font-style: italic;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+    }
+
     .spotlight-inner {
       display: flex;
       gap: 28px;
       align-items: flex-start;
       flex-wrap: wrap;
+      padding: 28px 32px;
     }
-    .spotlight-img {
-      width: 155px;
-      flex-shrink: 0;
-      border-radius: 10px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
-    }
+    .spotlight-img { width: 150px; flex-shrink: 0; border-radius: 10px; box-shadow: 0 4px 20px rgba(0,0,0,0.15); }
     .spotlight-details { flex: 1; min-width: 200px; }
-    .spotlight-details h3 {
-      font-family: 'Merriweather', serif;
-      font-size: 22px;
-      font-weight: 900;
-      color: #2d3436;
-      margin-bottom: 14px;
-    }
     .spotlight-features {
       list-style: none;
       display: flex;
       flex-direction: column;
       gap: 9px;
-      margin-bottom: 22px;
+      margin-bottom: 24px;
     }
     .spotlight-features li {
-      font-size: 14px;
-      color: #2d3436;
+      font-size: 15px;
+      color: var(--ink);
       display: flex;
       align-items: center;
-      gap: 9px;
+      gap: 10px;
     }
     .spotlight-features li::before {
       content: '✓';
-      background: #4CAF50;
+      background: var(--green);
       color: white;
-      width: 18px;
-      height: 18px;
+      width: 18px; height: 18px;
       border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 11px;
-      font-weight: 900;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 11px; font-weight: 900;
       flex-shrink: 0;
     }
-    .price-display {
+    .spotlight-cta-area {
+      background: var(--gold-l);
+      border-top: 2px solid var(--gold-b);
+      padding: 24px 32px;
       display: flex;
-      align-items: baseline;
-      gap: 10px;
-      margin-bottom: 18px;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 20px;
     }
-    .price-main {
-      font-family: 'Merriweather', serif;
-      font-size: 38px;
-      font-weight: 900;
-      color: #667eea;
-    }
-    .price-sub { font-size: 14px; color: #636e72; }
+    .spotlight-cta-left p { font-size: 14px; color: var(--ink-soft); margin-bottom: 4px; }
+    .spotlight-cta-left strong { font-size: 13px; color: var(--green); }
+
     .btn-primary {
-      display: inline-block;
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--purple-d);
       color: white;
       font-size: 16px;
       font-weight: 800;
-      padding: 16px 36px;
+      padding: 16px 32px;
       border-radius: 12px;
       text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 4px 20px rgba(102,126,234,0.4);
-      letter-spacing: 0.5px;
+      transition: all 0.25s;
+      box-shadow: 0 4px 20px rgba(59,31,110,0.35);
+      letter-spacing: 0.3px;
+      white-space: nowrap;
     }
-    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(102,126,234,0.5); }
+    .btn-primary:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(59,31,110,0.45); }
+
     .btn-gold {
-      display: inline-block;
-      background: linear-gradient(135deg, #FFD700 0%, #FFA500 100%);
-      color: #1a1a1a;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--gold-b);
+      color: var(--ink);
       font-size: 16px;
       font-weight: 800;
-      padding: 16px 36px;
+      padding: 16px 32px;
       border-radius: 12px;
       text-decoration: none;
-      transition: all 0.3s;
-      box-shadow: 0 4px 20px rgba(255,165,0,0.35);
-      letter-spacing: 0.5px;
+      transition: all 0.25s;
+      box-shadow: 0 4px 20px rgba(201,150,10,0.35);
+      letter-spacing: 0.3px;
     }
-    .btn-gold:hover { transform: translateY(-3px); box-shadow: 0 8px 30px rgba(255,165,0,0.5); }
-    .secure-note {
-      font-size: 12px;
-      color: #636e72;
-      margin-top: 10px;
-      display: flex;
-      align-items: center;
-      gap: 5px;
-    }
+    .btn-gold:hover { transform: translateY(-3px); background: #f0d040; box-shadow: 0 8px 30px rgba(201,150,10,0.45); }
 
-    /* ── IN-CONTENT IMAGE ── */
-    .in-content-img {
-      width: 100%;
-      border-radius: 14px;
-      box-shadow: 0 6px 24px rgba(0,0,0,0.12);
-      margin: 28px 0 8px;
-      display: block;
-    }
-    .img-caption {
-      text-align: center;
-      font-size: 13px;
-      color: #636e72;
-      font-style: italic;
-      margin-bottom: 28px;
-    }
+    .secure-note { font-size: 12px; color: var(--ink-muted); margin-top: 8px; display: flex; align-items: center; gap: 5px; }
+
+    /* ── IN-CONTENT IMG ── */
+    .in-content-img { width: 100%; border-radius: 14px; box-shadow: 0 6px 24px rgba(0,0,0,0.1); margin: 28px 0 8px; display: block; }
+    .img-caption { text-align: center; font-size: 13px; color: var(--ink-muted); font-style: italic; margin-bottom: 28px; }
 
     /* ── TIPS LIST ── */
-    .tips-list {
-      list-style: none;
-      display: flex;
-      flex-direction: column;
-      gap: 14px;
-      margin: 20px 0;
-    }
+    .tips-list { list-style: none; display: flex; flex-direction: column; gap: 14px; margin: 20px 0; }
     .tips-list li {
       background: white;
-      border: 1px solid #e1e8ed;
-      border-left: 4px solid #667eea;
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--purple);
       border-radius: 8px;
       padding: 16px 18px;
       font-size: 15px;
-      color: #2d3436;
+      color: #2d2640;
       line-height: 1.65;
     }
-    .tips-list li strong {
-      color: #667eea;
-      display: block;
-      margin-bottom: 5px;
-      font-size: 15px;
-    }
+    .tips-list li strong { color: var(--purple); display: block; margin-bottom: 5px; font-size: 15px; }
 
-    /* ── DIFFICULTY CALLOUT ── */
-    .difficulty-row {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 14px;
-      margin: 24px 0;
-    }
-    .diff-card {
-      border-radius: 12px;
-      padding: 18px;
-      text-align: center;
-    }
-    .diff-card .diff-label {
-      font-size: 11px;
-      font-weight: 800;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 6px;
-    }
+    /* ── DIFFICULTY ── */
+    .difficulty-row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin: 24px 0; }
+    .diff-card { border-radius: 12px; padding: 18px; text-align: center; }
+    .diff-card .diff-label { font-size: 11px; font-weight: 800; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 6px; }
     .diff-card .diff-desc { font-size: 13px; line-height: 1.5; }
-    .diff-easy { background: #d4edda; }
-    .diff-easy .diff-label { color: #155724; }
-    .diff-easy .diff-desc { color: #155724; }
-    .diff-medium { background: #fff3cd; }
-    .diff-medium .diff-label { color: #856404; }
-    .diff-medium .diff-desc { color: #856404; }
-    .diff-hard { background: #f8d7da; }
-    .diff-hard .diff-label { color: #721c24; }
-    .diff-hard .diff-desc { color: #721c24; }
+    .diff-easy { background: #d4edda; } .diff-easy .diff-label,.diff-easy .diff-desc { color: #155724; }
+    .diff-medium { background: #fff3cd; } .diff-medium .diff-label,.diff-medium .diff-desc { color: #856404; }
+    .diff-hard { background: #f8d7da; } .diff-hard .diff-label,.diff-hard .diff-desc { color: #721c24; }
 
-    /* ── BUNDLE BOX ── */
+    /* ── BUNDLE BOX — Myron style ── */
     .bundle-box {
-      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      background: var(--purple-d);
       border-radius: 20px;
-      padding: 38px;
+      padding: 0;
       margin: 48px 0;
-      text-align: center;
-      color: white;
-      box-shadow: 0 12px 40px rgba(102,126,234,0.35);
-      position: relative;
+      box-shadow: 0 12px 50px rgba(59,31,110,0.3);
       overflow: hidden;
     }
-    .bundle-box::before {
-      content: '';
-      position: absolute;
-      top: -60px; right: -60px;
-      width: 220px; height: 220px;
-      background: rgba(255,255,255,0.06);
-      border-radius: 50%;
-    }
-    .bundle-box::after {
-      content: '';
-      position: absolute;
-      bottom: -40px; left: -40px;
-      width: 160px; height: 160px;
-      background: rgba(255,255,255,0.04);
-      border-radius: 50%;
+    .bundle-top {
+      padding: 32px 38px 24px;
     }
     .bundle-tag {
       display: inline-block;
-      background: rgba(255,215,0,0.2);
-      border: 1px solid #FFD700;
-      color: #FFD700;
+      background: rgba(232,198,80,0.18);
+      border: 1px solid var(--gold-b);
+      color: var(--gold-b);
       font-size: 11px;
       font-weight: 800;
       letter-spacing: 2px;
@@ -602,263 +584,218 @@
       border-radius: 20px;
       margin-bottom: 16px;
     }
+    /* Bundle pain statement */
+    .bundle-pain {
+      font-size: 17px;
+      color: white;
+      line-height: 1.65;
+      margin-bottom: 8px;
+      max-width: 580px;
+    }
+    .bundle-pain strong { color: var(--gold-b); }
     .bundle-box h3 {
-      font-family: 'Merriweather', serif;
+      font-family: 'Lora', serif;
       font-size: 26px;
-      font-weight: 900;
+      font-weight: 700;
       color: white;
       margin-bottom: 10px;
-      position: relative;
-      z-index: 1;
     }
-    .bundle-box > p {
-      color: rgba(255,255,255,0.88);
+    .bundle-subtext {
+      color: white;
       font-size: 15px;
-      margin-bottom: 22px;
+      margin-bottom: 20px;
       max-width: 520px;
-      margin-left: auto;
-      margin-right: auto;
-      position: relative;
-      z-index: 1;
     }
     .bundle-products {
       display: flex;
-      justify-content: center;
-      gap: 12px;
+      gap: 10px;
       flex-wrap: wrap;
-      margin-bottom: 24px;
-      position: relative;
-      z-index: 1;
+      margin-bottom: 0;
     }
     .bundle-product-tag {
-      background: rgba(255,255,255,0.15);
-      border: 1px solid rgba(255,255,255,0.25);
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
       color: white;
       font-size: 13px;
       font-weight: 600;
       padding: 7px 16px;
       border-radius: 20px;
     }
-    .bundle-img {
-      width: 100%;
-      max-width: 580px;
-      border-radius: 14px;
-      box-shadow: 0 8px 30px rgba(0,0,0,0.3);
-      margin: 0 auto 28px;
-      display: block;
-      position: relative;
-      z-index: 1;
+    .bundle-img { width: 100%; max-width: 560px; border-radius: 12px; box-shadow: 0 8px 30px rgba(0,0,0,0.35); display: block; margin: 0 auto; }
+    .bundle-bottom {
+      background: var(--gold-l);
+      border-top: 3px solid var(--gold-b);
+      padding: 28px 38px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 24px;
     }
+    .bundle-price-col {}
     .bundle-price-row {
       display: flex;
       align-items: baseline;
-      justify-content: center;
-      gap: 12px;
-      margin-bottom: 24px;
+      gap: 10px;
+      margin-bottom: 6px;
       flex-wrap: wrap;
-      position: relative;
-      z-index: 1;
     }
-    .bundle-old-price {
-      font-size: 20px;
-      color: rgba(255,255,255,0.45);
-      text-decoration: line-through;
-      font-weight: 700;
-    }
-    .bundle-new-price {
-      font-family: 'Merriweather', serif;
-      font-size: 44px;
-      font-weight: 900;
-      color: #FFD700;
-    }
-    .bundle-save {
-      background: rgba(255,215,0,0.2);
-      border: 1px solid rgba(255,215,0,0.5);
-      color: #FFD700;
-      font-size: 13px;
-      font-weight: 800;
-      padding: 5px 14px;
-      border-radius: 20px;
-    }
-    .bundle-cta-wrap { position: relative; z-index: 1; }
+    .bundle-old-price { font-size: 18px; color: var(--ink-soft); text-decoration: line-through; font-weight: 700; }
+    .bundle-new-price { font-family: 'Lora', serif; font-size: 42px; font-weight: 700; color: var(--purple-d); }
+    .bundle-save { background: var(--green); color: white; font-size: 12px; font-weight: 800; padding: 4px 12px; border-radius: 20px; }
+    .bundle-price-note { font-size: 13px; color: var(--ink-soft); font-weight: 500; }
+    .bundle-img-wrap { padding: 0 38px 28px; }
 
     /* ── FAQ ── */
-    .faq-section {
-      background: white;
-      border-radius: 16px;
-      padding: 36px;
-      margin: 44px 0;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-    }
+    .faq-section { background: white; border-radius: var(--radius); padding: 36px; margin: 44px 0; box-shadow: 0 2px 16px rgba(90,62,138,0.07); }
     .faq-section h2 { border-top: none !important; padding-top: 0 !important; margin-top: 0 !important; }
-    .faq-item { border-bottom: 1px solid #e1e8ed; }
+    .faq-item { border-bottom: 1px solid var(--border); }
     .faq-item:last-child { border-bottom: none; }
     .faq-q {
       width: 100%; background: none; border: none;
       text-align: left; padding: 18px 0;
-      font-size: 16px; font-weight: 700; color: #2d3436;
+      font-size: 16px; font-weight: 700; color: var(--ink);
       cursor: pointer; display: flex;
       justify-content: space-between; align-items: center; gap: 12px;
-      font-family: 'Inter', sans-serif;
+      font-family: 'DM Sans', sans-serif;
     }
-    .faq-q:hover { color: #667eea; }
-    .faq-arrow { color: #667eea; font-size: 12px; transition: transform 0.3s; flex-shrink: 0; }
-    .faq-a {
-      max-height: 0; overflow: hidden;
-      transition: max-height 0.35s ease, padding 0.3s;
-      font-size: 15px; color: #636e72;
-      line-height: 1.72; padding: 0;
-    }
+    .faq-q:hover { color: var(--purple); }
+    .faq-arrow { color: var(--purple); font-size: 12px; transition: transform 0.3s; flex-shrink: 0; }
+    .faq-a { max-height: 0; overflow: hidden; transition: max-height 0.35s ease, padding 0.3s; font-size: 15px; color: var(--ink-soft); line-height: 1.72; padding: 0; }
     .faq-a.open { max-height: 300px; padding-bottom: 18px; }
     .faq-arrow.open { transform: rotate(180deg); }
 
-    /* ── CLOSING CTA ── */
+    /* ── CLOSING CTA — Myron style ── */
     .closing-cta {
-      background: linear-gradient(135deg, #fff9e6, #fffdf5);
-      border: 2px solid #FFD700;
-      border-radius: 16px;
-      padding: 34px;
+      background: var(--purple-d);
+      border-radius: var(--radius);
+      padding: 40px;
       margin: 40px 0;
       text-align: center;
+      overflow: hidden;
+      position: relative;
+    }
+    .closing-cta::before {
+      content: '';
+      position: absolute;
+      top: -60px; right: -60px;
+      width: 200px; height: 200px;
+      background: rgba(255,255,255,0.04);
+      border-radius: 50%;
+    }
+    .closing-cta-pain {
+      font-size: 16px;
+      color: white;
+      margin-bottom: 20px;
+      max-width: 520px;
+      margin-left: auto;
+      margin-right: auto;
+      position: relative;
+      z-index: 1;
     }
     .closing-cta h3 {
-      font-family: 'Merriweather', serif;
-      font-size: 22px; font-weight: 900;
-      color: #2d3436; margin-bottom: 12px;
+      font-family: 'Lora', serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: white;
+      margin-bottom: 12px;
+      position: relative;
+      z-index: 1;
     }
-    .closing-cta p {
-      color: #636e72; font-size: 15px;
-      margin-bottom: 22px;
-      max-width: 480px;
-      margin-left: auto; margin-right: auto;
+    .closing-cta-btns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 14px;
+      position: relative;
+      z-index: 1;
     }
-    .urgency-pill {
-      display: inline-block;
-      background: #fee; border: 1px solid #ffaaaa;
-      color: #c0392b; font-size: 13px; font-weight: 700;
-      padding: 5px 14px; border-radius: 20px; margin-bottom: 18px;
-    }
+    .closing-trust { margin-top: 16px; font-size: 13px; color: white; position: relative; z-index: 1; }
 
     /* ── RELATED POSTS ── */
-    .related-box {
-      background: white;
-      border-radius: 16px;
-      padding: 28px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.06);
-      border: 1px solid #e1e8ed;
-      margin-top: 16px;
-    }
-    .related-box h3 {
-      font-family: 'Merriweather', serif;
-      font-size: 18px; font-weight: 900;
-      color: #2d3436; margin-bottom: 16px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid #667eea;
-    }
-    .related-item {
-      padding: 12px;
-      background: #f8f9fa;
-      border-radius: 8px;
-      font-size: 14px;
-      margin-bottom: 10px;
-    }
+    .related-box { background: white; border-radius: var(--radius); padding: 28px; box-shadow: 0 2px 16px rgba(90,62,138,0.07); border: 1px solid var(--border); margin-top: 16px; }
+    .related-box h3 { font-family: 'Lora', serif; font-size: 18px; font-weight: 700; color: var(--ink); margin-bottom: 16px; padding-bottom: 12px; border-bottom: 2px solid var(--purple); }
+    .related-item { padding: 12px; background: var(--surface); border-radius: 8px; font-size: 14px; margin-bottom: 10px; }
     .related-item:last-child { margin-bottom: 0; }
-    .related-item a { color: #667eea; font-weight: 700; text-decoration: none; }
+    .related-item a { color: var(--purple); font-weight: 700; text-decoration: none; }
     .related-item a:hover { text-decoration: underline; }
-    .related-item .rel-label { color: #667eea; font-weight: 700; }
-    .related-item .rel-text { color: #636e72; }
+    .related-item .rel-label { color: var(--purple); font-weight: 700; }
 
     /* ── SIDEBAR ── */
     .sidebar { position: sticky; top: 100px; }
-    .sidebar-card {
-      background: white; border-radius: 16px;
-      padding: 24px; margin-bottom: 24px;
-      box-shadow: 0 2px 16px rgba(0,0,0,0.08);
-      border: 1px solid #e1e8ed;
-    }
-    .sidebar-card h4 {
-      font-family: 'Merriweather', serif;
-      font-size: 16px; font-weight: 900;
-      color: #2d3436; margin-bottom: 14px;
-      padding-bottom: 12px;
-      border-bottom: 2px solid #667eea;
-    }
-    .sidebar-product img {
-      width: 100%; border-radius: 8px;
-      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
-      margin-bottom: 12px;
-    }
-    .sidebar-product-title { font-size: 14px; font-weight: 700; color: #2d3436; margin-bottom: 4px; }
-    .sidebar-product-price { font-size: 22px; font-weight: 900; color: #667eea; margin-bottom: 14px; }
+    .sidebar-card { background: white; border-radius: var(--radius); padding: 22px; margin-bottom: 22px; box-shadow: 0 2px 16px rgba(90,62,138,0.08); border: 1px solid var(--border); }
+    .sidebar-card h4 { font-family: 'Lora', serif; font-size: 16px; font-weight: 700; color: var(--ink); margin-bottom: 14px; padding-bottom: 12px; border-bottom: 2px solid var(--purple); }
+
+    /* Sidebar product card — Myron: pain then price */
+    .sidebar-pain { font-size: 13px; color: var(--ink-soft); margin-bottom: 12px; line-height: 1.55; font-style: italic; }
+    .sidebar-product img { width: 100%; border-radius: 8px; box-shadow: 0 3px 12px rgba(0,0,0,0.1); margin-bottom: 10px; }
+    .sidebar-price-row { display: flex; align-items: baseline; gap: 8px; margin-bottom: 14px; }
+    .sidebar-price { font-size: 26px; font-weight: 900; color: var(--purple-d); }
+    .sidebar-price-note { font-size: 12px; color: var(--ink-muted); }
+
     .btn-sidebar {
-      display: block; background: linear-gradient(135deg, #667eea, #764ba2);
+      display: block; background: var(--purple-d);
       color: white; text-align: center; font-size: 14px; font-weight: 800;
-      padding: 12px; border-radius: 10px; text-decoration: none;
+      padding: 13px; border-radius: 10px; text-decoration: none;
       transition: all 0.2s; margin-bottom: 10px;
+      box-shadow: 0 3px 14px rgba(59,31,110,0.3);
     }
-    .btn-sidebar:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(102,126,234,0.4); }
+    .btn-sidebar:hover { transform: translateY(-2px); box-shadow: 0 6px 20px rgba(59,31,110,0.4); }
     .btn-sidebar-gold {
-      display: block;
-      background: linear-gradient(135deg, #FFD700, #FFA500);
-      color: #1a1a1a; text-align: center; font-size: 13px; font-weight: 800;
-      padding: 10px; border-radius: 10px; text-decoration: none; transition: all 0.2s;
+      display: block; background: var(--gold-b);
+      color: var(--ink); text-align: center; font-size: 13px; font-weight: 800;
+      padding: 11px; border-radius: 10px; text-decoration: none; transition: all 0.2s;
     }
-    .btn-sidebar-gold:hover { transform: translateY(-2px); }
+    .btn-sidebar-gold:hover { transform: translateY(-2px); background: #f0d040; }
+
+    /* Bundle sidebar */
+    .sidebar-bundle-price { display: flex; align-items: baseline; gap: 8px; margin-bottom: 14px; flex-wrap: wrap; }
+    .sidebar-old { font-size: 13px; color: var(--ink-muted); text-decoration: line-through; font-weight: 700; }
+    .sidebar-new { font-size: 24px; font-weight: 900; color: var(--purple-d); }
+    .sidebar-save { background: var(--green); color: white; font-size: 11px; font-weight: 800; padding: 3px 8px; border-radius: 10px; }
+
     .related-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .related-links li a {
-      color: #667eea; text-decoration: none; font-size: 14px; font-weight: 600;
+      color: var(--purple); text-decoration: none; font-size: 14px; font-weight: 600;
       display: flex; align-items: center; gap: 8px;
-      padding: 8px 12px; border-radius: 8px;
-      background: #f8f9fa; transition: all 0.2s;
+      padding: 8px 12px; border-radius: 8px; background: var(--surface); transition: all 0.2s;
     }
-    .related-links li a:hover { background: #f0f3ff; color: #764ba2; }
+    .related-links li a:hover { background: var(--purple-l); color: var(--purple-d); }
     .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
-    .tag {
-      background: #f0f3ff; color: #667eea;
-      font-size: 12px; font-weight: 600;
-      padding: 4px 12px; border-radius: 20px; text-decoration: none;
-    }
-    .tag:hover { background: #667eea; color: white; }
+    .tag { background: var(--purple-l); color: var(--purple); font-size: 12px; font-weight: 600; padding: 4px 12px; border-radius: 20px; text-decoration: none; }
+    .tag:hover { background: var(--purple); color: white; }
 
     /* ── FOOTER ── */
-    footer {
-      background: #2d3436;
-      color: white;
-      padding: 60px 24px 32px;
-      margin-top: 40px;
-    }
+    footer { background: #2d3436; color: white; padding: 60px 24px 32px; margin-top: 40px; }
     .footer-content { max-width: 1200px; margin: 0 auto; }
-    .footer-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 40px; margin-bottom: 40px;
-    }
+    .footer-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 40px; margin-bottom: 40px; }
     .footer-logo img { height: 60px; width: auto; margin-bottom: 16px; display: block; }
     .footer-about p { color: #b2bec3; line-height: 1.7; font-size: 14px; margin-bottom: 10px; }
     .footer-column h4 { font-weight: 700; margin-bottom: 16px; font-size: 15px; }
     .footer-links { list-style: none; display: flex; flex-direction: column; gap: 10px; }
     .footer-links a { color: #b2bec3; text-decoration: none; font-size: 14px; transition: color 0.2s; }
     .footer-links a:hover { color: white; }
-    .footer-bottom {
-      border-top: 1px solid #4a4a4a;
-      padding-top: 28px; text-align: center;
-      color: #b2bec3; font-size: 13px;
-    }
+    .footer-bottom { border-top: 1px solid #4a4a4a; padding-top: 28px; text-align: center; color: #b2bec3; font-size: 13px; }
 
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       .page-wrapper { grid-template-columns: 1fr; }
       .sidebar { position: static; }
       .difficulty-row { grid-template-columns: 1fr; }
+      .bundle-bottom { flex-direction: column; align-items: flex-start; }
+      .spotlight-cta-area { flex-direction: column; }
     }
     @media (max-width: 600px) {
       .hero-text h1 { font-size: 21px; }
+      .hero-cta-row { flex-direction: column; align-items: flex-start; }
       .spotlight-inner { flex-direction: column; }
       .spotlight-img { width: 100%; max-width: 180px; }
-      .bundle-box { padding: 24px 18px; }
+      .bundle-top,.bundle-bottom { padding: 24px 20px; }
+      .bundle-img-wrap { padding: 0 20px 20px; }
       nav { flex-direction: column; align-items: flex-start; }
       .nav-menu { gap: 12px; }
       .category-grid { grid-template-columns: 1fr 1fr; }
+      .closing-cta { padding: 28px 20px; }
     }
   </style>
 </head>
@@ -867,6 +804,11 @@
 
 <!-- GTM noscript -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3G4FWBF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+
+<!-- ── URGENCY STRIP ── -->
+<div class="urgency-strip">
+  ⏰ Easter 2026 is <strong>April 5</strong> — don't leave your Holy Week activities to the last minute.
+</div>
 
 <!-- ── HEADER ── -->
 <header>
@@ -898,12 +840,12 @@
   <img src="3crosses_hill.png" alt="Easter Bible trivia questions printable - three crosses at sunset">
   <div class="hero-overlay">
     <div class="hero-text">
-      <div class="hero-category">📖 Easter Resources 2026</div>
+      <div class="hero-badge">📖 Easter Resources 2026</div>
       <h1>120 Easter Bible Trivia Questions: Printable PDF for Sunday School (KJV)</h1>
-      <div class="hero-meta">
-        <span>📅 February 26, 2026</span>
-        <span>⏱ 7 min read</span>
-        <span>✝ Palm Sunday → Ascension</span>
+      <p class="hero-pain">Most Sunday School teachers spend hours searching for Easter activities — then worry whether the theology is actually accurate. This PDF fixes that in one download.</p>
+      <div class="hero-cta-row">
+        <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="btn-hero">⬇ Get Instant Access — $5.99</a>
+        <span class="hero-trust">🔒 Instant PDF · Print unlimited copies</span>
       </div>
     </div>
   </div>
@@ -915,20 +857,18 @@
   <!-- ── ARTICLE ── -->
   <article class="article-content">
 
-    <!-- Quick Summary -->
-    <div class="summary-box">
-      <h3>📋 Quick Summary</h3>
-      <ul>
-        <li>See exactly what's inside the <strong>Easter Bible Trivia printable PDF</strong> — 120 questions covering the full Easter story</li>
-        <li>Learn how Sunday School teachers, homeschool families, and youth pastors are using it for Holy Week 2026</li>
-        <li>Get the <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank">full 120-question printable PDF</a> — only $5.99, instant download</li>
-        <li>Or save with the <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank">Complete Easter Kit</a> (Trivia + BINGO + Treasure Hunt) for $12.99</li>
-      </ul>
+    <!-- Pain Hook — replaces generic summary box -->
+    <div class="pain-hook">
+      <div class="pain-hook-label">What this page covers</div>
+      <p>You've got thirty minutes before your Sunday School class starts, Easter is two weeks away, and you still don't have a solid activity planned for Holy Week. Sound familiar?</p>
+      <p>The <strong style="color:var(--gold-b);">Easter Bible Trivia PDF</strong> solves that completely — 120 KJV questions covering the full Easter story, answer key included, ready to print in the next two minutes.</p>
+      <div class="pain-hook-links">
+        <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank">→ Get the full 120-question printable PDF — $5.99</a>
+        <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank">→ Or get Trivia + BINGO + Treasure Hunt in the Complete Easter Kit — $12.99</a>
+      </div>
     </div>
 
-    <!-- Opening -->
-    <p>You've got thirty minutes before your Sunday School class starts, Easter is two weeks away, and you still don't have a solid activity planned for Holy Week. Sound familiar?</p>
-
+    <!-- Opening — SEO text preserved exactly -->
     <p>Planning Christ-centered Easter activities takes time you often don't have — especially when you're already writing lessons, preparing crafts, and managing everything else that comes with children's ministry. Finding <strong>quality easter bible trivia questions printable</strong> that actually go deep into Scripture instead of just asking "What color is Easter?" can feel like searching for a needle in a haystack.</p>
 
     <p>That's exactly why we created the Easter Bible Trivia PDF. One hundred and twenty multiple-choice questions covering the full Easter story — from the Triumphal Entry on Palm Sunday all the way through the Ascension — all rooted in the King James Version. Everything your class needs to engage with the Resurrection story, already done for you.</p>
@@ -954,7 +894,7 @@
     <img src="bible_quiz.png" alt="Sunday School teacher and student doing Easter Bible trivia together at home" class="in-content-img">
     <p class="img-caption">Easter Bible trivia turns Holy Week review into a conversation — not just a lecture.</p>
 
-    <!-- What's Inside Section (replaces free sample) -->
+    <!-- What's Inside -->
     <h2>What's Inside the Easter Bible Trivia Questions Printable PDF</h2>
 
     <p>We built this with Sunday School teachers and homeschool families in mind. Here's exactly what you get when you download the PDF:</p>
@@ -1036,35 +976,48 @@
       </div>
     </div>
 
-    <!-- Product Spotlight -->
+    <!-- PRODUCT SPOTLIGHT — Myron method: pain → story → offer -->
     <div class="product-spotlight">
-      <div class="spotlight-tag">⭐ Featured Resource</div>
+      <div class="spotlight-header">
+        <div class="spotlight-header-left">
+          <div class="spotlight-tag">⭐ Get It Now</div>
+          <h3>Easter Bible Trivia — 120 Questions Printable PDF</h3>
+        </div>
+        <div class="spotlight-price-badge">$5.99</div>
+      </div>
+
+      <p class="spotlight-pain">Stop spending hours on Google trying to find Easter questions that are theologically accurate and actually go deep into Scripture. Everything is already done for you.</p>
+
       <div class="spotlight-inner">
         <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia printable PDF - 120 multiple choice questions KJV" class="spotlight-img">
         <div class="spotlight-details">
-          <h3>Easter Bible Trivia — 120 Questions Printable PDF</h3>
           <ul class="spotlight-features">
             <li>120 multiple-choice questions with 4 answer options each</li>
-            <li>Covers Palm Sunday through the Ascension — the full story</li>
+            <li>Covers Palm Sunday through the Ascension — the complete story</li>
             <li>KJV Scripture reference on every single question</li>
-            <li>Complete answer key included (separate printable page)</li>
-            <li>Organized into 10 chapters — easy to use across multiple sessions</li>
-            <li>Three difficulty levels mixed throughout</li>
-            <li>Print-ready PDF — works perfectly on any home printer</li>
+            <li>Complete answer key included — separate printable page</li>
+            <li>Organized into 10 chapters — use across multiple sessions</li>
+            <li>Three difficulty levels mixed throughout — works for all ages</li>
+            <li>Print-ready PDF — works on any home printer</li>
             <li>Print unlimited copies for your class, church, or co-op</li>
             <li>Instant digital download — in your inbox in seconds</li>
           </ul>
-          <div class="price-display">
-            <span class="price-main">$5.99</span>
-            <span class="price-sub">One-time · Instant PDF</span>
-          </div>
+        </div>
+      </div>
+
+      <div class="spotlight-cta-area">
+        <div class="spotlight-cta-left">
+          <p>One-time purchase. Use every Easter, forever.</p>
+          <strong>✓ Instant download &nbsp;&nbsp; ✓ Print unlimited copies &nbsp;&nbsp; ✓ KJV throughout</strong>
+        </div>
+        <div>
           <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="btn-primary">⬇ Get Instant Access — $5.99</a>
-          <div class="secure-note">🔒 Secure checkout via Gumroad · Instant PDF delivery · Print at home</div>
+          <div class="secure-note">🔒 Secure checkout via Gumroad · PDF delivered instantly</div>
         </div>
       </div>
     </div>
 
-    <!-- How to Use -->
+    <!-- How to Use — SEO text preserved -->
     <h2>How to Use This in Your Sunday School, Home, or Church</h2>
 
     <p>With 120 questions organized into 10 chapters, this PDF is built to be flexible. Here's how different groups are putting it to use:</p>
@@ -1101,33 +1054,40 @@
 
     <p>You can also use the PDF in small pieces — pull out 10 questions for a quick review at the end of any Easter lesson, use 5 questions as a warm-up icebreaker, or give the full 120 as a take-home challenge for older students over the week before Easter.</p>
 
-    <!-- Bundle Box -->
+    <!-- BUNDLE BOX — Myron: pain → story → value contrast → offer -->
     <div class="bundle-box">
-      <div class="bundle-tag">🎁 Best Value</div>
-      <h3>Get All 3 for Less: The Complete Easter Kit</h3>
-      <p>Pair the 120 trivia questions with Easter Bible BINGO and a Christ-centered treasure hunt — everything you need for an entire Holy Week of activities, all in one download.</p>
-
-      <div class="bundle-products">
-        <span class="bundle-product-tag">📋 Easter Bible Trivia — 120 Questions</span>
-        <span class="bundle-product-tag">🎲 Easter Bible BINGO — 30 Cards</span>
-        <span class="bundle-product-tag">🗺 Easter Story Treasure Hunt</span>
+      <div class="bundle-top">
+        <div class="bundle-tag">🎁 Best Value</div>
+        <p class="bundle-pain">Most Sunday School teachers need <strong>more than just trivia</strong> to run a complete Holy Week — they need games, activities, and something kids actually want to do. That's exactly what this bundle covers.</p>
+        <h3>Get All 3 for Less: The Complete Easter Kit</h3>
+        <p class="bundle-subtext">Everything you need for an entire Holy Week of activities — three different formats, all Christ-centred, all KJV, all in one instant download.</p>
+        <div class="bundle-products">
+          <span class="bundle-product-tag">📋 Easter Bible Trivia — 120 Questions</span>
+          <span class="bundle-product-tag">🎲 Easter Bible BINGO — 30 Cards</span>
+          <span class="bundle-product-tag">🗺️ Easter Story Treasure Hunt</span>
+        </div>
       </div>
 
-      <img src="bundle_image.png" alt="Complete Easter Kit bundle showing all three printable PDF products" class="bundle-img">
-
-      <div class="bundle-price-row">
-        <span class="bundle-old-price">$16.97</span>
-        <span class="bundle-new-price">$12.99</span>
-        <span class="bundle-save">SAVE $3.98</span>
+      <div class="bundle-img-wrap">
+        <img src="bundle_image.png" alt="Complete Easter Kit bundle showing all three printable PDF products" class="bundle-img">
       </div>
 
-      <div class="bundle-cta-wrap">
-        <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="btn-gold">⬇ Get the Complete Easter Kit — $12.99</a>
-        <p style="margin-top:12px;font-size:13px;color:rgba(255,255,255,0.65);margin-bottom:0;">Regular price if bought separately: $16.97 · Instant PDF · Print unlimited copies</p>
+      <div class="bundle-bottom">
+        <div class="bundle-price-col">
+          <div class="bundle-price-row">
+            <span class="bundle-old-price">$16.97</span>
+            <span class="bundle-new-price">$12.99</span>
+            <span class="bundle-save">SAVE $3.98</span>
+          </div>
+          <p style="font-size:13px;color:#12091f;font-weight:600;">One purchase · Instant PDF · Print unlimited copies · Use every Easter forever</p>
+        </div>
+        <div>
+          <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="btn-gold">⬇ Get the Complete Easter Kit — $12.99</a>
+        </div>
       </div>
     </div>
 
-    <!-- FAQ -->
+    <!-- FAQ — SEO text preserved exactly -->
     <div class="faq-section">
       <h2>Frequently Asked Questions</h2>
 
@@ -1172,15 +1132,15 @@
       </div>
     </div>
 
-    <!-- Closing CTA -->
+    <!-- CLOSING CTA — Myron: pain → transformation → offer -->
     <div class="closing-cta">
-      <div class="urgency-pill">⏰ Easter 2026 is April 5 — 5 weeks away!</div>
+      <p class="closing-cta-pain">Don't spend another hour searching for quality Easter trivia that's actually rooted in Scripture. The 120 questions are written, the answer key is included, and you can have it in your inbox in the next two minutes.</p>
       <h3>Your Holy Week Activities Are One Click Away</h3>
-      <p>Don't spend another hour searching for quality Easter trivia. The 120 questions are ready, the answer key is included, and you can have it in your inbox in the next two minutes.</p>
-      <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="btn-primary" style="display:inline-block;margin-bottom:14px;">⬇ Get Easter Bible Trivia PDF — $5.99</a>
-      <br>
-      <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="btn-gold" style="display:inline-block;">🎁 Or get all 3 in the Complete Easter Kit — $12.99</a>
-      <p style="margin-top:16px;font-size:13px;color:#636e72;">Instant digital download · Print at home · KJV throughout · Unlimited class copies</p>
+      <div class="closing-cta-btns">
+        <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="btn-gold" style="min-width:280px;justify-content:center;">⬇ Get Easter Bible Trivia PDF — $5.99</a>
+        <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="btn-primary" style="min-width:280px;justify-content:center;">🎁 Complete Easter Kit — All 3 for $12.99</a>
+      </div>
+      <p class="closing-trust">Instant digital download · Print at home · KJV throughout · Unlimited class copies</p>
     </div>
 
     <!-- Related Posts -->
@@ -1213,27 +1173,30 @@
   <!-- ── SIDEBAR ── -->
   <aside class="sidebar">
 
+    <!-- Main product card — pain first -->
     <div class="sidebar-card">
       <h4>📋 Easter Bible Trivia PDF</h4>
+      <p class="sidebar-pain">Stop scrambling for Easter activities. 120 KJV questions covering the complete Holy Week story — ready to print right now.</p>
       <div class="sidebar-product">
         <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia printable PDF cover">
-        <div>
-          <div class="sidebar-product-title">120 Questions · KJV · Answer Key Included</div>
-          <div class="sidebar-product-price">$5.99</div>
-        </div>
       </div>
-      <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="btn-sidebar">⬇ Get Instant Access</a>
+      <div class="sidebar-price-row">
+        <span class="sidebar-price">$5.99</span>
+        <span class="sidebar-price-note">One-time · Instant PDF</span>
+      </div>
+      <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="btn-sidebar">⬇ Get Instant Access — $5.99</a>
       <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="btn-sidebar-gold">🎁 Bundle — All 3 for $12.99</a>
     </div>
 
+    <!-- Bundle card — value contrast -->
     <div class="sidebar-card">
       <h4>🎁 Complete Easter Kit</h4>
-      <img src="bundle_image.png" alt="Complete Easter Kit - all 3 printable PDFs" style="width:100%;border-radius:10px;margin-bottom:14px;box-shadow:0 3px 12px rgba(0,0,0,0.12);">
-      <p style="font-size:13px;color:#636e72;margin-bottom:12px;line-height:1.6;">All 3 products: Trivia + BINGO + Treasure Hunt. Everything for Holy Week in one download.</p>
-      <div style="display:flex;align-items:baseline;gap:8px;margin-bottom:14px;flex-wrap:wrap;">
-        <span style="font-size:14px;color:#b2bec3;text-decoration:line-through;font-weight:700;">$16.97</span>
-        <span style="font-size:22px;font-weight:900;color:#667eea;">$12.99</span>
-        <span style="background:#fff3cd;color:#856404;font-size:11px;font-weight:800;padding:3px 8px;border-radius:10px;">SAVE $3.98</span>
+      <img src="bundle_image.png" alt="Complete Easter Kit - all 3 printable PDFs" style="width:100%;border-radius:10px;margin-bottom:12px;box-shadow:0 3px 12px rgba(0,0,0,0.1);">
+      <p style="font-size:13px;color:var(--ink-soft);margin-bottom:12px;line-height:1.6;">Everything for Holy Week: Trivia + BINGO + Treasure Hunt. Three formats, one download, saves $3.98.</p>
+      <div class="sidebar-bundle-price">
+        <span class="sidebar-old">$16.97</span>
+        <span class="sidebar-new">$12.99</span>
+        <span class="sidebar-save">SAVE $3.98</span>
       </div>
       <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="btn-sidebar-gold">⬇ Get the Bundle</a>
     </div>
@@ -1242,7 +1205,7 @@
       <h4>🎲 Also in This Series</h4>
       <ul class="related-links">
         <li><a href="easter-bible-bingo-printable.html">🎲 Easter Bible BINGO — 30 Cards</a></li>
-        <li><a href="#">🗺 Easter Story Treasure Hunt</a></li>
+        <li><a href="easter-story-treasure-hunt-kids-printable.html">🗺️ Easter Story Treasure Hunt</a></li>
       </ul>
     </div>
 
@@ -1250,7 +1213,7 @@
       <h4>📖 Free Easter Quizzes</h4>
       <ul class="related-links">
         <li><a href="easter-bible-quiz.html">🐣 Free Easter Bible Quiz — 30 Qs</a></li>
-        <li><a href="jesus-life-quiz.html">✝ Life of Jesus Quiz</a></li>
+        <li><a href="jesus-life-quiz.html">✝️ Life of Jesus Quiz</a></li>
         <li><a href="miracles-of-jesus-quiz.html">✨ Miracles of Jesus Quiz</a></li>
         <li><a href="parables-quiz.html">📚 Parables Quiz</a></li>
       </ul>
