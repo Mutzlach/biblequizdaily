@@ -399,6 +399,11 @@
                     <div class="feedback-title" id="feedbackTitle"></div>
                     <div class="feedback-text" id="feedbackText"></div>
                     <div class="reference" id="referenceText"></div>
+                <!-- MID-QUIZ EASTER AD — shown every 5th question via JS -->
+                <div id="midQuizAd" style="display:none; margin-top: 14px; background: linear-gradient(135deg, #2d1b69 0%, #5a3e8a 100%); border-radius: 10px; padding: 10px 16px; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+                    <span style="font-size: 13px; color: #dcc8ff; font-weight: 600;">🐣 Easter Bible resources — print at home</span>
+                    <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" style="background: #FFD700; color: #2d1b69; font-size: 12px; font-weight: 900; padding: 7px 16px; border-radius: 20px; text-decoration: none; white-space: nowrap;">🛒 Get the Bundle — $12.99</a>
+                </div>
                 </div>
                 
                 <div class="button-group">
@@ -428,279 +433,153 @@
                     </div>
                 </div>
 
-                <!-- EASTER PRODUCTS BANNER -->
-                <style>
-                .eb-results {
-                    background: linear-gradient(135deg, #5a3e8a 0%, #7c52b8 50%, #4a2d7a 100%);
-                    border-radius: 16px;
-                    overflow: hidden;
-                    position: relative;
-                    border: 2px solid rgba(255,215,0,0.5);
-                    box-shadow: 0 8px 40px rgba(90,62,138,0.4);
-                    margin: 0 0 25px 0;
-                }
-                .eb-results::before {
-                    content: '';
-                    position: absolute;
-                    top: 0; left: -100%;
-                    width: 55%; height: 3px;
-                    background: linear-gradient(90deg, transparent, #FFD700, transparent);
-                    animation: eb-shimmer 3.5s ease-in-out infinite;
-                    z-index: 3;
-                }
-                @keyframes eb-shimmer { 0%{left:-100%} 100%{left:200%} }
-                .eb-results::after {
-                    content: '';
-                    position: absolute;
-                    top: -80px; right: -80px;
-                    width: 300px; height: 300px;
-                    border-radius: 50%;
-                    background: radial-gradient(circle, rgba(255,215,0,0.12) 0%, transparent 65%);
-                    pointer-events: none;
-                }
-                .eb-results-inner {
-                    display: grid;
-                    grid-template-columns: 1fr 300px;
-                    position: relative;
-                    z-index: 2;
-                }
-                .eb-results-left { padding: 24px 28px; text-align: left; }
-                .eb-results-eyebrow { display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
-                .eb-results-eyebrow-text { font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #FFE566; }
-                .eb-results-hot { background: #e74c3c; color: white; font-size: 10px; font-weight: 900; padding: 3px 9px; border-radius: 20px; letter-spacing: 0.8px; animation: eb-pulse-red 2s ease-in-out infinite; }
-                @keyframes eb-pulse-red { 0%,100%{opacity:1} 50%{opacity:0.7} }
-                .eb-results-headline { font-family: 'Merriweather', serif; font-size: 18px; font-weight: 900; color: #fff; line-height: 1.3; margin-bottom: 6px; text-shadow: 0 1px 4px rgba(0,0,0,0.3); }
-                .eb-results-headline span { color: #FFD700; }
-                .eb-results-sub { font-size: 12px; color: #e8d8ff; margin-bottom: 16px; line-height: 1.5; font-weight: 500; }
-                .eb-results-products { display: flex; gap: 12px; align-items: flex-end; }
-                .eb-results-product { display: flex; flex-direction: column; align-items: center; gap: 6px; flex: 1; max-width: 110px; text-decoration: none; }
-                .eb-results-cover { width: 100%; aspect-ratio: 3/4; border-radius: 8px; overflow: hidden; box-shadow: 0 6px 20px rgba(0,0,0,0.4), 0 0 0 2px rgba(255,215,0,0.3); transition: transform 0.25s; }
-                .eb-results-cover:hover { transform: translateY(-4px) scale(1.03); }
-                .eb-results-cover img { width: 100%; height: 100%; object-fit: cover; display: block; }
-                .eb-results-plabel { font-size: 10px; font-weight: 800; color: #fff; text-align: center; text-transform: uppercase; letter-spacing: 0.3px; text-shadow: 0 1px 3px rgba(0,0,0,0.4); }
-                .eb-results-pprice { font-size: 14px; font-weight: 900; color: #FFD700; }
-                .eb-results-right { background: rgba(0,0,0,0.2); border-left: 2px solid rgba(255,215,0,0.3); padding: 24px 20px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 10px; }
-                .eb-results-bundle-label { font-size: 11px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; color: #FFD700; background: rgba(255,215,0,0.15); padding: 5px 14px; border-radius: 20px; }
-                .eb-results-bundle-name { font-family: 'Merriweather', serif; font-size: 16px; font-weight: 900; color: #fff; text-align: center; line-height: 1.35; }
-                .eb-results-price-was { font-size: 13px; color: #dcc8ff; text-decoration: line-through; font-weight: 600; }
-                .eb-results-price-now { font-size: 44px; font-weight: 900; color: #FFD700; line-height: 1; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
-                .eb-results-price-save { font-size: 12px; font-weight: 800; color: #fff; background: #27ae60; padding: 4px 12px; border-radius: 20px; display: inline-block; }
-                .eb-results-cta { display: block; background: #FFD700; color: #3a1a6e; font-weight: 900; font-size: 16px; padding: 14px 20px; border-radius: 10px; text-decoration: none; text-align: center; width: 100%; box-shadow: 0 4px 20px rgba(255,215,0,0.5); animation: eb-glow 2.5s ease-in-out infinite; transition: transform 0.2s, background 0.2s; }
-                @keyframes eb-glow { 0%,100%{box-shadow:0 4px 20px rgba(255,215,0,0.5)} 50%{box-shadow:0 6px 36px rgba(255,215,0,0.85)} }
-                .eb-results-cta:hover { background: #ffe033; transform: translateY(-2px); }
-                .eb-results-trust { font-size: 11px; color: #dcc8ff; text-align: center; line-height: 1.7; font-weight: 600; }
-                @media (max-width: 650px) {
-                    .eb-results-inner { grid-template-columns: 1fr; }
-                    .eb-results-right { border-left: none; border-top: 2px solid rgba(255,215,0,0.25); flex-direction: row; flex-wrap: wrap; justify-content: center; padding: 16px; gap: 12px; }
-                    .eb-results-cta { width: auto; padding: 12px 28px; }
-                }
-                </style>
-                <div class="eb-results">
-                    <div class="eb-results-inner">
-                        <div class="eb-results-left">
-                            <div class="eb-results-eyebrow">
-                                <span class="eb-results-eyebrow-text">🐣 Easter Ministry Resources</span>
-                                <span class="eb-results-hot">EASTER IS COMING</span>
+                <!-- EASTER PRODUCTS BANNER — results page -->
+                <div style="margin: 24px 0; border-radius: 16px; overflow: hidden; border: 2px solid rgba(255,215,0,0.5); box-shadow: 0 8px 40px rgba(90,62,138,0.4);">
+                    <div style="background: linear-gradient(135deg, #5a3e8a 0%, #7c52b8 50%, #4a2d7a 100%); position: relative;">
+                        <div style="display: grid; grid-template-columns: 1fr 260px; position: relative; z-index: 2;">
+                            <div style="padding: 22px 24px;">
+                                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 10px;">
+                                    <span style="font-size: 11px; font-weight: 800; letter-spacing: 2px; text-transform: uppercase; color: #FFE566;">🐣 Easter Ministry Resources</span>
+                                </div>
+                                <div style="font-family: 'Merriweather', serif; font-size: 17px; font-weight: 900; color: #fff; line-height: 1.25; margin-bottom: 6px;">3 Ready-to-Print Easter Resources —<br><span style="color:#FFD700;">Download &amp; Use This Sunday</span></div>
+                                <div style="font-size: 13px; color: #e8d8ff; margin-bottom: 16px; line-height: 1.5;">Instant PDF · Print unlimited copies</div>
+                                <div style="display: flex; gap: 10px; align-items: flex-end;">
+                                    <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:5px;flex:1;max-width:90px;text-decoration:none;">
+                                        <div style="width:100%;aspect-ratio:3/4;border-radius:7px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,0.4);">
+                                            <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia" style="width:100%;height:100%;object-fit:cover;display:block;">
+                                        </div>
+                                        <span style="font-size:9px;font-weight:800;color:#fff;text-transform:uppercase;">Trivia</span>
+                                        <span style="font-size:13px;font-weight:900;color:#FFD700;">$5.99</span>
+                                    </a>
+                                    <a href="https://biblequizdaily.gumroad.com/l/easterbiblebingo" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:5px;flex:1;max-width:90px;text-decoration:none;">
+                                        <div style="width:100%;aspect-ratio:3/4;border-radius:7px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,0.4);">
+                                            <img src="EASTER_BIBLE_BINGO.png" alt="Easter BINGO" style="width:100%;height:100%;object-fit:cover;display:block;">
+                                        </div>
+                                        <span style="font-size:9px;font-weight:800;color:#fff;text-transform:uppercase;">BINGO</span>
+                                        <span style="font-size:13px;font-weight:900;color:#FFD700;">$5.99</span>
+                                    </a>
+                                    <a href="https://biblequizdaily.gumroad.com/l/EASTERSTORYTREASUREHUNT" target="_blank" style="display:flex;flex-direction:column;align-items:center;gap:5px;flex:1;max-width:90px;text-decoration:none;">
+                                        <div style="width:100%;aspect-ratio:3/4;border-radius:7px;overflow:hidden;box-shadow:0 4px 14px rgba(0,0,0,0.4);">
+                                            <img src="Easter_story_hunt.png" alt="Treasure Hunt" style="width:100%;height:100%;object-fit:cover;display:block;">
+                                        </div>
+                                        <span style="font-size:9px;font-weight:800;color:#fff;text-transform:uppercase;">Hunt</span>
+                                        <span style="font-size:13px;font-weight:900;color:#FFD700;">$4.99</span>
+                                    </a>
+                                </div>
                             </div>
-                            <div class="eb-results-headline">3 Ready-to-Print Easter Resources —<br><span>Download &amp; Use This Sunday</span></div>
-                            <div class="eb-results-sub">KJV-based · Instant PDF download · Print unlimited copies for your whole class</div>
-                            <div class="eb-results-products">
-                                <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="eb-results-product">
-                                    <div class="eb-results-cover"><img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia — 120 Questions PDF"></div>
-                                    <div class="eb-results-plabel">Easter Trivia</div>
-                                    <div class="eb-results-pprice">$5.99</div>
-                                </a>
-                                <a href="https://biblequizdaily.gumroad.com/l/easterbiblebingo" target="_blank" class="eb-results-product">
-                                    <div class="eb-results-cover"><img src="EASTER_BIBLE_BINGO.png" alt="Easter Bible BINGO — 30 Unique Cards PDF"></div>
-                                    <div class="eb-results-plabel">Bible BINGO</div>
-                                    <div class="eb-results-pprice">$5.99</div>
-                                </a>
-                                <a href="https://biblequizdaily.gumroad.com/l/EASTERSTORYTREASUREHUNT" target="_blank" class="eb-results-product">
-                                    <div class="eb-results-cover"><img src="Easter_story_hunt.png" alt="Easter Story Treasure Hunt PDF"></div>
-                                    <div class="eb-results-plabel">Treasure Hunt</div>
-                                    <div class="eb-results-pprice">$4.99</div>
-                                </a>
+                            <div style="background:rgba(0,0,0,0.2);border-left:2px solid rgba(255,215,0,0.3);padding:20px 16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;">
+                                <div style="font-size:11px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#FFD700;background:rgba(255,215,0,0.15);padding:4px 12px;border-radius:20px;">⭐ Best Value</div>
+                                <div style="font-family:'Merriweather',serif;font-size:15px;font-weight:900;color:#fff;text-align:center;line-height:1.3;">Complete Easter<br>Ministry Kit</div>
+                                <div style="text-align:center;">
+                                    <div style="font-size:12px;color:#dcc8ff;text-decoration:line-through;font-weight:600;">$16.97</div>
+                                    <div style="font-size:38px;font-weight:900;color:#FFD700;line-height:1;">$12.99</div>
+                                    <div style="font-size:11px;font-weight:800;color:#fff;background:#27ae60;padding:3px 10px;border-radius:20px;display:inline-block;margin-top:5px;">Save $3.98</div>
+                                </div>
+                                <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" style="display:block;background:#FFD700;color:#3a1a6e;font-weight:900;font-size:14px;padding:12px 16px;border-radius:10px;text-decoration:none;text-align:center;width:100%;box-shadow:0 4px 16px rgba(255,215,0,0.5);">🛒 Get the Bundle →</a>
+                                <div style="font-size:11px;color:#dcc8ff;text-align:center;font-weight:600;">✓ Instant download · ✓ Print unlimited</div>
                             </div>
-                        </div>
-                        <div class="eb-results-right">
-                            <div class="eb-results-bundle-label">⭐ Best Value</div>
-                            <div class="eb-results-bundle-name">Complete Easter<br>Ministry Kit</div>
-                            <div class="eb-results-price-was">Separately $16.97</div>
-                            <div class="eb-results-price-now">$12.99</div>
-                            <div class="eb-results-price-save">You save $3.98</div>
-                            <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="eb-results-cta">🛒 Get the Bundle →</a>
-                            <div class="eb-results-trust">✓ Instant download &nbsp;·&nbsp; ✓ Print unlimited</div>
                         </div>
                     </div>
                 </div>
-
                 
-                
-                <!-- AMAZON AFFILIATE DISCLAIMER - REQUIRED BEFORE LINKS -->
+                <!-- AMAZON AFFILIATE DISCLAIMER -->
                 <div style="background: #fff3cd; border: 2px solid #ffc107; border-radius: 12px; padding: 16px 20px; text-align: center; margin-bottom: 25px; box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);">
                     <p style="font-size: 14px; color: #856404; margin: 0; font-weight: 600;">
                         <span style="font-size: 18px;">⚠️</span> <strong>AFFILIATE DISCLOSURE:</strong> As an Amazon Associate, BibleQuizDaily earns from qualifying purchases. This helps us keep all Bible quizzes 100% free!
                     </p>
                 </div>
                 
-                <!-- DEFAULT PRODUCT (Bible Tabs - All Quizzes) -->
+                <!-- DEFAULT PRODUCT (Bible Tabs) -->
                 <div id="defaultProduct">
-                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 32px; margin-bottom: 25px;">
-                        <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
+                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 28px; margin-bottom: 25px;">
+                        <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px; display: flex; align-items: center; gap: 8px;">
                             <span style="font-size: 16px;">✨</span> RECOMMENDED FOR YOU
                         </div>
-                        
-                        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start;">
+                        <div style="display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: start;">
                             <div>
                                 <img src="bhoho_theme1.jpg" alt="Mr. Pen Bible Tabs" id="productImage" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                                <div style="display: flex; gap: 10px; margin-top: 10px;">
-                                    <img src="bhoho_theme1.jpg" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
-                                    <img src="boho_theme2.jpg" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
-                                    <img src="boho_theme3.jpg" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
-                                    <img src="boho_theme4.jpg" onclick="changeResultsProductImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                                    <img src="bhoho_theme1.jpg" onclick="changeResultsProductImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
+                                    <img src="boho_theme2.jpg" onclick="changeResultsProductImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="boho_theme3.jpg" onclick="changeResultsProductImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="boho_theme4.jpg" onclick="changeResultsProductImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
                                 </div>
                             </div>
                             <div>
-                                <h3 style="font-size: 20px; font-weight: 700; color: #2d3436; margin-bottom: 12px;">
-                                    📖 Want to Score Higher Next Time?
-                                </h3>
-                                <p style="color: #636e72; margin-bottom: 16px; font-size: 14px;">
-                                    Find Bible passages instantly with these beautiful tabs!
-                                </p>
-                                <ul style="list-style: none; margin-bottom: 16px; padding: 0;">
-                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                        <strong>75 tabs</strong> - All 66 books + 9 custom
-                                    </li>
-                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                        <strong>No bleed-through</strong> - Safe for pages
-                                    </li>
-                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                        <strong>Self-adhesive</strong> - Easy application
-                                    </li>
+                                <h3 style="font-size: 18px; font-weight: 700; color: #2d3436; margin-bottom: 10px;">📖 Want to Score Higher Next Time?</h3>
+                                <p style="color: #636e72; margin-bottom: 14px; font-size: 14px;">Find Bible passages instantly with these beautiful tabs!</p>
+                                <ul style="list-style: none; margin-bottom: 14px; padding: 0;">
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span> <strong>75 tabs</strong> — All 66 books + 9 custom</li>
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span> <strong>No bleed-through</strong> — Safe for pages</li>
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span> <strong>Self-adhesive</strong> — Easy application</li>
                                 </ul>
                                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
                                     <div style="color: #FFD700; font-size: 14px;">★★★★★</div>
                                     <span style="color: #636e72; font-size: 13px;">4.7 stars (2,300+ reviews)</span>
                                 </div>
-                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                                    
-                                    <span style="background: #667eea; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700;">BESTSELLER</span>
-                                </div>
-                                <a href="https://amzn.to/4qsf4FN" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 15px;">
-                                    🛒 Get Bible Tabs on Amazon
-                                </a>
+                                <a href="https://amzn.to/4qsf4FN" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 13px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 15px;">🛒 Get Bible Tabs on Amazon</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- FLASH CARDS PRODUCT (Books of Bible Quiz Only) -->
+                <!-- FLASH CARDS (Books of Bible only) -->
                 <div id="flashCardsProduct" style="display: none;">
-                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 32px; margin-bottom: 25px;">
-                        <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 16px;">✨</span> PERFECT FOR MEMORIZATION
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start;">
+                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 28px; margin-bottom: 25px;">
+                        <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px;">✨ PERFECT FOR MEMORIZATION</div>
+                        <div style="display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: start;">
                             <div>
-                                <img src="bristol_card1.jpg" alt="Books of the Bible Flash Cards" id="flashCardImage" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                                <div style="display: flex; gap: 10px; margin-top: 10px;">
-                                    <img src="bristol_card1.jpg" onclick="changeFlashCardImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
-                                    <img src="bristol_card2.jpg" onclick="changeFlashCardImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
-                                    <img src="bristol_card3.jpg" onclick="changeFlashCardImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
-                                    <img src="bristol_card4.jpg" onclick="changeFlashCardImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                <img src="bristol_card1.jpg" alt="Bible Flash Cards" id="flashCardImage" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                                    <img src="bristol_card1.jpg" onclick="changeFlashCardImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
+                                    <img src="bristol_card2.jpg" onclick="changeFlashCardImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="bristol_card3.jpg" onclick="changeFlashCardImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="bristol_card4.jpg" onclick="changeFlashCardImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
                                 </div>
                             </div>
-                            
                             <div>
-                                <h3 style="font-size: 20px; font-weight: 700; color: #2d3436; margin-bottom: 12px;">
-                                    📚 Memorize All 66 Books Faster with Flash Cards!
-                                </h3>
-                                <p style="color: #636e72; margin-bottom: 16px; font-size: 14px;">
-                                    Master book names, order, and categories. Perfect for quiz retakes!
-                                </p>
-                                <ul style="list-style: none; margin-bottom: 16px; padding: 0;">
-                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                        <strong>170 cards</strong> - All 66 books covered
-                                    </li>
-                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                        <strong>Color-coded</strong> - By testament & category
-                                    </li>
-                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                        <strong>Durable</strong> - Quality card stock
-                                    </li>
+                                <h3 style="font-size: 18px; font-weight: 700; color: #2d3436; margin-bottom: 10px;">📚 Memorize All 66 Books Faster!</h3>
+                                <p style="color: #636e72; margin-bottom: 14px; font-size: 14px;">Master book names, order, and categories.</p>
+                                <ul style="list-style: none; margin-bottom: 14px; padding: 0;">
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span> <strong>170 cards</strong> — All 66 books covered</li>
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span> <strong>Color-coded</strong> — By testament & category</li>
                                 </ul>
                                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
                                     <div style="color: #FFD700; font-size: 14px;">★★★★★</div>
                                     <span style="color: #636e72; font-size: 13px;">4.8 stars (850+ reviews)</span>
                                 </div>
-                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                                    
-                                </div>
-                                <a href="https://amzn.to/4qEIRey" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 15px;">
-                                    🛒 Get Flash Cards on Amazon
-                                </a>
+                                <a href="https://amzn.to/4qEIRey" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 13px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 15px;">🛒 Get Flash Cards on Amazon</a>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <!-- BIBLE GUIDE PRODUCT (Books of Bible Quiz Only) -->
+                <!-- BIBLE GUIDE (Books of Bible only) -->
                 <div id="bibleGuideProduct" style="display: none;">
-                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 32px; margin-bottom: 25px;">
-                        <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 16px; display: flex; align-items: center; gap: 8px;">
-                            <span style="font-size: 16px;">✨</span> COMPLETE STUDY GUIDE
-                        </div>
-                        
-                        <div style="display: grid; grid-template-columns: 280px 1fr; gap: 24px; align-items: start;">
+                    <div style="background: linear-gradient(135deg, #f8f9ff 0%, #fff9f9 100%); border: 2px solid #e1e8f0; border-radius: 16px; padding: 28px; margin-bottom: 25px;">
+                        <div style="font-size: 13px; font-weight: 700; color: #667eea; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 14px;">✨ COMPLETE STUDY GUIDE</div>
+                        <div style="display: grid; grid-template-columns: 240px 1fr; gap: 20px; align-items: start;">
                             <div>
                                 <img src="bible_guide1.jpg" alt="Bible Study Guide" id="bibleGuideImage" style="width: 100%; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
-                                <div style="display: flex; gap: 10px; margin-top: 10px;">
-                                    <img src="bible_guide1.jpg" onclick="changeBibleGuideImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
-                                    <img src="bible_guide2.jpg" onclick="changeBibleGuideImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
-                                    <img src="bible_guide3.jpg" onclick="changeBibleGuideImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
-                                    <img src="bible_guide4.jpg" onclick="changeBibleGuideImage(this)" style="width: 60px; height: 60px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                <div style="display: flex; gap: 8px; margin-top: 10px;">
+                                    <img src="bible_guide1.jpg" onclick="changeBibleGuideImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid #667eea; object-fit: cover;">
+                                    <img src="bible_guide2.jpg" onclick="changeBibleGuideImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="bible_guide3.jpg" onclick="changeBibleGuideImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
+                                    <img src="bible_guide4.jpg" onclick="changeBibleGuideImage(this)" style="width: 56px; height: 56px; border-radius: 6px; cursor: pointer; border: 2px solid transparent; object-fit: cover;">
                                 </div>
                             </div>
-                            
                             <div>
-                                <h3 style="font-size: 20px; font-weight: 700; color: #2d3436; margin-bottom: 12px;">
-                                    📖 Master Every Book with This Complete Guide!
-                                </h3>
-                                <p style="color: #636e72; margin-bottom: 16px; font-size: 14px;">
-                                    Deep dive into all 66 books - authors, themes, key verses, timelines!
-                                </p>
-                                <ul style="list-style: none; margin-bottom: 16px; padding: 0;">
-                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                        <strong>All 66 books</strong> - Complete overview
-                                    </li>
-                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                        <strong>Visual timelines</strong> - See the big picture
-                                    </li>
-                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;">
-                                        <span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span>
-                                        <strong>Key themes</strong> - Understand each book
-                                    </li>
+                                <h3 style="font-size: 18px; font-weight: 700; color: #2d3436; margin-bottom: 10px;">📖 Master Every Book with This Guide!</h3>
+                                <p style="color: #636e72; margin-bottom: 14px; font-size: 14px;">Authors, themes, key verses, timelines — all 66 books.</p>
+                                <ul style="list-style: none; margin-bottom: 14px; padding: 0;">
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span> <strong>All 66 books</strong> — Complete overview</li>
+                                    <li style="color: #636e72; font-size: 14px; margin-bottom: 6px; padding-left: 20px; position: relative;"><span style="position: absolute; left: 0; color: #667eea; font-weight: 700;">✓</span> <strong>Visual timelines</strong> — See the big picture</li>
                                 </ul>
                                 <div style="display: flex; align-items: center; gap: 8px; margin-bottom: 12px;">
                                     <div style="color: #FFD700; font-size: 14px;">★★★★★</div>
                                     <span style="color: #636e72; font-size: 13px;">4.7 stars (1,200+ reviews)</span>
                                 </div>
-                                <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 16px;">
-                                    
-                                    <span style="background: #667eea; color: white; padding: 4px 10px; border-radius: 6px; font-size: 11px; font-weight: 700;">TOP RATED</span>
-                                </div>
-                                <a href="https://amzn.to/3ZBefzK" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 14px 35px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 15px;">
-                                    🛒 Get Bible Guide on Amazon
-                                </a>
+                                <a href="https://amzn.to/3ZBefzK" target="_blank" rel="nofollow noopener" style="display: inline-block; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 13px 28px; border-radius: 10px; text-decoration: none; font-weight: 700; font-size: 15px;">🛒 Get Bible Guide on Amazon</a>
                             </div>
                         </div>
                     </div>
@@ -708,24 +587,17 @@
 
                 <style>
                 @media (max-width: 768px) {
-                    div[style*="grid-template-columns: 280px 1fr"] {
-                        grid-template-columns: 1fr !important;
-                    }
+                    div[style*="grid-template-columns: 240px 1fr"] { grid-template-columns: 1fr !important; }
+                    div[style*="grid-template-columns: 1fr 260px"] { grid-template-columns: 1fr !important; }
                 }
                 </style>
 
                 <div style="text-align: center; margin-bottom: 30px;">
                     <p style="font-size: 18px; color: #636e72; margin-bottom: 15px; font-weight: 600;">Share Your Results:</p>
                     <div style="display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
-                        <button onclick="shareTwitter()" class="btn" style="background: #1DA1F2; color: white; padding: 12px 25px; font-size: 16px;">
-                            🐦 Share on Twitter
-                        </button>
-                        <button onclick="shareFacebook()" class="btn" style="background: #4267B2; color: white; padding: 12px 25px; font-size: 16px;">
-                            📘 Share on Facebook
-                        </button>
-                        <button onclick="shareWhatsApp()" class="btn" style="background: #25D366; color: white; padding: 12px 25px; font-size: 16px;">
-                            💬 Share on WhatsApp
-                        </button>
+                        <button onclick="shareTwitter()" class="btn" style="background: #1DA1F2; color: white; padding: 12px 25px; font-size: 16px;">🐦 Share on Twitter</button>
+                        <button onclick="shareFacebook()" class="btn" style="background: #4267B2; color: white; padding: 12px 25px; font-size: 16px;">📘 Share on Facebook</button>
+                        <button onclick="shareWhatsApp()" class="btn" style="background: #25D366; color: white; padding: 12px 25px; font-size: 16px;">💬 Share on WhatsApp</button>
                     </div>
                 </div>
                 
@@ -733,8 +605,7 @@
                     <button class="btn btn-primary" onclick="location.reload()">Retake Quiz</button>
                     <button class="btn btn-secondary" onclick="window.location.href='index.html'">All Quizzes</button>
                 </div>
-            </div>
-        </div>
+            </div>        </div>
     </div>
     
     <script src="questions.js"></script>
@@ -830,6 +701,13 @@
                 // Update running score display
                 document.getElementById('runningScore').textContent = this.score;
                 document.getElementById('runningIncorrect').textContent = this.incorrectCount;
+                // Show mid-quiz ad on every 5th question
+                const midAd = document.getElementById('midQuizAd');
+                if (midAd && this.currentQuestionIndex > 0 && this.currentQuestionIndex % 5 === 0) {
+                    midAd.style.display = 'flex';
+                } else if (midAd) {
+                    midAd.style.display = 'none';
+                }
                 
                 this.showFeedback(question, isCorrect);
                 document.getElementById('nextBtn').classList.remove('hidden');
@@ -947,7 +825,12 @@
             'who-am-i': 'Who Am I? Bible Character Riddles',
             'bible-numbers': 'Bible Numbers Quiz',
             'bible-villains': 'Bible Villains Quiz',
-            'bible-firsts': 'Bible Firsts Quiz'
+            'bible-firsts': 'Bible Firsts Quiz',
+            'noahs-ark': "Noah's Ark Quiz",
+            'joseph-quiz': 'Joseph Bible Quiz',
+            'solomon-quiz': 'King Solomon Bible Quiz',
+            'samson-quiz': 'Samson Bible Quiz',
+            'abraham-quiz': 'Abraham Bible Quiz'
         };
         
         // Load quiz based on category
@@ -1025,6 +908,11 @@
                 'bible-numbers': 'bible-numbers-quiz.html',
                 'bible-villains': 'bible-villains-quiz.html',
                 'bible-firsts': 'bible-firsts-quiz.html',
+                'noahs-ark': 'noahs-ark-quiz.html',
+                'joseph-quiz': 'joseph-quiz.html',
+                'solomon-quiz': 'solomon-quiz.html',
+                'samson-quiz': 'samson-quiz.html',
+                'abraham-quiz': 'abraham-quiz.html',
             };
             
             const landingPage = landingPages[category];

@@ -5077,1075 +5077,1067 @@ window.quizQuestions = {
         }
     ],
 
-// ============================================================
-//  BibleQuizDaily — 5 New Hard Quiz Question Sets
-//  Add these inside window.quizQuestions = { ... }
-//  Paste BEFORE the final closing }; line
-//  Each key: "who-said-it", "who-am-i", "bible-numbers",
-//            "bible-villains", "bible-firsts"
-// ============================================================
-
-    "who-said-it": [
+"noahs-ark": [
         {
-            scripture: "Before I formed thee in the belly I knew thee; and before thou camest forth out of the womb I sanctified thee.",
-            reference: "Jeremiah 1:5",
-            question: "\"Before I formed thee in the belly I knew thee.\" Who said this?",
-            answers: ["God to Moses", "God to Jeremiah", "God to Isaiah", "God to Samuel"],
+            scripture: "And God said unto Noah, Make thee an ark of gopher wood; rooms shalt thou make in the ark, and shalt pitch it within and without with pitch.",
+            reference: "Genesis 6:14",
+            question: "Of what wood was Noah's Ark made?",
+            answers: ["Cedar wood", "Gopher wood", "Acacia wood", "Oak wood"],
             correct: 1
         },
         {
-            scripture: "Am I my brother's keeper?",
-            reference: "Genesis 4:9",
-            question: "\"Am I my brother's keeper?\" Who said this?",
-            answers: ["Abel", "Adam", "Cain", "Seth"],
+            scripture: "The length of the ark shall be three hundred cubits, the breadth of it fifty cubits, and the height of it thirty cubits.",
+            reference: "Genesis 6:15",
+            question: "How long was Noah's Ark in cubits?",
+            answers: ["200 cubits", "250 cubits", "300 cubits", "400 cubits"],
             correct: 2
         },
         {
-            scripture: "How long halt ye between two opinions? if the LORD be God, follow him: but if Baal, then follow him.",
-            reference: "1 Kings 18:21",
-            question: "\"How long halt ye between two opinions?\" Who said this to the people of Israel?",
-            answers: ["Elisha", "Isaiah", "Elijah", "Moses"],
+            scripture: "And the rain was upon the earth forty days and forty nights.",
+            reference: "Genesis 7:12",
+            question: "How many days and nights did it rain during the great flood?",
+            answers: ["20 days and nights", "30 days and nights", "40 days and nights", "50 days and nights"],
             correct: 2
         },
         {
-            scripture: "Entreat me not to leave thee, or to return from following after thee.",
-            reference: "Ruth 1:16",
-            question: "\"Entreat me not to leave thee.\" Who said these words of loyalty?",
-            answers: ["Orpah", "Ruth", "Naomi", "Boaz"],
+            scripture: "And the waters prevailed upon the earth an hundred and fifty days.",
+            reference: "Genesis 7:24",
+            question: "How many days did the floodwaters prevail upon the earth?",
+            answers: ["40 days", "100 days", "150 days", "200 days"],
+            correct: 2
+        },
+        {
+            scripture: "And Noah was six hundred years old when the flood of waters was upon the earth.",
+            reference: "Genesis 7:6",
+            question: "How old was Noah when the flood came?",
+            answers: ["500 years old", "550 years old", "600 years old", "650 years old"],
+            correct: 2
+        },
+        {
+            scripture: "And he sent forth a raven, which went forth to and fro, until the waters were dried up from off the earth.",
+            reference: "Genesis 8:7",
+            question: "What was the first bird Noah sent out of the ark?",
+            answers: ["A dove", "A sparrow", "A raven", "An eagle"],
+            correct: 2
+        },
+        {
+            scripture: "Also he sent forth a dove from him, to see if the waters were abated from off the face of the ground.",
+            reference: "Genesis 8:8",
+            question: "What did the dove bring back to Noah on its second flight?",
+            answers: ["Nothing", "A fig leaf", "An olive leaf", "A branch of cedar"],
+            correct: 2
+        },
+        {
+            scripture: "I do set my bow in the cloud, and it shall be for a token of a covenant between me and the earth.",
+            reference: "Genesis 9:13",
+            question: "What sign did God place in the sky as a token of His covenant with Noah?",
+            answers: ["A star", "A rainbow", "A cloud", "A pillar of fire"],
             correct: 1
         },
         {
-            scripture: "The LORD gave, and the LORD hath taken away; blessed be the name of the LORD.",
-            reference: "Job 1:21",
-            question: "\"The LORD gave, and the LORD hath taken away.\" Who said this in the depths of suffering?",
-            answers: ["David", "Solomon", "Job", "Isaiah"],
-            correct: 2
-        },
-        {
-            scripture: "Here am I; send me.",
-            reference: "Isaiah 6:8",
-            question: "\"Here am I; send me.\" Who responded to God's call with these words?",
-            answers: ["Jeremiah", "Ezekiel", "Isaiah", "Moses"],
-            correct: 2
-        },
-        {
-            scripture: "Is it nothing to you, all ye that pass by? behold, and see if there be any sorrow like unto my sorrow.",
-            reference: "Lamentations 1:12",
-            question: "\"Is it nothing to you, all ye that pass by?\" Who authored this lament over Jerusalem?",
-            answers: ["Isaiah", "Ezekiel", "Daniel", "Jeremiah"],
-            correct: 3
-        },
-        {
-            scripture: "Thou art the Christ, the Son of the living God.",
-            reference: "Matthew 16:16",
-            question: "\"Thou art the Christ, the Son of the living God.\" Who declared this at Caesarea Philippi?",
-            answers: ["John", "James", "Andrew", "Peter"],
-            correct: 3
-        },
-        {
-            scripture: "My Lord and my God.",
-            reference: "John 20:28",
-            question: "\"My Lord and my God.\" Which disciple said this after seeing the risen Christ?",
-            answers: ["Peter", "John", "Thomas", "Philip"],
-            correct: 2
-        },
-        {
-            scripture: "I have fought a good fight, I have finished my course, I have kept the faith.",
-            reference: "2 Timothy 4:7",
-            question: "\"I have fought a good fight, I have finished my course.\" Who wrote these final words?",
-            answers: ["Peter", "Paul", "John", "Luke"],
+            scripture: "And of every living thing of all flesh, two of every sort shalt thou bring into the ark, to keep them alive with thee.",
+            reference: "Genesis 6:19",
+            question: "How many of every unclean animal did Noah take into the ark?",
+            answers: ["One of each", "Two of each", "Seven pairs", "Four of each"],
             correct: 1
         },
         {
-            scripture: "What is truth?",
-            reference: "John 18:38",
-            question: "\"What is truth?\" Who asked Jesus this famous question?",
-            answers: ["Herod", "Caiaphas", "Pontius Pilate", "Nicodemus"],
+            scripture: "Of every clean beast thou shalt take to thee by sevens, the male and his female.",
+            reference: "Genesis 7:2",
+            question: "How many of every clean animal did Noah take into the ark?",
+            answers: ["Two", "Four", "Seven pairs", "Twelve"],
             correct: 2
         },
         {
-            scripture: "We have found the Messias, which is, being interpreted, the Christ.",
-            reference: "John 1:41",
-            question: "\"We have found the Messias.\" Who said this to his brother Simon?",
-            answers: ["Philip", "Andrew", "Nathanael", "John"],
+            scripture: "And Noah builded an altar unto the LORD; and took of every clean beast, and of every clean fowl, and offered burnt offerings on the altar.",
+            reference: "Genesis 8:20",
+            question: "What was the first thing Noah did after leaving the ark?",
+            answers: ["Planted a vineyard", "Built a city", "Built an altar and offered burnt offerings", "Gave thanks by the river"],
+            correct: 2
+        },
+        {
+            scripture: "And the LORD smelled a sweet savour; and the LORD said in his heart, I will not again curse the ground any more for man's sake.",
+            reference: "Genesis 8:21",
+            question: "After Noah's sacrifice, what did God promise He would never do again?",
+            answers: ["Send plagues", "Destroy the earth with water", "Curse the ground for man's sake", "Remove His presence from earth"],
+            correct: 2
+        },
+        {
+            scripture: "And Noah began to be an husbandman, and he planted a vineyard.",
+            reference: "Genesis 9:20",
+            question: "What did Noah plant after the flood?",
+            answers: ["Wheat fields", "A vineyard", "An olive grove", "A fig tree"],
             correct: 1
         },
         {
-            scripture: "Can there any good thing come out of Nazareth?",
-            reference: "John 1:46",
-            question: "\"Can there any good thing come out of Nazareth?\" Who asked this skeptical question?",
-            answers: ["Thomas", "Philip", "Nathanael", "Judas"],
-            correct: 2
-        },
-        {
-            scripture: "I have sinned in that I have betrayed the innocent blood.",
-            reference: "Matthew 27:4",
-            question: "\"I have sinned in that I have betrayed the innocent blood.\" Who confessed this?",
-            answers: ["Peter", "Judas Iscariot", "Caiaphas", "Pilate"],
+            scripture: "These are the generations of Noah: Noah was a just man and perfect in his generations, and Noah walked with God.",
+            reference: "Genesis 6:9",
+            question: "How is Noah described in Genesis 6:9?",
+            answers: ["A mighty man and a builder", "A just man, perfect in his generations, who walked with God", "A prophet who spoke for God", "A priest who served at the altar"],
             correct: 1
         },
         {
-            scripture: "Silver and gold have I none; but such as I have give I thee.",
-            reference: "Acts 3:6",
-            question: "\"Silver and gold have I none; but such as I have give I thee.\" Who said this to a lame man?",
-            answers: ["Paul", "John", "Peter", "Stephen"],
+            scripture: "And God said, This is the token of the covenant which I make between me and you and every living creature.",
+            reference: "Genesis 9:12",
+            question: "With whom did God establish His covenant after the flood?",
+            answers: ["Noah and his sons only", "All of mankind", "Noah, his family, and every living creature", "Only the animals on the ark"],
             correct: 2
         },
         {
-            scripture: "I have been very jealous for the LORD God of hosts: for the children of Israel have forsaken thy covenant.",
-            reference: "1 Kings 19:10",
-            question: "\"I have been very jealous for the LORD God of hosts.\" Who said this in despair in the wilderness?",
-            answers: ["Moses", "Elijah", "Samuel", "Josiah"],
+            scripture: "And Noah lived after the flood three hundred and fifty years.",
+            reference: "Genesis 9:28",
+            question: "How many years did Noah live after the flood?",
+            answers: ["200 years", "300 years", "350 years", "450 years"],
+            correct: 2
+        },
+        {
+            scripture: "And all the days of Noah were nine hundred and fifty years: and he died.",
+            reference: "Genesis 9:29",
+            question: "How old was Noah when he died?",
+            answers: ["750 years", "850 years", "950 years", "1000 years"],
+            correct: 2
+        },
+        {
+            scripture: "And Noah went in, and his sons, and his wife, and his sons' wives with him, into the ark.",
+            reference: "Genesis 7:7",
+            question: "How many people were saved on Noah's Ark?",
+            answers: ["4 people", "6 people", "8 people", "12 people"],
+            correct: 2
+        },
+        {
+            scripture: "And the waters returned from off the earth continually: and after the end of the hundred and fifty days the waters were abated.",
+            reference: "Genesis 8:3",
+            question: "On what mountain did Noah's Ark come to rest?",
+            answers: ["Mount Sinai", "Mount Hermon", "Mount Ararat", "Mount Moriah"],
+            correct: 2
+        },
+        {
+            scripture: "Cursed be Canaan; a servant of servants shall he be unto his brethren.",
+            reference: "Genesis 9:25",
+            question: "What sin did Noah's son Ham commit that brought a curse upon Canaan?",
+            answers: ["He stole food from Noah", "He saw his father's nakedness and told his brothers", "He refused to enter the ark", "He sacrificed to false gods"],
             correct: 1
         },
         {
-            scripture: "Almost thou persuadest me to be a Christian.",
-            reference: "Acts 26:28",
-            question: "\"Almost thou persuadest me to be a Christian.\" Which king said this to Paul?",
-            answers: ["Herod", "Nero", "Agrippa", "Felix"],
+            scripture: "And the LORD said unto Noah, Come thou and all thy house into the ark; for thee have I seen righteous before me in this generation.",
+            reference: "Genesis 7:1",
+            question: "Why did God choose Noah to build the ark?",
+            answers: ["He was the strongest man alive", "He was a skilled carpenter", "He was righteous before God in his generation", "He was the oldest man alive"],
             correct: 2
         },
         {
-            scripture: "The thing that hath been, it is that which shall be; and that which is done is that which shall be done.",
-            reference: "Ecclesiastes 1:9",
-            question: "\"There is no new thing under the sun.\" Who wrote this in Ecclesiastes?",
-            answers: ["David", "Solomon", "Asaph", "Job"],
+            scripture: "And every living substance was destroyed which was upon the face of the ground, both man, and cattle, and the creeping things, and the fowl of the heaven.",
+            reference: "Genesis 7:23",
+            question: "Who survived the flood besides Noah's family?",
+            answers: ["The giants", "Animals on the ark", "Righteous men who climbed mountains", "Enoch's descendants"],
             correct: 1
         },
         {
-            scripture: "Behold, I stand at the door, and knock.",
-            reference: "Revelation 3:20",
-            question: "\"Behold, I stand at the door, and knock.\" Who spoke these words in Revelation?",
-            answers: ["An angel", "God the Father", "The Holy Spirit", "Jesus Christ"],
-            correct: 3
-        },
-        {
-            scripture: "Draw me not away with the wicked...which speak peace to their neighbours, but mischief is in their hearts.",
-            reference: "Psalm 28:3",
-            question: "\"The LORD is my strength and my shield; my heart trusted in him.\" Which psalmist wrote this?",
-            answers: ["Asaph", "Solomon", "David", "Moses"],
+            scripture: "Make thee an ark of gopher wood; rooms shalt thou make in the ark.",
+            reference: "Genesis 6:14-16",
+            question: "How many levels or stories did the ark have?",
+            answers: ["One", "Two", "Three", "Four"],
             correct: 2
         },
         {
-            scripture: "Intreat me not to leave thee, or to return from following after thee: for whither thou goest, I will go.",
-            reference: "Ruth 1:16",
-            question: "\"Whither thou goest, I will go; and where thou lodgest, I will lodge.\" Who spoke these words of covenant loyalty?",
-            answers: ["Naomi to Ruth", "Ruth to Naomi", "Orpah to Naomi", "Boaz to Ruth"],
+            scripture: "And Noah did according unto all that the LORD commanded him.",
+            reference: "Genesis 7:5",
+            question: "According to Genesis, how did Noah respond to God's commands about the ark?",
+            answers: ["He questioned God first", "He obeyed after some delay", "He did according to all that the LORD commanded him", "He asked for a sign before obeying"],
+            correct: 2
+        },
+        {
+            scripture: "And it repented the LORD that he had made man on the earth, and it grieved him at his heart.",
+            reference: "Genesis 6:6",
+            question: "What was the reason God sent the flood?",
+            answers: ["To test Noah's faithfulness", "Because man's wickedness was great on the earth", "Because the earth was overpopulated", "To reshape the geography of the world"],
             correct: 1
         },
         {
-            scripture: "Lord, now lettest thou thy servant depart in peace, according to thy word.",
-            reference: "Luke 2:29",
-            question: "\"Lord, now lettest thou thy servant depart in peace.\" Who said this upon seeing the infant Jesus?",
-            answers: ["Zacharias", "Joseph", "Simeon", "Anna"],
+            scripture: "For yet seven days, and I will cause it to rain upon the earth forty days and forty nights.",
+            reference: "Genesis 7:4",
+            question: "How many days before the flood did God warn Noah to enter the ark?",
+            answers: ["3 days", "5 days", "7 days", "14 days"],
             correct: 2
         },
         {
-            scripture: "Naked came I out of my mother's womb, and naked shall I return thither.",
-            reference: "Job 1:21",
-            question: "\"Naked came I out of my mother's womb, and naked shall I return.\" Who said this after losing everything?",
-            answers: ["David", "Solomon", "Job", "Jeremiah"],
-            correct: 2
-        },
-        {
-            scripture: "For God so loved the world, that he gave his only begotten Son.",
-            reference: "John 3:16",
-            question: "\"Ye must be born again.\" To whom did Jesus say this under cover of night?",
-            answers: ["Joseph of Arimathea", "Nicodemus", "A Pharisee named Simon", "The rich young ruler"],
-            correct: 1
-        },
-        {
-            scripture: "O LORD, I have heard thy speech, and was afraid: O LORD, revive thy work in the midst of the years.",
-            reference: "Habakkuk 3:2",
-            question: "\"Yet I will rejoice in the LORD, I will joy in the God of my salvation.\" Which minor prophet wrote this remarkable statement of faith?",
-            answers: ["Micah", "Nahum", "Habakkuk", "Zephaniah"],
-            correct: 2
-        },
-        {
-            scripture: "Now mine eyes have seen thee. Wherefore I abhor myself, and repent in dust and ashes.",
-            reference: "Job 42:5-6",
-            question: "\"Now mine eyes have seen thee. Wherefore I abhor myself.\" Who said this after God answered him from the whirlwind?",
-            answers: ["Isaiah", "Job", "Ezekiel", "Moses"],
-            correct: 1
-        },
-        {
-            scripture: "Father, if thou be willing, remove this cup from me: nevertheless not my will, but thine, be done.",
-            reference: "Luke 22:42",
-            question: "\"Not my will, but thine, be done.\" Where did Jesus pray these words?",
-            answers: ["The Upper Room", "The Mount of Olives", "Gethsemane", "Mount Hermon"],
-            correct: 2
-        },
-        {
-            scripture: "For I know that my redeemer liveth, and that he shall stand at the latter day upon the earth.",
-            reference: "Job 19:25",
-            question: "\"I know that my redeemer liveth.\" Who declared this remarkable messianic statement?",
-            answers: ["David", "Isaiah", "Job", "Abraham"],
-            correct: 2
-        },
-        {
-            scripture: "I am the resurrection, and the life: he that believeth in me, though he were dead, yet shall he live.",
-            reference: "John 11:25",
-            question: "\"I am the resurrection, and the life.\" To which woman did Jesus speak these words?",
-            answers: ["Mary Magdalene", "Mary the mother of Jesus", "Martha", "Salome"],
-            correct: 2
-        },
-        {
-            scripture: "Saul, Saul, why persecutest thou me?",
-            reference: "Acts 9:4",
-            question: "\"Saul, Saul, why persecutest thou me?\" Where was Saul travelling when he heard this voice?",
-            answers: ["Jerusalem", "Antioch", "Damascus", "Tarsus"],
-            correct: 2
-        }
-    ],
-
-    "who-am-i": [
-        {
-            scripture: "I was a herdsman and a gatherer of sycamore fruit. I was not a prophet, nor was I the son of a prophet. Yet God called me to prophesy against Israel.",
-            reference: "Amos 1:1, 7:14",
-            question: "I was a shepherd and fig farmer — not trained as a prophet — yet God sent me to rebuke Israel. Who am I?",
-            answers: ["Hosea", "Joel", "Amos", "Obadiah"],
-            correct: 2
-        },
-        {
-            scripture: "I interpreted dreams in prison. I was falsely accused by my master's wife. I rose from slave to second-in-command of an entire nation.",
-            reference: "Genesis 39-41",
-            question: "I was sold by my brothers, wrongly imprisoned, and became a ruler of Egypt. Who am I?",
-            answers: ["Moses", "Joseph", "Daniel", "Nehemiah"],
-            correct: 1
-        },
-        {
-            scripture: "I was the first judge of Israel. I defeated Jabin king of Canaan. I was the only female judge named in Scripture.",
-            reference: "Judges 4-5",
-            question: "I was a prophetess and the only female judge in Israel who led an army to victory. Who am I?",
-            answers: ["Miriam", "Esther", "Deborah", "Huldah"],
-            correct: 2
-        },
-        {
-            scripture: "I was a Moabite woman. I left my homeland for a foreign people. My loyalty to my mother-in-law was repaid with a husband from her clan.",
-            reference: "Ruth 1-4",
-            question: "I was a foreign widow whose loyalty brought me into the lineage of King David. Who am I?",
-            answers: ["Rahab", "Ruth", "Orpah", "Bathsheba"],
-            correct: 1
-        },
-        {
-            scripture: "I was swallowed by a great fish. I preached to a city of 120,000 people. I sat under a gourd vine and complained to God.",
-            reference: "Jonah 1-4",
-            question: "I fled from God's command, was swallowed by a fish, and reluctantly preached to Nineveh. Who am I?",
-            answers: ["Elijah", "Elisha", "Jonah", "Nahum"],
-            correct: 2
-        },
-        {
-            scripture: "I was taken captive to Babylon as a young man. I refused the king's meat. I interpreted handwriting on a wall.",
-            reference: "Daniel 1-5",
-            question: "I was a Hebrew exile who refused defilement, interpreted dreams, and was thrown into a lions' den. Who am I?",
-            answers: ["Ezekiel", "Daniel", "Shadrach", "Nehemiah"],
-            correct: 1
-        },
-        {
-            scripture: "I was a tax collector. Jesus called me while I sat at my work. I hosted a great feast for Jesus and invited my colleagues.",
-            reference: "Luke 5:27-29",
-            question: "I was a despised tax collector who became a disciple and wrote a Gospel. Who am I?",
-            answers: ["Zacchaeus", "Matthew", "Luke", "Thomas"],
-            correct: 1
-        },
-        {
-            scripture: "I was the mother of twins. I received a prophecy that the elder would serve the younger. I helped my younger son deceive his father.",
-            reference: "Genesis 25-27",
-            question: "I am the mother of Jacob and Esau, who manipulated events to fulfill God's prophecy. Who am I?",
-            answers: ["Sarah", "Rachel", "Rebekah", "Leah"],
-            correct: 2
-        },
-        {
-            scripture: "I was an Egyptian slave. I became overseer of a prison. My master's wife falsely accused me. Yet God was with me.",
-            reference: "Genesis 39:21-23",
-            question: "I was the jailor of prisoners in Egypt who kept two royal servants — a cupbearer and a baker. Who am I?",
-            answers: ["Potiphar", "The captain of the guard", "Pharaoh's chief butler", "The keeper of the prison"],
-            correct: 3
-        },
-        {
-            scripture: "I was the first king of Israel. I was from the smallest tribe. Samuel anointed me. I disobeyed God and lost my kingdom.",
-            reference: "1 Samuel 9-15",
-            question: "I was Israel's first king, tall and impressive, but my disobedience cost me the throne. Who am I?",
-            answers: ["David", "Solomon", "Saul", "Rehoboam"],
-            correct: 2
-        },
-        {
-            scripture: "I was a Gentile prostitute in Jericho. I hid two spies under stalks of flax. A scarlet thread in my window saved my household.",
-            reference: "Joshua 2",
-            question: "I was a Canaanite woman whose faith in Israel's God placed me in the lineage of Christ. Who am I?",
-            answers: ["Tamar", "Rahab", "Bathsheba", "Ruth"],
-            correct: 1
-        },
-        {
-            scripture: "I was a Levite from Cyprus. I sold land and gave the money to the apostles. My name means 'son of encouragement.'",
-            reference: "Acts 4:36-37",
-            question: "I was Paul's travelling companion whose real name was Joseph but the apostles renamed me for my encouraging character. Who am I?",
-            answers: ["Silas", "Timothy", "Barnabas", "Titus"],
-            correct: 2
-        },
-        {
-            scripture: "I was a tent-maker by trade. I suffered beatings, shipwreck, and imprisonment. I wrote more books of the New Testament than any other author.",
-            reference: "2 Corinthians 11:24-27",
-            question: "I was a Pharisee who became the greatest missionary of the early church. Who am I?",
-            answers: ["Peter", "Barnabas", "Paul", "Apollos"],
-            correct: 2
-        },
-        {
-            scripture: "I was the son of a Kenite priest of Midian. My father-in-law gave Moses valuable advice on governing Israel. I guided Israel through the wilderness.",
-            reference: "Numbers 10:29-32",
-            question: "I was Moses's brother-in-law whose knowledge of the desert proved invaluable to the Israelites. Who am I?",
-            answers: ["Jethro", "Hobab", "Reuel", "Caleb"],
-            correct: 1
-        },
-        {
-            scripture: "I was the queen of a great African kingdom. I travelled far to test a king's wisdom with hard questions. I returned home laden with gifts.",
-            reference: "1 Kings 10:1-13",
-            question: "I journeyed to Jerusalem with great wealth to test Solomon's famous wisdom. Who am I?",
-            answers: ["The Queen of Tyre", "The Queen of Sheba", "The Queen of Persia", "The Queen of Egypt"],
-            correct: 1
-        },
-        {
-            scripture: "I was Saul's son. I loved David as my own soul. I warned David of my father's murderous plans. I died in battle with my father.",
-            reference: "1 Samuel 18-31",
-            question: "I was a prince who gave up my claim to the throne out of loyalty to my closest friend. Who am I?",
-            answers: ["Abner", "Ishbosheth", "Jonathan", "Mephibosheth"],
-            correct: 2
-        },
-        {
-            scripture: "I was placed in a basket as an infant. I was educated in the palace of my oppressors. I led more than two million people out of slavery.",
-            reference: "Exodus 2-14",
-            question: "I was a shepherd for forty years before God spoke to me from a burning bush and called me to deliver a nation. Who am I?",
-            answers: ["Aaron", "Joshua", "Moses", "Caleb"],
-            correct: 2
-        },
-        {
-            scripture: "I was a poor widow. I gave two small coins — all I had. Jesus saw me and called my gift greater than all others.",
-            reference: "Mark 12:41-44",
-            question: "I gave everything I possessed into the temple treasury and was praised by Jesus above all the wealthy donors. Who am I?",
-            answers: ["Mary of Magdala", "The widow of Zarephath", "The poor widow at the treasury", "Joanna"],
-            correct: 2
-        },
-        {
-            scripture: "I was a Syrophoenician woman. I begged Jesus to heal my daughter. He tested my faith by comparing me to dogs. I answered wisely.",
-            reference: "Matthew 15:22-28",
-            question: "I was a Gentile woman whose persistent, humble faith won healing for my demon-possessed daughter. Who am I?",
-            answers: ["The woman with the issue of blood", "The Syrophoenician woman", "The woman at the well", "Martha"],
-            correct: 1
-        },
-        {
-            scripture: "I was a cupbearer to a Persian king. I wept and prayed for months. I received permission to rebuild a ruined city's walls in 52 days.",
-            reference: "Nehemiah 1-6",
-            question: "I was a royal servant who became a governor and rebuilt Jerusalem's walls against fierce opposition. Who am I?",
-            answers: ["Ezra", "Nehemiah", "Zerubbabel", "Joshua"],
-            correct: 1
-        },
-        {
-            scripture: "I was a physician. I was Luke's companion. I was never among the twelve apostles but I wrote more of the New Testament by volume than any other author.",
-            reference: "Colossians 4:14, Luke 1:1-4, Acts 1:1",
-            question: "I was a Gentile doctor and historian who wrote two books of the New Testament addressed to Theophilus. Who am I?",
-            answers: ["Mark", "Paul", "Luke", "Silas"],
-            correct: 2
-        },
-        {
-            scripture: "I was the half-sister of Abraham and his wife. A Pharaoh and a king both took me before God intervened. I gave my servant to my husband when I was barren.",
-            reference: "Genesis 12, 16, 20",
-            question: "I laughed when I heard I would bear a son at ninety years old, and God named my son after my laughter. Who am I?",
-            answers: ["Hagar", "Rebekah", "Sarah", "Rachel"],
-            correct: 2
-        },
-        {
-            scripture: "I was an Ethiopian eunuch. I was reading Isaiah in my chariot. A deacon was sent to meet me on the Gaza road and I was baptised that same day.",
-            reference: "Acts 8:26-39",
-            question: "I was a treasurer of a queen who believed and was baptised in the desert after Philip explained Isaiah 53 to me. Who am I?",
-            answers: ["A Roman centurion", "The Ethiopian eunuch", "Cornelius", "Simon the sorcerer"],
-            correct: 1
-        },
-        {
-            scripture: "I was the firstborn of Jacob by Leah. I saved Joseph from death by suggesting he be sold rather than killed. My father cursed me on his deathbed.",
-            reference: "Genesis 35:22, 37:21, 49:4",
-            question: "I was Jacob's eldest son who defiled my father's bed and lost my birthright, yet I tried to save Joseph's life. Who am I?",
-            answers: ["Simeon", "Reuben", "Levi", "Judah"],
-            correct: 1
-        },
-        {
-            scripture: "I was Elijah's servant. I ran ahead of Ahab's chariot. I saw a small cloud like a man's hand that became a great rain after three years of drought.",
-            reference: "1 Kings 18:43-46",
-            question: "I was the prophet who ended the drought after confronting the prophets of Baal on Mount Carmel. Who am I?",
-            answers: ["Elisha", "Elijah", "Micaiah", "Jehu"],
-            correct: 1
-        },
-        {
-            scripture: "I was stoned outside Jerusalem. I saw heaven opened and Jesus standing at the right hand of God. I asked God not to charge my killers with this sin.",
-            reference: "Acts 7:55-60",
-            question: "I was the first Christian martyr, full of faith and the Holy Spirit, who died forgiving those who stoned me. Who am I?",
-            answers: ["James", "Philip", "Stephen", "Barnabas"],
-            correct: 2
-        },
-        {
-            scripture: "I was a weaver's beam. I was six cubits long. I had six toes on each foot and six fingers on each hand and I defied Israel.",
-            reference: "2 Samuel 21:20, 1 Chronicles 20:6",
-            question: "I was one of the giants of Gath who challenged Israel and had an unusual number of digits. Who am I?",
-            answers: ["Og king of Bashan", "Goliath", "A giant son of Rapha", "Ishbi-benob"],
-            correct: 2
-        },
-        {
-            scripture: "My name means 'laughter.' I was nearly sacrificed on a mountain. I took a wife from my father's homeland. I had two sons who struggled together even in the womb.",
-            reference: "Genesis 21, 22, 24, 25",
-            question: "I am the son of promise, nearly offered as a sacrifice, whose twin sons began a rivalry before birth. Who am I?",
-            answers: ["Jacob", "Ishmael", "Isaac", "Joseph"],
-            correct: 2
-        },
-        {
-            scripture: "I was a Nazarite from birth. I judged Israel twenty years. A woman betrayed me. I killed more in my death than in my life.",
-            reference: "Judges 13-16",
-            question: "My strength was in my hair, a woman was my downfall, and I destroyed more Philistines in my death than my life. Who am I?",
-            answers: ["Gideon", "Jephthah", "Samson", "Othniel"],
-            correct: 2
-        },
-        {
-            scripture: "I was the son of a Jew named Jair of the tribe of Benjamin. My cousin was a queen. I refused to bow to the king's favourite. My obedience to God saved my people.",
-            reference: "Esther 2:5-7, 3:2-6",
-            question: "I was Esther's older cousin who raised her and whose refusal to bow to Haman triggered a plot to destroy all Jews. Who am I?",
-            answers: ["Mordecai", "Haman", "Ahasuerus", "Zeresh"],
-            correct: 0
-        }
-    ],
-
-    "bible-numbers": [
-        {
-            scripture: "And it came to pass at the end of forty days, that Noah opened the window of the ark which he had made.",
-            reference: "Genesis 8:6",
-            question: "How many days and nights did rain fall during the great flood?",
-            answers: ["20 days and nights", "40 days and nights", "120 days and nights", "150 days and nights"],
-            correct: 1
-        },
-        {
-            scripture: "And the LORD plagued Pharaoh and his house with great plagues because of Sarai Abram's wife.",
-            reference: "Exodus 7-12",
-            question: "How many plagues did God send upon Egypt before Pharaoh released Israel?",
-            answers: ["7", "10", "12", "15"],
-            correct: 1
-        },
-        {
-            scripture: "And they returned from searching of the land after forty days.",
-            reference: "Numbers 13:25",
-            question: "How many spies did Moses send to scout the land of Canaan?",
-            answers: ["10", "12", "2", "70"],
-            correct: 1
-        },
-        {
-            scripture: "And the children of Israel did eat manna forty years, until they came to a land inhabited.",
-            reference: "Exodus 16:35",
-            question: "How many years did the Israelites wander in the wilderness as punishment for their unbelief?",
-            answers: ["20 years", "30 years", "40 years", "50 years"],
-            correct: 2
-        },
-        {
-            scripture: "In the six hundredth year of Noah's life, in the second month, the seventeenth day of the month, the same day were all the fountains of the great deep broken up.",
+            scripture: "And the fountains of the great deep broken up, and the windows of heaven were opened.",
             reference: "Genesis 7:11",
-            question: "How old was Noah when the flood began?",
-            answers: ["500 years old", "600 years old", "700 years old", "900 years old"],
+            question: "In what month and day of Noah's life did the flood begin?",
+            answers: ["First month, first day", "Second month, seventeenth day", "Third month, tenth day", "Seventh month, first day"],
+            correct: 1
+        },
+        {
+            scripture: "And it came to pass in the six hundredth and first year, in the first month, the first day of the month, the waters were dried up from off the earth.",
+            reference: "Genesis 8:13",
+            question: "Approximately how long were Noah and his family on the ark?",
+            answers: ["40 days", "150 days", "Over a year", "6 months exactly"],
+            correct: 2
+        },
+        {
+            scripture: "And God blessed Noah and his sons, and said unto them, Be fruitful, and multiply, and replenish the earth.",
+            reference: "Genesis 9:1",
+            question: "What command did God give Noah after the flood?",
+            answers: ["Build a great city", "Be fruitful, multiply, and replenish the earth", "Offer sacrifices every year", "Never build a boat again"],
+            correct: 1
+        },
+        {
+            scripture: "Whoso sheddeth man's blood, by man shall his blood be shed: for in the image of God made he man.",
+            reference: "Genesis 9:6",
+            question: "What new provision did God give humanity after the flood regarding food?",
+            answers: ["Only fruit and grain", "Only clean animals", "Every moving thing that lives, plus herbs", "Meat was still forbidden"],
+            correct: 2
+        }
+    ],
+
+    "joseph-quiz": [
+        {
+            scripture: "Now Israel loved Joseph more than all his children, because he was the son of his old age: and he made him a coat of many colours.",
+            reference: "Genesis 37:3",
+            question: "Why did Jacob love Joseph more than his other sons?",
+            answers: ["Joseph was the strongest", "Joseph was the son of his old age", "Joseph was the most obedient", "Joseph was the firstborn"],
+            correct: 1
+        },
+        {
+            scripture: "And they sat down to eat bread: and they lifted up their eyes and looked, and, behold, a company of Ishmeelites came from Gilead.",
+            reference: "Genesis 37:25",
+            question: "For how many pieces of silver did Joseph's brothers sell him?",
+            answers: ["10 pieces", "15 pieces", "20 pieces", "30 pieces"],
+            correct: 2
+        },
+        {
+            scripture: "And Joseph was brought down to Egypt; and Potiphar, an officer of Pharaoh, captain of the guard, an Egyptian, bought him.",
+            reference: "Genesis 39:1",
+            question: "Who in Egypt bought Joseph as a slave?",
+            answers: ["Pharaoh directly", "Potiphar, captain of the guard", "The chief baker", "A merchant of spices"],
+            correct: 1
+        },
+        {
+            scripture: "And it came to pass after these things, that his master's wife cast her eyes upon Joseph; and she said, Lie with me.",
+            reference: "Genesis 39:7",
+            question: "Why was Joseph thrown into prison in Egypt?",
+            answers: ["He stole bread", "He angered Pharaoh", "Potiphar's wife falsely accused him", "He refused to work on the Sabbath"],
+            correct: 2
+        },
+        {
+            scripture: "And the LORD was with Joseph, and shewed him mercy, and gave him favour in the sight of the keeper of the prison.",
+            reference: "Genesis 39:21",
+            question: "How did God's favour appear to Joseph even in prison?",
+            answers: ["He was given gold and silver", "He was freed immediately", "The prison keeper gave him favour and put him in charge", "Angels appeared to him nightly"],
+            correct: 2
+        },
+        {
+            scripture: "And it came to pass, as he interpreted to us, so it was; me he restored unto mine office, and him he hanged.",
+            reference: "Genesis 41:13",
+            question: "While in prison, Joseph correctly interpreted the dreams of which two men?",
+            answers: ["The king and his general", "The chief butler and the chief baker", "Two foreign merchants", "Two of his brothers"],
+            correct: 1
+        },
+        {
+            scripture: "And Pharaoh said unto Joseph, I have dreamed a dream, and there is none that can interpret it: and I have heard say of thee, that thou canst understand a dream to interpret it.",
+            reference: "Genesis 41:15",
+            question: "How many years of plenty and famine did Joseph predict from Pharaoh's dream?",
+            answers: ["5 years of each", "7 years of each", "10 years of each", "3 years of each"],
+            correct: 1
+        },
+        {
+            scripture: "And Pharaoh said unto his servants, Can we find such a one as this is, a man in whom the Spirit of God is?",
+            reference: "Genesis 41:38",
+            question: "How old was Joseph when he stood before Pharaoh to interpret his dreams?",
+            answers: ["20 years old", "25 years old", "30 years old", "35 years old"],
+            correct: 2
+        },
+        {
+            scripture: "And Pharaoh took off his ring from his hand, and put it upon Joseph's hand, and arrayed him in vestures of fine linen, and put a gold chain about his neck.",
+            reference: "Genesis 41:42",
+            question: "What position did Pharaoh give Joseph after interpreting his dreams?",
+            answers: ["Chief of the army", "Second in command over all Egypt", "Governor of one province", "High Priest of Egypt"],
+            correct: 1
+        },
+        {
+            scripture: "And Joseph called the name of the firstborn Manasseh: For God, said he, hath made me forget all my toil.",
+            reference: "Genesis 41:51",
+            question: "What was the name of Joseph's Egyptian wife given to him by Pharaoh?",
+            answers: ["Hagar", "Asenath", "Zipporah", "Tamar"],
+            correct: 1
+        },
+        {
+            scripture: "And Joseph knew his brethren, but they knew not him.",
+            reference: "Genesis 42:8",
+            question: "Why did Joseph's brothers come to Egypt the first time?",
+            answers: ["To find Joseph", "To buy grain because of the famine", "To make a treaty with Pharaoh", "To find pasture for their flocks"],
+            correct: 1
+        },
+        {
+            scripture: "And he turned himself about from them, and wept; and returned to them again, and communed with them.",
+            reference: "Genesis 42:24",
+            question: "Which of Joseph's brothers did he keep as a hostage during the brothers' first visit?",
+            answers: ["Reuben", "Judah", "Simeon", "Benjamin"],
+            correct: 2
+        },
+        {
+            scripture: "And Joseph made haste; for his bowels did yearn upon his brother: and he sought where to weep; and he entered into his chamber, and wept there.",
+            reference: "Genesis 43:30",
+            question: "What did Joseph hide in Benjamin's sack before his brothers left Egypt the second time?",
+            answers: ["Silver coins", "His silver cup", "A letter to Jacob", "His signet ring"],
+            correct: 1
+        },
+        {
+            scripture: "And Joseph said unto his brethren, I am Joseph; doth my father yet live? And his brethren could not answer him; for they were troubled at his presence.",
+            reference: "Genesis 45:3",
+            question: "When Joseph revealed himself to his brothers, what was his first question?",
+            answers: ["Why did you sell me?", "Doth my father yet live?", "Are you sorry for what you did?", "Will you bow before me?"],
+            correct: 1
+        },
+        {
+            scripture: "Now therefore be not grieved, nor angry with yourselves, that ye sold me hither: for God did send me before you to preserve life.",
+            reference: "Genesis 45:5",
+            question: "How did Joseph explain to his brothers why they should not feel guilty for selling him?",
+            answers: ["Because he had forgiven them", "Because God sent him ahead to preserve life", "Because he had become rich", "Because their father had already forgiven them"],
+            correct: 1
+        },
+        {
+            scripture: "And he fell upon his brother Benjamin's neck, and wept; and Benjamin wept upon his neck.",
+            reference: "Genesis 45:14",
+            question: "In which land did Jacob and all his family settle at Joseph's invitation?",
+            answers: ["Canaan", "Goshen", "Midian", "Sinai"],
+            correct: 1
+        },
+        {
+            scripture: "And Jacob lived in the land of Egypt seventeen years: so the whole age of Jacob was an hundred forty and seven years.",
+            reference: "Genesis 47:28",
+            question: "How many years did Jacob live in Egypt before he died?",
+            answers: ["7 years", "10 years", "17 years", "25 years"],
+            correct: 2
+        },
+        {
+            scripture: "And Joseph said unto his brethren, I die: and God will surely visit you, and bring you out of this land unto the land which he sware to Abraham, to Isaac, and to Jacob.",
+            reference: "Genesis 50:24",
+            question: "What did Joseph request regarding his bones when he died?",
+            answers: ["To be buried in Egypt beside Pharaoh", "To be buried in Canaan with his fathers", "To have his bones carried out of Egypt when God visited them", "To be entombed in a pyramid"],
+            correct: 2
+        },
+        {
+            scripture: "And Joseph was thirty years old when he stood before Pharaoh king of Egypt.",
+            reference: "Genesis 41:46",
+            question: "How old was Joseph when he was sold into slavery by his brothers?",
+            answers: ["15 years old", "17 years old", "20 years old", "22 years old"],
+            correct: 1
+        },
+        {
+            scripture: "And Joseph died, being an hundred and ten years old: and they embalmed him, and he was put in a coffin in Egypt.",
+            reference: "Genesis 50:26",
+            question: "How old was Joseph when he died?",
+            answers: ["90 years old", "100 years old", "110 years old", "120 years old"],
+            correct: 2
+        },
+        {
+            scripture: "Now Israel loved Joseph more than all his children, because he was the son of his old age.",
+            reference: "Genesis 37:3",
+            question: "Who was Joseph's mother?",
+            answers: ["Leah", "Bilhah", "Zilpah", "Rachel"],
+            correct: 3
+        },
+        {
+            scripture: "And they hated him yet the more for his dreams, and for his words.",
+            reference: "Genesis 37:8",
+            question: "What did Joseph's first dream reveal about his future?",
+            answers: ["He would become a great prophet", "His sheaf rose up while his brothers' bowed to it", "He would rule over all of Egypt", "Angels would protect him"],
+            correct: 1
+        },
+        {
+            scripture: "And he dreamed yet another dream, and told it his brethren, and said, Behold, I have dreamed a dream more; and, behold, the sun and the moon and the eleven stars made obeisance to me.",
+            reference: "Genesis 37:9",
+            question: "In Joseph's second dream, what made obeisance to him?",
+            answers: ["Eleven sheaves of wheat", "The sun, moon, and eleven stars", "The cattle and sheep of his father", "Eleven trees bearing fruit"],
+            correct: 1
+        },
+        {
+            scripture: "Come, and let us sell him to the Ishmeelites, and let not our hand be upon him; for he is our brother and our flesh.",
+            reference: "Genesis 37:27",
+            question: "Which of Joseph's brothers suggested selling him rather than killing him?",
+            answers: ["Reuben", "Simeon", "Judah", "Levi"],
+            correct: 2
+        },
+        {
+            scripture: "The LORD was with Joseph, and he was a prosperous man; and he was in the house of his master the Egyptian.",
+            reference: "Genesis 39:2",
+            question: "What common thread runs through every stage of Joseph's life — as a slave, in prison, and in Pharaoh's palace?",
+            answers: ["Joseph always escaped his troubles", "The LORD was with Joseph", "Joseph was physically stronger than others", "Joseph's wisdom was naturally greater"],
+            correct: 1
+        },
+        {
+            scripture: "And Joseph made haste; for his bowels did yearn upon his brother: and he sought where to weep.",
+            reference: "Genesis 43:30",
+            question: "Who was the youngest of Jacob's sons who had to accompany the brothers on their second trip to Egypt?",
+            answers: ["Levi", "Dan", "Benjamin", "Zebulun"],
+            correct: 2
+        },
+        {
+            scripture: "And he wept aloud: and the Egyptians and the house of Pharaoh heard.",
+            reference: "Genesis 45:2",
+            question: "What did Joseph tell his brothers to do after he revealed himself?",
+            answers: ["Leave Egypt and never return", "Haste and go to their father and tell him Joseph lives", "Bow down and confess their sin", "Remain silent about his identity"],
+            correct: 1
+        },
+        {
+            scripture: "And Israel said unto Joseph, I had not thought to see thy face: and, lo, God hath shewed me also thy seed.",
+            reference: "Genesis 48:11",
+            question: "What did Joseph ask Pharaoh permission for regarding his family?",
+            answers: ["To make them all overseers in Egypt", "To bury his father in Canaan", "To give them the best land in Egypt", "To build a city for them in Goshen"],
+            correct: 1
+        },
+        {
+            scripture: "And Joseph gathered corn as the sand of the sea, very much, until he left numbering; for it was without number.",
+            reference: "Genesis 41:49",
+            question: "During the seven years of plenty, where did Joseph store all the food?",
+            answers: ["In Pharaoh's palace", "In caves throughout Egypt", "In the cities of Egypt", "In warehouses in Goshen"],
+            correct: 2
+        },
+        {
+            scripture: "Fear not: for am I in the place of God?",
+            reference: "Genesis 50:19",
+            question: "After Jacob died, the brothers feared Joseph would take revenge. What was Joseph's response?",
+            answers: ["He sent them back to Canaan", "He said he was not in the place of God and reassured them", "He required them to remain as servants", "He wept and refused to speak to them"],
+            correct: 1
+        }
+    ],
+
+    "solomon-quiz": [
+        {
+            scripture: "In Gibeon the LORD appeared to Solomon in a dream by night: and God said, Ask what I shall give thee.",
+            reference: "1 Kings 3:5",
+            question: "Where did God appear to Solomon in a dream and offer him anything he desired?",
+            answers: ["Jerusalem", "Hebron", "Gibeon", "Bethel"],
+            correct: 2
+        },
+        {
+            scripture: "Give therefore thy servant an understanding heart to judge thy people, that I may discern between good and bad.",
+            reference: "1 Kings 3:9",
+            question: "What did Solomon ask God for when given the chance to ask for anything?",
+            answers: ["Long life and riches", "Victory over his enemies", "An understanding heart to judge God's people", "The power to build the temple"],
+            correct: 2
+        },
+        {
+            scripture: "And God gave Solomon wisdom and understanding exceeding much, and largeness of heart, even as the sand that is on the sea shore.",
+            reference: "1 Kings 4:29",
+            question: "How is Solomon's wisdom described in 1 Kings 4?",
+            answers: ["Greater than any prophet", "Exceeding much, like the sand on the seashore", "Surpassing all of Egypt", "Perfect and without error"],
+            correct: 1
+        },
+        {
+            scripture: "And it came to pass in the four hundred and eightieth year after the children of Israel were come out of the land of Egypt...that he began to build the house of the LORD.",
+            reference: "1 Kings 6:1",
+            question: "How many years after the Exodus from Egypt did Solomon begin building the temple?",
+            answers: ["240 years", "340 years", "480 years", "600 years"],
+            correct: 2
+        },
+        {
+            scripture: "So he built the house, and finished it; and covered the house with beams and boards of cedar.",
+            reference: "1 Kings 6:9",
+            question: "How many years did it take Solomon to build the temple?",
+            answers: ["5 years", "7 years", "10 years", "14 years"],
             correct: 1
         },
         {
             scripture: "And Solomon had forty thousand stalls of horses for his chariots, and twelve thousand horsemen.",
             reference: "1 Kings 4:26",
             question: "How many wives did Solomon have?",
-            answers: ["300 wives", "500 wives", "700 wives", "1000 wives"],
+            answers: ["300 wives", "500 wives", "700 wives", "1,000 wives"],
             correct: 2
         },
         {
-            scripture: "And it came to pass after seven days, that the waters of the flood were upon the earth.",
-            reference: "Genesis 7:10",
-            question: "How many of each kind of clean animal did Noah take into the ark?",
-            answers: ["One pair", "Seven pairs", "Three pairs", "Five pairs"],
+            scripture: "And he had seven hundred wives, princesses, and three hundred concubines: and his wives turned away his heart.",
+            reference: "1 Kings 11:3",
+            question: "How many concubines did Solomon have in addition to his 700 wives?",
+            answers: ["100 concubines", "200 concubines", "300 concubines", "500 concubines"],
+            correct: 2
+        },
+        {
+            scripture: "And when the queen of Sheba heard of the fame of Solomon concerning the name of the LORD, she came to prove him with hard questions.",
+            reference: "1 Kings 10:1",
+            question: "Who visited Solomon to test him with hard questions and was overwhelmed by his wisdom?",
+            answers: ["The Queen of Egypt", "The Queen of Sheba", "The Queen of Tyre", "The Queen of Persia"],
             correct: 1
         },
         {
-            scripture: "And he made an hundred talents of silver into the hooks of the pillars.",
-            reference: "Exodus 38:27",
-            question: "How many pieces of silver did Judas receive for betraying Jesus?",
-            answers: ["10 pieces", "20 pieces", "30 pieces", "50 pieces"],
+            scripture: "Now the weight of gold that came to Solomon in one year was six hundred threescore and six talents of gold.",
+            reference: "1 Kings 10:14",
+            question: "How many talents of gold came to Solomon in one year?",
+            answers: ["500 talents", "600 talents", "666 talents", "700 talents"],
             correct: 2
         },
         {
-            scripture: "And when he was twelve years old, they went up to Jerusalem after the custom of the feast.",
-            reference: "Luke 2:42",
-            question: "How many days did Jesus spend in the temple when his parents lost him in Jerusalem?",
-            answers: ["1 day", "3 days", "7 days", "12 days"],
+            scripture: "For it came to pass, when Solomon was old, that his wives turned away his heart after other gods: and his heart was not perfect with the LORD his God.",
+            reference: "1 Kings 11:4",
+            question: "What caused Solomon's heart to turn away from God?",
+            answers: ["His great wealth", "His foreign wives", "His pride in the temple", "His wars with surrounding nations"],
             correct: 1
         },
         {
-            scripture: "And the LORD spake unto Moses, saying, Send thou men, that they may search the land of Canaan.",
-            reference: "Numbers 13:1-2",
-            question: "How many years did Caleb wait to receive his inheritance in Canaan from the time the spies were sent?",
-            answers: ["40 years", "45 years", "50 years", "38 years"],
+            scripture: "Vanity of vanities, saith the Preacher, vanity of vanities; all is vanity.",
+            reference: "Ecclesiastes 1:2",
+            question: "Which book of the Bible did Solomon write that begins with the phrase 'Vanity of vanities'?",
+            answers: ["Proverbs", "Psalms", "Ecclesiastes", "Song of Solomon"],
+            correct: 2
+        },
+        {
+            scripture: "The proverbs of Solomon the son of David, king of Israel.",
+            reference: "Proverbs 1:1",
+            question: "Approximately how many proverbs did Solomon speak, according to 1 Kings 4?",
+            answers: ["1,000 proverbs", "2,000 proverbs", "3,000 proverbs", "5,000 proverbs"],
+            correct: 2
+        },
+        {
+            scripture: "And he spake three thousand proverbs: and his songs were a thousand and five.",
+            reference: "1 Kings 4:32",
+            question: "How many songs did Solomon compose?",
+            answers: ["100 songs", "500 songs", "1,005 songs", "3,000 songs"],
+            correct: 2
+        },
+        {
+            scripture: "Then came there two women, that were harlots, unto the king, and stood before him.",
+            reference: "1 Kings 3:16",
+            question: "In Solomon's famous judgment, two women claimed the same baby. What did he threaten to do to reveal the true mother?",
+            answers: ["Ask the women to pray", "Divide the child in two with a sword", "Cast lots", "Ask witnesses from the city"],
             correct: 1
         },
         {
-            scripture: "And Methuselah lived an hundred eighty and seven years, and begat Lamech.",
-            reference: "Genesis 5:27",
-            question: "How old was Methuselah, the oldest person recorded in the Bible?",
-            answers: ["777 years", "900 years", "969 years", "930 years"],
+            scripture: "And the LORD said unto him, I have heard thy prayer and thy supplication, that thou hast made before me: I have hallowed this house.",
+            reference: "1 Kings 9:3",
+            question: "What did God tell Solomon would happen if he turned from following Him?",
+            answers: ["His wealth would be taken", "Israel would be cut off from the land and the house become a heap", "His throne would be given to a foreigner", "The rains would cease"],
+            correct: 1
+        },
+        {
+            scripture: "So king Solomon exceeded all the kings of the earth for riches and for wisdom.",
+            reference: "1 Kings 10:23",
+            question: "With which king did Solomon make an alliance by marrying his daughter?",
+            answers: ["The King of Babylon", "The King of Assyria", "Pharaoh, King of Egypt", "The King of Tyre"],
             correct: 2
         },
         {
-            scripture: "And he was there with the LORD forty days and forty nights; he did neither eat bread, nor drink water.",
-            reference: "Exodus 34:28",
-            question: "How many days and nights did Moses fast on Mount Sinai when receiving the law?",
-            answers: ["3 days", "7 days", "21 days", "40 days"],
-            correct: 3
+            scripture: "And Hiram king of Tyre sent his servants unto Solomon; for he had heard that they had anointed him king in the room of his father.",
+            reference: "1 Kings 5:1",
+            question: "Which king supplied the cedar and fir trees for Solomon's temple?",
+            answers: ["The King of Egypt", "Hiram, King of Tyre", "The King of Damascus", "The King of Sidon"],
+            correct: 1
         },
         {
-            scripture: "And Solomon offered a sacrifice of peace offerings, which he offered unto the LORD, two and twenty thousand oxen.",
-            reference: "1 Kings 8:63",
-            question: "How many days did Solomon's dedication of the temple last?",
-            answers: ["3 days", "7 days", "14 days", "40 days"],
+            scripture: "And Solomon made affinity with Pharaoh king of Egypt, and took Pharaoh's daughter, and brought her into the city of David.",
+            reference: "1 Kings 3:1",
+            question: "Where was Solomon when God appeared to him in a dream and offered him whatever he wanted?",
+            answers: ["Jerusalem", "Gibeon", "Hebron", "Sinai"],
+            correct: 1
+        },
+        {
+            scripture: "The fear of the LORD is the beginning of wisdom: and the knowledge of the holy is understanding.",
+            reference: "Proverbs 9:10",
+            question: "According to Proverbs, what is the beginning of wisdom?",
+            answers: ["Study of the law", "The fear of the LORD", "Humility before kings", "Knowledge of creation"],
+            correct: 1
+        },
+        {
+            scripture: "And Solomon slept with his fathers, and was buried in the city of David his father: and Rehoboam his son reigned in his stead.",
+            reference: "1 Kings 11:43",
+            question: "Who succeeded Solomon as king of Israel?",
+            answers: ["Jeroboam", "Adonijah", "Rehoboam", "Absalom"],
             correct: 2
         },
         {
-            scripture: "And being forty days tempted of the devil. And in those days he did eat nothing.",
-            reference: "Luke 4:2",
-            question: "How many days did Jesus fast in the wilderness before his temptation?",
-            answers: ["3 days", "7 days", "21 days", "40 days"],
-            correct: 3
+            scripture: "And the LORD was angry with Solomon, because his heart was turned from the LORD God of Israel, which had appeared unto him twice.",
+            reference: "1 Kings 11:9",
+            question: "How many times had God appeared to Solomon before his heart turned away?",
+            answers: ["Once", "Twice", "Three times", "Many times"],
+            correct: 1
         },
         {
-            scripture: "And it came to pass in the four hundred and eightieth year after the children of Israel were come out of the land of Egypt.",
-            reference: "1 Kings 6:1",
-            question: "How many years after the Exodus did Solomon begin building the temple?",
-            answers: ["40 years", "240 years", "480 years", "400 years"],
+            scripture: "And he spake of trees, from the cedar tree that is in Lebanon even unto the hyssop that springeth out of the wall.",
+            reference: "1 Kings 4:33",
+            question: "Besides wisdom, what subjects did Solomon's knowledge cover according to 1 Kings 4?",
+            answers: ["Mathematics and astronomy only", "Plants, animals, birds, reptiles, and fish", "Music and poetry only", "History and warfare"],
+            correct: 1
+        },
+        {
+            scripture: "Hear, O Israel: The LORD our God is one LORD: and thou shalt love the LORD thy God with all thine heart.",
+            reference: "Deuteronomy 6:4-5",
+            question: "What was Solomon's great sin that God condemned before he died?",
+            answers: ["He taxed the people too heavily", "He built altars for his wives' false gods", "He refused to go to war", "He kept Gentile slaves"],
+            correct: 1
+        },
+        {
+            scripture: "And the king made silver to be in Jerusalem as stones, and cedars made he to be as the sycomore trees that are in the vale, for abundance.",
+            reference: "1 Kings 10:27",
+            question: "What valuable material was so plentiful in Jerusalem during Solomon's reign that it was compared to stones in the street?",
+            answers: ["Gold", "Silver", "Ivory", "Precious gems"],
+            correct: 1
+        },
+        {
+            scripture: "Moreover the king made a great throne of ivory, and overlaid it with the best gold.",
+            reference: "1 Kings 10:18",
+            question: "How many steps led up to Solomon's great throne?",
+            answers: ["4 steps", "6 steps", "7 steps", "12 steps"],
+            correct: 1
+        },
+        {
+            scripture: "But king Solomon loved many strange women, together with the daughter of Pharaoh, women of the Moabites, Ammonites, Edomites, Zidonians, and Hittites.",
+            reference: "1 Kings 11:1",
+            question: "God had specifically warned Israel's kings not to multiply wives. Where is this warning found?",
+            answers: ["Exodus 20", "Leviticus 18", "Deuteronomy 17", "Numbers 30"],
             correct: 2
         },
         {
-            scripture: "And Elijah went up by a whirlwind into heaven. And Elisha saw it.",
-            reference: "2 Kings 2:1-11",
-            question: "How many times did Elisha strike the Jordan River with Elijah's mantle to cross over?",
-            answers: ["Once", "Twice", "Three times", "Seven times"],
+            scripture: "And Jeroboam the son of Nebat, an Ephrathite of Zereda...even he lifted up his hand against the king.",
+            reference: "1 Kings 11:26",
+            question: "How many of Solomon's kingdom tribes did God promise to tear away and give to his servant?",
+            answers: ["5 tribes", "8 tribes", "10 tribes", "11 tribes"],
+            correct: 2
+        },
+        {
+            scripture: "And it came to pass, when Solomon had finished the building of the house of the LORD...that the LORD appeared to Solomon.",
+            reference: "1 Kings 9:1-2",
+            question: "What was the name of Solomon's great administrative official over the twelve districts of Israel?",
+            answers: ["Zadok", "Nathan", "Azariah", "Benaiah"],
             correct: 0
         },
         {
-            scripture: "And he smote the men of Bethshemesh, because they had looked into the ark of the LORD.",
-            reference: "1 Samuel 6:19",
-            question: "How many loaves and fish did Jesus use to feed the five thousand?",
-            answers: ["2 loaves and 3 fish", "3 loaves and 2 fish", "5 loaves and 2 fish", "7 loaves and 2 fish"],
+            scripture: "And Benaiah the son of Jehoiada was over the host: and Zadok and Abiathar were the priests.",
+            reference: "1 Kings 4:4",
+            question: "How many years did Solomon rule as king of Israel?",
+            answers: ["20 years", "30 years", "40 years", "50 years"],
             correct: 2
         },
         {
-            scripture: "And Naaman came with his horses and with his chariot, and stood at the door of the house of Elisha.",
-            reference: "2 Kings 5:9-14",
-            question: "How many times did Naaman have to dip in the Jordan River to be healed of leprosy?",
-            answers: ["3 times", "5 times", "7 times", "10 times"],
+            scripture: "And Hiram gave Solomon cedar trees and fir trees according to all his desire. And Solomon gave Hiram twenty thousand measures of wheat for food to his household.",
+            reference: "1 Kings 5:10-11",
+            question: "What did Solomon give to Hiram of Tyre annually in exchange for cedar and fir trees?",
+            answers: ["Gold and silver", "Twenty thousand measures of wheat and oil", "Horses and chariots", "Servants and craftsmen"],
+            correct: 1
+        }
+    ],
+
+    "samson-quiz": [
+        {
+            scripture: "And the angel of the LORD appeared unto the woman, and said unto her, Behold now, thou art barren, and bearest not: but thou shalt conceive, and bear a son.",
+            reference: "Judges 13:3",
+            question: "From which tribe of Israel was Samson born?",
+            answers: ["Judah", "Benjamin", "Dan", "Ephraim"],
             correct: 2
         },
         {
-            scripture: "And there were in the same country shepherds abiding in the field, keeping watch over their flock by night.",
-            reference: "Matthew 2, Numbers 29",
-            question: "How many wise men (Magi) does the Bible specifically state visited Jesus?",
-            answers: ["2", "3", "The Bible does not specify", "12"],
+            scripture: "For, lo, thou shalt conceive, and bear a son; and no razor shall come on his head: for the child shall be a Nazarite unto God from the womb.",
+            reference: "Judges 13:5",
+            question: "What special vow was Samson under from birth?",
+            answers: ["The Levitical vow", "The Nazirite vow — no wine, no razor, no touching the dead", "The warrior's vow of silence", "The priestly covenant"],
+            correct: 1
+        },
+        {
+            scripture: "And the Spirit of the LORD began to move him at times in the camp of Dan between Zorah and Eshtaol.",
+            reference: "Judges 13:25",
+            question: "What happened to a young lion that attacked Samson on his way to Timnath?",
+            answers: ["Samson drove it away with a stone", "The Spirit of the LORD came on Samson and he tore the lion apart", "His servants killed it", "It fled when Samson shouted"],
+            correct: 1
+        },
+        {
+            scripture: "And he found a new jawbone of an ass, and put forth his hand, and took it, and slew a thousand men therewith.",
+            reference: "Judges 15:15",
+            question: "With what weapon did Samson kill 1,000 Philistines?",
+            answers: ["A sword", "A spear", "The jawbone of a donkey", "A sling and stones"],
             correct: 2
         },
         {
-            scripture: "And the LORD said unto him, Therefore whosoever slayeth Cain, vengeance shall be taken on him sevenfold.",
-            reference: "Genesis 4:15",
-            question: "How many sons did Jacob have who became the twelve tribes of Israel?",
-            answers: ["10 sons", "11 sons", "12 sons", "13 sons"],
+            scripture: "And Samson lay till midnight, and arose at midnight, and took the doors of the gate of the city, and the two posts, and went away with them, bar and all.",
+            reference: "Judges 16:3",
+            question: "After being locked in Gaza, what did Samson do at midnight?",
+            answers: ["Tunnelled under the walls", "Called on God for strength", "Carried the gates of the city on his shoulders to a hilltop", "Broke the iron bars with his hands"],
             correct: 2
         },
         {
-            scripture: "For the LORD had fast closed up all the wombs of the house of Abimelech.",
-            reference: "Genesis 12:4",
-            question: "How old was Abraham when he left Haran to go to Canaan?",
+            scripture: "And it came to pass afterward, that he loved a woman in the valley of Sorek, whose name was Delilah.",
+            reference: "Judges 16:4",
+            question: "What was the name of the woman who betrayed Samson to the Philistines?",
+            answers: ["Tamar", "Rahab", "Delilah", "Jael"],
+            correct: 2
+        },
+        {
+            scripture: "And the lords of the Philistines came up unto her, and said unto her, Entice him, and see wherein his great strength lieth.",
+            reference: "Judges 16:5",
+            question: "How much silver did each Philistine lord promise Delilah to discover the secret of Samson's strength?",
+            answers: ["100 pieces of silver", "500 pieces of silver", "1,100 pieces of silver", "3,000 pieces of silver"],
+            correct: 2
+        },
+        {
+            scripture: "And she said, The Philistines be upon thee, Samson. And he awoke out of his sleep, and said, I will go out as at other times before, and shake myself. And he wist not that the LORD was departed from him.",
+            reference: "Judges 16:20",
+            question: "How many times did Delilah ask Samson the secret of his strength before he finally told her?",
+            answers: ["Once", "Twice", "Three times", "Four times"],
+            correct: 3
+        },
+        {
+            scripture: "That he told her all his heart, and said unto her, There hath not come a razor upon mine head; for I have been a Nazarite unto God from my mother's womb: if I be shaven, then my strength will go from me.",
+            reference: "Judges 16:17",
+            question: "What was the true secret of Samson's supernatural strength?",
+            answers: ["His great size and muscle", "His hair, which had never been cut as part of his Nazirite vow", "A special diet God prescribed", "A blessing pronounced at his birth"],
+            correct: 1
+        },
+        {
+            scripture: "But the Philistines took him, and put out his eyes, and brought him down to Gaza, and bound him with fetters of brass; and he did grind in the prison house.",
+            reference: "Judges 16:21",
+            question: "What did the Philistines do to Samson after they captured him?",
+            answers: ["They imprisoned him but kept his eyes", "They put out his eyes and made him grind grain in prison", "They executed him immediately", "They sold him as a slave to Egypt"],
+            correct: 1
+        },
+        {
+            scripture: "Howbeit the hair of his head began to grow again after he was shaven.",
+            reference: "Judges 16:22",
+            question: "What happened to Samson's hair while he was in prison?",
+            answers: ["It remained shaved", "It began to grow again", "It turned white from grief", "It was kept short by the Philistines"],
+            correct: 1
+        },
+        {
+            scripture: "And Samson called unto the LORD, and said, O Lord GOD, remember me, I pray thee, and strengthen me, I pray thee, only this once.",
+            reference: "Judges 16:28",
+            question: "What did the Philistines do with Samson when they had a great feast for their god Dagon?",
+            answers: ["They sacrificed him on the altar", "They brought him out to perform and entertain them", "They released him as an act of mercy", "They displayed him in the marketplace"],
+            correct: 1
+        },
+        {
+            scripture: "And Samson said, Let me die with the Philistines. And he bowed himself with all his might; and the house fell upon the lords, and upon all the people that were therein.",
+            reference: "Judges 16:30",
+            question: "How many Philistines did Samson kill when he pushed down the pillars of Dagon's temple?",
+            answers: ["More than he had killed in his whole life", "Exactly one thousand", "About three thousand", "The number is not given"],
+            correct: 0
+        },
+        {
+            scripture: "So the dead which he slew at his death were more than they which he slew in his life.",
+            reference: "Judges 16:30",
+            question: "Where was Samson buried after his death?",
+            answers: ["In Gaza by the Philistines", "In Jerusalem", "In his father's tomb between Zorah and Eshtaol", "In Hebron with his ancestors"],
+            correct: 2
+        },
+        {
+            scripture: "And he judged Israel twenty years in the days of the Philistines.",
+            reference: "Judges 15:20",
+            question: "How many years did Samson judge Israel?",
+            answers: ["10 years", "15 years", "20 years", "40 years"],
+            correct: 2
+        },
+        {
+            scripture: "Then went Samson to Gaza, and saw there an harlot, and went in unto her.",
+            reference: "Judges 16:1",
+            question: "What did Samson find inside the carcass of the lion he had killed, when he returned to it later?",
+            answers: ["Flies and maggots", "A swarm of bees and honey", "Birds nesting inside", "It had been eaten by jackals"],
+            correct: 1
+        },
+        {
+            scripture: "Out of the eater came forth meat, and out of the strong came forth sweetness.",
+            reference: "Judges 14:14",
+            question: "What riddle did Samson pose at his wedding feast?",
+            answers: ["Who is stronger than a lion?", "What runs without legs?", "Out of the eater came forth meat; out of the strong came forth sweetness", "What cannot be broken yet destroys everything?"],
+            correct: 2
+        },
+        {
+            scripture: "And Samson said concerning them, Now shall I be more blameless than the Philistines, though I do them a displeasure.",
+            reference: "Judges 15:3",
+            question: "How did Samson destroy the Philistines' crops in revenge for being denied his wife?",
+            answers: ["He burned their fields himself", "He sent foxes with torches tied to their tails through the grain", "He diverted the rivers to flood their fields", "He gathered an army to trample the crops"],
+            correct: 1
+        },
+        {
+            scripture: "And he called for Samson out of the prison house; and he made them sport: and they set him between the pillars.",
+            reference: "Judges 16:25",
+            question: "How many people were on the roof watching when Samson pushed down the temple?",
+            answers: ["About 500 people", "About 1,000 people", "About 3,000 people", "About 5,000 people"],
+            correct: 2
+        },
+        {
+            scripture: "And the woman bare a son, and called his name Samson: and the child grew, and the LORD blessed him.",
+            reference: "Judges 13:24",
+            question: "What was the name of Samson's father?",
+            answers: ["Gideon", "Manoah", "Elkanah", "Toah"],
+            correct: 1
+        },
+        {
+            scripture: "Then his father and his mother said unto him, Is there never a woman among the daughters of thy brethren, or among all my people, that thou goest to take a wife of the uncircumcised Philistines?",
+            reference: "Judges 14:3",
+            question: "Where was the Philistine woman from whom Samson first wanted to marry?",
+            answers: ["Gaza", "Ashdod", "Timnath", "Ekron"],
+            correct: 2
+        },
+        {
+            scripture: "And Samson went and caught three hundred foxes, and took firebrands, and turned tail to tail.",
+            reference: "Judges 15:4",
+            question: "Exactly how many foxes did Samson catch to burn the Philistines' fields?",
+            answers: ["100 foxes", "200 foxes", "300 foxes", "400 foxes"],
+            correct: 2
+        },
+        {
+            scripture: "And he was sore athirst, and called on the LORD, and said, Thou hast given this great deliverance into the hand of thy servant.",
+            reference: "Judges 15:18",
+            question: "After the great victory with the jawbone, what did God miraculously provide for the thirsty Samson?",
+            answers: ["A river appeared at his feet", "God split the hollow place in Lehi and water came out", "An angel brought him water", "Rain fell immediately"],
+            correct: 1
+        },
+        {
+            scripture: "By faith...Samson...out of weakness were made strong, waxed valiant in fight, turned to flight the armies of the aliens.",
+            reference: "Hebrews 11:32-34",
+            question: "In which New Testament book is Samson mentioned as a hero of faith?",
+            answers: ["Romans", "Galatians", "Hebrews", "James"],
+            correct: 2
+        },
+        {
+            scripture: "For the child shall be a Nazarite unto God from the womb to the day of his death.",
+            reference: "Judges 13:7",
+            question: "Which of the following was NOT part of the Nazirite vow Samson was under?",
+            answers: ["No razor to touch his head", "No wine or strong drink", "No touching a dead body", "No eating of leavened bread"],
+            correct: 3
+        },
+        {
+            scripture: "And the Spirit of the LORD came mightily upon him, and he rent him as he would have rent a kid, and he had nothing in his hand.",
+            reference: "Judges 14:6",
+            question: "What does the name Samson mean in Hebrew?",
+            answers: ["Man of strength", "Son of the sun / little sun", "Servant of God", "Strong like a lion"],
+            correct: 1
+        },
+        {
+            scripture: "And it came to pass, when she pressed him daily with her words, and urged him, so that his soul was vexed unto death.",
+            reference: "Judges 16:16",
+            question: "Why did Samson finally give in and tell Delilah the secret of his strength?",
+            answers: ["She threatened to leave him", "She pressed him daily until his soul was vexed unto death", "The Philistines tortured him", "He was tricked when drunk"],
+            correct: 1
+        },
+        {
+            scripture: "Then the lords of the Philistines gathered them together for to offer a great sacrifice unto Dagon their god, and to rejoice.",
+            reference: "Judges 16:23",
+            question: "Which Philistine god was being worshipped at the feast when Samson was brought out?",
+            answers: ["Baal", "Molech", "Dagon", "Chemosh"],
+            correct: 2
+        },
+        {
+            scripture: "And he said unto the lad that held him by the hand, Suffer me that I may feel the pillars whereupon the house standeth.",
+            reference: "Judges 16:26",
+            question: "What did Samson ask the young man leading him to do before he pushed down the pillars?",
+            answers: ["Leave him alone with the Philistines", "Let him feel the pillars the house rested on", "Bring him water to drink", "Tell him how many people were watching"],
+            correct: 1
+        },
+        {
+            scripture: "And his brethren and all the house of his father came down, and took him, and brought him up, and buried him between Zorah and Eshtaol.",
+            reference: "Judges 16:31",
+            question: "In what valley was the woman Delilah living when Samson fell in love with her?",
+            answers: ["The Valley of Elah", "The Valley of Sorek", "The Valley of Jezreel", "The Valley of Hinnom"],
+            correct: 1
+        }
+    ],
+
+    "abraham-quiz": [
+        {
+            scripture: "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred, and from thy father's house, unto a land that I will shew thee.",
+            reference: "Genesis 12:1",
+            question: "From which city did God call Abram to leave?",
+            answers: ["Ur of the Chaldees", "Haran", "Nineveh", "Damascus"],
+            correct: 0
+        },
+        {
+            scripture: "And I will make of thee a great nation, and I will bless thee, and make thy name great; and thou shalt be a blessing.",
+            reference: "Genesis 12:2",
+            question: "How old was Abram when he departed from Haran to go to Canaan?",
             answers: ["55 years old", "65 years old", "75 years old", "85 years old"],
             correct: 2
         },
         {
-            scripture: "And the LORD said, My spirit shall not always strive with man, for that he also is flesh: yet his days shall be an hundred and twenty years.",
-            reference: "Genesis 6:3",
-            question: "How many years did it rain on the day of Pentecost after Christ's resurrection?",
-            answers: ["It did not rain", "3 days", "40 days", "It was Pentecost, 50 days after Passover"],
+            scripture: "Neither shall thy name any more be called Abram, but thy name shall be Abraham; for a father of many nations have I made thee.",
+            reference: "Genesis 17:5",
+            question: "What does the name Abraham mean?",
+            answers: ["Father of one people", "Father of many nations", "Servant of God", "Man of faith"],
+            correct: 1
+        },
+        {
+            scripture: "And Abram said unto Lot, Let there be no strife, I pray thee, between me and thee...for we be brethren.",
+            reference: "Genesis 13:8",
+            question: "When Abram and Lot separated because the land could not support both their flocks, who chose first which land to take?",
+            answers: ["Abram chose first", "Lot chose first", "They cast lots", "God assigned each man his portion"],
+            correct: 1
+        },
+        {
+            scripture: "And he believed in the LORD; and he counted it to him for righteousness.",
+            reference: "Genesis 15:6",
+            question: "What did God promise Abraham when He showed him the stars of the sky?",
+            answers: ["That he would have great wealth", "That his descendants would be as numerous as the stars", "That he would live to see his grandchildren", "That all nations would fear him"],
+            correct: 1
+        },
+        {
+            scripture: "And Sarai said unto Abram, Behold now, the LORD hath restrained me from bearing: I pray thee, go in unto my maid.",
+            reference: "Genesis 16:2",
+            question: "What was the name of Hagar's son, who was Abram's firstborn?",
+            answers: ["Isaac", "Ishmael", "Midian", "Keturah"],
+            correct: 1
+        },
+        {
+            scripture: "This is my covenant, which ye shall keep, between me and you and thy seed after thee; Every man child among you shall be circumcised.",
+            reference: "Genesis 17:10",
+            question: "How old was Abraham when he was circumcised as the sign of the covenant?",
+            answers: ["75 years old", "85 years old", "99 years old", "100 years old"],
+            correct: 2
+        },
+        {
+            scripture: "And God said, Sarah thy wife shall bear thee a son indeed; and thou shalt call his name Isaac.",
+            reference: "Genesis 17:19",
+            question: "What was Sarah's reaction when she heard she would bear a son at ninety years old?",
+            answers: ["She wept with joy", "She fell on her face in worship", "She laughed within herself", "She fainted in disbelief"],
+            correct: 2
+        },
+        {
+            scripture: "And the LORD appeared unto him in the plains of Mamre: and he sat in the tent door in the heat of the day.",
+            reference: "Genesis 18:1",
+            question: "How many visitors appeared to Abraham at the oaks of Mamre?",
+            answers: ["One angel", "Two angels", "Three men", "A great multitude"],
+            correct: 2
+        },
+        {
+            scripture: "And Abraham drew near, and said, Wilt thou also destroy the righteous with the wicked?",
+            reference: "Genesis 18:23",
+            question: "What was Abraham's final negotiated number when interceding for Sodom?",
+            answers: ["50 righteous people", "45 righteous people", "20 righteous people", "10 righteous people"],
             correct: 3
         },
         {
-            scripture: "And Peter remembered the word of Jesus, which said unto him, Before the cock crow, thou shalt deny me thrice.",
-            reference: "Matthew 26:75",
-            question: "How many times did Peter deny knowing Jesus before the rooster crowed?",
-            answers: ["Once", "Twice", "Three times", "Four times"],
+            scripture: "And Abraham rose up early in the morning, and saddled his ass, and took two of his young men with him, and Isaac his son.",
+            reference: "Genesis 22:3",
+            question: "Where did God command Abraham to offer Isaac as a burnt offering?",
+            answers: ["Mount Sinai", "Mount Hermon", "Mount Moriah", "Mount Carmel"],
             correct: 2
         },
         {
-            scripture: "And the lot fell upon Matthias; and he was numbered with the eleven apostles.",
-            reference: "Acts 1:26",
-            question: "How many days passed between Jesus's resurrection and his ascension?",
-            answers: ["3 days", "7 days", "40 days", "50 days"],
-            correct: 2
-        },
-        {
-            scripture: "And the number of the name of the beast, or the number of his name. Here is wisdom. Let him that hath understanding count the number of the beast.",
-            reference: "Revelation 13:17-18",
-            question: "What is the number of the beast as given in Revelation?",
-            answers: ["444", "616", "666", "777"],
-            correct: 2
-        },
-        {
-            scripture: "And the LORD opened the mouth of the ass, and she said unto Balaam, What have I done unto thee, that thou hast smitten me these three times?",
-            reference: "Numbers 22:28",
-            question: "How many times did Balaam's donkey turn away from the angel before the donkey spoke?",
-            answers: ["Once", "Twice", "Three times", "Seven times"],
-            correct: 2
-        },
-        {
-            scripture: "Jesus saith unto him, I say not unto thee, Until seven times: but, Until seventy times seven.",
-            reference: "Matthew 18:22",
-            question: "How many times did Jesus tell Peter to forgive — not seven times but how many?",
-            answers: ["49 times", "70 times", "490 times", "Seven times seventy"],
-            correct: 2
-        },
-        {
-            scripture: "And he took him by the right hand, and lifted him up: and immediately his feet and ankle bones received strength.",
-            reference: "Acts 3:7",
-            question: "How many years had the lame man at the Beautiful Gate been crippled before Peter healed him?",
-            answers: ["18 years", "28 years", "38 years", "Over forty years"],
-            correct: 3
-        },
-        {
-            scripture: "And the people shouted with a great shout, that the wall fell down flat.",
-            reference: "Joshua 6:20",
-            question: "How many days did the Israelites march around Jericho before the walls fell?",
-            answers: ["3 days", "5 days", "7 days", "40 days"],
-            correct: 2
-        },
-        {
-            scripture: "And the number of them was ten thousand times ten thousand, and thousands of thousands.",
-            reference: "Revelation 5:11",
-            question: "How many books of the Bible did the Apostle Paul write?",
-            answers: ["9 books", "11 books", "13 books", "15 books"],
-            correct: 2
-        }
-    ],
-
-    "bible-villains": [
-        {
-            scripture: "And Jezebel his wife said unto him, Dost thou now govern the kingdom of Israel? arise, and eat bread, and let thine heart be merry: I will give thee the vineyard of Naboth.",
-            reference: "1 Kings 21:7",
-            question: "Which wicked queen arranged the murder of Naboth so her husband could take his vineyard?",
-            answers: ["Athaliah", "Jezebel", "Herodias", "Salome"],
+            scripture: "And Abraham lifted up his eyes, and looked, and behold behind him a ram caught in a thicket by his horns.",
+            reference: "Genesis 22:13",
+            question: "When Abraham raised the knife over Isaac, what did God provide as a substitute sacrifice?",
+            answers: ["A lamb without blemish", "A ram caught in a thicket", "A young bull", "Two doves"],
             correct: 1
         },
         {
-            scripture: "And when Athaliah the mother of Ahaziah saw that her son was dead, she arose and destroyed all the seed royal.",
-            reference: "2 Kings 11:1",
-            question: "Which queen attempted to destroy the entire royal line of Judah and ruled for six years?",
-            answers: ["Jezebel", "Herodias", "Athaliah", "Vashti"],
+            scripture: "And Abraham called the name of that place Jehovahjireh: as it is said to this day, In the mount of the LORD it shall be seen.",
+            reference: "Genesis 22:14",
+            question: "What name did Abraham give the place where he almost sacrificed Isaac?",
+            answers: ["Jehovah-Nissi", "Jehovah-Shalom", "Jehovah-Jireh", "El-Bethel"],
             correct: 2
         },
         {
-            scripture: "And Haman said unto king Ahasuerus, There is a certain people scattered abroad and dispersed among the people in all the provinces of thy kingdom.",
-            reference: "Esther 3:8",
-            question: "Which official in Persia plotted the genocide of all Jewish people in the empire because one man refused to bow to him?",
-            answers: ["Sanballat", "Tobiah", "Haman", "Ahasuerus"],
+            scripture: "And Sarah was an hundred and seven and twenty years old: these were the years of the life of Sarah.",
+            reference: "Genesis 23:1",
+            question: "How old was Sarah when she died?",
+            answers: ["100 years old", "110 years old", "127 years old", "137 years old"],
             correct: 2
         },
         {
-            scripture: "Now Sanballat and Tobiah and the Arabians, and the Ammonites, and the Ashdodites, heard that the walls of Jerusalem were made up.",
-            reference: "Nehemiah 4:7",
-            question: "Which Samaritan governor relentlessly mocked and threatened Nehemiah to stop the rebuilding of Jerusalem's walls?",
-            answers: ["Tobiah", "Geshem", "Sanballat", "Rehum"],
+            scripture: "Then Abraham gave up the ghost, and died in a good old age, an old man, and full of years.",
+            reference: "Genesis 25:8",
+            question: "How old was Abraham when he died?",
+            answers: ["150 years old", "165 years old", "175 years old", "180 years old"],
             correct: 2
         },
         {
-            scripture: "And Absalom stole the hearts of the men of Israel.",
-            reference: "2 Samuel 15:6",
-            question: "Which of David's sons led a violent rebellion against his own father and tried to seize the throne?",
-            answers: ["Amnon", "Solomon", "Adonijah", "Absalom"],
-            correct: 3
-        },
-        {
-            scripture: "Then Satan answered the LORD, and said, Doth Job fear God for nought?",
-            reference: "Job 1:9",
-            question: "Who accused Job before God of only serving God for personal benefit, then caused Job immense suffering?",
-            answers: ["A false prophet", "An evil king", "Satan", "Job's wife"],
+            scripture: "And he said, LORD God of my master Abraham, I pray thee, send me good speed this day.",
+            reference: "Genesis 24:12",
+            question: "Who did Abraham send to find a wife for Isaac from his homeland?",
+            answers: ["His son Ishmael", "His nephew Lot", "His oldest servant", "A Canaanite merchant"],
             correct: 2
         },
         {
-            scripture: "And Ahab made a grove; and Ahab did more to provoke the LORD God of Israel to anger than all the kings of Israel that were before him.",
-            reference: "1 Kings 16:33",
-            question: "Which king of Israel was considered the most wicked of all Israel's kings and was heavily influenced by his wife Jezebel?",
-            answers: ["Jeroboam", "Omri", "Ahab", "Baasha"],
+            scripture: "And Abraham said, My son, God will provide himself a lamb for a burnt offering.",
+            reference: "Genesis 22:8",
+            question: "What did Isaac carry up Mount Moriah, not knowing he was to be the sacrifice?",
+            answers: ["The altar stones", "The knife and fire", "The wood for the burnt offering", "The ropes to bind the animal"],
             correct: 2
         },
         {
-            scripture: "Then Herod, when he saw that he was mocked of the wise men, was exceeding wroth, and sent forth, and slew all the children that were in Bethlehem.",
-            reference: "Matthew 2:16",
-            question: "Which king ordered the massacre of all male children under two years old in Bethlehem to eliminate the newborn King?",
-            answers: ["Herod Antipas", "Herod Agrippa", "Herod Archelaus", "Herod the Great"],
-            correct: 3
-        },
-        {
-            scripture: "Woe unto thee, Chorazin! woe unto thee, Bethsaida! for if the mighty works had been done in Tyre and Sidon, which have been done in you.",
-            reference: "Acts 12:1-2",
-            question: "Which Herod killed the apostle James with the sword and then arrested Peter, intending to kill him too?",
-            answers: ["Herod the Great", "Herod Antipas", "Herod Agrippa I", "Herod Archelaus"],
-            correct: 2
-        },
-        {
-            scripture: "And Judas Iscariot, one of the twelve, went unto the chief priests, to betray him unto them.",
-            reference: "Mark 14:10",
-            question: "What did Judas do with the thirty pieces of silver after Jesus was condemned?",
-            answers: ["Kept them", "Gave them to the poor", "Threw them into the temple and hanged himself", "Returned them to Caiaphas"],
-            correct: 2
-        },
-        {
-            scripture: "For Herodias's sake, his brother Philip's wife: for he had married her.",
-            reference: "Mark 6:17-19",
-            question: "Who demanded the head of John the Baptist on a platter after her daughter's dance pleased Herod?",
-            answers: ["Salome", "Herodias", "Jezebel", "Athaliah"],
-            correct: 1
-        },
-        {
-            scripture: "And when Simon saw that through laying on of the apostles' hands the Holy Ghost was given, he offered them money.",
-            reference: "Acts 8:18-19",
-            question: "Which sorcerer tried to buy the power of the Holy Spirit from the apostles, giving rise to the term 'simony'?",
-            answers: ["Elymas", "Simon the Pharisee", "Simon Magus", "Bar-Jesus"],
-            correct: 2
-        },
-        {
-            scripture: "And Nebuchadnezzar the king sent to gather together the princes, the governors, and the captains.",
-            reference: "Daniel 3:1",
-            question: "Which Babylonian king built a golden image ninety feet tall and demanded all people worship it on penalty of death?",
-            answers: ["Cyrus", "Darius", "Belshazzar", "Nebuchadnezzar"],
-            correct: 3
-        },
-        {
-            scripture: "And Cain talked with Abel his brother: and it came to pass, when they were in the field, that Cain rose up against Abel his brother, and slew him.",
-            reference: "Genesis 4:8",
-            question: "What was the root sin that led Cain to murder his brother Abel?",
-            answers: ["Greed", "Jealousy over God's acceptance of Abel's offering", "Anger over their inheritance", "Competition for a wife"],
-            correct: 1
-        },
-        {
-            scripture: "And Balak the son of Zippor saw all that Israel had done to the Amorites.",
-            reference: "Numbers 22:2",
-            question: "Which king of Moab hired the prophet Balaam to curse the Israelites as they approached his land?",
-            answers: ["Og", "Sihon", "Balak", "Eglon"],
-            correct: 2
-        },
-        {
-            scripture: "And Delilah said to Samson, Tell me, I pray thee, wherein thy great strength lieth.",
-            reference: "Judges 16:6",
-            question: "How many times did Delilah press Samson for the secret of his strength before he finally revealed it?",
-            answers: ["Once", "Twice", "Three times", "Four times"],
-            correct: 3
-        },
-        {
-            scripture: "Now the serpent was more subtil than any beast of the field which the LORD God had made.",
-            reference: "Genesis 3:1",
-            question: "What lie did the serpent tell Eve about the forbidden fruit?",
-            answers: ["That it tasted like honey", "That she would not surely die", "That God had not forbidden it", "That it would make her like the angels"],
-            correct: 1
-        },
-        {
-            scripture: "But a certain man named Ananias, with Sapphira his wife, sold a possession. And kept back part of the price.",
-            reference: "Acts 5:1-2",
-            question: "What happened to Ananias and Sapphira when they lied to the Holy Spirit about their offering?",
-            answers: ["They were excommunicated", "They were struck blind", "They both fell down dead", "They were imprisoned"],
-            correct: 2
-        },
-        {
-            scripture: "And they made a calf in those days, and offered sacrifice unto the idol, and rejoiced in the works of their own hands.",
-            reference: "Acts 7:41",
-            question: "Who led the Israelites in making a golden calf while Moses was on Mount Sinai?",
-            answers: ["Miriam", "Joshua", "Aaron", "Korah"],
-            correct: 2
-        },
-        {
-            scripture: "For Demas hath forsaken me, having loved this present world, and is departed unto Thessalonica.",
-            reference: "2 Timothy 4:10",
-            question: "Which early Christian worker abandoned the apostle Paul because he loved the present world?",
-            answers: ["Alexander", "Hymenaeus", "Demas", "Philetus"],
-            correct: 2
-        },
-        {
-            scripture: "And Doeg the Edomite turned, and he fell upon the priests, and slew on that day fourscore and five persons.",
-            reference: "1 Samuel 22:18",
-            question: "Who slaughtered eighty-five priests at Nob on Saul's orders when his own men refused to do so?",
-            answers: ["Abner", "Doeg the Edomite", "The Amalekites", "Ishbosheth"],
-            correct: 1
-        },
-        {
-            scripture: "And Absalom met the servants of David. And Absalom rode upon a mule, and the mule went under the thick boughs of a great oak.",
-            reference: "2 Samuel 18:9",
-            question: "How did Absalom die during his rebellion against his father David?",
-            answers: ["Killed in battle by Joab", "His hair caught in a tree and Joab killed him", "Drowned crossing the Jordan", "Killed by one of David's mighty men"],
-            correct: 1
-        },
-        {
-            scripture: "For where envying and strife is, there is confusion and every evil work.",
-            reference: "Numbers 12:1-2",
-            question: "Who was struck with leprosy for challenging Moses's authority and speaking against his Cushite wife?",
-            answers: ["Korah", "Aaron", "Miriam", "Dathan"],
-            correct: 2
-        },
-        {
-            scripture: "Then Pharaoh's heart was hardened, neither would he hearken unto them; as the LORD had said.",
-            reference: "Exodus 7:13",
-            question: "Which Pharaoh hardened his heart against God repeatedly despite ten devastating plagues?",
-            answers: ["Thutmose III", "The Bible does not name him", "Ramesses II", "Amenhotep II"],
-            correct: 1
-        },
-        {
-            scripture: "And Joab the son of Zeruiah perceived that the king's heart was toward Absalom.",
-            reference: "2 Samuel 14:1",
-            question: "Which of David's military commanders murdered two rival generals in peacetime and was never properly punished during David's reign?",
-            answers: ["Abner", "Amasa", "Joab", "Benaiah"],
-            correct: 2
-        },
-        {
-            scripture: "Now these be the last words of David. David the son of Jesse said.",
-            reference: "1 Kings 2:5-6",
-            question: "On his deathbed, David told Solomon to deal wisely with which general who had shed innocent blood?",
-            answers: ["Abishai", "Ittai", "Joab", "Benaiah"],
-            correct: 2
-        },
-        {
-            scripture: "I have not troubled Israel; but thou, and thy father's house, in that ye have forsaken the commandments of the LORD.",
-            reference: "1 Kings 18:18",
-            question: "Which king of Israel did Elijah rebuke with the words 'thou, and thy father's house' have troubled Israel?",
-            answers: ["Jeroboam", "Omri", "Ahab", "Baasha"],
-            correct: 2
-        },
-        {
-            scripture: "And in the morning watch the LORD looked unto the host of the Egyptians through the pillar of fire and of the cloud, and troubled the host of the Egyptians.",
-            reference: "Exodus 14:24",
-            question: "Who was the biblical villain who pursued the Israelites to the Red Sea after releasing them?",
-            answers: ["The unnamed Pharaoh of the Exodus", "Pharaoh Neco", "Pharaoh Shishak", "Pharaoh Hophra"],
-            correct: 0
-        },
-        {
-            scripture: "And Jezebel sent a messenger unto Elijah, saying, So let the gods do to me, and more also, if I make not thy life as the life of one of them by to morrow about this time.",
-            reference: "1 Kings 19:2",
-            question: "How did Jezebel ultimately die, according to the prophecy of Elijah?",
-            answers: ["She was burned in her palace", "Dogs ate her flesh by the wall of Jezreel", "She was stoned by the people", "She drowned in the sea"],
-            correct: 1
-        },
-        {
-            scripture: "And there went out a champion out of the camp of the Philistines, named Goliath, of Gath, whose height was six cubits and a span.",
-            reference: "1 Samuel 17:4",
-            question: "How tall was Goliath in cubits and a span, making him approximately how many feet tall?",
-            answers: ["About 7 feet", "About 8 feet", "About 9 feet 9 inches", "About 12 feet"],
-            correct: 2
-        }
-    ],
-
-    "bible-firsts": [
-        {
-            scripture: "And Adam called his wife's name Eve; because she was the mother of all living.",
-            reference: "Genesis 4:8",
-            question: "Who committed the first murder recorded in Scripture?",
-            answers: ["Adam", "Seth", "Cain", "Lamech"],
-            correct: 2
-        },
-        {
-            scripture: "And Saul was consenting unto his death. And at that time there was a great persecution against the church which was at Jerusalem.",
-            reference: "Acts 7:58-60",
-            question: "Who was the first Christian martyr after Pentecost?",
-            answers: ["James the son of Zebedee", "Stephen", "Philip", "Barnabas"],
-            correct: 1
-        },
-        {
-            scripture: "And Saul said to Samuel, I have performed the commandment of the LORD.",
-            reference: "1 Samuel 9:1-2",
-            question: "Who was the first king of Israel?",
-            answers: ["David", "Solomon", "Saul", "Samuel"],
-            correct: 2
-        },
-        {
-            scripture: "Thus the heavens and the earth were finished, and all the host of them.",
-            reference: "Genesis 2:2",
-            question: "What was the first thing God declared 'not good' in all of creation?",
-            answers: ["Darkness", "The void", "Man being alone", "The forbidden fruit"],
-            correct: 2
-        },
-        {
-            scripture: "And the LORD said unto Abram, after that Lot was separated from him, Lift up now thine eyes.",
+            scripture: "And Melchizedek king of Salem brought forth bread and wine: and he was the priest of the most high God.",
             reference: "Genesis 14:18",
-            question: "Who was the first priest of God Most High mentioned in Scripture, who brought bread and wine to Abraham?",
-            answers: ["Aaron", "Jethro", "Melchizedek", "Zadok"],
-            correct: 2
-        },
-        {
-            scripture: "Now when Jesus was born in Bethlehem of Judaea in the days of Herod the king.",
-            reference: "Matthew 2:1-2",
-            question: "Who were the first Gentiles recorded as coming to worship Jesus?",
-            answers: ["The shepherds", "The Magi from the East", "Simeon and Anna", "The disciples"],
+            question: "What fraction of his spoils did Abraham give to Melchizedek, king of Salem?",
+            answers: ["A fifth part", "A tenth part (a tithe)", "A third part", "Half of everything"],
             correct: 1
         },
         {
-            scripture: "And the LORD God made coats of skins, and clothed them.",
-            reference: "Genesis 3:21",
-            question: "What was the first animal sacrifice recorded in Scripture?",
-            answers: ["Abel's lamb offering", "God's sacrifice to clothe Adam and Eve", "Noah's burnt offering", "Abraham's ram on Mount Moriah"],
+            scripture: "Know of a surety that thy seed shall be a stranger in a land that is not theirs, and shall serve them; and they shall afflict them four hundred years.",
+            reference: "Genesis 15:13",
+            question: "In the covenant God made with Abraham in Genesis 15, how many years did God say his descendants would be enslaved in a foreign land?",
+            answers: ["200 years", "300 years", "400 years", "500 years"],
+            correct: 2
+        },
+        {
+            scripture: "And the scripture, foreseeing that God would justify the heathen through faith, preached before the gospel unto Abraham.",
+            reference: "Galatians 3:8",
+            question: "In what New Testament book is Abraham called the father of all who believe?",
+            answers: ["Matthew", "Romans", "Galatians", "Hebrews"],
             correct: 1
         },
         {
-            scripture: "And Enoch walked with God: and he was not; for God took him.",
-            reference: "Genesis 5:24",
-            question: "Who was the first person taken to heaven without dying, before Elijah?",
-            answers: ["Noah", "Abraham", "Enoch", "Elijah"],
+            scripture: "By faith Abraham, when he was called to go out into a place which he should after receive for an inheritance, obeyed; and he went out, not knowing whither he went.",
+            reference: "Hebrews 11:8",
+            question: "What is Abraham called in James 2:23 and 2 Chronicles 20:7?",
+            answers: ["The father of the faithful", "The prophet of God", "The friend of God", "The servant of the Most High"],
             correct: 2
         },
         {
-            scripture: "And his disciples came, and took up the body, and buried it, and went and told Jesus.",
-            reference: "Matthew 14:10-12",
-            question: "Who was the first of the twelve apostles to be martyred?",
-            answers: ["Peter", "Stephen", "James the son of Zebedee", "John"],
+            scripture: "And Abraham returned unto his young men, and they rose up and went together to Beersheba.",
+            reference: "Genesis 22:19",
+            question: "After Lot separated from Abraham, in which city did Abraham eventually dwell?",
+            answers: ["Bethel", "Shechem", "Hebron by the oaks of Mamre", "Beersheba"],
             correct: 2
         },
         {
-            scripture: "And when they were come to a place called Golgotha, that is to say, a place of a skull.",
-            reference: "John 20:11-18",
-            question: "Who was the first person to see the risen Jesus after his resurrection?",
-            answers: ["Peter", "John", "Mary Magdalene", "The eleven disciples"],
-            correct: 2
-        },
-        {
-            scripture: "Now the LORD had said unto Abram, Get thee out of thy country, and from thy kindred.",
-            reference: "Genesis 12:1-4",
-            question: "Who was the first person in the Bible described as God's 'friend'?",
-            answers: ["Noah", "Enoch", "Moses", "Abraham"],
-            correct: 3
-        },
-        {
-            scripture: "And Cornelius said, Four days ago I was fasting until this hour; and at the ninth hour I prayed in my house.",
-            reference: "Acts 10",
-            question: "Who was the first Gentile to be formally converted and baptised in the early church?",
-            answers: ["The Ethiopian eunuch", "Lydia", "Cornelius the centurion", "The Philippian jailer"],
-            correct: 2
-        },
-        {
-            scripture: "And the LORD said unto Noah, Come thou and all thy house into the ark.",
-            reference: "Genesis 6:9",
-            question: "What is the first covenant God formally made with a human being after the fall?",
-            answers: ["The covenant with Abraham", "The covenant with Noah", "The covenant with Adam", "The covenant with Moses"],
+            scripture: "And Abram passed through the land unto the place of Sichem, unto the plain of Moreh.",
+            reference: "Genesis 12:6",
+            question: "What did Abram do at Shechem when God appeared to him in Canaan for the first time?",
+            answers: ["He dug a well", "He built an altar to the LORD", "He sacrificed seven bulls", "He planted a tree"],
             correct: 1
         },
         {
-            scripture: "And Jairus was one of the rulers of the synagogue: and he fell at his feet.",
-            reference: "Mark 5:35-42",
-            question: "Who was the first person Jesus raised from the dead by name?",
-            answers: ["Lazarus", "The widow's son at Nain", "Jairus's daughter", "Eutychus"],
+            scripture: "And there was a famine in the land: and Abram went down into Egypt to sojourn there.",
+            reference: "Genesis 12:10",
+            question: "When Abram went to Egypt during a famine, what did he tell the Egyptians about Sarai?",
+            answers: ["That she was his daughter", "That she was his servant", "That she was his sister", "That she was a widow"],
             correct: 2
         },
         {
-            scripture: "And God said, Let there be light: and there was light.",
-            reference: "Genesis 1:3",
-            question: "What was the very first thing God created in the Genesis account?",
-            answers: ["The heavens", "The earth", "Light", "Water"],
+            scripture: "And Abram was very rich in cattle, in silver, and in gold.",
+            reference: "Genesis 13:2",
+            question: "How many trained men did Abraham take to rescue Lot from the four kings?",
+            answers: ["38 trained men", "138 trained men", "318 trained men", "518 trained men"],
             correct: 2
         },
         {
-            scripture: "And Jethro, Moses' father in law, came with his sons and his wife unto Moses into the wilderness.",
-            reference: "Exodus 18:13-26",
-            question: "Who suggested the first system of delegated leadership and judges to Moses to prevent burnout?",
-            answers: ["Aaron", "Miriam", "Joshua", "Jethro"],
-            correct: 3
+            scripture: "And he brought him forth abroad, and said, Look now toward heaven, and tell the stars, if thou be able to number them.",
+            reference: "Genesis 15:5",
+            question: "In what form did God make His covenant with Abraham in Genesis 15?",
+            answers: ["A pillar of cloud", "A burning bush", "A smoking furnace and a burning lamp passing between the divided animals", "A still small voice"],
+            correct: 2
         },
         {
-            scripture: "And God remembered Rachel, and God hearkened to her, and opened her womb.",
-            reference: "Genesis 29:31-30:24",
-            question: "Who was the first son born to Rachel after years of barrenness?",
-            answers: ["Benjamin", "Joseph", "Dan", "Naphtali"],
+            scripture: "By faith Abraham, when he was tried, offered up Isaac: and he that had received the promises offered up his only begotten son.",
+            reference: "Hebrews 11:17",
+            question: "According to Hebrews 11, what did Abraham believe God could do if he sacrificed Isaac?",
+            answers: ["Give him another son immediately", "Raise him from the dead", "Provide another heir through Ishmael", "Cancel the covenant and start anew"],
             correct: 1
         },
         {
-            scripture: "And Jesus went about all Galilee, teaching in their synagogues, and preaching the gospel of the kingdom.",
-            reference: "Matthew 4:18-22",
-            question: "Which disciples did Jesus first call to follow him?",
-            answers: ["James and John", "Peter and Andrew", "Philip and Nathanael", "Matthew and Thomas"],
-            correct: 1
-        },
-        {
-            scripture: "And they continued stedfastly in the apostles' doctrine and fellowship, and in breaking of bread, and in prayers.",
-            reference: "Acts 2:41",
-            question: "How many people were baptised on the day of Pentecost — the first mass conversion in the early church?",
-            answers: ["120 people", "500 people", "3,000 people", "5,000 people"],
+            scripture: "And Abraham took another wife, whose name was Keturah.",
+            reference: "Genesis 25:1",
+            question: "How many sons did Abraham have altogether (including those by Keturah)?",
+            answers: ["3 sons", "5 sons", "8 sons", "12 sons"],
             correct: 2
         },
         {
-            scripture: "And Barnabas and Saul returned from Jerusalem, when they had fulfilled their ministry.",
-            reference: "Acts 11:26",
-            question: "In which city were the disciples of Jesus first called Christians?",
-            answers: ["Jerusalem", "Rome", "Antioch", "Ephesus"],
+            scripture: "And he was called the Friend of God.",
+            reference: "James 2:23",
+            question: "In which chapter of Genesis did God first make the covenant of circumcision with Abraham?",
+            answers: ["Genesis 12", "Genesis 15", "Genesis 17", "Genesis 22"],
             correct: 2
         },
         {
-            scripture: "But whom say ye that I am? And Simon Peter answered and said.",
-            reference: "Matthew 16:13-19",
-            question: "Who was the first person Jesus declared he would build his church upon?",
-            answers: ["John", "James", "Andrew", "Peter"],
-            correct: 3
-        },
-        {
-            scripture: "And when Jesus was baptized, straightway he went up out of the water: and, lo, the heavens were opened unto him.",
-            reference: "Matthew 3:13-17",
-            question: "Who baptised Jesus at the beginning of his ministry?",
-            answers: ["Andrew", "John the Baptist", "Philip", "The Holy Spirit"],
-            correct: 1
-        },
-        {
-            scripture: "And he smote the Egyptians: and there was a great cry in Egypt; for there was not a house where there was not one dead.",
-            reference: "Genesis 38:6-10",
-            question: "Who was the first person in the Bible recorded as being slain directly by God for their wickedness?",
-            answers: ["Cain", "Er, Judah's firstborn", "Korah", "Nadab and Abihu"],
-            correct: 1
-        },
-        {
-            scripture: "And the LORD appeared unto Abram, and said, Unto thy seed will I give this land.",
-            reference: "Genesis 12:7",
-            question: "What is the first altar mentioned as built by Abraham when he entered Canaan?",
-            answers: ["At Bethel", "At Shechem by the oak of Moreh", "At Hebron", "At Beersheba"],
-            correct: 1
-        },
-        {
-            scripture: "And these are the names of the men that shall stand with you: of the tribe of Reuben; Elizur the son of Shedeur.",
-            reference: "Numbers 1:1-2",
-            question: "What was the first census of Israel's fighting men recorded in Scripture, and how many were counted?",
-            answers: ["603,550 men", "600,000 men", "601,730 men", "550,000 men"],
-            correct: 0
-        },
-        {
-            scripture: "And Solomon made affinity with Pharaoh king of Egypt, and took Pharaoh's daughter, and brought her into the city of David.",
-            reference: "1 Kings 3:4-5",
-            question: "Where did God appear to Solomon in a dream and offer him anything he desired?",
-            answers: ["Jerusalem", "Hebron", "Gibeon", "Bethel"],
-            correct: 2
-        },
-        {
-            scripture: "Now the first lot came forth to Jehoiarib, the second to Jedaiah.",
-            reference: "Acts 1:26",
-            question: "Who was the first replacement apostle chosen to fill the vacancy left by Judas Iscariot?",
-            answers: ["Barnabas", "Paul", "Matthias", "Joseph called Barsabas"],
-            correct: 2
-        },
-        {
-            scripture: "And there appeared unto them cloven tongues like as of fire, and it sat upon each of them.",
-            reference: "Acts 2:1-4",
-            question: "What feast was being celebrated in Jerusalem when the Holy Spirit first descended at Pentecost?",
-            answers: ["Passover", "Feast of Tabernacles", "Feast of Weeks (Pentecost)", "Feast of Trumpets"],
-            correct: 2
-        },
-        {
-            scripture: "And the LORD God took the man, and put him into the garden of Eden to dress it and to keep it.",
-            reference: "Genesis 2:16-17",
-            question: "What was the first commandment God gave to Adam in the Garden of Eden?",
-            answers: ["Be fruitful and multiply", "Dress and keep the garden", "You may freely eat of every tree — but not the tree of knowledge", "Name the animals"],
-            correct: 2
-        },
-        {
-            scripture: "And he brought him to Jesus. And when Jesus beheld him, he said, Thou art Simon the son of Jona: thou shalt be called Cephas.",
-            reference: "John 1:40-42",
-            question: "Who was the first person to bring a family member to Jesus?",
-            answers: ["Philip bringing Nathanael", "Andrew bringing Peter", "John bringing James", "Mary bringing her brother"],
+            scripture: "And in thy seed shall all the nations of the earth be blessed; because thou hast obeyed my voice.",
+            reference: "Genesis 22:18",
+            question: "What promise did God renew with Abraham immediately after the near-sacrifice of Isaac?",
+            answers: ["That he would have more children", "That his seed would bless all the nations of the earth", "That he would never face testing again", "That he would see the Promised Land entered"],
             correct: 1
         }
     ]
