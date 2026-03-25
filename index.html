@@ -758,7 +758,7 @@
                 </li>
                 <li><a href="free-resources.html">Free Downloads</a></li>
                 <li><a href="complete-easter-bundle.html">🐣 Easter</a></li>
-                <li><a href="ultimate-easter-sunday-school-kit.html">Blog</a></li>
+                <li><a href="blog.html">Blog</a></li>
                 <li><a href="shop.html" class="nav-shop-btn">🛒 Shop</a></li>
             </ul>
         </nav>
@@ -1351,6 +1351,78 @@
                 </a>
             </div>
         </div>
+
+        <!-- AFFILIATE DISCLOSURE -->
+        <div style="background:#fdf3d0;border-left:4px solid #e8c650;border-radius:0 10px 10px 0;padding:10px 16px;margin-bottom:20px;font-size:13px;color:#4a4060;line-height:1.5;">
+            <strong style="color:#12091f;">AFFILIATE DISCLOSURE:</strong> As an Amazon Associate, BibleQuizDaily earns from qualifying purchases. This helps us keep all Bible quizzes 100% free!
+        </div>
+
+        <!-- ESV STUDY BIBLE AFFILIATE STRIP -->
+        <div id="esv-strip" style="background:white;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.08);margin:0 0 48px 0;overflow:hidden;border:2px solid #e4dff5;display:flex;align-items:stretch;">
+
+            <!-- Single image with arrow navigation -->
+            <div style="position:relative;flex-shrink:0;width:220px;background:#ede8fa;overflow:hidden;">
+
+                <!-- Main display image -->
+                <img id="esv-main-img" src="esv.jpg" alt="ESV Study Bible" style="width:220px;height:100%;min-height:160px;object-fit:cover;display:block;transition:opacity 0.25s ease;">
+
+                <!-- Left arrow -->
+                <button onclick="esvPrev()" aria-label="Previous image" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.18);font-size:14px;color:#5a3e8a;font-weight:900;transition:all 0.2s;padding:0;line-height:1;" onmouseover="this.style.background='white';this.style.boxShadow='0 3px 12px rgba(0,0,0,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.92)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.18)'">&#8249;</button>
+
+                <!-- Right arrow -->
+                <button onclick="esvNext()" aria-label="Next image" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.18);font-size:14px;color:#5a3e8a;font-weight:900;transition:all 0.2s;padding:0;line-height:1;" onmouseover="this.style.background='white';this.style.boxShadow='0 3px 12px rgba(0,0,0,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.92)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.18)'">&#8250;</button>
+
+                <!-- Dot indicators -->
+                <div style="position:absolute;bottom:6px;left:0;right:0;display:flex;justify-content:center;gap:5px;">
+                    <span class="esv-dot" style="width:6px;height:6px;border-radius:50%;background:white;opacity:1;transition:opacity 0.2s;cursor:pointer;" onclick="esvGoTo(0)"></span>
+                    <span class="esv-dot" style="width:6px;height:6px;border-radius:50%;background:white;opacity:0.45;transition:opacity 0.2s;cursor:pointer;" onclick="esvGoTo(1)"></span>
+                    <span class="esv-dot" style="width:6px;height:6px;border-radius:50%;background:white;opacity:0.45;transition:opacity 0.2s;cursor:pointer;" onclick="esvGoTo(2)"></span>
+                    <span class="esv-dot" style="width:6px;height:6px;border-radius:50%;background:white;opacity:0.45;transition:opacity 0.2s;cursor:pointer;" onclick="esvGoTo(3)"></span>
+                    <span class="esv-dot" style="width:6px;height:6px;border-radius:50%;background:white;opacity:0.45;transition:opacity 0.2s;cursor:pointer;" onclick="esvGoTo(4)"></span>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div style="flex:1;padding:20px 24px;display:flex;align-items:center;gap:24px;flex-wrap:wrap;min-width:0;">
+                <div style="flex:1;min-width:200px;">
+                    <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#5a3e8a;margin-bottom:5px;">📖 Recommended Bible Resource</div>
+                    <div style="font-family:'Merriweather',serif;font-size:18px;font-weight:900;color:#1a1a1a;margin-bottom:4px;line-height:1.3;">ESV Study Bible</div>
+                    <div style="font-size:13px;color:#636e72;font-weight:600;margin-bottom:8px;">20,000 study notes · 200+ full-colour maps · 95 scholars across 9 countries</div>
+                    <div style="display:flex;flex-wrap:wrap;gap:6px;">
+                        <span style="background:#ede8fa;color:#5a3e8a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">Deep Study Notes</span>
+                        <span style="background:#ede8fa;color:#5a3e8a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">Charts &amp; Timelines</span>
+                        <span style="background:#ede8fa;color:#5a3e8a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">Bible Characters</span>
+                    </div>
+                </div>
+                <div style="flex-shrink:0;text-align:center;">
+                    <a href="https://amzn.to/4bvYyk3" target="_blank" rel="noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:#FF9900;color:white;padding:12px 22px;border-radius:10px;font-weight:800;font-size:14px;text-decoration:none;box-shadow:0 4px 14px rgba(255,153,0,.35);transition:all .2s;white-space:nowrap;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 6px 20px rgba(255,153,0,.5)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 4px 14px rgba(255,153,0,.35)'">🛒 View on Amazon</a>
+                    <div style="font-size:11px;color:#636e72;margin-top:6px;font-style:italic;">Supports our free quizzes ❤️</div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+        (function(){
+            var imgs = ['esv.jpg','esv1.jpg','esv2.jpg','esv3.jpg','esv4.jpg'];
+            var alts = ['ESV Study Bible hardcover','ESV Study Bible interior pages','ESV Study Bible study notes','ESV Study Bible full-colour maps','ESV Study Bible characters'];
+            var cur = 0;
+            function updateESV(idx){
+                var el = document.getElementById('esv-main-img');
+                el.style.opacity = '0';
+                setTimeout(function(){
+                    el.src = imgs[idx];
+                    el.alt = alts[idx];
+                    el.style.opacity = '1';
+                }, 200);
+                var dots = document.querySelectorAll('.esv-dot');
+                dots.forEach(function(d,i){ d.style.opacity = i===idx ? '1' : '0.45'; });
+                cur = idx;
+            }
+            window.esvNext = function(){ updateESV((cur+1) % imgs.length); };
+            window.esvPrev = function(){ updateESV((cur-1+imgs.length) % imgs.length); };
+            window.esvGoTo = function(i){ updateESV(i); };
+        })();
+        </script>
 
         <!-- NEW TESTAMENT QUIZZES -->
         <div class="category-section" id="new-testament">
