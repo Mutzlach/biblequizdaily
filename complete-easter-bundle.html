@@ -19,15 +19,55 @@
     "@context": "https://schema.org",
     "@type": "Product",
     "name": "Complete Easter Ministry Kit — 3-Product Bundle",
-    "description": "120 KJV Easter trivia questions, 30 unique BINGO cards, and an Easter Story Treasure Hunt with completion certificate. All printable, instant PDF download.",
+    "description": "120 KJV Easter trivia questions, 30 unique BINGO cards, and an Easter Story Treasure Hunt. All printable, instant PDF download.",
     "image": "https://biblequizdaily.com/bundle_image.png",
-    "brand": { "@type": "Organization", "name": "BibleQuizDaily" },
+    "brand": {
+      "@type": "Brand",
+      "name": "BibleQuizDaily"
+    },
     "offers": {
       "@type": "Offer",
       "price": "12.99",
       "priceCurrency": "USD",
       "availability": "https://schema.org/InStock",
-      "url": "https://biblequizdaily.gumroad.com/l/completeeasterministrykit"
+      "url": "https://biblequizdaily.gumroad.com/l/completeeasterministrykit",
+      "seller": {
+        "@type": "Organization",
+        "name": "BibleQuizDaily"
+      },
+      "shippingDetails": {
+        "@type": "OfferShippingDetails",
+        "shippingRate": {
+          "@type": "MonetaryAmount",
+          "value": "0",
+          "currency": "USD"
+        },
+        "deliveryTime": {
+          "@type": "ShippingDeliveryTime",
+          "handlingTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 0,
+            "unitCode": "DAY"
+          },
+          "transitTime": {
+            "@type": "QuantitativeValue",
+            "minValue": 0,
+            "maxValue": 0,
+            "unitCode": "DAY"
+          }
+        },
+        "shippingDestination": {
+          "@type": "DefinedRegion",
+          "addressCountry": "US"
+        }
+      },
+      "hasMerchantReturnPolicy": {
+        "@type": "MerchantReturnPolicy",
+        "applicableCountry": "US",
+        "returnPolicyCategory": "https://schema.org/MerchantReturnNotPermitted",
+        "merchantReturnDays": 0
+      }
     }
   }
   </script>
