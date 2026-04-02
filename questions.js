@@ -1,7 +1,6 @@
 // Bible Quiz Daily - Complete Question Database
-// 520 questions across 14 categories
-// Original 9 categories: 270 questions (30 each)
-// New 5 categories: 250 questions (50 each)
+// 1,011 questions across 30 categories
+// Added: angels, holy-spirit, jonah, bible-animals, elijah-elisha (30 questions each)
 
 window.quizQuestions = {
     "old-testament": [
@@ -6139,6 +6138,1066 @@ window.quizQuestions = {
             question: "What promise did God renew with Abraham immediately after the near-sacrifice of Isaac?",
             answers: ["That he would have more children", "That his seed would bless all the nations of the earth", "That he would never face testing again", "That he would see the Promised Land entered"],
             correct: 1
+        }
+    ],
+    "angels": [
+        {
+            scripture: "Above it stood the seraphims: each one had six wings.",
+            reference: "Isaiah 6:2",
+            question: "How many wings did each seraph have in Isaiah's vision of God's throne?",
+            answers: ["Two", "Four", "Six", "Eight"],
+            correct: 2
+        },
+        {
+            scripture: "I am Gabriel, that stand in the presence of God.",
+            reference: "Luke 1:19",
+            question: "Which angel appeared to Zacharias to announce the birth of John the Baptist?",
+            answers: ["Michael", "Raphael", "Gabriel", "Uriel"],
+            correct: 2
+        },
+        {
+            scripture: "And in the sixth month the angel Gabriel was sent from God unto a city of Galilee.",
+            reference: "Luke 1:26",
+            question: "Which angel was sent to Mary to announce the birth of Jesus?",
+            answers: ["Michael", "Gabriel", "An unnamed angel", "The angel of the Lord"],
+            correct: 1
+        },
+        {
+            scripture: "And the LORD God said, Behold, the man is become as one of us.",
+            reference: "Genesis 3:24",
+            question: "What winged creatures did God place east of the Garden of Eden to guard the tree of life?",
+            answers: ["Seraphim", "Archangels", "Cherubim", "Thrones"],
+            correct: 2
+        },
+        {
+            scripture: "And the angel of the Lord came upon him, and a light shined in the prison.",
+            reference: "Acts 12:7",
+            question: "What happened to Peter's chains when the angel appeared to him in prison?",
+            answers: ["They were cut with a sword", "They fell off by themselves", "The angel removed them", "They melted away"],
+            correct: 1
+        },
+        {
+            scripture: "At that time shall Michael stand up, the great prince which standeth for the children of thy people.",
+            reference: "Daniel 12:1",
+            question: "Which archangel is described as a fighter for Israel and one of the chief princes in Daniel?",
+            answers: ["Gabriel", "Michael", "Raphael", "Uriel"],
+            correct: 1
+        },
+        {
+            scripture: "And Jacob was left alone; and there wrestled a man with him until the breaking of the day.",
+            reference: "Genesis 32:24",
+            question: "What did the angel do to Jacob during their all-night wrestling match?",
+            answers: ["He blessed Jacob without touching him", "He touched the hollow of Jacob's thigh and put it out of joint", "He revealed his true name to Jacob", "He departed when day broke without blessing him"],
+            correct: 1
+        },
+        {
+            scripture: "Be not forgetful to entertain strangers: for thereby some have entertained angels unawares.",
+            reference: "Hebrews 13:2",
+            question: "According to Hebrews 13:2, what have some people done without knowing it?",
+            answers: ["Seen the face of God", "Entertained angels unawares", "Received a heavenly blessing", "Heard the voice of God"],
+            correct: 1
+        },
+        {
+            scripture: "And I beheld, and I heard the voice of many angels round about the throne.",
+            reference: "Revelation 5:11",
+            question: "According to Revelation 5:11, approximately how many angels were around the throne?",
+            answers: ["Ten thousand", "One hundred and forty-four thousand", "Ten thousand times ten thousand, and thousands of thousands", "An innumerable host without number"],
+            correct: 2
+        },
+        {
+            scripture: "He shall give his angels charge over thee, to keep thee in all thy ways.",
+            reference: "Psalm 91:11",
+            question: "Which psalm says God shall give His angels charge over you to keep you in all your ways?",
+            answers: ["Psalm 23", "Psalm 46", "Psalm 91", "Psalm 103"],
+            correct: 2
+        },
+        {
+            scripture: "And the angel of the LORD found her by a fountain of water in the wilderness.",
+            reference: "Genesis 16:7",
+            question: "To which woman did the angel of the Lord say I will multiply thy seed exceedingly?",
+            answers: ["Sarah", "Rebekah", "Hagar", "Rachel"],
+            correct: 2
+        },
+        {
+            scripture: "And there was war in heaven: Michael and his angels fought against the dragon.",
+            reference: "Revelation 12:7",
+            question: "Who does Michael fight against in the war in heaven described in Revelation 12?",
+            answers: ["The beast and the false prophet", "The dragon and his angels", "The armies of earth", "Death and Hades"],
+            correct: 1
+        },
+        {
+            scripture: "And the LORD opened the eyes of the young man; and he saw the mountain was full of horses and chariots of fire.",
+            reference: "2 Kings 6:17",
+            question: "When Elisha prayed for his servant's eyes to be opened, what did the servant see surrounding them?",
+            answers: ["A mighty army of Israel", "The mountain full of horses and chariots of fire", "Angels with drawn swords", "A pillar of fire and cloud"],
+            correct: 1
+        },
+        {
+            scripture: "And the angel of the LORD came again the second time, and touched him.",
+            reference: "1 Kings 19:7",
+            question: "What did the angel provide for Elijah when he lay exhausted under the juniper tree?",
+            answers: ["Water and a prophecy", "A cake baked on coals and a cruse of water", "Bread and wine", "Manna from heaven"],
+            correct: 1
+        },
+        {
+            scripture: "And suddenly there was with the angel a multitude of the heavenly host praising God.",
+            reference: "Luke 2:13",
+            question: "What did the multitude of the heavenly host say when they appeared to the shepherds?",
+            answers: ["Fear not, for I bring good tidings", "Go to Bethlehem and worship", "Glory to God in the highest, and on earth peace, good will toward men", "The Saviour is born in David's city"],
+            correct: 2
+        },
+        {
+            scripture: "And the angels which kept not their first estate, but left their own habitation.",
+            reference: "Jude 1:6",
+            question: "According to Jude 1:6, where are the angels who sinned and left their first estate now kept?",
+            answers: ["In outer darkness forever", "In everlasting chains under darkness unto the judgment of the great day", "In the bottomless pit", "In the lake of fire"],
+            correct: 1
+        },
+        {
+            scripture: "Bless the LORD, ye his angels, that excel in strength, that do his commandments.",
+            reference: "Psalm 103:20",
+            question: "What does Psalm 103:20 say the angels do?",
+            answers: ["They guard the gates of heaven day and night", "They excel in strength and do His commandments, hearkening to the voice of His word", "They number ten thousand times ten thousand", "They sing before the throne day and night without ceasing"],
+            correct: 1
+        },
+        {
+            scripture: "And he dreamed, and behold a ladder set up on the earth, and the top of it reached to heaven.",
+            reference: "Genesis 28:12",
+            question: "What did Jacob see ascending and descending the ladder in his dream at Bethel?",
+            answers: ["The Spirit of God descending like fire", "The angels of God", "Stars and celestial lights", "The sons of God calling to him"],
+            correct: 1
+        },
+        {
+            scripture: "And there appeared an angel unto him from heaven, strengthening him.",
+            reference: "Luke 22:43",
+            question: "When did an angel from heaven appear to strengthen Jesus according to Luke 22:43?",
+            answers: ["At His baptism in the Jordan", "During His forty days in the wilderness", "In the Garden of Gethsemane", "As He hung on the cross"],
+            correct: 2
+        },
+        {
+            scripture: "And I saw seven angels which stood before God; and to them were given seven trumpets.",
+            reference: "Revelation 8:2",
+            question: "How many angels stand before God and were given trumpets in Revelation 8?",
+            answers: ["Four", "Six", "Seven", "Twelve"],
+            correct: 2
+        },
+        {
+            scripture: "And the LORD said, Shall I hide from Abraham that thing which I do?",
+            reference: "Genesis 18:17",
+            question: "How many visitors came to Abraham at Mamre before the destruction of Sodom?",
+            answers: ["One", "Two", "Three", "Four"],
+            correct: 2
+        },
+        {
+            scripture: "Thinkest thou that I cannot now pray to my Father, and he shall presently give me more than twelve legions of angels?",
+            reference: "Matthew 26:53",
+            question: "How many legions of angels did Jesus say the Father could send to deliver Him?",
+            answers: ["Seven legions", "Ten legions", "More than twelve legions", "A thousand legions"],
+            correct: 2
+        },
+        {
+            scripture: "And the angel answered and said unto the women, Fear not ye: for I know that ye seek Jesus.",
+            reference: "Matthew 28:5",
+            question: "What had the angel done to the stone in front of Jesus's tomb when the women arrived?",
+            answers: ["Broken it into pieces", "Rolled it away and sat upon it", "Carried it away entirely", "Pushed it to the side of the entrance"],
+            correct: 1
+        },
+        {
+            scripture: "Take heed that ye despise not one of these little ones.",
+            reference: "Matthew 18:10",
+            question: "According to Matthew 18:10, what do the angels of little children always behold?",
+            answers: ["The gates of heaven", "The face of my Father which is in heaven", "The throne of God", "The prayers of the saints"],
+            correct: 1
+        },
+        {
+            scripture: "And the LORD said unto Moses, Yet will I bring one plague more upon Pharaoh.",
+            reference: "Exodus 11:1",
+            question: "In the book of Revelation, what are the four living creatures around the throne doing day and night without rest?",
+            answers: ["Sounding their trumpets", "Saying Holy, holy, holy, Lord God Almighty", "Casting their crowns before the throne", "Declaring the judgments of God"],
+            correct: 1
+        },
+        {
+            scripture: "And to the angel of the church in Ephesus write.",
+            reference: "Revelation 2:1",
+            question: "In Revelation chapters 2 and 3, to how many churches did Jesus send messages through angels?",
+            answers: ["Five", "Six", "Seven", "Twelve"],
+            correct: 2
+        },
+        {
+            scripture: "Are they not all ministering spirits, sent forth to minister for them who shall be heirs of salvation?",
+            reference: "Hebrews 1:14",
+            question: "According to Hebrews 1:14, what are angels described as?",
+            answers: ["Warrior princes of heaven", "Ministering spirits sent to minister for the heirs of salvation", "Sons of God who stand before His throne", "Watchers and holy ones"],
+            correct: 1
+        },
+        {
+            scripture: "And the angel of God, which went before the camp of Israel, removed and went behind them.",
+            reference: "Exodus 14:19",
+            question: "What did the angel of God do when Pharaoh's army pursued Israel at the Red Sea?",
+            answers: ["Went ahead to part the waters", "Removed from before the camp and went behind them between them and the Egyptians", "Stood in the midst of the sea as a pillar", "Went up to heaven and sent fire down on the army"],
+            correct: 1
+        },
+        {
+            scripture: "And I John saw these things, and heard them. And when I had heard and seen, I fell down to worship before the feet of the angel.",
+            reference: "Revelation 22:8",
+            question: "What did the angel tell John when John fell down to worship him in Revelation 22?",
+            answers: ["Rise up and worship only God most high", "See thou do it not: for I am thy fellowservant; worship God", "I am the Alpha and Omega, worship me not", "Stand up for the Lord thy God is coming quickly"],
+            correct: 1
+        },
+        {
+            scripture: "Also I heard the voice of the Lord, saying, Whom shall I send, and who will go for us?",
+            reference: "Isaiah 6:8",
+            question: "In Isaiah 6, what did the seraph use to purge Isaiah's lips before he received his calling?",
+            answers: ["Holy water from the altar", "A live coal taken from off the altar with tongs", "The breath of God breathed upon him", "The word of the Lord spoken directly to his mouth"],
+            correct: 1
+        }
+    ],
+    "holy-spirit": [
+        {
+            scripture: "And the Spirit of God moved upon the face of the waters.",
+            reference: "Genesis 1:2",
+            question: "In which verse does the Holy Spirit first appear in the Bible?",
+            answers: ["Genesis 1:1", "Genesis 1:2", "Exodus 3:2", "John 1:1"],
+            correct: 1
+        },
+        {
+            scripture: "And there appeared unto them cloven tongues like as of fire, and it sat upon each of them.",
+            reference: "Acts 2:3",
+            question: "What appeared over the disciples when the Holy Spirit came at Pentecost?",
+            answers: ["A bright cloud", "A mighty rushing wind only", "Cloven tongues like as of fire", "A shining dove"],
+            correct: 2
+        },
+        {
+            scripture: "And I will pray the Father, and he shall give you another Comforter.",
+            reference: "John 14:16",
+            question: "What does Jesus call the Holy Spirit in John 14:16?",
+            answers: ["The Spirit of Truth", "Another Comforter", "The Holy One of God", "The Counsellor from above"],
+            correct: 1
+        },
+        {
+            scripture: "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.",
+            reference: "Galatians 5:22",
+            question: "Which fruit of the Spirit is listed first in Galatians 5:22 (KJV)?",
+            answers: ["Joy", "Peace", "Love", "Faith"],
+            correct: 2
+        },
+        {
+            scripture: "And they were all filled with the Holy Ghost, and began to speak with other tongues.",
+            reference: "Acts 2:4",
+            question: "What did the disciples begin to do when they were filled with the Holy Ghost at Pentecost?",
+            answers: ["Prophesy of the end times", "Speak with other tongues as the Spirit gave them utterance", "Heal the sick in the streets of Jerusalem", "Preach boldly in the temple courts"],
+            correct: 1
+        },
+        {
+            scripture: "What? know ye not that your body is the temple of the Holy Ghost which is in you.",
+            reference: "1 Corinthians 6:19",
+            question: "In 1 Corinthians 6:19, Paul describes the believer's body as what?",
+            answers: ["A vessel of honour to God", "The dwelling place of God most high", "The temple of the Holy Ghost", "A living sacrifice holy and acceptable"],
+            correct: 2
+        },
+        {
+            scripture: "Grieve not the holy Spirit of God, whereby ye are sealed unto the day of redemption.",
+            reference: "Ephesians 4:30",
+            question: "What does Paul instruct believers not to do to the Holy Spirit in Ephesians 4:30?",
+            answers: ["Quench the Spirit", "Grieve the Holy Spirit of God", "Resist the Holy Spirit", "Test the Holy Spirit"],
+            correct: 1
+        },
+        {
+            scripture: "And John bare record, saying, I saw the Spirit descending from heaven like a dove.",
+            reference: "John 1:32",
+            question: "In what form did the Holy Spirit descend upon Jesus at His baptism?",
+            answers: ["As a flame of fire", "As a mighty rushing wind", "Like a dove", "As a bright and shining cloud"],
+            correct: 2
+        },
+        {
+            scripture: "Likewise the Spirit also helpeth our infirmities: for we know not what we should pray for as we ought.",
+            reference: "Romans 8:26",
+            question: "According to Romans 8:26, what does the Spirit do when believers do not know how to pray?",
+            answers: ["Teaches them the right words to say", "Maketh intercession with groanings which cannot be uttered", "Gives them a vision of what to ask for", "Speaks directly to God in their stead"],
+            correct: 1
+        },
+        {
+            scripture: "But ye shall receive power, after that the Holy Ghost is come upon you.",
+            reference: "Acts 1:8",
+            question: "According to Acts 1:8, what did Jesus promise the Holy Spirit would give the disciples?",
+            answers: ["Wisdom to teach all nations", "Power to perform great miracles", "Power to be witnesses unto Him", "The ability to speak all languages of the world"],
+            correct: 2
+        },
+        {
+            scripture: "Howbeit when he, the Spirit of truth, is come, he will guide you into all truth.",
+            reference: "John 16:13",
+            question: "What does Jesus say in John 16:13 the Spirit of truth will do when He comes?",
+            answers: ["Remind you of all that Jesus said to you", "Guide you into all truth", "Convict the whole world of sin", "Give you words to speak before kings and rulers"],
+            correct: 1
+        },
+        {
+            scripture: "But he that shall blaspheme against the Holy Ghost hath never forgiveness.",
+            reference: "Mark 3:29",
+            question: "What does Jesus say in Mark 3:29 about blaspheming the Holy Ghost?",
+            answers: ["It is the greatest sin known to man", "Hath never forgiveness, but is in danger of eternal damnation", "It will be judged severely on the last day", "It grieves God beyond all measure"],
+            correct: 1
+        },
+        {
+            scripture: "And it shall come to pass afterward, that I will pour out my spirit upon all flesh.",
+            reference: "Joel 2:28",
+            question: "In Acts 2:16, Peter said the events of Pentecost fulfilled the prophecy of which Old Testament prophet?",
+            answers: ["Isaiah", "Jeremiah", "Joel", "Zechariah"],
+            correct: 2
+        },
+        {
+            scripture: "Quench not the Spirit.",
+            reference: "1 Thessalonians 5:19",
+            question: "What short command does 1 Thessalonians 5:19 give about the Spirit?",
+            answers: ["Grieve not the Spirit", "Resist not the Spirit", "Quench not the Spirit", "Test not the Spirit"],
+            correct: 2
+        },
+        {
+            scripture: "But Peter said, Ananias, why hath Satan filled thine heart to lie to the Holy Ghost?",
+            reference: "Acts 5:3",
+            question: "In Acts 5, who lied to the Holy Ghost about the price of land they sold?",
+            answers: ["Simon the sorcerer and his wife", "Ananias and Sapphira", "Bar-Jesus the sorcerer", "Demas who loved this present world"],
+            correct: 1
+        },
+        {
+            scripture: "For he shall be great in the sight of the Lord, and shall be filled with the Holy Ghost, even from his mother's womb.",
+            reference: "Luke 1:15",
+            question: "Who was filled with the Holy Ghost from his mother's womb according to Luke 1:15?",
+            answers: ["Jesus Christ the Son of God", "Stephen the first martyr", "John the Baptist", "Timothy the young minister"],
+            correct: 2
+        },
+        {
+            scripture: "While Peter yet spake these words, the Holy Ghost fell on all them which heard the word.",
+            reference: "Acts 10:44",
+            question: "In Acts 10, on whom did the Holy Spirit fall while Peter was still preaching?",
+            answers: ["The Samaritan believers in Samaria", "The household of Cornelius the centurion", "The disciples already gathered at Jerusalem", "The church that had formed at Antioch"],
+            correct: 1
+        },
+        {
+            scripture: "If ye then, being evil, know how to give good gifts unto your children: how much more shall your heavenly Father give the Holy Spirit to them that ask him?",
+            reference: "Luke 11:13",
+            question: "What does Jesus promise the heavenly Father will give to those who ask in Luke 11:13?",
+            answers: ["Every good and perfect gift", "The Holy Spirit", "All their prayers answered", "Wisdom and knowledge from above"],
+            correct: 1
+        },
+        {
+            scripture: "And be not drunk with wine, wherein is excess; but be filled with the Spirit.",
+            reference: "Ephesians 5:18",
+            question: "What does Paul contrast with being drunk with wine in Ephesians 5:18?",
+            answers: ["Walking carefully in wisdom", "Being filled with the Spirit", "Praying without ceasing always", "Putting on the whole armour of God"],
+            correct: 1
+        },
+        {
+            scripture: "For by one Spirit are we all baptized into one body.",
+            reference: "1 Corinthians 12:13",
+            question: "According to 1 Corinthians 12:13, what unites all believers into one body?",
+            answers: ["Faith in Christ Jesus alone", "Baptism in water in His name", "One Spirit baptising all into one body", "The breaking of bread together in His name"],
+            correct: 2
+        },
+        {
+            scripture: "Then Peter said unto them, Repent, and be baptized every one of you in the name of Jesus Christ.",
+            reference: "Acts 2:38",
+            question: "According to Acts 2:38, what must a person do to receive the gift of the Holy Ghost?",
+            answers: ["Fast and pray for ten days as the disciples did", "Repent and be baptised in the name of Jesus Christ", "Have hands laid on them by an apostle", "Speak in tongues as an outward sign of receiving"],
+            correct: 1
+        },
+        {
+            scripture: "And God hath set some in the church, first apostles, secondarily prophets.",
+            reference: "1 Corinthians 12:28",
+            question: "How many gifts of the Spirit are listed in 1 Corinthians 12:8-10 (KJV)?",
+            answers: ["Seven gifts", "Nine gifts", "Twelve gifts", "Five gifts"],
+            correct: 1
+        },
+        {
+            scripture: "But the Comforter, which is the Holy Ghost, whom the Father will send in my name, he shall teach you all things.",
+            reference: "John 14:26",
+            question: "According to John 14:26, what two things will the Comforter — the Holy Ghost — do?",
+            answers: ["Heal the sick and raise the dead in His name", "Teach you all things and bring all things to your remembrance", "Guide you in truth and convict the world of sin", "Give you power and comfort you in all your sorrows"],
+            correct: 1
+        },
+        {
+            scripture: "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+            reference: "2 Timothy 1:7",
+            question: "According to 2 Timothy 1:7, what spirit has God NOT given us?",
+            answers: ["A spirit of doubt and unbelief", "A spirit of fear", "A spirit of division and strife", "A spirit of pride and boasting"],
+            correct: 1
+        },
+        {
+            scripture: "And the Spirit of the LORD came mightily upon him.",
+            reference: "Judges 14:6",
+            question: "In the Old Testament, the Spirit of the LORD came mightily upon which judge giving him supernatural strength?",
+            answers: ["Gideon the mighty man of valour", "Deborah the prophetess", "Samson the Nazirite", "Jephthah the Gileadite"],
+            correct: 2
+        },
+        {
+            scripture: "And I will pray the Father, and he shall give you another Comforter, that he may abide with you for ever.",
+            reference: "John 14:16",
+            question: "How long does Jesus say in John 14:16 the Comforter — the Holy Spirit — will abide with believers?",
+            answers: ["Until the end of this present age", "For ever", "Until Christ returns at the last day", "As long as they remain faithful to God"],
+            correct: 1
+        },
+        {
+            scripture: "When they had prayed, the place was shaken where they were assembled together.",
+            reference: "Acts 4:31",
+            question: "What happened when the early church prayed together in Acts 4:31?",
+            answers: ["They all spoke in tongues together", "The place was shaken and they were all filled with the Holy Ghost and spake the word with boldness", "Fire descended from heaven upon them", "An angel appeared and stood among them"],
+            correct: 1
+        },
+        {
+            scripture: "Now the Lord is that Spirit: and where the Spirit of the Lord is, there is liberty.",
+            reference: "2 Corinthians 3:17",
+            question: "What does 2 Corinthians 3:17 say is found where the Spirit of the Lord is?",
+            answers: ["Power and great boldness", "Liberty", "Peace that surpasses all understanding", "The fullness of God"],
+            correct: 1
+        },
+        {
+            scripture: "But if the Spirit of him that raised up Jesus from the dead dwell in you.",
+            reference: "Romans 8:11",
+            question: "According to Romans 8:11, whose Spirit raised Jesus from the dead and now dwells in believers?",
+            answers: ["The Spirit of God the Father", "The Spirit of him that raised up Jesus from the dead", "The Spirit of Christ the Son", "The Spirit of the Living God"],
+            correct: 1
+        },
+        {
+            scripture: "Ye are our epistle written in our hearts, known and read of all men.",
+            reference: "2 Corinthians 3:2",
+            question: "According to Romans 8:14, who are the sons of God?",
+            answers: ["Those who keep the whole law without failing", "As many as are led by the Spirit of God", "Those who believe on Jesus Christ His Son", "Those who are baptised into His death and resurrection"],
+            correct: 1
+        }
+    ],
+    "jonah": [
+        {
+            scripture: "Arise, go to Nineveh, that great city, and cry against it.",
+            reference: "Jonah 1:2",
+            question: "Where did God command Jonah to go and preach?",
+            answers: ["Jerusalem", "Tarshish", "Nineveh", "Babylon"],
+            correct: 2
+        },
+        {
+            scripture: "But Jonah rose up to flee unto Tarshish from the presence of the LORD.",
+            reference: "Jonah 1:3",
+            question: "Where was Jonah trying to flee instead of going to Nineveh?",
+            answers: ["Egypt", "Babylon", "Tarshish", "Joppa"],
+            correct: 2
+        },
+        {
+            scripture: "But the LORD sent out a great wind into the sea, and there was a mighty tempest in the sea.",
+            reference: "Jonah 1:4",
+            question: "What did God send to trouble the ship Jonah was sailing on?",
+            answers: ["A plague of locusts on the sails", "A great wind and a mighty tempest in the sea", "A thick darkness at noon", "An army of enemy ships"],
+            correct: 1
+        },
+        {
+            scripture: "But Jonah was gone down into the sides of the ship; and he lay, and was fast asleep.",
+            reference: "Jonah 1:5",
+            question: "What was Jonah doing when the great storm struck the ship?",
+            answers: ["Praying alone on the deck", "Helping the sailors throw cargo overboard", "Fast asleep in the sides of the ship", "Crying out to God below deck"],
+            correct: 2
+        },
+        {
+            scripture: "Come, and let us cast lots, that we may know for whose cause this evil is upon us.",
+            reference: "Jonah 1:7",
+            question: "What did the sailors do to discover who had caused the storm to come upon them?",
+            answers: ["They prayed to all their gods together", "They cast lots", "They interrogated every passenger one by one", "They threw all the cargo overboard first"],
+            correct: 1
+        },
+        {
+            scripture: "Take me up, and cast me forth into the sea; so shall the sea be calm unto you.",
+            reference: "Jonah 1:12",
+            question: "What did Jonah tell the sailors to do to stop the storm?",
+            answers: ["Pray to the God of Israel all night", "Return the ship immediately to the port of Joppa", "Cast him into the sea", "Fast for three days and cry unto God"],
+            correct: 2
+        },
+        {
+            scripture: "Now the LORD had prepared a great fish to swallow up Jonah.",
+            reference: "Jonah 1:17",
+            question: "What did the LORD prepare to swallow Jonah after he was thrown into the sea?",
+            answers: ["A great whale", "A leviathan from the deep", "A great fish", "A sea monster from the deep"],
+            correct: 2
+        },
+        {
+            scripture: "And Jonah was in the belly of the fish three days and three nights.",
+            reference: "Jonah 1:17",
+            question: "How long was Jonah inside the great fish?",
+            answers: ["One day and one night", "Seven days and seven nights", "Three days and three nights", "Forty days and forty nights"],
+            correct: 2
+        },
+        {
+            scripture: "Then Jonah prayed unto the LORD his God out of the fish's belly.",
+            reference: "Jonah 2:1",
+            question: "From where did Jonah pray to the LORD after being swallowed?",
+            answers: ["From the depths of the open sea", "Out of the belly of hell (Sheol)", "From deep within the fish's mouth", "From the deep waters of the ocean floor"],
+            correct: 1
+        },
+        {
+            scripture: "And the LORD spake unto the fish, and it vomited out Jonah upon the dry land.",
+            reference: "Jonah 2:10",
+            question: "What did God command the great fish to do at the end of Jonah chapter 2?",
+            answers: ["Swim to the shores of Nineveh with Jonah", "Vomit Jonah out upon the dry land", "Release Jonah into the shallow water near shore", "Return Jonah to the port of Joppa where he had fled"],
+            correct: 1
+        },
+        {
+            scripture: "Now Nineveh was an exceeding great city of three days' journey.",
+            reference: "Jonah 3:3",
+            question: "How large was Nineveh described as in Jonah 3:3?",
+            answers: ["A one day journey across the city", "An exceeding great city of three days' journey", "The greatest city the ancient world had ever seen", "A city so large it held more than a million people"],
+            correct: 1
+        },
+        {
+            scripture: "Yet forty days, and Nineveh shall be overthrown.",
+            reference: "Jonah 3:4",
+            question: "What was the complete message that Jonah preached throughout Nineveh?",
+            answers: ["Repent or be destroyed by the God of Israel", "Yet forty days, and Nineveh shall be overthrown", "God will judge you for your wickedness and violence", "Turn from evil or the LORD God will send fire upon you"],
+            correct: 1
+        },
+        {
+            scripture: "So the people of Nineveh believed God, and proclaimed a fast, and put on sackcloth.",
+            reference: "Jonah 3:5",
+            question: "How did the people of Nineveh respond when they heard Jonah's message?",
+            answers: ["They mocked him and threw him in prison", "They believed God, proclaimed a fast, and put on sackcloth from the greatest to the least", "They debated amongst themselves for three days before deciding", "They sent ambassadors to the king to seek his counsel first"],
+            correct: 1
+        },
+        {
+            scripture: "And God saw their works, that they turned from their evil way.",
+            reference: "Jonah 3:10",
+            question: "What did God see that caused Him to spare Nineveh from destruction?",
+            answers: ["Their great numbers of men, women, and children", "Their works — that they turned from their evil way", "The king's decree of fasting and prayer", "Their sacrifice and offerings to the God of Israel"],
+            correct: 1
+        },
+        {
+            scripture: "For I knew that thou art a gracious God, and merciful, slow to anger, and of great kindness.",
+            reference: "Jonah 4:2",
+            question: "Why was Jonah angry after Nineveh was spared from destruction?",
+            answers: ["He had walked many miles for nothing at all", "He had known God was merciful and feared this outcome — he wanted Nineveh destroyed", "The people of Nineveh did not thank him for his warning", "God did not reward him for his reluctant obedience"],
+            correct: 1
+        },
+        {
+            scripture: "And God prepared a gourd, and made it to come up over Jonah.",
+            reference: "Jonah 4:6",
+            question: "What plant did God prepare to give Jonah shade east of Nineveh?",
+            answers: ["A vine", "A fig tree", "A large palm tree", "A gourd"],
+            correct: 3
+        },
+        {
+            scripture: "But God prepared a worm when the morning rose the next day, and it smote the gourd.",
+            reference: "Jonah 4:7",
+            question: "What did God prepare to destroy the shade plant the very next morning?",
+            answers: ["A great heat that scorched it", "A worm which smote the gourd", "A vehement east wind", "A sudden drought"],
+            correct: 1
+        },
+        {
+            scripture: "And God prepared a vehement east wind; and the sun beat upon the head of Jonah, that he fainted.",
+            reference: "Jonah 4:8",
+            question: "What additional affliction did God send along with the sun to make Jonah faint?",
+            answers: ["A second great storm from the sea", "Heavy rain with no shade at all", "A vehement east wind so that the sun beat upon his head", "A swarm of locusts that drove him from his shelter"],
+            correct: 2
+        },
+        {
+            scripture: "And should not I spare Nineveh, that great city, wherein are more than sixscore thousand persons.",
+            reference: "Jonah 4:11",
+            question: "How many people in Nineveh could not discern between their right hand and their left?",
+            answers: ["Forty thousand people", "Sixty thousand people", "More than sixscore thousand — that is 120,000", "Two hundred thousand people"],
+            correct: 2
+        },
+        {
+            scripture: "For as Jonas was three days and three nights in the whale's belly; so shall the Son of man be.",
+            reference: "Matthew 12:40",
+            question: "In Matthew 12:40, Jesus compares Jonah's time in the fish to what event in His own life?",
+            answers: ["His forty days of fasting in the wilderness", "Three days and three nights in the heart of the earth — His burial and resurrection", "His time of prayer in Gethsemane", "His ascension into heaven after appearing to His disciples"],
+            correct: 1
+        },
+        {
+            scripture: "Then the men feared the LORD exceedingly, and offered a sacrifice unto the LORD.",
+            reference: "Jonah 1:16",
+            question: "What did the sailors do after the sea calmed when Jonah was thrown overboard?",
+            answers: ["They turned the ship back to Joppa in fear", "They feared the LORD exceedingly and offered a sacrifice and made vows unto the LORD", "They gave thanks to their own pagan gods for deliverance", "They sailed quickly on and continued toward Tarshish"],
+            correct: 1
+        },
+        {
+            scripture: "Now the word of the LORD came unto Jonah the son of Amittai.",
+            reference: "Jonah 1:1",
+            question: "What was the name of Jonah's father according to Jonah 1:1?",
+            answers: ["Elijah", "Amittai", "Zebulun", "Gittah-hepher"],
+            correct: 1
+        },
+        {
+            scripture: "And Jonah was exceeding glad of the gourd.",
+            reference: "Jonah 4:6",
+            question: "How did Jonah feel about the gourd plant that God provided for shade?",
+            answers: ["He was grateful but still deeply angry at God", "He was exceeding glad of the gourd", "He accepted it as a sign of God's comfort toward him", "He thanked God for it and repented of all his anger"],
+            correct: 1
+        },
+        {
+            scripture: "So he called upon the LORD, and said, O LORD, take, I beseech thee, my life from me.",
+            reference: "Jonah 4:3",
+            question: "What did Jonah ask God to do after Nineveh was spared?",
+            answers: ["Send him back to preach again in Nineveh", "Take away his life, for it is better for him to die than to live", "Destroy Nineveh anyway within forty-one days", "Give him a clear sign of what His will was"],
+            correct: 1
+        },
+        {
+            scripture: "And the word of the LORD came unto Jonah the second time, saying, Arise, go unto Nineveh.",
+            reference: "Jonah 3:1-2",
+            question: "What did God say to Jonah after the fish vomited him onto dry land?",
+            answers: ["Rest here for three days then go to Nineveh", "Arise, go unto Nineveh, that great city, and preach the preaching that I bid thee", "Return to Joppa and give thanks to Me", "Go first to the king of Nineveh and warn him privately"],
+            correct: 1
+        },
+        {
+            scripture: "And the king of Nineveh arose from his throne, and he laid his robe from him.",
+            reference: "Jonah 3:6",
+            question: "What did the king of Nineveh do when the word of God's judgment reached him?",
+            answers: ["He called Jonah before his throne to hear more detail", "He arose from his throne, laid aside his robe, covered himself in sackcloth and sat in ashes", "He sent messengers to the God of Israel to investigate the warning", "He consulted his priests and wise men and advisors"],
+            correct: 1
+        },
+        {
+            scripture: "Let man and beast be covered with sackcloth, and cry mightily unto God.",
+            reference: "Jonah 3:8",
+            question: "What unusual group did the king of Nineveh's decree include in the fasting and sackcloth?",
+            answers: ["All foreigners living within the city", "Even the animals — both man and beast were covered with sackcloth", "The soldiers and palace guards only", "The women and children but not the men"],
+            correct: 1
+        },
+        {
+            scripture: "And Jonah began to enter into the city a day's journey.",
+            reference: "Jonah 3:4",
+            question: "How far into Nineveh had Jonah gone when he began preaching his message?",
+            answers: ["He preached from outside the city gates only", "A day's journey into the city", "He went to the city centre before preaching", "He preached the entire three days' journey across the city"],
+            correct: 1
+        },
+        {
+            scripture: "For I knew that thou art a gracious God, and merciful, slow to anger.",
+            reference: "Jonah 4:2",
+            question: "In Jonah 4:2, which attribute of God did Jonah NOT list when explaining why he fled?",
+            answers: ["Gracious", "Merciful", "Slow to anger", "Holy and just in all His ways"],
+            correct: 3
+        },
+        {
+            scripture: "And Jonah went out of the city, and sat on the east side of the city.",
+            reference: "Jonah 4:5",
+            question: "Where did Jonah go after preaching in Nineveh to wait and see what would happen?",
+            answers: ["He returned to Israel immediately", "He sat on the east side of the city and made a booth to sit under in the shadow", "He went into the wilderness to pray and fast", "He sat at the city gates watching for God's judgment"],
+            correct: 1
+        }
+    ],
+    "bible-animals": [
+        {
+            scripture: "Now the serpent was more subtil than any beast of the field which the LORD God had made.",
+            reference: "Genesis 3:1",
+            question: "What was the first animal to speak in the Bible?",
+            answers: ["The raven sent from the ark", "Balaam's donkey", "The serpent in the garden", "A dove"],
+            correct: 2
+        },
+        {
+            scripture: "Of every clean beast thou shalt take to thee by sevens, the male and his female.",
+            reference: "Genesis 7:2",
+            question: "According to Genesis 7:2, how many of each clean beast did Noah take on the ark?",
+            answers: ["Two — just one pair of each", "Seven pairs — seven and seven", "Three pairs of every clean beast", "One of each kind only"],
+            correct: 1
+        },
+        {
+            scripture: "And he sent forth a raven, which went forth to and fro, until the waters were dried up from off the earth.",
+            reference: "Genesis 8:7",
+            question: "What was the first bird Noah sent out from the ark after the floodwaters began to recede?",
+            answers: ["A dove", "A sparrow", "A raven", "A swallow"],
+            correct: 2
+        },
+        {
+            scripture: "And the dove came in to him in the evening; and, lo, in her mouth was an olive leaf pluckt off.",
+            reference: "Genesis 8:11",
+            question: "What did the dove bring back to Noah on its second flight from the ark?",
+            answers: ["A fig leaf from a tree", "An olive leaf freshly plucked", "A small green branch", "Nothing — it returned with empty beak"],
+            correct: 1
+        },
+        {
+            scripture: "And Abraham lifted up his eyes, and looked, and behold behind him a ram caught in a thicket by his horns.",
+            reference: "Genesis 22:13",
+            question: "What animal was caught in the thicket and sacrificed in Isaac's place on Mount Moriah?",
+            answers: ["A lamb without blemish", "A goat", "A ram", "A young bull"],
+            correct: 2
+        },
+        {
+            scripture: "And the ravens brought him bread and flesh in the morning, and bread and flesh in the evening.",
+            reference: "1 Kings 17:6",
+            question: "What birds did God send to feed Elijah by the brook Cherith during the drought?",
+            answers: ["Doves", "Eagles", "Ravens", "Sparrows"],
+            correct: 2
+        },
+        {
+            scripture: "And the LORD opened the mouth of the ass, and she said unto Balaam, What have I done unto thee?",
+            reference: "Numbers 22:28",
+            question: "Whose animal spoke to him with a human voice in Numbers 22?",
+            answers: ["Elijah's horse", "Balaam's donkey (ass)", "A raven sent to warn Moses", "A serpent in the wilderness of Sinai"],
+            correct: 1
+        },
+        {
+            scripture: "And the ass saw the angel of the LORD standing in the way, and his sword drawn in his hand.",
+            reference: "Numbers 22:23",
+            question: "What did Balaam's donkey see that Balaam himself was completely unable to see?",
+            answers: ["A pit dug across the road", "A lion crouching to spring on them", "The angel of the Lord with a drawn sword blocking the way", "God Himself in a pillar of cloud"],
+            correct: 2
+        },
+        {
+            scripture: "And he found a new jawbone of an ass, and put forth his hand, and took it, and slew a thousand men therewith.",
+            reference: "Judges 15:15",
+            question: "Samson found a swarm of bees and honey inside the carcass of which animal he had killed?",
+            answers: ["A bear he had slain", "An ox from a nearby farm", "A lion that had attacked him", "A horse fallen in battle"],
+            correct: 2
+        },
+        {
+            scripture: "And it came to pass, that at even the quails came up, and covered the camp.",
+            reference: "Exodus 16:13",
+            question: "What birds did God send to feed the Israelites with meat in the wilderness?",
+            answers: ["Doves", "Pigeons", "Quails", "Ravens"],
+            correct: 2
+        },
+        {
+            scripture: "My God hath sent his angel, and hath shut the lions' mouths, that they have not hurt me.",
+            reference: "Daniel 6:22",
+            question: "What did God do to the lions when Daniel was thrown into their den?",
+            answers: ["Put them all into a deep sleep", "Removed them all to the far end of the den", "Shut the lions' mouths so they had no power to hurt him", "Drove them out of the den entirely"],
+            correct: 2
+        },
+        {
+            scripture: "Now the LORD had prepared a great fish to swallow up Jonah.",
+            reference: "Jonah 1:17",
+            question: "What animal did God prepare to swallow Jonah according to Jonah 1:17?",
+            answers: ["A great whale", "A leviathan from the deep", "A great fish", "A sea monster from the depths"],
+            correct: 2
+        },
+        {
+            scripture: "Tell ye the daughter of Sion, Behold, thy King cometh unto thee, meek, and sitting upon an ass.",
+            reference: "Matthew 21:5",
+            question: "What animal did Jesus ride into Jerusalem on Palm Sunday?",
+            answers: ["A white horse of victory", "A donkey — a colt the foal of an ass", "A young camel", "A mule from David's line"],
+            correct: 1
+        },
+        {
+            scripture: "And bring hither the fatted calf, and kill it; and let us eat, and be merry.",
+            reference: "Luke 15:23",
+            question: "In the Parable of the Prodigal Son, what animal was killed to celebrate the son's return?",
+            answers: ["A lamb without blemish", "A fatted calf", "A young goat", "An ox from the herd"],
+            correct: 1
+        },
+        {
+            scripture: "And found in the temple those that sold oxen and sheep and doves, and the changers of money sitting.",
+            reference: "John 2:14",
+            question: "What animals did Jesus drive out of the temple along with the money changers?",
+            answers: ["Sheep and goats only", "Oxen and sheep and doves", "Cattle and horses", "Doves and sparrows only"],
+            correct: 1
+        },
+        {
+            scripture: "And John saw the Spirit of God descending like a dove, and lighting upon him.",
+            reference: "Matthew 3:16",
+            question: "What animal visibly descended from heaven at the baptism of Jesus?",
+            answers: ["A white lamb", "A raven", "A dove", "An eagle"],
+            correct: 2
+        },
+        {
+            scripture: "And one of the elders saith unto me, Weep not: behold, the Lion of the tribe of Juda hath prevailed.",
+            reference: "Revelation 5:5",
+            question: "What is the Lion of the tribe of Judah in Revelation 5:5 a title for?",
+            answers: ["A literal lion representing Israel", "The archangel Michael the warrior", "Jesus Christ who alone is worthy", "King David the great warrior"],
+            correct: 2
+        },
+        {
+            scripture: "And they took two milch kine, and tied them to the cart, and shut up their calves at home.",
+            reference: "1 Samuel 6:10",
+            question: "What kind of cows did the Philistines hitch to the cart carrying the ark of God back to Israel?",
+            answers: ["Strong trained oxen", "Wild bulls from the field", "Milch kine — nursing cows with calves", "White horses of the best breed"],
+            correct: 2
+        },
+        {
+            scripture: "What man of you, having an hundred sheep, if he lose one of them, doth not leave the ninety and nine?",
+            reference: "Luke 15:4",
+            question: "In the Parable of the Lost Sheep, how many sheep does the shepherd leave to search for the one lost sheep?",
+            answers: ["Ninety sheep", "Ninety and nine sheep", "Forty-nine sheep", "Ninety-eight sheep"],
+            correct: 1
+        },
+        {
+            scripture: "Unto Adam also and to his wife did the LORD God make coats of skins, and clothed them.",
+            reference: "Genesis 3:21",
+            question: "What did God make from animal skins to clothe Adam and Eve after the fall in the Garden?",
+            answers: ["Shoes of leather", "Cloaks of wool", "Coats of skins", "Head coverings"],
+            correct: 2
+        },
+        {
+            scripture: "But the dove found no rest for the sole of her foot, and she returned unto him into the ark.",
+            reference: "Genesis 8:9",
+            question: "Why did the dove return to Noah on its very first flight from the ark?",
+            answers: ["It could not find enough food anywhere", "The waters were still on the face of the whole earth and it found no rest for its foot", "It was frightened by the strong wind", "God directed it back by His command"],
+            correct: 1
+        },
+        {
+            scripture: "He saith unto him, Go thou to the sea, and cast an hook, and take up the fish that first cometh up.",
+            reference: "Matthew 17:27",
+            question: "What animal provided the coin to pay Jesus and Peter's temple tax in Matthew 17?",
+            answers: ["A fish with a piece of money in his mouth", "A dove carrying a silver coin", "An ox sold at the temple market", "A ram provided from the flock"],
+            correct: 0
+        },
+        {
+            scripture: "And I beheld, and, lo, in the midst of the throne and of the four beasts, stood a Lamb as it had been slain.",
+            reference: "Revelation 5:6",
+            question: "What does the Lamb standing in the midst of the throne represent throughout the Book of Revelation?",
+            answers: ["Israel as God's chosen nation", "The church of all true believers", "Jesus Christ who was slain", "The Holy Spirit of God"],
+            correct: 2
+        },
+        {
+            scripture: "And he arose and came to his father. But when he was yet a great way off, his father saw him.",
+            reference: "Luke 15:20",
+            question: "What animals was the Prodigal Son reduced to feeding in the far country?",
+            answers: ["Sheep and goats", "Oxen and donkeys", "Swine — pigs", "Cattle and horses"],
+            correct: 2
+        },
+        {
+            scripture: "The wolf also shall dwell with the lamb, and the leopard shall lie down with the kid.",
+            reference: "Isaiah 11:6",
+            question: "According to Isaiah 11:6, which animals shall dwell together in peace in God's coming kingdom?",
+            answers: ["The lion and the leopard together", "The wolf and the lion side by side", "The wolf, leopard, and bear with the lamb, kid, and calf", "The lion and the bear lying together"],
+            correct: 2
+        },
+        {
+            scripture: "And the first beast was like a lion, and the second beast like a calf.",
+            reference: "Revelation 4:7",
+            question: "In Revelation 4:7, what did the second of the four living creatures have the face of?",
+            answers: ["A horse", "A calf", "A serpent", "A ram"],
+            correct: 1
+        },
+        {
+            scripture: "Two and two of all flesh, wherein is the breath of life, came unto Noah into the ark.",
+            reference: "Genesis 7:15",
+            question: "According to Genesis 6:19, why did God tell Noah to bring two of every living creature?",
+            answers: ["So each animal would have a companion on the long voyage", "To keep them alive with thee — male and female to preserve every kind", "To replenish the earth quickly after the flood had passed", "So Noah could offer sacrifices from the extra pairs"],
+            correct: 1
+        },
+        {
+            scripture: "Are not five sparrows sold for two farthings, and not one of them is forgotten before God?",
+            reference: "Luke 12:6",
+            question: "What small birds does Jesus use in Luke 12:6 to illustrate God's care for even the smallest things?",
+            answers: ["Doves", "Sparrows", "Ravens", "Eagles"],
+            correct: 1
+        },
+        {
+            scripture: "And he saw heaven opened, and a certain vessel descending as it had been a great sheet.",
+            reference: "Acts 10:11",
+            question: "In Peter's vision in Acts 10, what did the great sheet descending from heaven contain?",
+            answers: ["A white dove and other clean birds only", "All manner of fourfooted beasts of the earth and creeping things and fowls of the air", "A net full of fish from the sea", "The heavenly manna and bread of life"],
+            correct: 1
+        },
+        {
+            scripture: "Consider the ravens: for they neither sow nor reap; which neither have storehouse nor barn; and God feedeth them.",
+            reference: "Luke 12:24",
+            question: "What birds does Jesus point to in Luke 12:24 as an example of God's faithful provision?",
+            answers: ["Doves", "Sparrows", "Ravens", "Eagles"],
+            correct: 2
+        }
+    ],
+    "elijah-elisha": [
+        {
+            scripture: "And Elijah the Tishbite, who was of the inhabitants of Gilead, said unto Ahab, As the LORD God of Israel liveth.",
+            reference: "1 Kings 17:1",
+            question: "What dramatic announcement did Elijah make to King Ahab at the very start of his ministry?",
+            answers: ["That Ahab's entire house would be destroyed within the year", "There would be no dew nor rain in Israel except at his word", "Israel would be conquered by Assyria for her sins", "Ahab must repent immediately or he would die"],
+            correct: 1
+        },
+        {
+            scripture: "Get thee hence, and turn thee eastward, and hide thyself by the brook Cherith.",
+            reference: "1 Kings 17:3",
+            question: "Where did God first send Elijah to hide after he announced the drought to Ahab?",
+            answers: ["The wilderness of Sinai near Horeb", "The brook Cherith east of the Jordan", "A cave deep on Mount Horeb", "The Gentile city of Zarephath in Sidon"],
+            correct: 1
+        },
+        {
+            scripture: "And the ravens brought him bread and flesh in the morning, and bread and flesh in the evening.",
+            reference: "1 Kings 17:6",
+            question: "How did God provide food for Elijah at the brook Cherith during the drought?",
+            answers: ["Manna fell each morning like in the wilderness", "Doves brought him grain and clean water", "Ravens brought him bread and flesh morning and evening", "An angel appeared and provided cake and water"],
+            correct: 2
+        },
+        {
+            scripture: "For thus saith the LORD God of Israel, The barrel of meal shall not waste, neither shall the cruse of oil fail.",
+            reference: "1 Kings 17:14",
+            question: "What miracle did Elijah perform for the widow of Zarephath throughout the famine?",
+            answers: ["He healed her son of a severe fever immediately", "Her barrel of meal and cruse of oil did not fail until rain returned", "He brought rain to end the drought in her city alone", "He multiplied her bread seven times over"],
+            correct: 1
+        },
+        {
+            scripture: "And he stretched himself upon the child three times, and cried unto the LORD.",
+            reference: "1 Kings 17:21",
+            question: "What did Elijah do to raise the widow of Zarephath's son from death?",
+            answers: ["He prayed once and the boy revived instantly", "He stretched himself upon the child three times and cried unto the LORD, and the soul of the child came into him again", "He commanded him to arise in the name of the LORD God", "He anointed him with oil and lay beside him and prayed"],
+            correct: 1
+        },
+        {
+            scripture: "Now therefore send, and gather to me all Israel unto mount Carmel, and the prophets of Baal four hundred and fifty.",
+            reference: "1 Kings 18:19",
+            question: "How many prophets of Baal gathered with Elijah on Mount Carmel for the great contest?",
+            answers: ["Four hundred prophets of Baal", "Four hundred and fifty prophets of Baal", "Seven hundred false prophets", "One thousand false prophets of Baal and Asherah"],
+            correct: 1
+        },
+        {
+            scripture: "Then the fire of the LORD fell, and consumed the burnt sacrifice, and the wood, and the stones, and the dust.",
+            reference: "1 Kings 18:38",
+            question: "What did the fire of the LORD consume on Mount Carmel beyond just the sacrifice and wood?",
+            answers: ["The sacrifice and the wood only as requested", "The sacrifice, the wood, and all the water in the trench", "The sacrifice, the wood, the stones, the dust, and the water in the trench", "The false prophets who stood nearby as well"],
+            correct: 2
+        },
+        {
+            scripture: "And Elijah took them, and brought them down to the brook Kishon, and slew them there.",
+            reference: "1 Kings 18:40",
+            question: "What happened to all 450 prophets of Baal after the great contest on Mount Carmel?",
+            answers: ["They fled to Jezebel under cover of night", "Elijah brought them down to the brook Kishon and slew them there", "They were banished from all of Israel forever", "They converted to worship of the LORD God of Israel"],
+            correct: 1
+        },
+        {
+            scripture: "But he himself went a day's journey into the wilderness, and came and sat down under a juniper tree.",
+            reference: "1 Kings 19:4",
+            question: "Why did Elijah flee into the wilderness immediately after the great victory on Mount Carmel?",
+            answers: ["God commanded him to rest there for forty days", "Jezebel had threatened to kill him just as she killed the other prophets", "The king of Israel himself ordered Elijah's arrest", "He was completely overcome with exhaustion and despair"],
+            correct: 1
+        },
+        {
+            scripture: "And as he lay and slept under a juniper tree, behold, then an angel touched him, and said unto him, Arise and eat.",
+            reference: "1 Kings 19:5",
+            question: "What did the angel provide for Elijah when he collapsed exhausted under the juniper tree?",
+            answers: ["Water alone and a word of prophecy", "A cake baked on coals and a cruse of water", "Bread and wine as at the Lord's table", "Manna as in the days of Moses in the wilderness"],
+            correct: 1
+        },
+        {
+            scripture: "And after the fire a still small voice.",
+            reference: "1 Kings 19:12",
+            question: "At Mount Horeb, God was not in the wind, not in the earthquake, not in the fire — what came after the fire?",
+            answers: ["A great light shining from heaven", "A still small voice", "The sound of many waters", "An angel standing face to face with him"],
+            correct: 1
+        },
+        {
+            scripture: "And Elijah passed by him, and cast his mantle upon him.",
+            reference: "1 Kings 19:19",
+            question: "How did Elijah call Elisha into the prophetic ministry?",
+            answers: ["He called to him from across the Jordan River", "He cast his mantle upon him as he was ploughing", "He sent a letter by a messenger to his household", "He appeared to him in a vision in the night"],
+            correct: 1
+        },
+        {
+            scripture: "And it came to pass, as they still went on, and talked, that, behold, there appeared a chariot of fire.",
+            reference: "2 Kings 2:11",
+            question: "How was Elijah taken from this earth up to heaven?",
+            answers: ["He was carried up by a great company of angels", "He walked through the parted Jordan and disappeared in a cloud", "He was taken up in a whirlwind with a chariot of fire and horses of fire", "He was transfigured on a mountain top and ascended"],
+            correct: 2
+        },
+        {
+            scripture: "I pray thee, let a double portion of thy spirit be upon me.",
+            reference: "2 Kings 2:9",
+            question: "What did Elisha ask of Elijah before Elijah was taken to heaven?",
+            answers: ["Elijah's prayer shawl and his staff only", "A double portion of Elijah's spirit", "The anointing to anoint both kings and prophets", "Elijah's mantle and also the spirit of Moses"],
+            correct: 1
+        },
+        {
+            scripture: "And he took the mantle of Elijah that fell from him, and smote the waters.",
+            reference: "2 Kings 2:14",
+            question: "What was the very first miracle Elisha performed after Elijah was taken to heaven?",
+            answers: ["He raised a dead child back to life", "He struck the Jordan River with Elijah's mantle and it parted for him", "He called fire down from heaven", "He healed a leper in the city of Jericho"],
+            correct: 1
+        },
+        {
+            scripture: "And he went unto the spring of the waters, and cast the salt in there, and said, Thus saith the LORD, I have healed these waters.",
+            reference: "2 Kings 2:21",
+            question: "What did Elisha cast into the bitter waters of Jericho to miraculously heal them?",
+            answers: ["Salt", "A handful of meal (flour)", "A piece of wood", "Oil from a cruse"],
+            correct: 0
+        },
+        {
+            scripture: "Go, borrow thee vessels abroad of all thy neighbours, even empty vessels; borrow not a few.",
+            reference: "2 Kings 4:3",
+            question: "How did Elisha cause the widow's oil to multiply in 2 Kings 4?",
+            answers: ["He prayed over one jar and it instantly filled all the others", "He told her to borrow many vessels and pour from her one jar — it kept flowing until all were full and then it stopped", "He commanded rain to fall into her jars from heaven", "He anointed her house with oil and it appeared from the walls"],
+            correct: 1
+        },
+        {
+            scripture: "And he went up, and lay upon the child, and put his mouth upon his mouth, and his eyes upon his eyes.",
+            reference: "2 Kings 4:34",
+            question: "How did Elisha raise the Shunammite woman's dead son back to life in 2 Kings 4?",
+            answers: ["He commanded him to arise in the LORD's name and the child immediately stood up", "He lay upon him and put his mouth on his mouth and his eyes on his eyes — the child sneezed seven times and opened his eyes", "He carried him to the temple and prayed there through the night", "He anointed the child with oil and fasted three days"],
+            correct: 1
+        },
+        {
+            scripture: "Now Naaman, captain of the host of the king of Syria, was a great man with his master, and honourable, but he was a leper.",
+            reference: "2 Kings 5:1",
+            question: "Who was Naaman described as in 2 Kings 5:1?",
+            answers: ["A king of Syria himself", "Captain of the host of the king of Syria — a great and honourable man, but a leper", "A prophet of the gods of Syria from Damascus", "A loyal servant of the house of Elisha"],
+            correct: 1
+        },
+        {
+            scripture: "Go and wash in Jordan seven times, and thy flesh shall come again to thee, and thou shalt be clean.",
+            reference: "2 Kings 5:10",
+            question: "What did Elisha instruct Naaman to do to be healed of his leprosy?",
+            answers: ["Come to Elisha's door to be anointed with oil in person", "Go and wash in the Jordan River seven times", "Fast for seven days and pray facing the temple in Jerusalem", "Wash in the rivers of Damascus which were better than Jordan"],
+            correct: 1
+        },
+        {
+            scripture: "And he cut down a stick, and cast it in thither; and the iron did swim.",
+            reference: "2 Kings 6:6",
+            question: "How did Elisha cause an iron axe head to float on the water in 2 Kings 6?",
+            answers: ["He stretched out his staff over the water and it floated up", "He cut a stick and cast it into the water — and the iron floated up to the surface", "He commanded it to rise in the name of the LORD God", "He waded into the water and retrieved it supernaturally"],
+            correct: 1
+        },
+        {
+            scripture: "And Elisha prayed, and said, LORD, I pray thee, open his eyes, that he may see.",
+            reference: "2 Kings 6:17",
+            question: "When Elisha prayed for his servant's eyes to be opened in 2 Kings 6:17, what did the servant then see?",
+            answers: ["A mighty advancing army of Israel surrounding the enemy", "The mountain full of horses and chariots of fire round about Elisha", "Angels with drawn swords standing at the city gates", "A pillar of fire and cloud as in the days of Moses"],
+            correct: 1
+        },
+        {
+            scripture: "And there was a great famine in Samaria: and, behold, they besieged it.",
+            reference: "2 Kings 6:25",
+            question: "What did Elisha throw into the pot of poisonous stew to make it safe for the sons of the prophets to eat?",
+            answers: ["Fresh clean water from the spring", "Meal — flour — from a new cruse", "Salt as he had used on the waters of Jericho", "Oil from a cruse"],
+            correct: 1
+        },
+        {
+            scripture: "And it came to pass, as they were burying a man, that, behold, they spied a band of men; and they cast the man into the sepulchre of Elisha.",
+            reference: "2 Kings 13:21",
+            question: "What remarkable miracle occurred when a dead man's body touched the bones of Elisha in his sepulchre?",
+            answers: ["The man arose from the dead and walked out of the tomb", "He revived and stood up on his feet", "His body was preserved from decay for many years", "He lived for seven more days before dying again"],
+            correct: 1
+        },
+        {
+            scripture: "So he departed thence, and found Elisha the son of Shaphat, who was plowing with twelve yoke of oxen before him.",
+            reference: "1 Kings 19:19",
+            question: "What was Elisha doing when Elijah found him and cast his mantle upon him?",
+            answers: ["Praying at the altar in Gilgal", "Sitting under an oak tree reading the law of Moses", "Ploughing with twelve yoke of oxen — he himself was with the twelfth yoke", "Tending his father's sheep near Bethel"],
+            correct: 2
+        },
+        {
+            scripture: "Knowest thou that the LORD will take away thy master from thy head to day?",
+            reference: "2 Kings 2:3",
+            question: "Who told Elisha on the day it happened that the LORD would take Elijah away that very day?",
+            answers: ["God spoke to Elisha directly in the night watches", "The sons of the prophets at Bethel", "An angel appeared to Elisha with the message", "Elijah himself told him that morning"],
+            correct: 1
+        },
+        {
+            scripture: "And Elijah answered and said to the captain of fifty, If I be a man of God, then let fire come down from heaven.",
+            reference: "2 Kings 1:10",
+            question: "How did Elijah respond to the first two captains of fifty sent by King Ahaziah to bring him by force?",
+            answers: ["He fled from them both into the hills above", "He called fire down from heaven which consumed each captain and his fifty men", "He sent them away with a strong warning from God", "He struck them all blind with the word of the LORD"],
+            correct: 1
+        },
+        {
+            scripture: "And there came a messenger, and told him, saying, Behold, the messengers came to me from beyond the river.",
+            reference: "1 Kings 19:2",
+            question: "What was the name of the wicked queen who threatened to kill Elijah within one day after the victory on Mount Carmel?",
+            answers: ["Athaliah queen of Judah", "Jezebel wife of Ahab", "Herodias wife of Herod", "Zipporah wife of Moses"],
+            correct: 1
+        },
+        {
+            scripture: "And, behold, there appeared unto them Moses and Elias talking with him.",
+            reference: "Matthew 17:3",
+            question: "In which New Testament passage does Elijah appear alongside Moses speaking with Jesus?",
+            answers: ["The feeding of the five thousand on the hillside", "The Transfiguration on the mountain", "The Last Supper in the upper room", "The baptism of Jesus in the Jordan"],
+            correct: 1
+        },
+        {
+            scripture: "Elias was a man subject to like passions as we are, and he prayed earnestly that it might not rain.",
+            reference: "James 5:17",
+            question: "According to James 5:17, how long did Elijah's prayer keep the rain from falling?",
+            answers: ["Exactly one year without rain", "Three years without rain", "Three years and six months without rain", "Seven full years without rain"],
+            correct: 2
         }
     ]
 };
