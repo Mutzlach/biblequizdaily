@@ -209,6 +209,86 @@
             .eb-right { justify-content: center; }
         }
     </style>
+
+    <!-- EXIT INTENT POPUP CSS -->
+    <style>
+    #exit-overlay {
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(15, 5, 30, 0.75);
+        z-index: 9999;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+        backdrop-filter: blur(4px);
+    }
+    #exit-overlay.show { display: flex; }
+    #exit-popup {
+        position: relative;
+        background: white;
+        border-radius: 20px;
+        max-width: 440px;
+        width: 100%;
+        overflow: hidden;
+        box-shadow: 0 28px 80px rgba(0,0,0,0.55);
+        animation: exit-pop 0.32s cubic-bezier(0.34,1.5,0.64,1) both;
+    }
+    @keyframes exit-pop {
+        from { opacity:0; transform:scale(0.86) translateY(-24px); }
+        to   { opacity:1; transform:scale(1) translateY(0); }
+    }
+    #exit-close {
+        position: absolute;
+        top: 12px; right: 12px;
+        width: 40px; height: 40px;
+        border-radius: 50%;
+        background: white;
+        border: none; cursor: pointer;
+        font-size: 22px; font-weight: 900;
+        color: #3d1a6e;
+        display: flex; align-items: center; justify-content: center;
+        box-shadow: 0 2px 14px rgba(0,0,0,0.3);
+        z-index: 10; transition: all 0.15s; line-height: 1;
+    }
+    #exit-close:hover { transform: scale(1.12); box-shadow: 0 4px 20px rgba(0,0,0,0.38); }
+    .exit-img-wrap { position: relative; height: 195px; overflow: hidden; }
+    .exit-img-wrap img { width:100%; height:100%; object-fit:cover; object-position:center 15%; display:block; }
+    .exit-img-grad {
+        position:absolute; inset:0;
+        background: linear-gradient(to bottom, rgba(15,5,30,0.08) 0%, rgba(15,5,30,0.72) 100%);
+        display:flex; flex-direction:column; justify-content:flex-end; padding:18px 22px;
+    }
+    .exit-eyebrow { font-size:11px; font-weight:900; letter-spacing:2.5px; text-transform:uppercase; color:#FFD700; margin-bottom:5px; }
+    .exit-headline { font-family:'Merriweather',Georgia,serif; font-size:20px; font-weight:900; color:white; line-height:1.25; }
+    .exit-body { padding:18px 22px 22px; }
+    .exit-sub { font-size:14px; color:#555; line-height:1.6; margin-bottom:14px; }
+    .exit-sub strong { color:#3d1a6e; }
+    .exit-bullets { list-style:none; margin-bottom:16px; padding:0; }
+    .exit-bullets li { font-size:13px; color:#555; padding-left:20px; position:relative; margin-bottom:5px; }
+    .exit-bullets li::before { content:'✓'; position:absolute; left:0; color:#27ae60; font-weight:900; }
+    .exit-price-row { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+    .exit-price { font-size:34px; font-weight:900; color:#3d1a6e; line-height:1; }
+    .exit-was { font-size:14px; color:#b2bec3; text-decoration:line-through; }
+    .exit-badge { background:#e74c3c; color:white; font-size:11px; font-weight:900; padding:4px 10px; border-radius:20px; letter-spacing:0.5px; }
+    .exit-cta {
+        display:block; width:100%;
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        color:white; text-align:center; padding:15px;
+        border-radius:12px; font-size:16px; font-weight:900;
+        text-decoration:none; letter-spacing:0.2px;
+        box-shadow: 0 6px 20px rgba(231,76,60,0.38);
+        transition:all 0.2s; margin-bottom:11px;
+    }
+    .exit-cta:hover { transform:translateY(-2px); box-shadow:0 10px 28px rgba(231,76,60,0.48); }
+    .exit-dismiss {
+        display:block; text-align:center; font-size:13px; color:#b2bec3;
+        cursor:pointer; background:none; border:none;
+        width:100%; padding:3px; font-family:inherit; transition:color 0.15s;
+    }
+    .exit-dismiss:hover { color:#636e72; }
+    @media(max-width:480px){ .exit-headline{font-size:17px;} .exit-price{font-size:28px;} }
+    </style>
 </head>
 <body>
     <header>
@@ -582,6 +662,79 @@
                 });
             });
         });
+    </script>
+
+    <!-- EXIT INTENT POPUP -->
+    <div id="exit-overlay" role="dialog" aria-modal="true" aria-label="Before you go">
+        <div id="exit-popup">
+
+            <button id="exit-close" onclick="closeExit()" aria-label="Close">&#10005;</button>
+
+            <div class="exit-img-wrap">
+                <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia — 120 Questions">
+                <div class="exit-img-grad">
+                    <div class="exit-eyebrow">&#9201; Before You Go</div>
+                    <div class="exit-headline">120 Easter Questions.<br>Ready to Print. Right Now.</div>
+                </div>
+            </div>
+
+            <div class="exit-body">
+                <p class="exit-sub">
+                    Most Sunday School teachers spend <strong>hours</strong> preparing Easter trivia.<br>
+                    This does it in <strong>60 seconds</strong>.
+                </p>
+                <ul class="exit-bullets">
+                    <li>120 KJV multiple-choice questions</li>
+                    <li>Covers the full Easter story — cross to resurrection</li>
+                    <li>Print unlimited copies for your group</li>
+                </ul>
+                <div class="exit-price-row">
+                    <span class="exit-price">$5.99</span>
+                    <span class="exit-was">$9.99</span>
+                    <span class="exit-badge">40% OFF</span>
+                </div>
+                <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="exit-cta">
+                    &#128722;&nbsp; Yes — Get It Now
+                </a>
+                <button class="exit-dismiss" onclick="closeExit()">No thanks, I&rsquo;ll prepare it myself</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    /* ── EXIT INTENT ── */
+    (function(){
+        var shown = false;
+        function showExit(){
+            if(shown) return;
+            try{ if(sessionStorage.getItem('exit_shown')) return; }catch(e){}
+            shown = true;
+            try{ sessionStorage.setItem('exit_shown','1'); }catch(e){}
+            document.getElementById('exit-overlay').classList.add('show');
+        }
+        function closeExit(){
+            document.getElementById('exit-overlay').classList.remove('show');
+        }
+        window.closeExit = closeExit;
+
+        // Desktop: mouse leaves toward top of viewport
+        document.addEventListener('mouseleave', function(e){
+            if(e.clientY < 10) showExit();
+        });
+
+        // Mobile: back button / page hide
+        window.addEventListener('pagehide', function(){ showExit(); });
+
+        // Close on overlay backdrop click
+        document.getElementById('exit-overlay').addEventListener('click', function(e){
+            if(e.target === this) closeExit();
+        });
+
+        // Close on Escape
+        document.addEventListener('keydown', function(e){
+            if(e.key === 'Escape') closeExit();
+        });
+    })();
     </script>
 </body>
 </html>
