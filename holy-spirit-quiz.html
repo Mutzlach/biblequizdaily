@@ -44,12 +44,24 @@
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root { --primary: #667eea; --primary-dark: #764ba2; --secondary: #8b9dff; --text-dark: #2d3436; --text-light: #636e72; --bg-light: #f0f3ff; }
         body { font-family: 'Inter', sans-serif; background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%); min-height: 100vh; line-height: 1.6; }
+        /* NAV */
         header { background: rgba(255,255,255,0.98); padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        nav { max-width: 1400px; margin: 0 auto; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 15px; }
+        nav { max-width: 1200px; margin: 0 auto; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 30px; }
+        .logo { display: flex; align-items: center; text-decoration: none; }
         .logo img { height: 80px; width: auto; }
-        .nav-links { display: flex; gap: 20px; flex-wrap: wrap; list-style: none; }
-        .nav-links a { color: var(--text-dark); text-decoration: none; font-weight: 600; font-size: 14px; }
-        .nav-links a:hover { color: var(--primary); }
+        .nav-menu { display: flex; gap: 20px; list-style: none; flex-wrap: nowrap; align-items: center; }
+        .nav-menu a { color: #2d3436; text-decoration: none; font-weight: 600; font-size: 16px; transition: color 0.2s; white-space: nowrap; }
+        .nav-menu a:hover { color: #667eea; }
+        .nav-shop-btn { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white !important; padding: 10px 22px; border-radius: 8px; font-weight: 800 !important; box-shadow: 0 4px 14px rgba(102,126,234,0.35); }
+        .nav-dropdown { position: relative; }
+        .nav-dropdown-toggle { color: #2d3436; font-weight: 600; font-size: 16px; cursor: pointer; white-space: nowrap; display: flex; align-items: center; gap: 4px; background: none; border: none; padding: 0; font-family: inherit; transition: color 0.2s; }
+        .nav-dropdown-toggle:hover { color: #667eea; }
+        .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: white; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.14); min-width: 200px; z-index: 2000; padding: 8px 0; border: 1px solid #e1e8ed; }
+        .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
+        .nav-dropdown-menu a { display: block; padding: 10px 20px; color: #2d3436; text-decoration: none; font-weight: 600; font-size: 15px; transition: background 0.15s; white-space: nowrap; }
+        .nav-dropdown-menu a:hover { background: #f0f3ff; color: #667eea; }
+        @media (max-width: 768px) { nav { flex-wrap: wrap; } .logo img { height: 60px; } .nav-menu { gap: 12px; flex-wrap: wrap; } }
+        /* LAYOUT */
         .container { max-width: 900px; margin: 40px auto; padding: 0 20px; }
         .intro-card { background: white; border-radius: 20px; padding: 40px; margin-bottom: 20px; box-shadow: 0 20px 60px rgba(0,0,0,0.2); }
         .intro-card h1 { font-family: 'Merriweather', serif; color: var(--text-dark); font-size: 36px; margin-bottom: 8px; }
@@ -82,6 +94,7 @@
         .related-card .r-icon { font-size: 28px; margin-bottom: 8px; }
         .related-card .r-title { font-weight: 700; color: var(--text-dark); margin-bottom: 4px; }
         .related-card .r-desc { font-size: 13px; color: var(--text-light); }
+        /* FOOTER */
         footer { background: #2d3436; color: white; padding: 60px 24px 32px; margin-top: 80px; }
         .footer-grid { max-width: 1400px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; margin-bottom: 40px; }
         .footer-links { list-style: none; }
@@ -89,52 +102,12 @@
         .footer-links a { color: #b2bec3; text-decoration: none; font-size: 14px; }
         .footer-links a:hover { color: white; }
         .footer-bottom { max-width: 1400px; margin: 0 auto; border-top: 1px solid #4a4a4a; padding-top: 28px; text-align: center; color: #b2bec3; font-size: 14px; }
-        @media (max-width: 768px) { .intro-card h1 { font-size: 28px; } .quiz-stats { flex-direction: column; } nav { flex-direction: column; align-items: flex-start; } .logo img { height: 60px; } }
-            header { background: rgba(255,255,255,0.98); padding: 20px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); position: sticky; top: 0; z-index: 1000; }
-        nav { max-width: 1200px; margin: 0 auto; padding: 0 5%; display: flex; justify-content: space-between; align-items: center; flex-wrap: nowrap; gap: 30px; }
-        .logo { display: flex; align-items: center; text-decoration: none; }
-        .logo img { height: 80px; width: auto; }
-        .nav-menu { display: flex; gap: 20px; list-style: none; flex-wrap: nowrap; align-items: center; }
-        .nav-menu a { color: #2d3436; text-decoration: none; font-weight: 600; font-size: 16px; transition: color 0.2s; white-space: nowrap; }
-        .nav-menu a:hover { color: #667eea; }
-        .nav-shop-btn { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white !important; padding: 10px 22px; border-radius: 8px; font-weight: 800 !important; box-shadow: 0 4px 14px rgba(102,126,234,0.35); }
-        .nav-dropdown { position: relative; }
-        .nav-dropdown-toggle { color: #2d3436; font-weight: 600; font-size: 16px; cursor: pointer; white-space: nowrap; display: flex; align-items: center; gap: 4px; background: none; border: none; padding: 0; font-family: inherit; transition: color 0.2s; }
-        .nav-dropdown-toggle:hover { color: #667eea; }
-        .nav-dropdown-menu { display: none; position: absolute; top: calc(100% + 12px); left: 50%; transform: translateX(-50%); background: white; border-radius: 12px; box-shadow: 0 8px 32px rgba(0,0,0,0.14); min-width: 200px; z-index: 2000; padding: 8px 0; border: 1px solid #e1e8ed; }
-        .nav-dropdown:hover .nav-dropdown-menu, .nav-dropdown:focus-within .nav-dropdown-menu { display: block; }
-        .nav-dropdown-menu a { display: block; padding: 10px 20px; color: #2d3436; text-decoration: none; font-weight: 600; font-size: 15px; transition: background 0.15s; white-space: nowrap; }
-        .nav-dropdown-menu a:hover { background: #f0f3ff; color: #667eea; }
-        @media (max-width: 768px) { nav { flex-wrap: wrap; } .logo img { height: 60px; } .nav-menu { gap: 12px; flex-wrap: wrap; } }
+        @media (max-width: 768px) { .intro-card h1 { font-size: 28px; } .quiz-stats { flex-direction: column; } }
         /* EASTER PRODUCTS BANNER */
-        .easter-banner {
-            background: linear-gradient(135deg, #2d1b69 0%, #5a3e8a 50%, #3d2070 100%);
-            border-radius: 16px;
-            overflow: hidden;
-            position: relative;
-            border: 2px solid rgba(255,215,0,0.45);
-            box-shadow: 0 8px 40px rgba(90,62,138,0.45);
-            margin: 30px 0 48px;
-        }
-        .easter-banner::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -120%;
-            width: 60%; height: 3px;
-            background: linear-gradient(90deg, transparent, #FFD700, transparent);
-            animation: eb-shimmer 3s ease-in-out infinite;
-            z-index: 3;
-        }
+        .easter-banner { background: linear-gradient(135deg, #2d1b69 0%, #5a3e8a 50%, #3d2070 100%); border-radius: 16px; overflow: hidden; position: relative; border: 2px solid rgba(255,215,0,0.45); box-shadow: 0 8px 40px rgba(90,62,138,0.45); margin: 30px 0 48px; }
+        .easter-banner::before { content: ''; position: absolute; top: 0; left: -120%; width: 60%; height: 3px; background: linear-gradient(90deg, transparent, #FFD700, transparent); animation: eb-shimmer 3s ease-in-out infinite; z-index: 3; }
         @keyframes eb-shimmer { 0%{left:-120%} 100%{left:160%} }
-        .easter-banner::after {
-            content: '';
-            position: absolute;
-            top: -60px; right: -60px;
-            width: 300px; height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,215,0,0.10) 0%, transparent 65%);
-            pointer-events: none;
-        }
+        .easter-banner::after { content: ''; position: absolute; top: -60px; right: -60px; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(255,215,0,0.10) 0%, transparent 65%); pointer-events: none; }
         .eb-new-inner { display: grid; grid-template-columns: 1fr 1fr; align-items: center; position: relative; z-index: 2; }
         .eb-new-left { padding: 20px 12px 20px 24px; }
         .eb-bundle-img-link { display: block; border-radius: 12px; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
@@ -152,6 +125,36 @@
         .eb-new-cta:hover { background: white; transform: translateY(-2px); animation: none; }
         .eb-new-save { font-size: 12px; color: rgba(255,255,255,0.55); }
         @media (max-width: 700px) { .eb-new-inner { grid-template-columns: 1fr; } .eb-new-left { padding: 20px 20px 0; } .eb-new-right { padding: 16px 20px 24px; } }
+    </style>
+
+    <!-- EXIT INTENT POPUP CSS -->
+    <style>
+    #exit-overlay { display:none; position:fixed; inset:0; background:rgba(15,5,30,0.75); z-index:9999; align-items:center; justify-content:center; padding:20px; backdrop-filter:blur(4px); }
+    #exit-overlay.show { display:flex; }
+    #exit-popup { position:relative; background:white; border-radius:20px; max-width:440px; width:100%; overflow:hidden; box-shadow:0 28px 80px rgba(0,0,0,0.55); animation:exit-pop 0.32s cubic-bezier(0.34,1.5,0.64,1) both; }
+    @keyframes exit-pop { from{opacity:0;transform:scale(0.86) translateY(-24px);}to{opacity:1;transform:scale(1) translateY(0);} }
+    #exit-close { position:absolute; top:12px; right:12px; width:40px; height:40px; border-radius:50%; background:white; border:none; cursor:pointer; font-size:22px; font-weight:900; color:#3d1a6e; display:flex; align-items:center; justify-content:center; box-shadow:0 2px 14px rgba(0,0,0,0.3); z-index:10; transition:all 0.15s; line-height:1; }
+    #exit-close:hover { transform:scale(1.12); box-shadow:0 4px 20px rgba(0,0,0,0.38); }
+    .exit-img-wrap { position:relative; height:195px; overflow:hidden; }
+    .exit-img-wrap img { width:100%; height:100%; object-fit:cover; object-position:center 15%; display:block; }
+    .exit-img-grad { position:absolute; inset:0; background:linear-gradient(to bottom,rgba(15,5,30,0.08) 0%,rgba(15,5,30,0.72) 100%); display:flex; flex-direction:column; justify-content:flex-end; padding:18px 22px; }
+    .exit-eyebrow { font-size:11px; font-weight:900; letter-spacing:2.5px; text-transform:uppercase; color:#FFD700; margin-bottom:5px; }
+    .exit-headline { font-family:'Merriweather',Georgia,serif; font-size:20px; font-weight:900; color:white; line-height:1.25; }
+    .exit-body { padding:18px 22px 22px; }
+    .exit-sub { font-size:14px; color:#555; line-height:1.6; margin-bottom:14px; }
+    .exit-sub strong { color:#3d1a6e; }
+    .exit-bullets { list-style:none; margin-bottom:16px; padding:0; }
+    .exit-bullets li { font-size:13px; color:#555; padding-left:20px; position:relative; margin-bottom:5px; }
+    .exit-bullets li::before { content:'✓'; position:absolute; left:0; color:#27ae60; font-weight:900; }
+    .exit-price-row { display:flex; align-items:center; gap:10px; margin-bottom:16px; }
+    .exit-price { font-size:34px; font-weight:900; color:#3d1a6e; line-height:1; }
+    .exit-was { font-size:14px; color:#b2bec3; text-decoration:line-through; }
+    .exit-badge { background:#e74c3c; color:white; font-size:11px; font-weight:900; padding:4px 10px; border-radius:20px; }
+    .exit-cta { display:block; width:100%; background:linear-gradient(135deg,#e74c3c 0%,#c0392b 100%); color:white; text-align:center; padding:15px; border-radius:12px; font-size:16px; font-weight:900; text-decoration:none; box-shadow:0 6px 20px rgba(231,76,60,0.38); transition:all 0.2s; margin-bottom:11px; }
+    .exit-cta:hover { transform:translateY(-2px); box-shadow:0 10px 28px rgba(231,76,60,0.48); }
+    .exit-dismiss { display:block; text-align:center; font-size:13px; color:#b2bec3; cursor:pointer; background:none; border:none; width:100%; padding:3px; font-family:inherit; transition:color 0.15s; }
+    .exit-dismiss:hover { color:#636e72; }
+    @media(max-width:480px){ .exit-headline{font-size:17px;} .exit-price{font-size:28px;} }
     </style>
 </head>
 <body>
@@ -396,6 +399,48 @@
                 icon.textContent = a.classList.contains('open') ? '▲' : '▼';
             });
         });
+    </script>
+
+    <!-- EXIT INTENT POPUP -->
+    <div id="exit-overlay" role="dialog" aria-modal="true" aria-label="Before you go">
+        <div id="exit-popup">
+            <button id="exit-close" onclick="closeExit()" aria-label="Close">&#10005;</button>
+            <div class="exit-img-wrap">
+                <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia — 120 Questions">
+                <div class="exit-img-grad">
+                    <div class="exit-eyebrow">&#9201; Before You Go</div>
+                    <div class="exit-headline">120 Easter Questions.<br>Ready to Print. Right Now.</div>
+                </div>
+            </div>
+            <div class="exit-body">
+                <p class="exit-sub">Most Sunday School teachers spend <strong>hours</strong> preparing Easter trivia. This does it in <strong>60 seconds</strong>.</p>
+                <ul class="exit-bullets">
+                    <li>120 KJV multiple-choice questions</li>
+                    <li>Covers the full Easter story — cross to resurrection</li>
+                    <li>Print unlimited copies for your group</li>
+                </ul>
+                <div class="exit-price-row">
+                    <span class="exit-price">$5.99</span>
+                    <span class="exit-was">$9.99</span>
+                    <span class="exit-badge">40% OFF</span>
+                </div>
+                <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="exit-cta">&#128722;&nbsp; Yes — Get It Now</a>
+                <button class="exit-dismiss" onclick="closeExit()">No thanks, I&rsquo;ll prepare it myself</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+    (function(){
+        var shown=false;
+        function showExit(){if(shown)return;try{if(sessionStorage.getItem('exit_shown'))return;}catch(e){}shown=true;try{sessionStorage.setItem('exit_shown','1');}catch(e){}document.getElementById('exit-overlay').classList.add('show');}
+        function closeExit(){document.getElementById('exit-overlay').classList.remove('show');}
+        window.closeExit=closeExit;
+        document.addEventListener('mouseleave',function(e){if(e.clientY<10)showExit();});
+        window.addEventListener('pagehide',function(){showExit();});
+        document.getElementById('exit-overlay').addEventListener('click',function(e){if(e.target===this)closeExit();});
+        document.addEventListener('keydown',function(e){if(e.key==='Escape')closeExit();});
+    })();
     </script>
 </body>
 </html>
