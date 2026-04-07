@@ -692,148 +692,7 @@
         .popup-dismiss:hover { color:#636e72; }
         @media (max-width:480px) { .popup-hero-line { font-size:18px; } .popup-price { font-size:30px; } }
     
-        /* EASTER PRODUCTS BANNER — new design */
-        .easter-banner {
-            background: linear-gradient(135deg, #2d1b69 0%, #5a3e8a 50%, #3d2070 100%);
-            border-radius: 16px;
-            overflow: hidden;
-            position: relative;
-            border: 2px solid rgba(255,215,0,0.45);
-            box-shadow: 0 8px 40px rgba(90,62,138,0.45);
-            margin: 30px 0 48px;
-        }
-        /* shimmer top line */
-        .easter-banner::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -120%;
-            width: 60%; height: 3px;
-            background: linear-gradient(90deg, transparent, #FFD700, transparent);
-            animation: eb-shimmer 3s ease-in-out infinite;
-            z-index: 3;
-        }
-        @keyframes eb-shimmer { 0%{left:-120%} 100%{left:160%} }
-        /* subtle radial glow */
-        .easter-banner::after {
-            content: '';
-            position: absolute;
-            top: -60px; right: -60px;
-            width: 300px; height: 300px;
-            border-radius: 50%;
-            background: radial-gradient(circle, rgba(255,215,0,0.10) 0%, transparent 65%);
-            pointer-events: none;
-        }
-        .eb-new-inner {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            align-items: center;
-            position: relative;
-            z-index: 2;
-        }
-        /* LEFT — bundle image */
-        .eb-new-left {
-            padding: 20px 12px 20px 24px;
-        }
-        .eb-bundle-img-link {
-            display: block;
-            border-radius: 12px;
-            overflow: hidden;
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-        .eb-bundle-img-link:hover {
-            transform: scale(1.02);
-            box-shadow: 0 12px 36px rgba(0,0,0,0.5);
-        }
-        .eb-bundle-img {
-            width: 100%;
-            display: block;
-            border-radius: 10px;
-        }
-        /* RIGHT — books + cta */
-        .eb-new-right {
-            padding: 28px 28px 28px 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 14px;
-        }
-        .eb-new-eyebrow {
-            font-size: 11px;
-            font-weight: 900;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            color: #FFE566;
-        }
-        .eb-new-kit-name {
-            font-family: 'Merriweather', serif;
-            font-size: 22px;
-            font-weight: 900;
-            color: #ffffff;
-            text-align: center;
-            line-height: 1.3;
-        }
-        .eb-new-price-row {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-            justify-content: center;
-        }
-        .eb-new-price {
-            font-size: 44px;
-            font-weight: 900;
-            color: #FFD700;
-            line-height: 1;
-        }
-        .eb-new-was {
-            font-size: 16px;
-            color: rgba(255,255,255,0.45);
-            text-decoration: line-through;
-        }
-        .eb-new-save-badge {
-            background: #27ae60;
-            color: white;
-            font-size: 12px;
-            font-weight: 800;
-            padding: 4px 12px;
-            border-radius: 20px;
-        }
-        .eb-new-cta {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: #FFD700;
-            color: #2d1b69;
-            font-weight: 900;
-            font-size: 17px;
-            padding: 15px 32px;
-            border-radius: 10px;
-            text-decoration: none;
-            width: 100%;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(255,215,0,0.45);
-            animation: eb-pulse 2.5s ease-in-out infinite;
-            transition: background 0.2s, transform 0.2s;
-        }
-        @keyframes eb-pulse {
-            0%,100% { box-shadow: 0 4px 20px rgba(255,215,0,0.45); }
-            50%      { box-shadow: 0 6px 36px rgba(255,215,0,0.80); }
-        }
-        .eb-new-cta:hover {
-            background: white;
-            transform: translateY(-2px);
-            animation: none;
-        }
-        .eb-new-save {
-            font-size: 12px;
-            color: rgba(255,255,255,0.55);
-        }
         @media (max-width: 700px) {
-            .eb-new-inner { grid-template-columns: 1fr; }
-            .eb-new-left  { padding: 20px 20px 0; }
-            .eb-new-right { padding: 16px 20px 24px; }
-            .eb-book img  { height: 90px; }
-            .eb-book:nth-child(2) img { height: 100px; }
         }
             
         /* ── EXIT INTENT POPUP ── */
@@ -1114,33 +973,35 @@
         </div>
 
 
-        <!-- EASTER PRODUCTS BANNER -->
-        <div class="easter-banner">
-            <div class="eb-new-inner">
-
-                <!-- Bundle image — left side -->
-                <div class="eb-new-left">
-                    <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="eb-bundle-img-link">
-                        <img src="bundle_image.png" alt="Complete Easter Ministry Kit — Bible Trivia, BINGO & Treasure Hunt" class="eb-bundle-img">
-                    </a>
-                </div>
-
-                <!-- Right: CTA only -->
-                <div class="eb-new-right">
-                    <div class="eb-new-eyebrow">🐣 Easter Ministry Resources</div>
-                    <div class="eb-new-kit-name">Complete Easter<br>Ministry Kit</div>
-                    <div class="eb-new-price-row">
-                        <span class="eb-new-price">$12.99</span>
-                        <span class="eb-new-was">$16.97</span>
-                        <span class="eb-new-save-badge">Save $3.98</span>
-                    </div>
-                    <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="eb-new-cta">
-                        🛒 Get the Bundle
-                    </a>
-                    <div class="eb-new-save">Instant Download · Print Unlimited</div>
-                </div>
-
+        <!-- COMPLETE COLLECTION BANNER -->
+        <div style="position:relative;border-radius:18px;overflow:hidden;display:flex;align-items:stretch;background:#fdf8ef;box-shadow:0 2px 0 0 #c9960a,0 4px 0 0 rgba(201,150,10,.15),0 16px 48px rgba(40,20,0,.18);margin:30px 0 48px;">
+          <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c9960a,#e8c650 40%,#c9960a 70%,#e8c650);z-index:10;"></div>
+          <div style="width:6px;flex-shrink:0;background:linear-gradient(180deg,#3b1f6e 0%,#5a3e8a 50%,#3b1f6e 100%);"></div>
+          <div style="flex-shrink:0;display:flex;align-items:center;padding:26px 20px 26px 18px;">
+            <div style="position:relative;">
+              <img src="The_Complete.png" alt="The Complete Bible Quiz Daily Collection" style="width:90px;display:block;border-radius:8px;box-shadow:0 12px 32px rgba(59,31,110,.45),0 4px 12px rgba(59,31,110,.3);transform:translateY(-4px) rotate(-1.5deg);">
+              <div style="position:absolute;top:-6px;right:-8px;width:28px;height:28px;background:linear-gradient(135deg,#e8c650,#c9960a);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;box-shadow:0 2px 8px rgba(201,150,10,.5);border:2px solid #fdf8ef;">&#128214;</div>
             </div>
+          </div>
+          <div style="flex:1;padding:22px 16px 22px 4px;display:flex;flex-direction:column;justify-content:center;gap:8px;min-width:0;">
+            <div style="font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#c9960a;">Complete Bible Resource</div>
+            <div style="font-family:'Merriweather',serif;font-size:clamp(14px,2vw,19px);font-weight:800;color:#1a0d33;line-height:1.25;"><span style="color:#3b1f6e;">1,102 KJV Questions</span><br>Genesis to Revelation</div>
+            <div style="display:flex;flex-wrap:wrap;gap:0;">
+              <span style="font-size:11px;font-weight:600;color:#5a4070;padding:3px 10px 3px 0;display:flex;align-items:center;gap:5px;"><span style="width:5px;height:5px;background:#c9960a;border-radius:50%;display:inline-block;"></span>35+ Quiz Categories</span>
+              <span style="font-size:11px;font-weight:600;color:#5a4070;padding:3px 10px 3px 10px;display:flex;align-items:center;gap:5px;border-left:1px solid rgba(90,62,138,.2);"><span style="width:5px;height:5px;background:#c9960a;border-radius:50%;display:inline-block;"></span>Full Answer Key</span>
+              <span style="font-size:11px;font-weight:600;color:#5a4070;padding:3px 0 3px 10px;display:flex;align-items:center;gap:5px;border-left:1px solid rgba(90,62,138,.2);"><span style="width:5px;height:5px;background:#c9960a;border-radius:50%;display:inline-block;"></span>Print Unlimited Copies</span>
+            </div>
+          </div>
+          <div style="width:1px;margin:20px 0;background:linear-gradient(180deg,transparent,rgba(90,62,138,.2) 30%,rgba(90,62,138,.2) 70%,transparent);flex-shrink:0;"></div>
+          <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:22px 24px;background:linear-gradient(135deg,rgba(59,31,110,.04),rgba(59,31,110,.08));border-left:1px solid rgba(59,31,110,.08);">
+            <div style="text-align:center;">
+              <span style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#9a8ab0;display:block;margin-bottom:2px;">Questions</span>
+              <span style="font-family:'Merriweather',serif;font-size:26px;font-weight:800;color:#3b1f6e;line-height:1;display:block;">1,102</span>
+              <span style="font-size:11px;color:#9a8ab0;font-weight:500;">Instant PDF download</span>
+            </div>
+            <a href="https://biblequizdaily.gumroad.com/l/TheCompleteBibleQuizDailyCollection" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,#3b1f6e 0%,#5a3e8a 100%);color:#fff;font-size:13px;font-weight:800;padding:12px 20px;border-radius:10px;text-decoration:none;white-space:nowrap;box-shadow:0 4px 16px rgba(59,31,110,.4);">Get the Collection &#8594;</a>
+            <span style="font-size:10.5px;color:#b0a0c0;text-align:center;white-space:nowrap;">&#128274; KJV &middot; Secure checkout</span>
+          </div>
         </div>
 
                 <!-- MOST POPULAR QUIZZES SECTION -->
