@@ -327,17 +327,12 @@
             position: relative;
             z-index: 2;
         }
-        .eb-left { padding: 20px 12px 20px 24px; }
         .eb-img-link {
             display: block; border-radius: 12px; overflow: hidden;
             transition: transform 0.3s, box-shadow 0.3s;
         }
         .eb-img-link:hover { transform: scale(1.02); box-shadow: 0 12px 36px rgba(0,0,0,0.5); }
         .eb-img { width: 100%; display: block; border-radius: 10px; }
-        .eb-right {
-            padding: 28px 28px 28px 20px;
-            display: flex; flex-direction: column; align-items: center; gap: 14px;
-        }
         .eb-eyebrow {
             font-size: 11px; font-weight: 900; letter-spacing: 2px;
             text-transform: uppercase; color: #FFE566;
@@ -692,8 +687,6 @@
             .nav-menu a { font-size: 13px; }
             .container { padding: 24px 16px; }
             .eb-inner { grid-template-columns: 1fr; }
-            .eb-left { padding: 20px 20px 0; }
-            .eb-right { padding: 16px 20px 24px; }
             .amazon-card-inner { grid-template-columns: 1fr; }
             .intro-block { padding: 20px; }
             .topic-header { flex-wrap: wrap; gap: 8px; }
@@ -764,36 +757,31 @@
 </div>
 
 <!-- ── EASTER BANNER (top) ── -->
-    <!-- COMPLETE COLLECTION BANNER -->
-    <div style="max-width:1200px;margin:20px auto 30px;padding:0 20px;">
-      <div style="position:relative;border-radius:18px;overflow:hidden;display:flex;align-items:stretch;background:#fdf8ef;box-shadow:0 2px 0 0 #c9960a,0 4px 0 0 rgba(201,150,10,.15),0 16px 48px rgba(40,20,0,.18),0 2px 8px rgba(40,20,0,.08);font-family:'Inter',sans-serif;">
-        <div style="position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c9960a,#e8c650 40%,#c9960a 70%,#e8c650);z-index:10;"></div>
-        <div style="width:6px;flex-shrink:0;background:linear-gradient(180deg,#3b1f6e 0%,#5a3e8a 50%,#3b1f6e 100%);"></div>
-        <div style="flex-shrink:0;display:flex;align-items:center;padding:26px 20px 26px 18px;">
-          <div style="position:relative;">
-            <img src="The_Complete.png" alt="The Complete Bible Quiz Daily Collection" style="width:90px;display:block;border-radius:8px;box-shadow:0 12px 32px rgba(59,31,110,.45),0 4px 12px rgba(59,31,110,.3);transform:translateY(-4px) rotate(-1.5deg);">
-            <div style="position:absolute;top:-6px;right:-8px;width:28px;height:28px;background:linear-gradient(135deg,#e8c650,#c9960a);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;box-shadow:0 2px 8px rgba(201,150,10,.5);border:2px solid #fdf8ef;">&#128214;</div>
+    <!-- WOMEN'S MINISTRY BANNER -->
+    <div style="max-width:900px;margin:30px auto 40px;padding:0 20px;">
+      <a href="bible-trivia-experience.html" style="display:flex;align-items:center;gap:0;text-decoration:none;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#c0392b 0%,#e74c3c 50%,#8e44ad 100%);box-shadow:0 6px 24px rgba(192,57,43,.38);transition:box-shadow .2s,transform .2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 32px rgba(192,57,43,.48)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 24px rgba(192,57,43,.38)'">
+        <!-- Book cover -->
+        <div style="flex-shrink:0;padding:20px 16px 20px 22px;display:flex;align-items:center;">
+          <img src="bible_trivia_experience.png" alt="The Bible Trivia Experience" style="width:72px;display:block;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.45);transform:rotate(-2deg);">
+        </div>
+        <!-- Copy — grows to fill space -->
+        <div style="flex:1;padding:18px 12px;min-width:0;">
+          <div style="font-size:9px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:4px;">&#128150; Women&rsquo;s Ministry</div>
+          <div style="font-family:'Merriweather',serif;font-size:15px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">The Bible Trivia Experience&#8482;</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;">
+            <span style="font-size:10px;font-weight:700;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);padding:2px 7px;border-radius:20px;">&#10003; Quiz Rounds</span>
+            <span style="font-size:10px;font-weight:700;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);padding:2px 7px;border-radius:20px;">&#10003; Bible BINGO</span>
+            <span style="font-size:10px;font-weight:700;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);padding:2px 7px;border-radius:20px;">&#10003; Certificate</span>
           </div>
         </div>
-        <div style="flex:1;padding:22px 16px 22px 4px;display:flex;flex-direction:column;justify-content:center;gap:8px;min-width:0;">
-          <div style="font-size:10px;font-weight:800;letter-spacing:3px;text-transform:uppercase;color:#c9960a;">Complete Bible Resource</div>
-          <div style="font-family:'Merriweather',serif;font-size:clamp(14px,2vw,19px);font-weight:800;color:#1a0d33;line-height:1.25;"><span style="color:#3b1f6e;">1,102 KJV Questions</span><br>Genesis to Revelation</div>
-          <div style="display:flex;flex-wrap:wrap;gap:0;">
-            <span style="font-size:11px;font-weight:600;color:#5a4070;padding:3px 10px 3px 0;display:flex;align-items:center;gap:5px;"><span style="width:5px;height:5px;background:#c9960a;border-radius:50%;display:inline-block;"></span>35+ Quiz Categories</span>
-            <span style="font-size:11px;font-weight:600;color:#5a4070;padding:3px 10px 3px 10px;display:flex;align-items:center;gap:5px;border-left:1px solid rgba(90,62,138,.2);"><span style="width:5px;height:5px;background:#c9960a;border-radius:50%;display:inline-block;"></span>Full Answer Key</span>
-            <span style="font-size:11px;font-weight:600;color:#5a4070;padding:3px 0 3px 10px;display:flex;align-items:center;gap:5px;border-left:1px solid rgba(90,62,138,.2);"><span style="width:5px;height:5px;background:#c9960a;border-radius:50%;display:inline-block;"></span>Print Unlimited Copies</span>
-          </div>
+        <!-- CTA — tight, right-aligned -->
+        <div style="flex-shrink:0;padding:18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border-left:1px solid rgba(255,255,255,.15);">
+          <div style="font-family:'Merriweather',serif;font-size:22px;font-weight:700;color:#fff;line-height:1;">$19.99</div>
+          <div style="background:#fff;color:#c0392b;font-size:12px;font-weight:900;padding:9px 16px;border-radius:8px;white-space:nowrap;">See the Kit &#8594;</div>
+          <div style="font-size:9px;color:rgba(255,255,255,.5);">Instant download</div>
         </div>
-        <div style="width:1px;margin:20px 0;background:linear-gradient(180deg,transparent,rgba(90,62,138,.2) 30%,rgba(90,62,138,.2) 70%,transparent);flex-shrink:0;"></div>
-        <div style="flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;padding:22px 24px;background:linear-gradient(135deg,rgba(59,31,110,.04),rgba(59,31,110,.08));border-left:1px solid rgba(59,31,110,.08);">
-          <div style="text-align:center;">
-            <span style="font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:#9a8ab0;display:block;margin-bottom:2px;">Questions</span>
-            <span style="font-family:'Merriweather',serif;font-size:26px;font-weight:800;color:#3b1f6e;line-height:1;display:block;">1,102</span>
-            <span style="font-size:11px;color:#9a8ab0;font-weight:500;">Instant PDF download</span>
-          </div>
-          <a href="https://biblequizdaily.gumroad.com/l/TheCompleteBibleQuizDailyCollection" target="_blank" style="display:inline-flex;align-items:center;justify-content:center;gap:6px;background:linear-gradient(135deg,#3b1f6e 0%,#5a3e8a 100%);color:#fff;font-size:13px;font-weight:800;padding:12px 20px;border-radius:10px;text-decoration:none;white-space:nowrap;letter-spacing:0.3px;box-shadow:0 4px 16px rgba(59,31,110,.4);">Get the Collection &#8594;</a>
-          <span style="font-size:10.5px;color:#b0a0c0;text-align:center;white-space:nowrap;">&#128274; KJV &middot; Secure checkout</span>
-        </div>
+      </a>
+    </div>
       </div>
     </div>
 <!-- ── MAIN CONTENT ── -->
@@ -1058,40 +1046,6 @@
 <!-- ── AMAZON BANNER (after puzzles) ── -->
 <div class="amazon-wrap">
     <div class="amazon-disclaimer">
-        ⚠️ <strong>AFFILIATE DISCLOSURE:</strong> As an Amazon Associate, BibleQuizDaily earns from qualifying purchases. This helps us keep all Bible quizzes and puzzles 100% free!
-    </div>
-    <div class="amazon-card">
-        <div class="amazon-card-inner">
-            <div class="amazon-imgs">
-                <img src="bhoho_theme1.jpg" alt="Mr. Pen Bible Tabs - Boho Theme" class="main-img" id="amazonMainImg">
-                <div class="amazon-thumbs">
-                    <img src="bhoho_theme1.jpg" alt="Bible Tabs View 1" onclick="changeImg(this,'amazonMainImg')">
-                    <img src="boho_theme2.jpg" alt="Bible Tabs View 2" onclick="changeImg(this,'amazonMainImg')">
-                    <img src="boho_theme3.jpg" alt="Bible Tabs View 3" onclick="changeImg(this,'amazonMainImg')">
-                    <img src="boho_theme4.jpg" alt="Bible Tabs View 4" onclick="changeImg(this,'amazonMainImg')">
-                </div>
-            </div>
-            <div>
-                <div class="amazon-eyebrow"><span>✨</span> RECOMMENDED FOR YOU</div>
-                <div class="amazon-title">📖 Find Bible Passages Faster While Solving Puzzles!</div>
-                <div class="amazon-sub">These beautiful boho-themed Bible tabs make navigation instant — no more hunting for the right book.</div>
-                <div class="amazon-stars">
-                    <span class="stars">★★★★★</span>
-                    <span class="review-count">4.7 out of 5 stars (2,300+ reviews)</span>
-                </div>
-                <ul class="amazon-bullets">
-                    <li><strong>75 tabs</strong> — All 66 books + 9 blank custom tabs</li>
-                    <li><strong>No bleed-through</strong> — Won't damage your Bible pages</li>
-                    <li><strong>Self-adhesive</strong> — Easy peel &amp; stick application</li>
-                    <li><strong>Beautiful boho colors</strong> — Loved by Sunday School teachers</li>
-                </ul>
-                <a href="https://amzn.to/4qsf4FN" target="_blank" rel="nofollow noopener" class="amazon-cta">🛒 Get Bible Tabs on Amazon</a>
-                <div class="amazon-why">
-                    <h4>💡 Why We Recommend This</h4>
-                    <p>When you're solving a crossword puzzle about Moses and need to verify an answer in Exodus, these tabs get you there in seconds. Perfect companion to any Bible study activity — crossword puzzles, quizzes, or daily devotions.</p>
-                </div>
-            </div>
-        </div>
     </div>
 </div>
 
@@ -1165,5 +1119,46 @@ function changeImg(thumb, mainId) {
     thumb.style.borderColor = '#667eea';
 }
 </script>
+    <!-- AMAZON AFFILIATE DISCLAIMER -->
+    <div style="max-width: 900px; margin: 30px auto 20px; padding: 0 20px;">
+        <div style="background: #fff3cd; border: 2px solid #ffc107; border-radius: 12px; padding: 18px 25px; text-align: center; box-shadow: 0 2px 8px rgba(255, 193, 7, 0.2);">
+            <p style="font-size: 15px; color: #856404; margin: 0; font-weight: 600;">
+                <span style="font-size: 20px;">&#9888;&#65039;</span> <strong>AFFILIATE DISCLOSURE:</strong> As an Amazon Associate, BibleQuizDaily earns from qualifying purchases. This helps us keep all Bible quizzes 100% free!
+            </p>
+        </div>
+    </div>
+    <div style="max-width: 900px; margin: 0 auto 48px; padding: 0 20px;">
+      <div style="background:white;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.08);overflow:hidden;border:2px solid #e4dff5;display:flex;align-items:stretch;flex-wrap:wrap;">
+        <div style="position:relative;flex-shrink:0;width:200px;background:#ede8fa;overflow:hidden;min-height:160px;">
+          <img id="esv-main-img" src="esv.jpg" alt="ESV Study Bible" style="width:200px;height:100%;min-height:160px;object-fit:cover;display:block;transition:opacity 0.25s ease;">
+          <button onclick="esvPrev()" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:14px;color:#5a3e8a;font-weight:900;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;">&#8249;</button>
+          <button onclick="esvNext()" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:14px;color:#5a3e8a;font-weight:900;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;">&#8250;</button>
+        </div>
+        <div style="flex:1;padding:20px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;min-width:0;">
+          <div style="flex:1;min-width:180px;">
+            <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#5a3e8a;margin-bottom:5px;">&#128214; Recommended Bible Resource</div>
+            <div style="font-family:'Merriweather',serif;font-size:18px;font-weight:900;color:#1a1a1a;margin-bottom:4px;line-height:1.3;">ESV Study Bible</div>
+            <div style="font-size:13px;color:#636e72;font-weight:600;margin-bottom:8px;">20,000 study notes &middot; 200+ full-colour maps &middot; 95 scholars</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span style="background:#ede8fa;color:#5a3e8a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">Deep Study Notes</span>
+              <span style="background:#ede8fa;color:#5a3e8a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">Charts &amp; Timelines</span>
+            </div>
+          </div>
+          <div style="flex-shrink:0;text-align:center;">
+            <a href="https://amzn.to/4bvYyk3" target="_blank" rel="noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:#FF9900;color:white;padding:12px 22px;border-radius:10px;font-weight:800;font-size:14px;text-decoration:none;box-shadow:0 4px 14px rgba(255,153,0,.35);">&#128722; View on Amazon</a>
+            <div style="font-size:11px;color:#636e72;margin-top:6px;font-style:italic;">Supports our free quizzes &#10084;&#65039;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function(){
+        var imgs=['esv.jpg','esv1.jpg','esv2.jpg','esv3.jpg','esv4.jpg'];
+        var cur=0;
+        function upd(i){var el=document.getElementById('esv-main-img');el.style.opacity='0';setTimeout(function(){el.src=imgs[i];el.style.opacity='1';},200);cur=i;}
+        window.esvNext=function(){upd((cur+1)%imgs.length);};
+        window.esvPrev=function(){upd((cur-1+imgs.length)%imgs.length);};
+    })();
+    </script>
 </body>
 </html>
