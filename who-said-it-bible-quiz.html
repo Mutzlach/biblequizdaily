@@ -113,26 +113,14 @@
         .topics-covered h2 { color: var(--text-dark); margin-bottom: 15px; font-size: 24px; }
         .topics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; margin-top: 20px; }
         .topic-item { background: white; padding: 15px; border-radius: 10px; border-left: 4px solid var(--primary); font-weight: 600; color: var(--text-dark); }
-        .easter-banner { background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 40%, #388e3c 100%); color: white; padding: 28px 36px; margin: 20px 0; border-radius: 16px; box-shadow: 0 6px 28px rgba(27,94,32,0.45); display: flex; align-items: center; gap: 32px; position: relative; overflow: hidden; }
-        .easter-banner::before { content: ''; position: absolute; top: -60px; right: -60px; width: 220px; height: 220px; background: rgba(255,255,255,0.05); border-radius: 50%; }
-        .easter-banner::after { content: ''; position: absolute; bottom: -40px; left: 30%; width: 140px; height: 140px; background: rgba(255,255,255,0.04); border-radius: 50%; }
-        .eb-left { flex: 1; min-width: 0; position: relative; z-index: 1; }
-        .eb-right { display: flex; gap: 10px; align-items: flex-end; flex-shrink: 0; position: relative; z-index: 1; }
         .easter-savings { background: #FFD700; color: #1b5e20; display: inline-flex; align-items: center; gap: 5px; padding: 4px 14px; border-radius: 50px; font-size: 11px; font-weight: 900; letter-spacing: 0.5px; text-transform: uppercase; margin-bottom: 10px; }
-        .easter-banner h2 { font-family: 'Merriweather', serif; font-size: 22px; font-weight: 900; margin-bottom: 6px; line-height: 1.25; }
-        .easter-banner .eb-sub { font-size: 13px; opacity: 0.88; margin-bottom: 14px; line-height: 1.5; }
         .easter-features { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 16px; }
         .easter-feat { background: rgba(255,255,255,0.15); border: 1px solid rgba(255,255,255,0.25); border-radius: 20px; font-size: 11px; font-weight: 700; padding: 3px 10px; white-space: nowrap; }
         .easter-cta { display: inline-flex; align-items: center; gap: 8px; background: #FFD700; color: #1b5e20; padding: 13px 26px; font-size: 15px; font-weight: 900; text-decoration: none; border-radius: 10px; transition: all 0.25s; box-shadow: 0 4px 18px rgba(0,0,0,0.25); }
         .easter-cta:hover { background: white; transform: translateY(-2px); }
         .easter-cta-sub { font-size: 12px; opacity: 0.75; margin-top: 8px; }
         .easter-cta-sub a { color: white; text-decoration: underline; }
-        .eb-product { text-align: center; text-decoration: none; }
-        .eb-product img { display: block; border-radius: 10px; box-shadow: 0 6px 20px rgba(0,0,0,0.4); transition: transform 0.25s; }
-        .eb-product:hover img { transform: translateY(-5px) scale(1.03); }
-        .eb-product-label { font-size: 10px; font-weight: 800; color: rgba(255,255,255,0.85); margin-top: 5px; }
-        .eb-product-price { font-size: 11px; font-weight: 900; color: #FFD700; }
-        @media (max-width: 900px) { .easter-banner { flex-direction: column; text-align: center; padding: 24px 20px; } .eb-left { width: 100%; } .easter-features { justify-content: center; } .eb-right { justify-content: center; } }
+        @media (max-width: 900px) { .easter-features { justify-content: center; } }
         @media (max-width: 768px) { .intro-card h1 { font-size: 28px; } .quiz-stats { flex-direction: column; } }
     </style>
 </head>
@@ -179,46 +167,66 @@
         </div>
     </div>
 
-    <!-- EASTER BANNER -->
-    <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
-        <div class="easter-banner">
-            <div class="eb-left">
-                <div class="easter-savings">⏰ Easter April 5 &nbsp;·&nbsp; Save $3.98</div>
-                <h2>Complete Easter Ministry Kit</h2>
-                <p class="eb-sub">3 done-for-you printable activities — KJV, instant download, unlimited copies</p>
-                <div class="easter-features">
-                    <span class="easter-feat">📋 120 Trivia Questions</span>
-                    <span class="easter-feat">🎲 30 BINGO Cards</span>
-                    <span class="easter-feat">🗺 Treasure Hunt + Certificate</span>
-                    <span class="easter-feat">✅ KJV Throughout</span>
-                    <span class="easter-feat">🖨 Print at Home</span>
-                </div>
-                <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="easter-cta">🎁 Get All 3 — $12.99</a>
-                <div class="easter-cta-sub">
-                    <span style="text-decoration:line-through; opacity:0.6;">$16.97</span> &nbsp;·&nbsp;
-                    <a href="ultimate-easter-sunday-school-kit.html">See what's inside →</a>
-                </div>
-            </div>
-            <div class="eb-right">
-                <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="eb-product">
-                    <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia" style="height:130px; width:auto;">
-                    <div class="eb-product-label">Bible Trivia</div>
-                    <div class="eb-product-price">$5.99</div>
-                </a>
-                <a href="https://biblequizdaily.gumroad.com/l/easterbiblebingo" target="_blank" class="eb-product">
-                    <img src="EASTER_BIBLE_BINGO.png" alt="Easter Bible BINGO" style="height:140px; width:auto;">
-                    <div class="eb-product-label">Bible BINGO</div>
-                    <div class="eb-product-price">$5.99</div>
-                </a>
-                <a href="https://biblequizdaily.gumroad.com/l/EASTERSTORYTREASUREHUNT" target="_blank" class="eb-product">
-                    <img src="Easter_story_hunt.png" alt="Easter Treasure Hunt" style="height:130px; width:auto;">
-                    <div class="eb-product-label">Treasure Hunt</div>
-                    <div class="eb-product-price">$4.99</div>
-                </a>
-            </div>
+    <!-- WOMEN'S MINISTRY BANNER -->
+    <div style="max-width:900px;margin:30px auto 40px;padding:0 20px;">
+      <a href="bible-trivia-experience.html" style="display:flex;align-items:center;gap:0;text-decoration:none;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#c0392b 0%,#e74c3c 50%,#8e44ad 100%);box-shadow:0 6px 24px rgba(192,57,43,.38);transition:box-shadow .2s,transform .2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 32px rgba(192,57,43,.48)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 24px rgba(192,57,43,.38)'">
+        <div style="flex-shrink:0;padding:20px 16px 20px 22px;display:flex;align-items:center;">
+          <img src="bible_trivia_experience.png" alt="The Bible Trivia Experience" style="width:72px;display:block;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.45);transform:rotate(-2deg);">
         </div>
+        <div style="flex:1;padding:18px 12px;min-width:0;">
+          <div style="font-size:9px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:4px;">&#128150; Women&rsquo;s Ministry</div>
+          <div style="font-family:'Merriweather',serif;font-size:15px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:8px;">The Bible Trivia Experience&#8482;</div>
+          <div style="display:flex;flex-wrap:wrap;gap:4px;">
+            <span style="font-size:10px;font-weight:700;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);padding:2px 7px;border-radius:20px;">&#10003; Quiz Rounds</span>
+            <span style="font-size:10px;font-weight:700;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);padding:2px 7px;border-radius:20px;">&#10003; Bible BINGO</span>
+            <span style="font-size:10px;font-weight:700;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);padding:2px 7px;border-radius:20px;">&#10003; Certificate</span>
+          </div>
+        </div>
+        <div style="flex-shrink:0;padding:18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border-left:1px solid rgba(255,255,255,.15);">
+          <div style="font-family:'Merriweather',serif;font-size:22px;font-weight:700;color:#fff;line-height:1;">$19.99</div>
+          <div style="background:#fff;color:#c0392b;font-size:12px;font-weight:900;padding:9px 16px;border-radius:8px;white-space:nowrap;">See the Kit &#8594;</div>
+          <div style="font-size:9px;color:rgba(255,255,255,.5);">Instant download</div>
+        </div>
+      </a>
     </div>
-
+    <!-- ESV STUDY BIBLE -->
+    <div style="max-width:900px;margin:0 auto 48px;padding:0 20px;">
+      <div style="background:#fff3cd;border-left:4px solid #e8c650;border-radius:0 10px 10px 0;padding:10px 16px;margin-bottom:16px;font-size:12px;color:#4a4060;line-height:1.5;">
+        <strong style="color:#12091f;">AFFILIATE DISCLOSURE:</strong> As an Amazon Associate, BibleQuizDaily earns from qualifying purchases. This keeps all quizzes 100% free!
+      </div>
+      <div style="background:white;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.08);overflow:hidden;border:2px solid #e4dff5;display:flex;align-items:stretch;flex-wrap:wrap;">
+        <div style="position:relative;flex-shrink:0;width:200px;background:#ede8fa;overflow:hidden;min-height:160px;">
+          <img id="esv-main-img" src="esv.jpg" alt="ESV Study Bible" style="width:200px;height:100%;min-height:160px;object-fit:cover;display:block;transition:opacity 0.25s ease;">
+          <button onclick="esvPrev()" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:14px;color:#5a3e8a;font-weight:900;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;">&#8249;</button>
+          <button onclick="esvNext()" style="position:absolute;right:6px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:30px;height:30px;cursor:pointer;font-size:14px;color:#5a3e8a;font-weight:900;display:flex;align-items:center;justify-content:center;padding:0;line-height:1;">&#8250;</button>
+        </div>
+        <div style="flex:1;padding:20px 24px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;min-width:0;">
+          <div style="flex:1;min-width:180px;">
+            <div style="font-size:11px;font-weight:800;letter-spacing:1.5px;text-transform:uppercase;color:#5a3e8a;margin-bottom:5px;">&#128214; Recommended Bible Resource</div>
+            <div style="font-family:'Merriweather',serif;font-size:18px;font-weight:900;color:#1a1a1a;margin-bottom:4px;line-height:1.3;">ESV Study Bible</div>
+            <div style="font-size:13px;color:#636e72;font-weight:600;margin-bottom:8px;">20,000 study notes &middot; 200+ full-colour maps &middot; 95 scholars</div>
+            <div style="display:flex;flex-wrap:wrap;gap:6px;">
+              <span style="background:#ede8fa;color:#5a3e8a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">Deep Study Notes</span>
+              <span style="background:#ede8fa;color:#5a3e8a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">Charts &amp; Timelines</span>
+              <span style="background:#ede8fa;color:#5a3e8a;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px;">Bible Characters</span>
+            </div>
+          </div>
+          <div style="flex-shrink:0;text-align:center;">
+            <a href="https://amzn.to/4bvYyk3" target="_blank" rel="noopener sponsored" style="display:inline-flex;align-items:center;gap:8px;background:#FF9900;color:white;padding:12px 22px;border-radius:10px;font-weight:800;font-size:14px;text-decoration:none;box-shadow:0 4px 14px rgba(255,153,0,.35);">&#128722; View on Amazon</a>
+            <div style="font-size:11px;color:#636e72;margin-top:6px;font-style:italic;">Supports our free quizzes &#10084;&#65039;</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+    (function(){
+        var imgs=['esv.jpg','esv1.jpg','esv2.jpg','esv3.jpg','esv4.jpg'];
+        var cur=0;
+        function upd(i){var el=document.getElementById('esv-main-img');el.style.opacity='0';setTimeout(function(){el.src=imgs[i];el.style.opacity='1';},200);cur=i;}
+        window.esvNext=function(){upd((cur+1)%imgs.length);};
+        window.esvPrev=function(){upd((cur-1+imgs.length)%imgs.length);};
+    })();
+    </script>
     <div class="container">
         <div class="intro-card">
             <h1>🗣️ Who Said It? Bible Quiz</h1>
@@ -290,38 +298,6 @@
 
             <div style="text-align: center; margin-top: 40px;">
                 <a href="quiz.html?category=who-said-it" class="btn btn-primary" style="display: inline-block; padding: 18px 45px; background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; text-decoration: none; border-radius: 30px; font-size: 20px; font-weight: 700;">🗣️ Start Who Said It? Quiz</a>
-            </div>
-        </div>
-    </div>
-
-    <!-- EASTER BANNER REPEATED BEFORE FOOTER -->
-    <div style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <div class="easter-banner">
-            <div class="eb-left">
-                <div class="easter-savings">⏰ Easter April 5 &nbsp;·&nbsp; Save $3.98</div>
-                <h2>Complete Easter Ministry Kit</h2>
-                <p class="eb-sub">3 done-for-you printable activities — KJV, instant download, unlimited copies</p>
-                <div class="easter-features">
-                    <span class="easter-feat">📋 120 Trivia Questions</span>
-                    <span class="easter-feat">🎲 30 BINGO Cards</span>
-                    <span class="easter-feat">✅ KJV Throughout</span>
-                    <span class="easter-feat">🖨 Print at Home</span>
-                </div>
-                <a href="https://biblequizdaily.gumroad.com/l/completeeasterministrykit" target="_blank" class="easter-cta">🎁 Get All 3 — $12.99</a>
-            </div>
-            <div class="eb-right">
-                <a href="https://biblequizdaily.gumroad.com/l/easterbibletrivia" target="_blank" class="eb-product">
-                    <img src="EASTER_BIBLE_TRIVIA.png" alt="Easter Bible Trivia" style="height:110px; width:auto;">
-                    <div class="eb-product-price">$5.99</div>
-                </a>
-                <a href="https://biblequizdaily.gumroad.com/l/easterbiblebingo" target="_blank" class="eb-product">
-                    <img src="EASTER_BIBLE_BINGO.png" alt="Easter Bible BINGO" style="height:120px; width:auto;">
-                    <div class="eb-product-price">$5.99</div>
-                </a>
-                <a href="https://biblequizdaily.gumroad.com/l/EASTERSTORYTREASUREHUNT" target="_blank" class="eb-product">
-                    <img src="Easter_story_hunt.png" alt="Easter Treasure Hunt" style="height:110px; width:auto;">
-                    <div class="eb-product-price">$4.99</div>
-                </a>
             </div>
         </div>
     </div>
