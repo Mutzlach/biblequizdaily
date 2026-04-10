@@ -3,29 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Free Bible Quiz & Crossword Puzzles - 1,200+ Interactive Bible Trivia Questions & Answers</title>
+    <!-- STEP 1 FIX: Title shortened to 57 chars (Google truncates at ~60) -->
+    <title>Free Bible Quiz — 1,200+ Questions & Crossword Puzzles</title>
     <meta name="description" content="Test your Bible knowledge with 1,200+ free Bible quiz questions and interactive KJV crossword puzzles across 35+ categories. Perfect for Sunday School, homeschool, and Bible study. No signup required!">
     <meta name="keywords" content="bible quiz, bible trivia, free bible quiz, bible questions, genesis quiz, moses quiz, miracles of jesus, parables quiz, anxiety bible verses, old testament quiz, new testament quiz, bible quiz for kids, sunday school quiz">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="Free Bible Quiz & Crossword Puzzles - 1,200+ Bible Trivia Questions">
+
+    <!-- STEP 1 FIX: Canonical URL — prevents duplicate content across www/non-www -->
+    <link rel="canonical" href="https://biblequizdaily.com/">
+    <!-- STEP 3 FIX: Sitemap link — helps Google find all 35+ quiz pages -->
+    <link rel="sitemap" type="application/xml" href="/sitemap.xml">
+
+    <!-- STEP 1 FIX: Open Graph — added og:image and og:site_name, fixed URL trailing slash -->
+    <meta property="og:title" content="Free Bible Quiz — 1,200+ Questions & Crossword Puzzles">
     <meta property="og:description" content="Challenge yourself with 1,200+ Bible trivia questions and KJV crossword puzzles! Old Testament, New Testament, Jesus' life, Genesis, Moses, Parables. Perfect for Sunday School.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://biblequizdaily.com">
-    
+    <meta property="og:url" content="https://biblequizdaily.com/">
+    <meta property="og:image" content="https://biblequizdaily.com/_Header_Logo_.png">
+    <meta property="og:image:width" content="512">
+    <meta property="og:image:height" content="512">
+    <meta property="og:site_name" content="BibleQuizDaily">
+    <meta property="og:locale" content="en_US">
+
+    <!-- STEP 1 FIX: Twitter / X Card tags — were completely missing -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Free Bible Quiz — 1,200+ Questions & Crossword Puzzles">
+    <meta name="twitter:description" content="1,200+ free Bible trivia questions and KJV crossword puzzles. Perfect for Sunday School, homeschool, and Bible study. No signup required!">
+    <meta name="twitter:image" content="https://biblequizdaily.com/_Header_Logo_.png">
+
     <!-- Pinterest -->
     <meta name="p:domain_verify" content="ff2dce6f2aa45e6f2689b853350c789a"/>
-    
+
     <!-- Awin/ShareASale Affiliate Network Verification -->
     <meta name="verification" content="a3ce823e63e711a1706ea86e6862bb1f" />
-    
+
+    <!-- STEP 1 FIX: Apple touch icon — shows logo when saved to phone home screen -->
+    <link rel="apple-touch-icon" href="favicon_512.png">
+
     <!-- Favicons -->
     <link rel="icon" type="image/png" sizes="512x512" href="favicon_512.png">
     <link rel="icon" type="image/png" sizes="256x256" href="favicon_256.png">
     <link rel="icon" type="image/png" sizes="128x128" href="favicon_128.png">
     <link rel="shortcut icon" href="favicon_128.png">
-    
-    <!-- Google Analytics -->
+
+    <!-- STEP 1 FIX: GTM — was missing from homepage, present on other pages -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-N3G4FWBF');</script>
+
+    <!-- Google Analytics GA4 -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-JRXEYD2W4M"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -33,8 +56,108 @@
       gtag('js', new Date());
       gtag('config', 'G-JRXEYD2W4M');
     </script>
-    
+
+    <!-- STEP 1 FIX: Font preconnect — stops fonts causing layout shift (LCP/CLS) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Merriweather:wght@700;900&display=swap" rel="stylesheet">
+
+    <!-- STEP 1 FIX: JSON-LD Schema — WebSite, Organization, FAQPage, WebPage -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://biblequizdaily.com/#website",
+          "url": "https://biblequizdaily.com/",
+          "name": "BibleQuizDaily",
+          "description": "Free Bible quiz questions and interactive Bible trivia for Sunday School, homeschool, and Bible study.",
+          "potentialAction": {
+            "@type": "SearchAction",
+            "target": {
+              "@type": "EntryPoint",
+              "urlTemplate": "https://biblequizdaily.com/quiz.html?q={search_term_string}"
+            },
+            "query-input": "required name=search_term_string"
+          }
+        },
+        {
+          "@type": "Organization",
+          "@id": "https://biblequizdaily.com/#organization",
+          "name": "BibleQuizDaily",
+          "url": "https://biblequizdaily.com/",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://biblequizdaily.com/_Header_Logo_.png",
+            "width": 512,
+            "height": 512
+          }
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://biblequizdaily.com/#webpage",
+          "url": "https://biblequizdaily.com/",
+          "name": "Free Bible Quiz — 1,200+ Questions & Crossword Puzzles",
+          "description": "Test your Bible knowledge with 1,200+ free Bible quiz questions and interactive KJV crossword puzzles across 35+ categories.",
+          "isPartOf": { "@id": "https://biblequizdaily.com/#website" },
+          "about": { "@id": "https://biblequizdaily.com/#organization" },
+          "inLanguage": "en-US",
+          "breadcrumb": {
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://biblequizdaily.com/" }
+            ]
+          }
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "How many free Bible quiz questions are available?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We offer 1,200+ free Bible trivia questions across 35+ categories including Genesis Quiz, Moses Quiz, Miracles of Jesus, Parables, Old Testament, New Testament, and specialized topics like the Armor of God, Fruit of the Spirit, Lord's Prayer, and Revelation. We also offer free interactive KJV Bible crossword puzzles covering Easter, Creation, Moses, and King David — with Easy, Medium, and Hard difficulty levels. All content is 100% free with no signup required."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do I need to create an account to take Bible quizzes?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No! All our Bible quiz questions are 100% free with no signup, no registration, and no email required. Just click any quiz and start playing instantly. We believe Bible knowledge should be accessible to everyone."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What Bible translation do you use for quiz questions?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "All Bible quiz questions are based on the King James Version (KJV) of the Holy Bible. Each question includes the Scripture reference so you can verify the answer in your own Bible translation."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Can I use these Bible quizzes for Sunday School or church groups?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! Our free Bible trivia questions are perfect for Sunday School classes, youth groups, Bible study sessions, homeschooling curriculum, church events, or personal devotional time. All content is freely available for ministry and educational purposes."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "What new quizzes have you recently added?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "We recently added 5 brand-new Bible quizzes! The Bible Angels Quiz covers Michael, Gabriel, cherubim, seraphim, and angelic appearances throughout Scripture. The Holy Spirit Quiz covers Pentecost, the nine gifts, and the fruit of the Spirit. The Jonah Quiz goes deep into all four chapters of the Book of Jonah. The Bible Animals Quiz covers Noah's ark, Balaam's donkey, Daniel's lions, and animals throughout Scripture. The Elijah & Elisha Quiz covers fire from heaven, the chariot of fire, Naaman, and the miracles of both prophets."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
         
@@ -862,10 +985,12 @@
     </style>
 </head>
 <body>
+    <!-- STEP 2 FIX: GTM noscript — must be first line of body -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-N3G4FWBF" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <header>
         <nav>
             <a href="index.html" class="logo">
-                <img src="_Header_Logo_.png" alt="BibleQuizDaily - Free Bible Quiz Questions">
+                <img src="_Header_Logo_.png" alt="BibleQuizDaily - Free Bible Quiz Questions" width="200" height="80">
             </a>
             <button class="nav-hamburger" onclick="toggleNav()" aria-label="Toggle menu" id="hamburger">
                 <span></span><span></span><span></span>
@@ -892,12 +1017,13 @@
 
     <div class="hero">
         <div class="hero-inner">
-        <h1>📖 Free Bible Quizzes & Crossword Puzzles</h1>
+        <h1>Free Bible Quizzes &amp; Crossword Puzzles 📖</h1>
         <p>Test your Scripture knowledge with 1,200+ free Bible trivia questions and KJV crossword puzzles. Perfect for Sunday School, Bible study, or personal growth!</p>
         <a href="#new-quizzes" class="hero-cta">🆕 Try Our Newest Quizzes</a>
         </div>
     </div>
 
+    <main role="main" id="main-content">
     <div class="container">
         <div class="stats">
             <div class="stat-item">
@@ -970,12 +1096,12 @@
         <div class="category-section" style="margin-top: 40px;" id="popular">
             <div class="category-header">
                 <span class="category-icon">🔥</span>
-                <h2 class="category-title">Most Popular Bible Quizzes</h2>
+                <h2 class="category-title">Most Popular Bible Quizzes 🔥</h2>
             </div>
             <p style="text-align: center; font-size: 17px; color: #636e72; margin: -16px 0 28px 0;">Start with our most-loved quizzes - these are bringing people closer to God's Word!</p>
             <div class="quiz-grid">
                 <!-- Genesis Quiz - Top Performer #1 -->
-                <a href="genesis-quiz.html" class="quiz-card" style="border: 3px solid #FFD700; background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%); position: relative;">
+                <a href="genesis-quiz.html" class="quiz-card" aria-label="Genesis Bible Quiz — 30 questions, Medium difficulty" style="border: 3px solid #FFD700; background: linear-gradient(135deg, #fff9e6 0%, #ffffff 100%); position: relative;">
                     <div style="position: absolute; top: -12px; right: 20px; background: #FFD700; color: #2d3436; padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 12px; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(255,215,0,0.3);">
                         🔥 #1 MOST POPULAR
                     </div>
@@ -996,7 +1122,7 @@
                 </a>
 
                 <!-- Books of the Bible Quiz - Top Performer #2 -->
-                <a href="books-of-the-bible-quiz.html" class="quiz-card" style="border: 3px solid #667eea; background: linear-gradient(135deg, #f0f3ff 0%, #ffffff 100%); position: relative;">
+                <a href="books-of-the-bible-quiz.html" class="quiz-card" aria-label="Books of the Bible Quiz — 50 questions, Medium difficulty" style="border: 3px solid #667eea; background: linear-gradient(135deg, #f0f3ff 0%, #ffffff 100%); position: relative;">
                     <div style="position: absolute; top: -12px; right: 20px; background: #667eea; color: white; padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 12px; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(102,126,234,0.3);">
                         🔥 TOP PERFORMER
                     </div>
@@ -1017,7 +1143,7 @@
                 </a>
 
                 <!-- Moses Quiz - Top Performer #3 -->
-                <a href="moses-quiz.html" class="quiz-card" style="border: 3px solid #4CAF50; background: linear-gradient(135deg, #f1f8f4 0%, #ffffff 100%); position: relative;">
+                <a href="moses-quiz.html" class="quiz-card" aria-label="Moses Bible Quiz — Medium difficulty" style="border: 3px solid #4CAF50; background: linear-gradient(135deg, #f1f8f4 0%, #ffffff 100%); position: relative;">
                     <div style="position: absolute; top: -12px; right: 20px; background: #4CAF50; color: white; padding: 6px 16px; border-radius: 20px; font-weight: 800; font-size: 12px; letter-spacing: 0.5px; box-shadow: 0 2px 8px rgba(76,175,80,0.3);">
                         🔥 FAN FAVORITE
                     </div>
@@ -1113,7 +1239,7 @@
 
         <!-- NEW QUIZZES HIGHLIGHT -->
         <div class="new-quizzes-banner" id="new-quizzes" style="margin-top: 48px;">
-            <h2>🆕 <span>Newest Bible Quizzes</span></h2>
+            <h2><span>Newest Bible Quizzes</span> 🆕</h2>
             <div class="new-quiz-grid" style="grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));">
                 <a href="bible-angels-quiz.html" class="new-quiz-link">
                     <div class="new-quiz-icon">😇</div>
@@ -1157,7 +1283,7 @@
         <div class="category-section" id="crossword-puzzles" style="margin-top: 48px;">
             <div class="category-header">
                 <span class="category-icon">✏️</span>
-                <h2 class="category-title">NEW: Free Bible Crossword Puzzles</h2>
+                <h2 class="category-title">Free Bible Crossword Puzzles ✏️</h2>
             </div>
             <p style="text-align: center; font-size: 17px; color: #636e72; margin: -16px 0 28px 0;">Interactive KJV-based crossword puzzles — Easy, Medium &amp; Hard. Click a cell and type your answers!</p>
             <div style="background: linear-gradient(135deg, #1a1228 0%, #3b1f6e 100%); border-radius: 16px; padding: 32px; border: 2px solid rgba(255,215,0,0.35); box-shadow: 0 8px 40px rgba(90,62,138,0.4); margin-bottom: 28px;">
@@ -1638,7 +1764,7 @@
             <div id="esv-img-col">
 
                 <!-- Main display image -->
-                <img id="esv-main-img" src="esv.jpg" alt="ESV Study Bible" style="width:220px;height:100%;min-height:160px;object-fit:cover;display:block;transition:opacity 0.25s ease;">
+                <img id="esv-main-img" src="esv.jpg" alt="ESV Study Bible" width="220" height="160" style="width:220px;height:100%;min-height:160px;object-fit:cover;display:block;transition:opacity 0.25s ease;">
 
                 <!-- Left arrow -->
                 <button onclick="esvPrev()" aria-label="Previous image" style="position:absolute;left:6px;top:50%;transform:translateY(-50%);background:rgba(255,255,255,0.92);border:none;border-radius:50%;width:32px;height:32px;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 2px 8px rgba(0,0,0,0.18);font-size:14px;color:#5a3e8a;font-weight:900;transition:all 0.2s;padding:0;line-height:1;" onmouseover="this.style.background='white';this.style.boxShadow='0 3px 12px rgba(0,0,0,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.92)';this.style.boxShadow='0 2px 8px rgba(0,0,0,0.18)'">&#8249;</button>
@@ -2178,12 +2304,13 @@
         </div>
     </div>
 
+    </main>
     <footer>
         <div class="footer-content">
             <div class="footer-grid">
                 <div class="footer-about">
                     <div class="footer-logo">
-                        <img src="_Header_Logo_.png" alt="BibleQuizDaily Logo">
+                        <img src="_Header_Logo_.png" alt="BibleQuizDaily Logo" width="160" height="64" loading="lazy">
                     </div>
                     <h3 style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; display: none;">BibleQuizDaily.com</h3>
                     <p>Free Bible quiz questions and interactive Bible trivia for strengthening faith. Join thousands of believers growing in Scripture knowledge through our comprehensive Bible quizzes covering Genesis, Moses, Jesus's miracles, parables, and more.</p>
@@ -2247,7 +2374,7 @@
 
             <!-- Left: book cover -->
             <div class="popup-img-col">
-                <img src="bible_trivia_experience.png" alt="The Bible Trivia Experience — Women's Ministry Kit">
+                <img src="bible_trivia_experience.png" alt="The Bible Trivia Experience — Women's Ministry Kit" width="280" height="280" loading="lazy">
             </div>
 
             <!-- Right: copy -->
