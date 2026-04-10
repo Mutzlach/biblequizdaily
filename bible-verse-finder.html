@@ -257,29 +257,52 @@ footer{background:#2d3436;color:#b2bec3;padding:60px 0 30px}
 </section>
 
 <!-- BIBLE TRIVIA EXPERIENCE BANNER -->
+<style>
+.bte-banner{display:flex;align-items:center;text-decoration:none;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#c0392b 0%,#e74c3c 50%,#8e44ad 100%);box-shadow:0 6px 24px rgba(192,57,43,.38);transition:box-shadow .2s,transform .2s;}
+.bte-banner:hover{transform:translateY(-2px);box-shadow:0 10px 32px rgba(192,57,43,.48);}
+.bte-img-wrap{flex-shrink:0;padding:20px 16px 20px 22px;display:flex;align-items:center;}
+.bte-img-wrap img{width:110px;height:110px;object-fit:cover;display:block;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.5);transform:rotate(-2deg);}
+.bte-copy{flex:1;padding:20px 16px;min-width:0;}
+.bte-eyebrow{font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:6px;}
+.bte-title{font-family:'Merriweather',serif;font-size:18px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:10px;}
+.bte-badges{display:flex;flex-wrap:wrap;gap:5px;}
+.bte-badge{font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.28);padding:3px 10px;border-radius:20px;}
+.bte-cta{flex-shrink:0;padding:20px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border-left:1px solid rgba(255,255,255,.2);}
+.bte-price{font-family:'Merriweather',serif;font-size:28px;font-weight:900;color:#fff;line-height:1;}
+.bte-btn{background:#fff;color:#c0392b;font-size:13px;font-weight:900;padding:11px 20px;border-radius:10px;white-space:nowrap;}
+.bte-sub{font-size:10px;color:rgba(255,255,255,.55);}
+@media(max-width:600px){
+  .bte-banner{flex-direction:column;align-items:stretch;}
+  .bte-img-wrap{padding:20px 20px 12px;justify-content:center;}
+  .bte-img-wrap img{width:120px;height:120px;transform:none;}
+  .bte-copy{padding:0 20px 16px;text-align:center;}
+  .bte-badges{justify-content:center;}
+  .bte-cta{flex-direction:row;border-left:none;border-top:1px solid rgba(255,255,255,.2);padding:14px 20px;justify-content:space-between;align-items:center;}
+  .bte-price{font-size:24px;}
+}
+</style>
 <div style="max-width:1200px;margin:0 auto 24px;padding:0 24px;display:flex;justify-content:center;">
-  <a href="bible-trivia-experience.html" style="display:flex;width:100%;max-width:700px;margin:0 auto;align-items:center;gap:0;text-decoration:none;border-radius:18px;overflow:hidden;background:linear-gradient(135deg,#c0392b 0%,#e74c3c 50%,#8e44ad 100%);box-shadow:0 8px 28px rgba(192,57,43,.42);transition:box-shadow .2s,transform .2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 12px 36px rgba(192,57,43,.52)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 8px 28px rgba(192,57,43,.42)'">
-    <!-- Book cover -->
-    <div style="flex-shrink:0;padding:22px 18px 22px 24px;display:flex;align-items:center;">
-      <img src="bible_trivia_experience.png" alt="The Bible Trivia Experience — Women's Ministry Kit" width="90" height="90" style="width:90px;height:90px;object-fit:cover;display:block;border-radius:10px;box-shadow:0 8px 20px rgba(0,0,0,.5);transform:rotate(-2deg);">
-    </div>
-    <!-- Copy -->
-    <div style="padding:20px 16px;min-width:0;">
-      <div style="font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.7);margin-bottom:5px;">&#128150; Women&#8217;s Ministry Kit</div>
-      <div style="font-family:'Merriweather',serif;font-size:18px;font-weight:700;color:#fff;line-height:1.25;margin-bottom:10px;white-space:nowrap;">The Bible Trivia Experience&#8482;</div>
-      <div style="display:flex;flex-wrap:wrap;gap:5px;">
-        <span style="font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);padding:3px 9px;border-radius:20px;">&#10003; Quiz Rounds</span>
-        <span style="font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);padding:3px 9px;border-radius:20px;">&#10003; Bible BINGO</span>
-        <span style="font-size:11px;font-weight:700;color:#fff;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.25);padding:3px 9px;border-radius:20px;">&#10003; Certificate</span>
+  <div style="width:100%;max-width:720px;">
+    <a href="bible-trivia-experience.html" class="bte-banner">
+      <div class="bte-img-wrap">
+        <img src="bible_trivia_experience.png" alt="The Bible Trivia Experience — Women's Ministry Kit" width="110" height="110">
       </div>
-    </div>
-    <!-- CTA -->
-    <div style="flex-shrink:0;padding:20px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;border-left:1px solid rgba(255,255,255,.18);margin-left:auto;">
-      <div style="font-family:'Merriweather',serif;font-size:26px;font-weight:900;color:#fff;line-height:1;">$19.99</div>
-      <div style="background:#fff;color:#c0392b;font-size:13px;font-weight:900;padding:10px 20px;border-radius:10px;white-space:nowrap;">See the Kit &#8594;</div>
-      <div style="font-size:10px;color:rgba(255,255,255,.55);">Instant download</div>
-    </div>
-  </a>
+      <div class="bte-copy">
+        <div class="bte-eyebrow">&#128150; Women&#8217;s Ministry Kit</div>
+        <div class="bte-title">The Bible Trivia Experience&#8482;</div>
+        <div class="bte-badges">
+          <span class="bte-badge">&#10003; Quiz Rounds</span>
+          <span class="bte-badge">&#10003; Bible BINGO</span>
+          <span class="bte-badge">&#10003; Certificate</span>
+        </div>
+      </div>
+      <div class="bte-cta">
+        <div class="bte-price">$19.99</div>
+        <div class="bte-btn">See the Kit &#8594;</div>
+        <div class="bte-sub">Instant download</div>
+      </div>
+    </a>
+  </div>
 </div>
 
 
