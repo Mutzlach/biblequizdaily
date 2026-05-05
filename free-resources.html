@@ -422,30 +422,6 @@
         .more-card-sub { font-size: 13px; color: var(--muted); }
 
         /* ── BTE PROMO ── */
-        .bte-promo {
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            border-radius: 20px;
-            overflow: hidden;
-            background: linear-gradient(135deg, #c0392b 0%, #e74c3c 50%, #8e44ad 100%);
-            box-shadow: 0 8px 32px rgba(192,57,43,0.35);
-            transition: all 0.25s;
-            margin-bottom: 72px;
-        }
-        .bte-promo:hover { transform: translateY(-3px); box-shadow: 0 14px 40px rgba(192,57,43,0.45); }
-        .bte-promo-img { flex-shrink: 0; padding: 28px 20px 28px 28px; display: flex; align-items: center; }
-        .bte-promo-img img { width: 120px; height: 120px; object-fit: cover; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.5); transform: rotate(-2deg); }
-        .bte-promo-copy { flex: 1; padding: 24px 20px; }
-        .bte-promo-eyebrow { font-size: 11px; font-weight: 900; letter-spacing: 2px; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 6px; }
-        .bte-promo-title { font-family: 'Merriweather', serif; font-size: 20px; font-weight: 900; color: white; line-height: 1.3; margin-bottom: 10px; }
-        .bte-promo-desc { font-size: 14px; color: rgba(255,255,255,0.85); line-height: 1.55; margin-bottom: 12px; }
-        .bte-promo-badges { display: flex; flex-wrap: wrap; gap: 6px; }
-        .bte-promo-badge { font-size: 11px; font-weight: 700; color: white; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.25); padding: 3px 10px; border-radius: 20px; }
-        .bte-promo-cta { flex-shrink: 0; padding: 24px 28px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; border-left: 1px solid rgba(255,255,255,0.18); }
-        .bte-promo-price { font-family: 'Merriweather', serif; font-size: 30px; font-weight: 900; color: white; line-height: 1; }
-        .bte-promo-btn { background: white; color: #c0392b; font-size: 14px; font-weight: 900; padding: 12px 22px; border-radius: 10px; white-space: nowrap; }
-        .bte-promo-sub { font-size: 11px; color: rgba(255,255,255,0.55); }
 
         /* ── FAQ ── */
         .faq-section {
@@ -513,11 +489,6 @@
             .container { padding: 48px 5%; }
             .trust-bar { padding: 32px 24px; }
             .faq-section { padding: 32px 24px; }
-            .bte-promo { flex-direction: column; align-items: stretch; }
-            .bte-promo-img { padding: 24px 24px 12px; justify-content: center; }
-            .bte-promo-img img { transform: none; }
-            .bte-promo-copy { padding: 0 24px 16px; }
-            .bte-promo-cta { flex-direction: row; border-left: none; border-top: 1px solid rgba(255,255,255,0.18); padding: 16px 24px; justify-content: space-between; align-items: center; }
         }
     </style>
 </head>
@@ -569,6 +540,70 @@
 </section>
 
 <div class="container">
+
+
+    <!-- COMPLETE COLLECTION BANNER -->
+    <style>
+        .bte-banner{display:flex;align-items:stretch;text-decoration:none;border-radius:18px;overflow:hidden;background:#fdf8ef;box-shadow:0 2px 0 0 #c9960a,0 12px 40px rgba(40,20,0,.18);transition:box-shadow .25s,transform .25s;position:relative;margin-bottom:40px;}
+        .bte-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c9960a,#e8c650 40%,#c9960a 70%,#e8c650);z-index:2;}
+        .bte-banner:hover{transform:translateY(-3px);box-shadow:0 2px 0 0 #c9960a,0 20px 52px rgba(40,20,0,.24);}
+        .bte-accent{width:7px;flex-shrink:0;background:linear-gradient(180deg,#3b1f6e 0%,#5a3e8a 50%,#3b1f6e 100%);}
+        .bte-img-wrap{flex-shrink:0;background:linear-gradient(160deg,#3b1f6e 0%,#5a3e8a 60%,#7c5aaa 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 22px;gap:12px;}
+        .bte-img-wrap img{width:130px;height:auto;display:block;border-radius:10px;box-shadow:0 14px 36px rgba(0,0,0,.55),0 0 0 1px rgba(232,198,80,.2);transform:rotate(-2deg);transition:transform .3s;}
+        .bte-banner:hover .bte-img-wrap img{transform:rotate(-2deg) translateY(-4px);}
+        .bte-img-qs{text-align:center;}
+        .bte-img-qs-num{font-family:'Merriweather',serif;font-size:26px;font-weight:900;color:#e8c650;line-height:1;display:block;}
+        .bte-img-qs-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.5px;}
+        .bte-copy{flex:1;padding:22px 18px;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:8px;}
+        .bte-eyebrow{font-size:10px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:#c9960a;}
+        .bte-title{font-family:'Merriweather',serif;font-size:19px;font-weight:700;color:#1a0d33;line-height:1.3;}
+        .bte-title em{font-style:normal;color:#3b1f6e;}
+        .bte-badges{display:flex;flex-wrap:wrap;gap:5px;}
+        .bte-badge{font-size:11px;font-weight:700;color:#3b1f6e;background:#ede8fa;border:1px solid rgba(90,62,138,.25);padding:3px 10px;border-radius:20px;}
+        .bte-vr{width:1px;margin:16px 0;background:linear-gradient(180deg,transparent,rgba(90,62,138,.2) 30%,rgba(90,62,138,.2) 70%,transparent);flex-shrink:0;}
+        .bte-cta{flex-shrink:0;padding:22px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,rgba(59,31,110,.05),rgba(59,31,110,.09));}
+        .bte-price{font-family:'Merriweather',serif;font-size:13px;font-weight:700;color:#5a3e8a;line-height:1;text-align:center;}
+        .bte-btn{background:linear-gradient(135deg,#3b1f6e,#5a3e8a);color:#fff;font-size:13px;font-weight:900;padding:12px 20px;border-radius:10px;white-space:nowrap;box-shadow:0 4px 16px rgba(59,31,110,.38);transition:all .2s;}
+        .bte-banner:hover .bte-btn{box-shadow:0 7px 22px rgba(59,31,110,.48);}
+        .bte-sub{font-size:10px;color:#9a8ab0;text-align:center;}
+        @media(max-width:620px){
+            .bte-banner{flex-direction:column;}
+            .bte-accent{width:100%;height:7px;}
+            .bte-img-wrap{padding:24px 20px 16px;flex-direction:row;justify-content:center;gap:20px;}
+            .bte-img-wrap img{width:100px;transform:none;}
+            .bte-banner:hover .bte-img-wrap img{transform:none;}
+            .bte-copy{padding:0 20px 16px;text-align:center;}
+            .bte-badges{justify-content:center;}
+            .bte-vr{display:none;}
+            .bte-cta{border-top:1px solid rgba(59,31,110,.1);padding:16px 20px;flex-direction:row;justify-content:space-between;align-items:center;}
+        }
+    </style>
+    <a href="complete-bible-quiz-collection-printable.html" class="bte-banner">
+        <div class="bte-accent"></div>
+        <div class="bte-img-wrap">
+            <img src="The_Complete.png" alt="The Complete Bible Quiz Daily Collection — 1,102 KJV Questions" width="130">
+            <div class="bte-img-qs">
+                <span class="bte-img-qs-num">1,102</span>
+                <span class="bte-img-qs-label">KJV Questions</span>
+            </div>
+        </div>
+        <div class="bte-copy">
+            <div class="bte-eyebrow">&#128214; Complete Bible Resource</div>
+            <div class="bte-title">Stop Building Quizzes From Scratch.<br><em>Get All 1,102 Questions Here.</em></div>
+            <div class="bte-badges">
+                <span class="bte-badge">&#10003; 33 Complete Quizzes</span>
+                <span class="bte-badge">&#10003; Full Answer Key</span>
+                <span class="bte-badge">&#10003; Genesis to Revelation</span>
+                <span class="bte-badge">&#10003; Print Unlimited Copies</span>
+            </div>
+        </div>
+        <div class="bte-vr"></div>
+        <div class="bte-cta">
+            <div class="bte-price">Instant PDF Download</div>
+            <div class="bte-btn">Get the Collection &#8594;</div>
+            <div class="bte-sub">&#128274; KJV &middot; Secure checkout</div>
+        </div>
+    </a>
 
     <!-- RESOURCE CARDS -->
     <div class="section-label">
@@ -664,6 +699,66 @@
 
     </div>
 
+
+    <!-- FREE PRINTABLE QUIZ PDFs -->
+    <div class="more-section" style="margin-top:48px;">
+        <div class="section-label">
+            <h2>Free Printable Bible Quiz PDFs</h2>
+            <p>Download a print-ready quiz PDF for free — 30 KJV questions, full answer key, A4 format. Enter your email and print in minutes.</p>
+        </div>
+        <div class="more-grid" style="grid-template-columns:repeat(auto-fill,minmax(240px,1fr));">
+            <a href="printable-genesis-bible-quiz.html" class="more-card">
+                <span class="more-card-icon">📖</span>
+                <div class="more-card-text">
+                    <div class="more-card-title">Genesis Quiz Printable</div>
+                    <div class="more-card-sub">30 KJV questions · Answer key · Free PDF</div>
+                </div>
+            </a>
+            <a href="printable-moses-bible-quiz.html" class="more-card">
+                <span class="more-card-icon">⚡</span>
+                <div class="more-card-text">
+                    <div class="more-card-title">Moses Quiz Printable</div>
+                    <div class="more-card-sub">30 KJV questions · Answer key · Free PDF</div>
+                </div>
+            </a>
+            <a href="printable-noahs-ark-bible-quiz.html" class="more-card">
+                <span class="more-card-icon">🌊</span>
+                <div class="more-card-text">
+                    <div class="more-card-title">Noah's Ark Quiz Printable</div>
+                    <div class="more-card-sub">30 KJV questions · Answer key · Free PDF</div>
+                </div>
+            </a>
+            <a href="printable-easter-bible-quiz.html" class="more-card">
+                <span class="more-card-icon">✝️</span>
+                <div class="more-card-text">
+                    <div class="more-card-title">Easter Quiz Printable</div>
+                    <div class="more-card-sub">30 KJV questions · Answer key · Free PDF</div>
+                </div>
+            </a>
+            <a href="printable-christmas-bible-quiz.html" class="more-card">
+                <span class="more-card-icon">🎄</span>
+                <div class="more-card-text">
+                    <div class="more-card-title">Christmas Quiz Printable</div>
+                    <div class="more-card-sub">30 KJV questions · Answer key · Free PDF</div>
+                </div>
+            </a>
+            <a href="printable-kids-bible-quiz.html" class="more-card">
+                <span class="more-card-icon">👶</span>
+                <div class="more-card-text">
+                    <div class="more-card-title">Kids Bible Quiz Printable</div>
+                    <div class="more-card-sub">30 easy KJV questions · Answer key · Free PDF</div>
+                </div>
+            </a>
+            <a href="printable-women-of-the-bible-quiz.html" class="more-card">
+                <span class="more-card-icon">💜</span>
+                <div class="more-card-text">
+                    <div class="more-card-title">Women of the Bible Printable</div>
+                    <div class="more-card-sub">30 KJV questions · Answer key · Free PDF</div>
+                </div>
+            </a>
+        </div>
+    </div>
+
     <!-- TRUST BAR -->
     <div class="trust-bar" role="list">
         <div class="trust-item" role="listitem">
@@ -740,29 +835,6 @@
         </div>
     </div>
 
-    <!-- BTE PROMO -->
-    <a href="bible-trivia-experience.html" class="bte-promo" aria-label="The Bible Trivia Experience — Women's Ministry Kit, $19.99">
-        <div class="bte-promo-img">
-            <img src="bible_trivia_experience.png" alt="The Bible Trivia Experience — Women's Ministry Party Kit" width="120" height="120" loading="lazy">
-        </div>
-        <div class="bte-promo-copy">
-            <div class="bte-promo-eyebrow">💜 Women's Ministry Kit</div>
-            <div class="bte-promo-title">The Bible Trivia Experience™</div>
-            <div class="bte-promo-desc">Want a complete, print-ready women's ministry night? 76 pages including quiz rounds, Bible BINGO, discussion starters, score sheets, and a winner's certificate. Everything done for you.</div>
-            <div class="bte-promo-badges">
-                <span class="bte-promo-badge">✓ Quiz Rounds</span>
-                <span class="bte-promo-badge">✓ Bible BINGO</span>
-                <span class="bte-promo-badge">✓ Discussion Starters</span>
-                <span class="bte-promo-badge">✓ Score Sheets</span>
-                <span class="bte-promo-badge">✓ Certificate</span>
-            </div>
-        </div>
-        <div class="bte-promo-cta">
-            <div class="bte-promo-price">$19.99</div>
-            <div class="bte-promo-btn">See the Kit →</div>
-            <div class="bte-promo-sub">Instant download</div>
-        </div>
-    </a>
 
     <!-- FAQ -->
     <section class="faq-section" aria-label="Frequently Asked Questions">
@@ -830,6 +902,10 @@
                     <li><a href="/free-bible-verse-cards-anxiety">Peace &amp; Anxiety Cards</a></li>
                     <li><a href="/free-spiritual-warfare-verse-cards">Spiritual Warfare Cards</a></li>
                     <li><a href="/free-healing-comfort-bible-verses">Healing &amp; Comfort Cards</a></li>
+                    <li><a href="printable-genesis-bible-quiz.html">Genesis Quiz Printable</a></li>
+                    <li><a href="printable-moses-bible-quiz.html">Moses Quiz Printable</a></li>
+                    <li><a href="printable-easter-bible-quiz.html">Easter Quiz Printable</a></li>
+                    <li><a href="printable-kids-bible-quiz.html">Kids Quiz Printable</a></li>
                 </ul>
             </div>
             <div class="footer-col">
