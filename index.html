@@ -266,6 +266,67 @@
             box-shadow: 0 6px 20px rgba(102,126,234,0.55);
             transform: translateY(-1px);
         }
+
+        /* ── VERSES MEGA DROPDOWN ── */
+        .nav-verses-dropdown .nav-dropdown-menu {
+            min-width: 560px;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 16px;
+            display: none;
+        }
+        .nav-verses-dropdown:hover .nav-dropdown-menu,
+        .nav-verses-dropdown:focus-within .nav-dropdown-menu { display: block; }
+        .verses-mega-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 4px 12px;
+        }
+        .verses-mega-cat {
+            font-size: 10px;
+            font-weight: 900;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: #c9960a;
+            padding: 10px 10px 4px;
+            grid-column: 1 / -1;
+            border-top: 1px solid #e4dff5;
+            margin-top: 6px;
+        }
+        .verses-mega-cat:first-child { border-top: none; margin-top: 0; }
+        .verses-mega-grid a {
+            display: block;
+            padding: 6px 10px;
+            color: #3b1f6e;
+            font-size: 13px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: background .15s;
+            white-space: nowrap;
+        }
+        .verses-mega-grid a:hover { background: #ede8fa; color: #3b1f6e; }
+        .verses-mega-all {
+            grid-column: 1 / -1;
+            margin-top: 8px;
+            padding-top: 10px;
+            border-top: 1px solid #e4dff5;
+            display: flex;
+            justify-content: center;
+        }
+        .verses-mega-all a {
+            background: linear-gradient(135deg, #3b1f6e, #5a3e8a);
+            color: white !important;
+            padding: 8px 20px !important;
+            border-radius: 20px;
+            font-size: 12px !important;
+            font-weight: 800 !important;
+        }
+        .verses-mega-all a:hover { background: linear-gradient(135deg, #5a3e8a, #764ba2) !important; }
+        @media (max-width: 768px) {
+            .nav-verses-dropdown .nav-dropdown-menu { min-width: calc(100vw - 40px); left: 0; transform: none; }
+            .verses-mega-grid { grid-template-columns: repeat(2, 1fr); }
+        }
         /* DROPDOWN */
         .nav-dropdown {
             position: relative;
@@ -1036,7 +1097,44 @@
                     </div>
                 </li>
                 <li><a href="free-resources.html">Free Downloads</a></li>
-                <li><a href="bible-verse-finder.html" class="nav-verses-btn">📖 Verses by Topic</a></li>
+                <li class="nav-dropdown nav-verses-dropdown">
+                    <button class="nav-dropdown-toggle nav-verses-btn" style="background:linear-gradient(135deg,#764ba2,#667eea);color:white;padding:10px 18px;border-radius:8px;font-size:15px;">📖 Verses by Topic ▾</button>
+                    <div class="nav-dropdown-menu">
+                        <div class="verses-mega-grid">
+                            <div class="verses-mega-cat">Life Struggles</div>
+                            <a href="bible-verses-about-anxiety-and-worry.html">☁️ Anxiety &amp; Worry</a>
+                            <a href="bible-verses-about-fear.html">😨 Fear</a>
+                            <a href="bible-verses-about-depression-and-sadness.html">💙 Depression &amp; Sadness</a>
+                            <a href="bible-verses-about-grief-and-loss.html">🕯️ Grief &amp; Loss</a>
+                            <a href="bible-verses-about-loneliness.html">🌫️ Loneliness</a>
+                            <a href="bible-verses-about-anger.html">🔥 Anger</a>
+                            <div class="verses-mega-cat">Relationships</div>
+                            <a href="bible-verses-about-marriage.html">💍 Marriage</a>
+                            <a href="bible-verses-about-love.html">❤️ Love</a>
+                            <a href="bible-verses-about-forgiveness.html">🕊️ Forgiveness</a>
+                            <a href="bible-verses-about-pride-and-humility.html">⚖️ Pride &amp; Humility</a>
+                            <div class="verses-mega-cat">Faith &amp; Spiritual Life</div>
+                            <a href="bible-verses-about-faith.html">✝️ Faith</a>
+                            <a href="bible-verses-about-hope.html">☀️ Hope</a>
+                            <a href="bible-verses-about-prayer.html">🙏 Prayer</a>
+                            <a href="bible-verses-about-wisdom.html">📖 Wisdom</a>
+                            <a href="bible-verses-about-courage.html">🦁 Courage</a>
+                            <a href="bible-verses-about-patience.html">⏳ Patience</a>
+                            <div class="verses-mega-cat">Identity &amp; Victory</div>
+                            <a href="bible-verses-about-salvation.html">✨ Salvation</a>
+                            <a href="bible-verses-about-in-christ-and-through-christ.html">🌟 In Christ</a>
+                            <a href="bible-verses-about-victory.html">🏆 Victory</a>
+                            <a href="bible-verses-about-strength.html">💪 Strength</a>
+                            <div class="verses-mega-cat">God's Nature</div>
+                            <a href="bible-verses-about-gods-presence.html">🌅 God's Presence</a>
+                            <a href="bible-verses-about-healing.html">🌿 Healing</a>
+                            <a href="bible-verses-about-money-and-finances.html">💰 Money &amp; Finances</a>
+                            <div class="verses-mega-all">
+                                <a href="bible-verse-finder.html">🔍 Browse All 23 Topics →</a>
+                            </div>
+                        </div>
+                    </div>
+                </li>
                 <li><a href="complete-easter-bundle.html">🐣 Easter Products</a></li>
                 <li><a href="bible-crossword-puzzles.html" class="nav-puzzle-btn">✏️ Puzzles</a></li>
                 <li><a href="blog.html">Blog</a></li>
@@ -2406,6 +2504,44 @@
                     </div>
                     <div class="quiz-cta">Start Bible Quiz <span>→</span></div>
                 </a>
+            </div>
+        </div>
+
+
+        <!-- BIBLE VERSES BY TOPIC SECTION -->
+        <div class="category-section" id="bible-verses" style="margin-top:56px;">
+            <div class="category-header">
+                <span class="category-icon">📖</span>
+                <h2 class="category-title">What Does the Bible Say About…?</h2>
+            </div>
+            <p style="text-align:center;font-size:17px;color:#636e72;margin:-16px 0 28px;">23 topics — every verse with commentary. Click any topic to read all the Scriptures on that subject.</p>
+            <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:12px;">
+                <a href="bible-verses-about-anxiety-and-worry.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">☁️ Anxiety &amp; Worry</a>
+                <a href="bible-verses-about-fear.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">😨 Fear</a>
+                <a href="bible-verses-about-hope.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">☀️ Hope</a>
+                <a href="bible-verses-about-strength.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">💪 Strength</a>
+                <a href="bible-verses-about-forgiveness.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">🕊️ Forgiveness</a>
+                <a href="bible-verses-about-love.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">❤️ Love</a>
+                <a href="bible-verses-about-faith.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">✝️ Faith</a>
+                <a href="bible-verses-about-prayer.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">🙏 Prayer</a>
+                <a href="bible-verses-about-wisdom.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">📖 Wisdom</a>
+                <a href="bible-verses-about-marriage.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">💍 Marriage</a>
+                <a href="bible-verses-about-healing.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">🌿 Healing</a>
+                <a href="bible-verses-about-salvation.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">✨ Salvation</a>
+                <a href="bible-verses-about-victory.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">🏆 Victory</a>
+                <a href="bible-verses-about-courage.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">🦁 Courage</a>
+                <a href="bible-verses-about-depression-and-sadness.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">💙 Depression</a>
+                <a href="bible-verses-about-grief-and-loss.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">🕯️ Grief &amp; Loss</a>
+                <a href="bible-verses-about-loneliness.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">🌫️ Loneliness</a>
+                <a href="bible-verses-about-anger.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">🔥 Anger</a>
+                <a href="bible-verses-about-patience.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">⏳ Patience</a>
+                <a href="bible-verses-about-pride-and-humility.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">⚖️ Pride &amp; Humility</a>
+                <a href="bible-verses-about-gods-presence.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">🌅 God's Presence</a>
+                <a href="bible-verses-about-in-christ-and-through-christ.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">🌟 In Christ</a>
+                <a href="bible-verses-about-money-and-finances.html" style="display:flex;align-items:center;gap:10px;background:white;border:2px solid #e4dff5;border-radius:12px;padding:14px 16px;text-decoration:none;color:#3b1f6e;font-weight:700;font-size:14px;transition:all .2s;" onmouseover="this.style.borderColor='#5a3e8a';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='#e4dff5';this.style.transform='none'">💰 Money &amp; Finances</a>
+            </div>
+            <div style="text-align:center;margin-top:24px;">
+                <a href="bible-verse-finder.html" style="display:inline-block;background:linear-gradient(135deg,#3b1f6e,#5a3e8a);color:white;font-size:15px;font-weight:800;padding:14px 36px;border-radius:12px;text-decoration:none;box-shadow:0 4px 20px rgba(59,31,110,.3);">🔍 Browse All 23 Topics in the Verse Finder →</a>
             </div>
         </div>
 
