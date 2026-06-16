@@ -213,70 +213,60 @@
         </div>
     </div>
 
-    <!-- COMPLETE COLLECTION BANNER -->
+    <!-- BUNDLE BANNER -->
     <style>
-        /* ── COMPLETE COLLECTION BANNER ── */
-        .bte-banner{display:flex;align-items:stretch;text-decoration:none;border-radius:18px;overflow:hidden;background:#fdf8ef;box-shadow:0 2px 0 0 #c9960a,0 12px 40px rgba(40,20,0,.18);transition:box-shadow .25s,transform .25s;position:relative;}
-        .bte-banner::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#c9960a,#e8c650 40%,#c9960a 70%,#e8c650);z-index:2;}
-        .bte-banner:hover{transform:translateY(-3px);box-shadow:0 2px 0 0 #c9960a,0 20px 52px rgba(40,20,0,.24);}
-        .bte-accent{width:7px;flex-shrink:0;background:linear-gradient(180deg,#3b1f6e 0%,#5a3e8a 50%,#3b1f6e 100%);}
-        .bte-img-wrap{flex-shrink:0;background:linear-gradient(160deg,#3b1f6e 0%,#5a3e8a 60%,#7c5aaa 100%);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:28px 22px;gap:12px;}
-        .bte-img-wrap img{width:130px;height:auto;display:block;border-radius:10px;box-shadow:0 14px 36px rgba(0,0,0,.55),0 0 0 1px rgba(232,198,80,.2);transform:rotate(-2deg);transition:transform .3s;}
-        .bte-banner:hover .bte-img-wrap img{transform:rotate(-2deg) translateY(-4px);}
-        .bte-img-qs{text-align:center;}
-        .bte-img-qs-num{font-family:'Merriweather',serif;font-size:26px;font-weight:900;color:#e8c650;line-height:1;display:block;}
-        .bte-img-qs-label{font-size:10px;font-weight:700;color:rgba(255,255,255,.6);letter-spacing:.5px;}
-        .bte-copy{flex:1;padding:22px 18px;min-width:0;display:flex;flex-direction:column;justify-content:center;gap:8px;}
-        .bte-eyebrow{font-size:10px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:#c9960a;}
-        .bte-title{font-family:'Merriweather',serif;font-size:19px;font-weight:700;color:#1a0d33;line-height:1.3;}
-        .bte-title em{font-style:normal;color:#3b1f6e;}
-        .bte-badges{display:flex;flex-wrap:wrap;gap:5px;}
-        .bte-badge{font-size:11px;font-weight:700;color:#3b1f6e;background:#ede8fa;border:1px solid rgba(90,62,138,.25);padding:3px 10px;border-radius:20px;}
-        .bte-vr{width:1px;margin:16px 0;background:linear-gradient(180deg,transparent,rgba(90,62,138,.2) 30%,rgba(90,62,138,.2) 70%,transparent);flex-shrink:0;}
-        .bte-cta{flex-shrink:0;padding:22px 24px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;background:linear-gradient(135deg,rgba(59,31,110,.05),rgba(59,31,110,.09));}
-        .bte-price{font-family:'Merriweather',serif;font-size:13px;font-weight:700;color:#5a3e8a;line-height:1;text-align:center;}
-        .bte-btn{background:linear-gradient(135deg,#3b1f6e,#5a3e8a);color:#fff;font-size:13px;font-weight:900;padding:12px 20px;border-radius:10px;white-space:nowrap;box-shadow:0 4px 16px rgba(59,31,110,.38);transition:all .2s;}
-        .bte-sub{font-size:10px;color:#9a8ab0;text-align:center;}
-        @media(max-width:620px){
-          .bte-banner{flex-direction:column;}
-          .bte-accent{width:100%;height:7px;}
-          .bte-img-wrap{padding:24px 20px 16px;flex-direction:row;justify-content:center;gap:20px;}
-          .bte-img-wrap img{width:100px;transform:none;}
-          .bte-banner:hover .bte-img-wrap img{transform:none;}
-          .bte-copy{padding:0 20px 16px;text-align:center;}
-          .bte-badges{justify-content:center;}
-          .bte-vr{display:none;}
-          .bte-cta{border-top:1px solid rgba(59,31,110,.1);padding:16px 20px;flex-direction:row;justify-content:space-between;align-items:center;}
-        }
+    .bdl-banner{display:block;max-width:820px;margin:36px auto 0;padding:0 20px;text-decoration:none;}
+    .bdl-inner{position:relative;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#0f2348 0%,#1a3a6e 60%,#2d5499 100%);box-shadow:0 4px 0 0 #c9960a,0 16px 56px rgba(15,35,72,.45);transition:transform .3s cubic-bezier(.34,1.4,.64,1),box-shadow .3s ease;padding:32px 36px;display:flex;align-items:center;gap:28px;}
+    .bdl-inner:hover{transform:translateY(-4px);box-shadow:0 4px 0 0 #e8c650,0 28px 70px rgba(15,35,72,.5);}
+    .bdl-inner::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent 30%,rgba(232,198,80,.08) 50%,transparent 70%);animation:bdl-shimmer 3.5s ease-in-out infinite;pointer-events:none;}
+    @keyframes bdl-shimmer{0%{left:-120%}60%{left:160%}100%{left:160%}}
+    .bdl-inner::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#e8c650,transparent);animation:bdl-glow 3.5s ease-in-out infinite;}
+    @keyframes bdl-glow{0%,100%{opacity:.6}50%{opacity:1}}
+    .bdl-icons{position:relative;flex-shrink:0;width:180px;height:170px;}
+    .bdl-i1,.bdl-i2,.bdl-i3{position:absolute;border-radius:8px;box-shadow:0 8px 28px rgba(0,0,0,.6);}
+    .bdl-i1{width:88px;bottom:0;left:0;z-index:3;animation:bdl-fi1 3.5s ease-in-out infinite;}
+    .bdl-i2{width:96px;bottom:12px;left:42px;z-index:2;animation:bdl-fi2 3.5s ease-in-out .5s infinite;}
+    .bdl-i3{width:104px;bottom:22px;left:82px;z-index:1;animation:bdl-fi3 3.5s ease-in-out 1s infinite;}
+    @keyframes bdl-fi1{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(-3deg) translateY(-5px)}}
+    @keyframes bdl-fi2{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+    @keyframes bdl-fi3{0%,100%{transform:rotate(3deg)}50%{transform:rotate(3deg) translateY(-5px)}}
+    .bdl-inner:hover .bdl-i1{transform:rotate(-6deg) translateX(-6px) translateY(-4px);}
+    .bdl-inner:hover .bdl-i2{transform:translateY(-8px);}
+    .bdl-inner:hover .bdl-i3{transform:rotate(6deg) translateX(6px) translateY(-4px);}
+    .bdl-copy{flex:1;min-width:0;}
+    .bdl-eyebrow{font-size:10px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:#e8c650;margin-bottom:6px;}
+    .bdl-title{font-family:'Merriweather',serif;font-size:20px;font-weight:900;color:white;line-height:1.25;margin-bottom:6px;}
+    .bdl-title em{font-style:normal;color:#e8c650;}
+    .bdl-sub{font-size:12px;color:rgba(255,255,255,.7);}
+    .bdl-right{flex-shrink:0;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;}
+    .bdl-was{font-size:12px;color:rgba(255,255,255,.4);text-decoration:line-through;}
+    .bdl-now{font-family:'Merriweather',serif;font-size:44px;font-weight:900;color:#e8c650;line-height:1;}
+    .bdl-btn{display:inline-block;background:linear-gradient(135deg,#e8c650,#c9960a);color:#0f2348;font-size:13px;font-weight:900;padding:11px 24px;border-radius:50px;white-space:nowrap;box-shadow:0 4px 18px rgba(232,198,80,.45);transition:all .2s;}
+    .bdl-inner:hover .bdl-btn{background:linear-gradient(135deg,#f0d848,#c9960a);box-shadow:0 7px 28px rgba(232,198,80,.6);}
+    .bdl-save{font-size:10px;font-weight:800;color:rgba(255,255,255,.55);letter-spacing:.5px;}
+    @media(max-width:620px){.bdl-inner{flex-direction:column;padding:24px 20px;text-align:center;}.bdl-icons{margin:0 auto;}.bdl-right{width:100%;}.bdl-title{font-size:17px;}}
     </style>
-    <div style="max-width:800px;margin:30px auto 0;padding:0 20px;">
-      <a href="complete-bible-quiz-collection-printable.html" class="bte-banner">
-        <div class="bte-accent"></div>
-        <div class="bte-img-wrap">
-          <img src="The_Complete.png" alt="The Complete Bible Quiz Daily Collection — 1,102 KJV Questions" width="130">
-          <div class="bte-img-qs">
-            <span class="bte-img-qs-num">1,102</span>
-            <span class="bte-img-qs-label">KJV Questions</span>
-          </div>
+    <a href="bible-study-bundle.html" class="bdl-banner" aria-label="Self-Led Bible Study Bundle — $27">
+      <div class="bdl-inner">
+        <div class="bdl-icons">
+          <img class="bdl-i1" src="The_Complete_Bible_Quiz_Book.png" alt="Complete Bible Quiz Book">
+          <img class="bdl-i2" src="52_week_reading_plan.png" alt="52-Week Bible Journey">
+          <img class="bdl-i3" src="Bible_Timeline_Poster.png" alt="Bible Timeline Poster">
         </div>
-        <div class="bte-copy">
-          <div class="bte-eyebrow">&#128214; Complete Bible Resource</div>
-          <div class="bte-title">Stop Building Quizzes From Scratch.<br><em>Get All 1,102 Questions Here.</em></div>
-          <div class="bte-badges">
-            <span class="bte-badge">&#10003; 33 Complete Quizzes</span>
-            <span class="bte-badge">&#10003; Full Answer Key</span>
-            <span class="bte-badge">&#10003; Genesis to Revelation</span>
-            <span class="bte-badge">&#10003; Print Unlimited Copies</span>
-          </div>
+        <div class="bdl-copy">
+          <div class="bdl-eyebrow">&#128230; 3 Resources &middot; One Download</div>
+          <div class="bdl-title">Quiz Book + Reading Plan + <em>Timeline Poster</em></div>
+          <div class="bdl-sub">3,800+ questions &middot; 52-week plan &middot; All 66 books &middot; Save $8</div>
         </div>
-        <div class="bte-vr"></div>
-        <div class="bte-cta">
-          <div class="bte-price">Instant PDF Download</div>
-          <div class="bte-btn">Get the Collection &#8594;</div>
-          <div class="bte-sub">&#128274; KJV &middot; Secure checkout</div>
+        <div class="bdl-right">
+          <div class="bdl-was">$35 separately</div>
+          <div class="bdl-now">$27</div>
+          <div class="bdl-btn">Get the Bundle &rarr;</div>
+          <div class="bdl-save">SAVE $8 &middot; INSTANT DOWNLOAD</div>
         </div>
-      </a>
-    </div>
+      </div>
+    </a>
+
     <!-- ESV STUDY BIBLE -->
     <div style="max-width:900px;margin:0 auto 48px;padding:0 20px;">
       <div style="background:#fff3cd;border-left:4px solid #e8c650;border-radius:0 10px 10px 0;padding:10px 16px;margin-bottom:16px;font-size:12px;color:#4a4060;line-height:1.5;">

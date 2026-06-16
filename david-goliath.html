@@ -349,6 +349,60 @@
         </div>
     </div>
 
+    <!-- BUNDLE BANNER -->
+    <style>
+    .bdl-banner{display:block;max-width:820px;margin:36px auto 0;padding:0 20px;text-decoration:none;}
+    .bdl-inner{position:relative;border-radius:20px;overflow:hidden;background:linear-gradient(135deg,#0f2348 0%,#1a3a6e 60%,#2d5499 100%);box-shadow:0 4px 0 0 #c9960a,0 16px 56px rgba(15,35,72,.45);transition:transform .3s cubic-bezier(.34,1.4,.64,1),box-shadow .3s ease;padding:32px 36px;display:flex;align-items:center;gap:28px;}
+    .bdl-inner:hover{transform:translateY(-4px);box-shadow:0 4px 0 0 #e8c650,0 28px 70px rgba(15,35,72,.5);}
+    .bdl-inner::before{content:'';position:absolute;top:0;left:-120%;width:60%;height:100%;background:linear-gradient(105deg,transparent 30%,rgba(232,198,80,.08) 50%,transparent 70%);animation:bdl-shimmer 3.5s ease-in-out infinite;pointer-events:none;}
+    @keyframes bdl-shimmer{0%{left:-120%}60%{left:160%}100%{left:160%}}
+    .bdl-inner::after{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,transparent,#e8c650,transparent);animation:bdl-glow 3.5s ease-in-out infinite;}
+    @keyframes bdl-glow{0%,100%{opacity:.6}50%{opacity:1}}
+    .bdl-icons{position:relative;flex-shrink:0;width:180px;height:170px;}
+    .bdl-i1,.bdl-i2,.bdl-i3{position:absolute;border-radius:8px;box-shadow:0 8px 28px rgba(0,0,0,.6);}
+    .bdl-i1{width:88px;bottom:0;left:0;z-index:3;animation:bdl-fi1 3.5s ease-in-out infinite;}
+    .bdl-i2{width:96px;bottom:12px;left:42px;z-index:2;animation:bdl-fi2 3.5s ease-in-out .5s infinite;}
+    .bdl-i3{width:104px;bottom:22px;left:82px;z-index:1;animation:bdl-fi3 3.5s ease-in-out 1s infinite;}
+    @keyframes bdl-fi1{0%,100%{transform:rotate(-3deg)}50%{transform:rotate(-3deg) translateY(-5px)}}
+    @keyframes bdl-fi2{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}
+    @keyframes bdl-fi3{0%,100%{transform:rotate(3deg)}50%{transform:rotate(3deg) translateY(-5px)}}
+    .bdl-inner:hover .bdl-i1{transform:rotate(-6deg) translateX(-6px) translateY(-4px);}
+    .bdl-inner:hover .bdl-i2{transform:translateY(-8px);}
+    .bdl-inner:hover .bdl-i3{transform:rotate(6deg) translateX(6px) translateY(-4px);}
+    .bdl-copy{flex:1;min-width:0;}
+    .bdl-eyebrow{font-size:10px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:#e8c650;margin-bottom:6px;}
+    .bdl-title{font-family:'Merriweather',serif;font-size:20px;font-weight:900;color:white;line-height:1.25;margin-bottom:6px;}
+    .bdl-title em{font-style:normal;color:#e8c650;}
+    .bdl-sub{font-size:12px;color:rgba(255,255,255,.7);}
+    .bdl-right{flex-shrink:0;text-align:center;display:flex;flex-direction:column;align-items:center;gap:8px;}
+    .bdl-was{font-size:12px;color:rgba(255,255,255,.4);text-decoration:line-through;}
+    .bdl-now{font-family:'Merriweather',serif;font-size:44px;font-weight:900;color:#e8c650;line-height:1;}
+    .bdl-btn{display:inline-block;background:linear-gradient(135deg,#e8c650,#c9960a);color:#0f2348;font-size:13px;font-weight:900;padding:11px 24px;border-radius:50px;white-space:nowrap;box-shadow:0 4px 18px rgba(232,198,80,.45);transition:all .2s;}
+    .bdl-inner:hover .bdl-btn{background:linear-gradient(135deg,#f0d848,#c9960a);box-shadow:0 7px 28px rgba(232,198,80,.6);}
+    .bdl-save{font-size:10px;font-weight:800;color:rgba(255,255,255,.55);letter-spacing:.5px;}
+    @media(max-width:620px){.bdl-inner{flex-direction:column;padding:24px 20px;text-align:center;}.bdl-icons{margin:0 auto;}.bdl-right{width:100%;}.bdl-title{font-size:17px;}}
+    </style>
+    <a href="bible-study-bundle.html" class="bdl-banner" aria-label="Self-Led Bible Study Bundle — $27">
+      <div class="bdl-inner">
+        <div class="bdl-icons">
+          <img class="bdl-i1" src="The_Complete_Bible_Quiz_Book.png" alt="Complete Bible Quiz Book">
+          <img class="bdl-i2" src="52_week_reading_plan.png" alt="52-Week Bible Journey">
+          <img class="bdl-i3" src="Bible_Timeline_Poster.png" alt="Bible Timeline Poster">
+        </div>
+        <div class="bdl-copy">
+          <div class="bdl-eyebrow">&#128230; 3 Resources &middot; One Download</div>
+          <div class="bdl-title">Quiz Book + Reading Plan + <em>Timeline Poster</em></div>
+          <div class="bdl-sub">3,800+ questions &middot; 52-week plan &middot; All 66 books &middot; Save $8</div>
+        </div>
+        <div class="bdl-right">
+          <div class="bdl-was">$35 separately</div>
+          <div class="bdl-now">$27</div>
+          <div class="bdl-btn">Get the Bundle &rarr;</div>
+          <div class="bdl-save">SAVE $8 &middot; INSTANT DOWNLOAD</div>
+        </div>
+      </div>
+    </a>
+
     <footer style="background: #2d3436; color: white; padding: 60px 24px 32px; margin-top: 80px;">
         <div style="max-width: 1400px; margin: 0 auto;">
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-bottom: 40px;">
