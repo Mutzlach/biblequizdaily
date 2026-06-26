@@ -702,6 +702,237 @@
 </div>
 
 <!-- ── EASTER BANNER (top) ── -->
+    <!-- BUNDLE BANNER -->
+    <style>
+    .pb-wrap {
+        max-width: 860px;
+        margin: 4px auto 52px;
+        padding: 0 20px;
+    }
+    .pb {
+        display: block;
+        text-decoration: none;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 0 0 #e8c650, 0 8px 32px rgba(59,31,110,.13);
+        border: 1.5px solid #e8e2f4;
+        transition: box-shadow .22s, transform .22s;
+        position: relative;
+    }
+    .pb:hover {
+        box-shadow: 0 2px 0 0 #e8c650, 0 16px 48px rgba(59,31,110,.2);
+        transform: translateY(-2px);
+    }
+    .pb-top {
+        background: linear-gradient(135deg, #2d1b69 0%, #3b1f6e 60%, #5a3e8a 100%);
+        padding: 18px 24px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .pb-pain {
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+        font-weight: 900;
+        color: white;
+        line-height: 1.4;
+        flex: 1;
+    }
+    .pb-pain em {
+        font-style: normal;
+        color: #e8c650;
+    }
+    .pb-emoji {
+        font-size: 32px;
+        flex-shrink: 0;
+    }
+    .pb-bottom {
+        display: flex;
+        align-items: stretch;
+        gap: 0;
+    }
+    /* Three product images */
+    .pb-imgs {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 20px 20px;
+        background: #faf8ff;
+        border-right: 1.5px solid #e8e2f4;
+        min-width: 185px;
+    }
+    .pb-img {
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0,0,0,.22);
+        display: block;
+    }
+    .pb-img:nth-child(1) { width: 58px; transform: rotate(-5deg); }
+    .pb-img:nth-child(2) { width: 68px; }
+    .pb-img:nth-child(3) { width: 58px; transform: rotate(5deg); }
+    /* Solution copy */
+    .pb-solution {
+        flex: 1;
+        padding: 16px 16px 16px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+    }
+    .pb-solve-label {
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #5a3e8a;
+    }
+    .pb-solve-text {
+        font-size: 13px;
+        font-weight: 600;
+        color: #2d2040;
+        line-height: 1.55;
+    }
+    .pb-solve-list {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .pb-solve-item {
+        font-size: 12px;
+        color: #4a3a6a;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+    .pb-solve-item::before {
+        content: '✓';
+        color: #166534;
+        font-weight: 900;
+        font-size: 11px;
+        flex-shrink: 0;
+    }
+    /* Price + CTA */
+    .pb-cta-col {
+        flex-shrink: 0;
+        border-left: 1.5px solid #e8e2f4;
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        background: #faf8ff;
+        min-width: 148px;
+        text-align: center;
+    }
+    .pb-price-block {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+    }
+    .pb-was {
+        font-size: 12px;
+        color: #b0a8c0;
+        text-decoration: line-through;
+        font-weight: 600;
+    }
+    .pb-now {
+        font-family: 'Merriweather', serif;
+        font-size: 38px;
+        font-weight: 900;
+        color: #2d1b69;
+        line-height: 1;
+    }
+    .pb-save {
+        font-size: 10px;
+        font-weight: 900;
+        color: #166534;
+        background: #dcfce7;
+        padding: 3px 10px;
+        border-radius: 20px;
+        letter-spacing: .3px;
+    }
+    .pb-btn {
+        display: block;
+        width: 100%;
+        background: linear-gradient(135deg, #5a3e8a, #2d1b69);
+        color: white;
+        font-size: 13px;
+        font-weight: 900;
+        padding: 11px 12px;
+        border-radius: 9px;
+        text-align: center;
+        box-shadow: 0 4px 14px rgba(59,31,110,.3);
+        transition: box-shadow .2s, transform .2s;
+    }
+    .pb:hover .pb-btn {
+        box-shadow: 0 6px 22px rgba(59,31,110,.45);
+        transform: scale(1.03);
+    }
+    .pb-fine {
+        font-size: 10px;
+        color: #9a8ab0;
+        font-weight: 600;
+    }
+    @media(max-width:620px) {
+        .pb-top { padding: 14px 16px 12px; }
+        .pb-pain { font-size: 14px; }
+        .pb-bottom { flex-wrap: wrap; }
+        .pb-imgs { border-right: none; border-bottom: 1.5px solid #e8e2f4; width: 100%; padding: 12px 20px 0; justify-content: center; }
+        .pb-cta-col { border-left: none; border-top: 1.5px solid #e8e2f4; width: 100%; padding: 14px 16px; }
+    }
+    </style>
+
+    <div class="pb-wrap">
+      <a href="bible-study-bundle.html" class="pb" aria-label="Self-Led Bible Study Bundle">
+
+        <!-- Problem header -->
+        <div class="pb-top">
+          <div class="pb-emoji">😓</div>
+          <div class="pb-pain">
+        Building quizzes from scratch <em>every single week</em> is exhausting.
+          </div>
+        </div>
+
+        <!-- Solution row -->
+        <div class="pb-bottom">
+
+          <!-- Product images -->
+          <div class="pb-imgs">
+        <img class="pb-img" src="The_Complete_Bible_Quiz_Book.png" alt="Complete Bible Quiz Book">
+        <img class="pb-img" src="52_week_reading_plan.png" alt="52-Week Bible Journey">
+        <img class="pb-img" src="Bible_Timeline_Poster.png" alt="Bible Timeline Poster">
+          </div>
+
+          <!-- Copy -->
+          <div class="pb-solution">
+        <div class="pb-solve-label">The fix &mdash; 3 done-for-you resources</div>
+        <div class="pb-solve-list">
+          <div class="pb-solve-item">3,800+ quiz questions — Genesis to Revelation, ready to use</div>
+          <div class="pb-solve-item">52-week reading plan — pre-built, start any Sunday</div>
+          <div class="pb-solve-item">Bible timeline poster — print once, use for years</div>
+        </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="pb-cta-col">
+        <div class="pb-save">SAVE $8</div>
+        <div class="pb-price-block">
+          <div class="pb-was">$35</div>
+          <div class="pb-now">$27</div>
+        </div>
+        <div class="pb-btn">Get the Bundle &rarr;</div>
+        <div class="pb-fine">&#9889; Instant download</div>
+          </div>
+
+        </div>
+      </a>
+    </div>
+</body>
+</html>
     <!-- WOMEN'S MINISTRY BANNER -->
     <div style="max-width:900px;margin:30px auto 40px;padding:0 20px;">
       <a href="bible-trivia-experience.html" style="display:flex;align-items:center;gap:0;text-decoration:none;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#c0392b 0%,#e74c3c 50%,#8e44ad 100%);box-shadow:0 6px 24px rgba(192,57,43,.38);transition:box-shadow .2s,transform .2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 32px rgba(192,57,43,.48)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 24px rgba(192,57,43,.38)'">
@@ -1105,5 +1336,3 @@ function changeImg(thumb, mainId) {
         window.esvPrev=function(){upd((cur-1+imgs.length)%imgs.length);};
     })();
     </script>
-</body>
-</html>

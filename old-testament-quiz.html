@@ -296,16 +296,21 @@
 <body>
     <header>
         <nav>
-            <a href="index.html" class="logo">BibleQuizDaily</a>
+            <a href="index.html" class="logo">
+                <img src="_Header_Logo_.png" alt="BibleQuizDaily - Free Bible Quiz Questions">
+            </a>
             <div class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="old-testament-quiz.html">Old Testament</a>
                 <a href="new-testament-quiz.html">New Testament</a>
                 <a href="jesus-life-quiz.html">Jesus's Life</a>
-                <a href="free-resources.html">Resources</a>
+                <a href="free-resources.html">Free Resources</a>
+                <a href="complete-easter-bundle.html" style="background: linear-gradient(135deg, #2e7d32 0%, #4caf50 100%); color: white; padding: 8px 16px; border-radius: 8px; font-weight: 700;">🎁 Easter Products</a>
+                <a href="ultimate-easter-sunday-school-kit.html" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 8px 14px; border-radius: 8px; font-weight: 700;">✍️ Blog</a>
             </div>
         </nav>
     </header>
+
     <!-- ═══════════════════════════════════════════════════════════ -->
     <!-- PROMINENT INTERNAL LINKING SECTION - Browse More Quizzes -->
     <!-- ═══════════════════════════════════════════════════════════ -->
@@ -365,25 +370,251 @@
         </div>
     </div>
 
+        <!-- BUNDLE BANNER -->
+    <style>
+    .pb-wrap {
+        max-width: 860px;
+        margin: 4px auto 52px;
+        padding: 0 20px;
+    }
+    .pb {
+        display: block;
+        text-decoration: none;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 0 0 #e8c650, 0 8px 32px rgba(59,31,110,.13);
+        border: 1.5px solid #e8e2f4;
+        transition: box-shadow .22s, transform .22s;
+        position: relative;
+    }
+    .pb:hover {
+        box-shadow: 0 2px 0 0 #e8c650, 0 16px 48px rgba(59,31,110,.2);
+        transform: translateY(-2px);
+    }
+    .pb-top {
+        background: linear-gradient(135deg, #2d1b69 0%, #3b1f6e 60%, #5a3e8a 100%);
+        padding: 18px 24px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .pb-pain {
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+        font-weight: 900;
+        color: white;
+        line-height: 1.4;
+        flex: 1;
+    }
+    .pb-pain em {
+        font-style: normal;
+        color: #e8c650;
+    }
+    .pb-emoji {
+        font-size: 32px;
+        flex-shrink: 0;
+    }
+    .pb-bottom {
+        display: flex;
+        align-items: stretch;
+        gap: 0;
+    }
+    /* Three product images */
+    .pb-imgs {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 20px 20px;
+        background: #faf8ff;
+        border-right: 1.5px solid #e8e2f4;
+        min-width: 185px;
+    }
+    .pb-img {
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0,0,0,.22);
+        display: block;
+    }
+    .pb-img:nth-child(1) { width: 58px; transform: rotate(-5deg); }
+    .pb-img:nth-child(2) { width: 68px; }
+    .pb-img:nth-child(3) { width: 58px; transform: rotate(5deg); }
+    /* Solution copy */
+    .pb-solution {
+        flex: 1;
+        padding: 16px 16px 16px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+    }
+    .pb-solve-label {
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #5a3e8a;
+    }
+    .pb-solve-text {
+        font-size: 13px;
+        font-weight: 600;
+        color: #2d2040;
+        line-height: 1.55;
+    }
+    .pb-solve-list {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .pb-solve-item {
+        font-size: 12px;
+        color: #4a3a6a;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+    .pb-solve-item::before {
+        content: '✓';
+        color: #166534;
+        font-weight: 900;
+        font-size: 11px;
+        flex-shrink: 0;
+    }
+    /* Price + CTA */
+    .pb-cta-col {
+        flex-shrink: 0;
+        border-left: 1.5px solid #e8e2f4;
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        background: #faf8ff;
+        min-width: 148px;
+        text-align: center;
+    }
+    .pb-price-block {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+    }
+    .pb-was {
+        font-size: 12px;
+        color: #b0a8c0;
+        text-decoration: line-through;
+        font-weight: 600;
+    }
+    .pb-now {
+        font-family: 'Merriweather', serif;
+        font-size: 38px;
+        font-weight: 900;
+        color: #2d1b69;
+        line-height: 1;
+    }
+    .pb-save {
+        font-size: 10px;
+        font-weight: 900;
+        color: #166534;
+        background: #dcfce7;
+        padding: 3px 10px;
+        border-radius: 20px;
+        letter-spacing: .3px;
+    }
+    .pb-btn {
+        display: block;
+        width: 100%;
+        background: linear-gradient(135deg, #5a3e8a, #2d1b69);
+        color: white;
+        font-size: 13px;
+        font-weight: 900;
+        padding: 11px 12px;
+        border-radius: 9px;
+        text-align: center;
+        box-shadow: 0 4px 14px rgba(59,31,110,.3);
+        transition: box-shadow .2s, transform .2s;
+    }
+    .pb:hover .pb-btn {
+        box-shadow: 0 6px 22px rgba(59,31,110,.45);
+        transform: scale(1.03);
+    }
+    .pb-fine {
+        font-size: 10px;
+        color: #9a8ab0;
+        font-weight: 600;
+    }
+    @media(max-width:620px) {
+        .pb-top { padding: 14px 16px 12px; }
+        .pb-pain { font-size: 14px; }
+        .pb-bottom { flex-wrap: wrap; }
+        .pb-imgs { border-right: none; border-bottom: 1.5px solid #e8e2f4; width: 100%; padding: 12px 20px 0; justify-content: center; }
+        .pb-cta-col { border-left: none; border-top: 1.5px solid #e8e2f4; width: 100%; padding: 14px 16px; }
+    }
+    </style>
 
-    <!-- WOMEN'S MINISTRY BANNER -->
+    <div class="pb-wrap">
+      <a href="bible-study-bundle.html" class="pb" aria-label="Self-Led Bible Study Bundle">
+
+        <!-- Problem header -->
+        <div class="pb-top">
+          <div class="pb-emoji">😓</div>
+          <div class="pb-pain">
+        Building quizzes from scratch <em>every single week</em> is exhausting.
+          </div>
+        </div>
+
+        <!-- Solution row -->
+        <div class="pb-bottom">
+
+          <!-- Product images -->
+          <div class="pb-imgs">
+        <img class="pb-img" src="The_Complete_Bible_Quiz_Book.png" alt="Complete Bible Quiz Book">
+        <img class="pb-img" src="52_week_reading_plan.png" alt="52-Week Bible Journey">
+        <img class="pb-img" src="Bible_Timeline_Poster.png" alt="Bible Timeline Poster">
+          </div>
+
+          <!-- Copy -->
+          <div class="pb-solution">
+        <div class="pb-solve-label">The fix &mdash; 3 done-for-you resources</div>
+        <div class="pb-solve-list">
+          <div class="pb-solve-item">3,800+ quiz questions — Genesis to Revelation, ready to use</div>
+          <div class="pb-solve-item">52-week reading plan — pre-built, start any Sunday</div>
+          <div class="pb-solve-item">Bible timeline poster — print once, use for years</div>
+        </div>
+          </div>
+
+          <!-- CTA -->
+          <div class="pb-cta-col">
+        <div class="pb-save">SAVE $8</div>
+        <div class="pb-price-block">
+          <div class="pb-was">$35</div>
+          <div class="pb-now">$27</div>
+        </div>
+        <div class="pb-btn">Get the Bundle &rarr;</div>
+        <div class="pb-fine">&#9889; Instant download</div>
+          </div>
+
+        </div>
+      </a>
+    </div>
+
+        <!-- WOMEN'S MINISTRY BANNER -->
     <div style="max-width:900px;margin:30px auto 40px;padding:0 20px;">
       <a href="bible-trivia-experience.html" style="display:flex;align-items:center;gap:0;text-decoration:none;border-radius:16px;overflow:hidden;background:linear-gradient(135deg,#c0392b 0%,#e74c3c 50%,#8e44ad 100%);box-shadow:0 6px 24px rgba(192,57,43,.38);transition:box-shadow .2s,transform .2s;" onmouseover="this.style.transform='translateY(-2px)';this.style.boxShadow='0 10px 32px rgba(192,57,43,.48)'" onmouseout="this.style.transform='translateY(0)';this.style.boxShadow='0 6px 24px rgba(192,57,43,.38)'">
-        <!-- Book cover -->
         <div style="flex-shrink:0;padding:20px 16px 20px 22px;display:flex;align-items:center;">
           <img src="bible_trivia_experience.png" alt="The Bible Trivia Experience" style="width:72px;display:block;border-radius:8px;box-shadow:0 6px 18px rgba(0,0,0,.45);transform:rotate(-2deg);">
         </div>
-        <!-- Copy — grows to fill space -->
         <div style="flex:1;padding:18px 12px;min-width:0;">
           <div style="font-size:9px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.65);margin-bottom:4px;">&#128150; Women&rsquo;s Ministry</div>
-          <div style="font-family:'Merriweather',serif;font-size:15px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">The Bible Trivia Experience&#8482;</div>
+          <div style="font-family:'Merriweather',serif;font-size:15px;font-weight:700;color:#fff;line-height:1.3;margin-bottom:8px;">The Bible Trivia Experience&#8482;</div>
           <div style="display:flex;flex-wrap:wrap;gap:4px;">
             <span style="font-size:10px;font-weight:700;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);padding:2px 7px;border-radius:20px;">&#10003; Quiz Rounds</span>
             <span style="font-size:10px;font-weight:700;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);padding:2px 7px;border-radius:20px;">&#10003; Bible BINGO</span>
             <span style="font-size:10px;font-weight:700;color:#fff;background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.22);padding:2px 7px;border-radius:20px;">&#10003; Certificate</span>
           </div>
         </div>
-        <!-- CTA — tight, right-aligned -->
         <div style="flex-shrink:0;padding:18px 20px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:5px;border-left:1px solid rgba(255,255,255,.15);">
           <div style="font-family:'Merriweather',serif;font-size:22px;font-weight:700;color:#fff;line-height:1;">$19.99</div>
           <div style="background:#fff;color:#c0392b;font-size:12px;font-weight:900;padding:9px 16px;border-radius:8px;white-space:nowrap;">See the Kit &#8594;</div>
@@ -391,58 +622,38 @@
         </div>
       </a>
     </div>
-                    <div class="stat-label">Questions</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">~10 min</div>
-                    <div class="stat-label">Duration</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">Free</div>
-                    <div class="stat-label">Always</div>
-                </div>
+
+    <div class="container">
+        <div class="intro-card">
+            <h1>📜 Old Testament Bible Quiz</h1>
+            <p class="subtitle" style="font-size:18px;color:#4caf50;font-weight:600;margin-top:-10px;margin-bottom:20px;">30 Free KJV Questions with Instant Answers | Genesis to Malachi</p>
+            <p>From the creation of the world to the prophets calling Israel home — the Old Testament spans thousands of years of God's faithfulness. Test how well you know the Hebrew Scriptures.</p>
+
+            <div class="quiz-stats">
+                <div class="stat-item"><div class="stat-number">30</div><div class="stat-label">Questions</div></div>
+                <div class="stat-item"><div class="stat-number">~10 min</div><div class="stat-label">Duration</div></div>
+                <div class="stat-item"><div class="stat-number">Free</div><div class="stat-label">Always</div></div>
+                <div class="stat-item"><div class="stat-number">KJV</div><div class="stat-label">Translation</div></div>
             </div>
 
-            <a href="quiz.html?category=old-testament" class="btn btn-primary">🎯 Start Quiz Now!</a>
+            <a href="quiz.html?category=old-testament" style="display:inline-block;padding:18px 45px;background:linear-gradient(135deg,#667eea 0%,#764ba2 100%);color:white;text-decoration:none;border-radius:30px;font-size:20px;font-weight:700;box-shadow:0 8px 24px rgba(102,126,234,0.4);margin-bottom:30px;transition:all 0.3s;">📜 Start Old Testament Quiz</a>
 
             <div class="topics-covered">
                 <h2>📚 Topics Covered:</h2>
                 <div class="topics-grid">
-                    <div class="topic-item">✓ Creation & Genesis</div>
-                    <div class="topic-item">✓ Abraham & Patriarchs</div>
-                    <div class="topic-item">✓ Moses & Exodus</div>
-                    <div class="topic-item">✓ Ten Commandments</div>
-                    <div class="topic-item">✓ Kings of Israel</div>
-                    <div class="topic-item">✓ Major Prophets</div>
-                    <div class="topic-item">✓ Psalms & Wisdom</div>
-                    <div class="topic-item">✓ Esther & Ruth</div>
+                    <div class="topic-item">🌍 Creation &amp; Genesis</div>
+                    <div class="topic-item">👴 Abraham &amp; Patriarchs</div>
+                    <div class="topic-item">⚡ Moses &amp; Exodus</div>
+                    <div class="topic-item">📋 Ten Commandments</div>
+                    <div class="topic-item">👑 Kings of Israel</div>
+                    <div class="topic-item">📮 Major Prophets</div>
+                    <div class="topic-item">📖 Psalms &amp; Wisdom</div>
+                    <div class="topic-item">👩 Esther &amp; Ruth</div>
                 </div>
+                <p style="margin-top:20px;color:var(--text-light);"><strong>Perfect for:</strong> Sunday School teachers, Bible study groups, homeschooling families, and anyone wanting to understand the foundation Jesus built His ministry on.</p>
             </div>
         </div>
-
-        
-        <!-- Social Share Buttons -->
-        <div class="social-share" style="background: #f8f9ff; padding: 30px; border-radius: 15px; margin-top: 30px; text-align: center;">
-            <h3 style="color: #2d3436; font-size: 20px; margin-bottom: 20px; font-weight: 700;">📢 Share This Quiz</h3>
-            <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
-                <a href="#" onclick="shareOnFacebook(event)" style="display: inline-flex; align-items: center; gap: 8px; background: #1877f2; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 15px rgba(24,119,242,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
-                    Facebook
-                </a>
-                <a href="#" onclick="shareOnTwitter(event)" style="display: inline-flex; align-items: center; gap: 8px; background: #1da1f2; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 15px rgba(29,161,242,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M23.953 4.57a10 10 0 01-2.825.775 4.958 4.958 0 002.163-2.723c-.951.555-2.005.959-3.127 1.184a4.92 4.92 0 00-8.384 4.482C7.69 8.095 4.067 6.13 1.64 3.162a4.822 4.822 0 00-.666 2.475c0 1.71.87 3.213 2.188 4.096a4.904 4.904 0 01-2.228-.616v.06a4.923 4.923 0 003.946 4.827 4.996 4.996 0 01-2.212.085 4.936 4.936 0 004.604 3.417 9.867 9.867 0 01-6.102 2.105c-.39 0-.779-.023-1.17-.067a13.995 13.995 0 007.557 2.209c9.053 0 13.998-7.496 13.998-13.985 0-.21 0-.42-.015-.63A9.935 9.935 0 0024 4.59z"/></svg>
-                    Twitter
-                </a>
-                <a href="#" onclick="shareOnPinterest(event)" style="display: inline-flex; align-items: center; gap: 8px; background: #e60023; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 15px rgba(230,0,35,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.162-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.401.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.354-.629-2.758-1.379l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.607 0 11.985-5.365 11.985-11.987C23.97 5.39 18.592.026 11.985.026L12.017 0z"/></svg>
-                    Pinterest
-                </a>
-                <a href="#" onclick="shareOnWhatsApp(event)" style="display: inline-flex; align-items: center; gap: 8px; background: #25d366; color: white; padding: 12px 24px; border-radius: 8px; text-decoration: none; font-weight: 600; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 4px 15px rgba(37,211,102,0.4)'" onmouseout="this.style.transform='translateY(0)'; this.style.boxShadow='none'">
-                    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/></svg>
-                    WhatsApp
-                </a>
-            </div>
-        </div>
+    </div>
 
     <!-- SEO CONTENT SECTION -->
     <div style="max-width: 900px; margin: 60px auto 0; padding: 0 20px;">
@@ -602,7 +813,20 @@ function shareOnWhatsApp(e) {
                 💬 WhatsApp
             </a>
             <a href="/cdn-cgi/l/email-protection#457a3630272f20263178072c2729206514302c3f63272a213c78062d20262e652a303165312d2c3665072c2729206534302c3f7f652d313135367f6a6a272c27292034302c3f21242c293c6b262a286a2a292168312036312428202b316834302c3f6b2d312829" style="background: #636e72; color: white; padding: 12px 25px; border-radius: 30px; text-decoration: none; font-weight: 600; font-size: 15px; display: inline-flex; align-items: center; gap: 8px; transition: all 0.3s;" onmouseover="this.style.transform='translateY(-3px)'; this.style.boxShadow='0 6px 20px rgba(99,110,114,0.4)'" onmouseout="this.style.transform='translate
-    <div style="max-width: 900px; margin: 30px auto 48px; padding: 0 20px;">
+
+
+    </div>
+
+    <!-- AMAZON AFFILIATE DISCLAIMER -->
+    <div style="max-width:900px;margin:30px auto 20px;padding:0 20px;">
+        <div style="background:#fff3cd;border:2px solid #ffc107;border-radius:12px;padding:18px 25px;text-align:center;box-shadow:0 2px 8px rgba(255,193,7,0.2);">
+            <p style="font-size:15px;color:#856404;margin:0;font-weight:600;">
+                <span style="font-size:20px;">&#9888;&#65039;</span> <strong>AFFILIATE DISCLOSURE:</strong> As an Amazon Associate, BibleQuizDaily earns from qualifying purchases. This helps us keep all Bible quizzes 100% free!
+            </p>
+        </div>
+    </div>
+
+        <div style="max-width: 900px; margin: 30px auto 48px; padding: 0 20px;">
       <div style="background:white;border-radius:16px;box-shadow:0 2px 16px rgba(0,0,0,0.08);overflow:hidden;border:2px solid #e4dff5;display:flex;align-items:stretch;flex-wrap:wrap;">
         <div style="position:relative;flex-shrink:0;width:200px;background:#ede8fa;overflow:hidden;min-height:160px;">
           <img id="esv-main-img" src="esv.jpg" alt="ESV Study Bible" style="width:200px;height:100%;min-height:160px;object-fit:cover;display:block;">
@@ -622,3 +846,5 @@ function shareOnWhatsApp(e) {
       </div>
     </div>
     <script>(function(){var imgs=["esv.jpg","esv1.jpg","esv2.jpg","esv3.jpg","esv4.jpg"],cur=0;function upd(i){var el=document.getElementById("esv-main-img");el.style.opacity="0";setTimeout(function(){el.src=imgs[i];el.style.opacity="1";},200);cur=i;}window.esvNext=function(){upd((cur+1)%imgs.length);};window.esvPrev=function(){upd((cur-1+imgs.length)%imgs.length);};})()</script>
+</body>
+</html>
