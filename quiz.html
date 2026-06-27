@@ -513,6 +513,61 @@
                     </div>
                 </div>
 
+                <!-- BUNDLE BANNER — results -->
+                <style>
+                .rb{display:block;text-decoration:none;border-radius:14px;overflow:hidden;background:white;border:1.5px solid #e2ddf0;box-shadow:0 2px 0 0 #e8c650,0 6px 20px rgba(59,31,110,.10);margin:20px 0;transition:box-shadow .2s,transform .2s;}
+                .rb:hover{box-shadow:0 2px 0 0 #e8c650,0 10px 30px rgba(59,31,110,.18);transform:translateY(-2px);}
+                .rb-top{background:linear-gradient(135deg,#2d1b69 0%,#3b1f6e 60%,#5a3e8a 100%);padding:14px 18px;display:flex;align-items:center;gap:12px;}
+                .rb-top::after{content:'';display:block;} /* gold stripe via box-shadow on .rb */
+                .rb-pain{font-family:'Merriweather',serif;font-size:14px;font-weight:900;color:white;line-height:1.4;flex:1;}
+                .rb-pain em{font-style:normal;color:#e8c650;}
+                .rb-bottom{display:flex;align-items:center;gap:0;}
+                .rb-imgs{flex-shrink:0;display:flex;align-items:center;justify-content:center;gap:6px;padding:12px 14px;background:#faf8ff;border-right:1.5px solid #e2ddf0;}
+                .rb-imgs img{border-radius:5px;box-shadow:0 3px 10px rgba(0,0,0,.15);}
+                .rb-imgs img:nth-child(1){width:44px;transform:rotate(-4deg);}
+                .rb-imgs img:nth-child(2){width:52px;}
+                .rb-imgs img:nth-child(3){width:44px;transform:rotate(4deg);}
+                .rb-copy{flex:1;padding:12px 12px;}
+                .rb-label{font-size:9px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#5a3e8a;margin-bottom:4px;}
+                .rb-items{display:flex;flex-direction:column;gap:2px;}
+                .rb-it{font-size:11px;font-weight:600;color:#2d2040;display:flex;align-items:center;gap:6px;}
+                .rb-it::before{content:'✓';color:#166534;font-weight:900;font-size:10px;flex-shrink:0;}
+                .rb-right{flex-shrink:0;padding:12px 14px;display:flex;flex-direction:column;align-items:center;gap:4px;border-left:1.5px solid #e2ddf0;background:#faf8ff;text-align:center;}
+                .rb-was{font-size:11px;color:#b0a8c0;text-decoration:line-through;}
+                .rb-now{font-family:'Merriweather',serif;font-size:28px;font-weight:900;color:#2d1b69;line-height:1;}
+                .rb-btn{display:block;background:linear-gradient(135deg,#5a3e8a,#2d1b69);color:white;font-size:11px;font-weight:900;padding:8px 14px;border-radius:8px;white-space:nowrap;box-shadow:0 3px 10px rgba(59,31,110,.3);}
+                .rb-save{font-size:9px;color:#9a8ab0;font-weight:700;}
+                @media(max-width:480px){.rb-bottom{flex-wrap:wrap;}.rb-imgs{border-right:none;border-bottom:1.5px solid #e2ddf0;width:100%;}.rb-right{border-left:none;border-top:1.5px solid #e2ddf0;width:100%;}}
+                </style>
+                <a href="bible-study-bundle.html" class="rb">
+                  <div class="rb-top">
+                    <span style="font-size:24px;">😓</span>
+                    <div class="rb-pain">Stop building quizzes from scratch <em>every week.</em></div>
+                  </div>
+                  <div class="rb-bottom">
+                    <div class="rb-imgs">
+                      <img src="The_Complete_Bible_Quiz_Book.png" alt="Quiz Book">
+                      <img src="52_week_reading_plan.png" alt="Reading Plan">
+                      <img src="Bible_Timeline_Poster.png" alt="Timeline Poster">
+                    </div>
+                    <div class="rb-copy">
+                      <div class="rb-label">The fix &mdash; 3 done-for-you resources</div>
+                      <div class="rb-items">
+                        <div class="rb-it">3,800+ questions &mdash; all 66 books, ready to use</div>
+                        <div class="rb-it">52-week reading plan &mdash; start any Sunday</div>
+                        <div class="rb-it">Bible timeline poster &mdash; print once, use for years</div>
+                      </div>
+                    </div>
+                    <div class="rb-right">
+                      <div class="rb-was">$35</div>
+                      <div class="rb-now">$27</div>
+                      <div class="rb-btn">Get the Bundle &rarr;</div>
+                      <div class="rb-save">SAVE $8 &middot; INSTANT DOWNLOAD</div>
+                    </div>
+                  </div>
+                </a>
+
+
                 <!-- WOMEN'S MINISTRY BANNER -->
                 <a href="bible-trivia-experience.html" style="display:flex;align-items:center;gap:0;text-decoration:none;border-radius:14px;overflow:hidden;background:linear-gradient(135deg,#c0392b 0%,#e74c3c 50%,#8e44ad 100%);box-shadow:0 4px 18px rgba(192,57,43,.35);margin:16px 0 20px;transition:transform .2s;" onmouseover="this.style.transform='translateY(-2px)'" onmouseout="this.style.transform='translateY(0)'">
                   <div style="flex-shrink:0;padding:16px 12px 16px 18px;">

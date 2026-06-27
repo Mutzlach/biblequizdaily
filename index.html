@@ -2507,95 +2507,92 @@
     <!-- ── COMPLETE COLLECTION POPUP ── -->
     <!-- BUNDLE POPUP -->
     <style>
-    #bpo{display:none;position:fixed;inset:0;background:rgba(5,2,18,.8);z-index:9000;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(10px);}
+    #bpo{display:none;position:fixed;inset:0;background:rgba(10,5,30,.82);z-index:9000;align-items:center;justify-content:center;padding:16px;backdrop-filter:blur(10px);}
     #bpo.show{display:flex;}
-    #bpop{position:relative;width:100%;max-width:600px;background:white;border-radius:24px;overflow:hidden;box-shadow:0 0 0 1.5px rgba(232,198,80,.4),0 40px 100px rgba(0,0,0,.6);animation:bpin .45s cubic-bezier(.34,1.4,.64,1) both;}
-    @keyframes bpin{from{opacity:0;transform:scale(.82) translateY(36px)}to{opacity:1;transform:scale(1) translateY(0)}}
-    #bpcl{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.18);border:none;cursor:pointer;font-size:15px;font-weight:900;color:white;display:flex;align-items:center;justify-content:center;z-index:10;transition:all .15s;}
-    #bpcl:hover{background:rgba(255,255,255,.32);transform:scale(1.1);}
-    /* Header with images */
-    .bph{background:linear-gradient(135deg,#0f2348 0%,#1a3a6e 100%);padding:28px 28px 24px;position:relative;display:flex;align-items:center;gap:24px;}
-    .bph::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,#c9960a,#e8c650,#c9960a);}
-    /* fanned images in popup header */
-    .bph-imgs{position:relative;width:140px;height:130px;flex-shrink:0;}
-    .bph-i1,.bph-i2,.bph-i3{position:absolute;border-radius:7px;box-shadow:0 6px 20px rgba(0,0,0,.55);}
-    .bph-i1{width:70px;bottom:0;left:0;z-index:3;transform:rotate(-4deg);}
-    .bph-i2{width:76px;bottom:10px;left:34px;z-index:2;}
-    .bph-i3{width:82px;bottom:18px;left:66px;z-index:1;transform:rotate(4deg);}
-    .bph-copy{flex:1;}
-    .bph-eyebrow{font-size:9px;font-weight:900;letter-spacing:2.5px;text-transform:uppercase;color:#e8c650;margin-bottom:8px;}
-    .bph-title{font-family:'Merriweather',serif;font-size:20px;font-weight:900;color:white;line-height:1.22;margin-bottom:5px;}
-    .bph-title em{font-style:normal;color:#e8c650;}
-    .bph-sub{font-size:12px;color:rgba(255,255,255,.72);line-height:1.5;}
+    #bpop{position:relative;width:100%;max-width:580px;background:white;border-radius:20px;overflow:hidden;box-shadow:0 2px 0 0 #e8c650,0 40px 100px rgba(0,0,0,.6);animation:bpin .4s cubic-bezier(.34,1.4,.64,1) both;}
+    @keyframes bpin{from{opacity:0;transform:scale(.85) translateY(28px)}to{opacity:1;transform:scale(1) translateY(0)}}
+    /* Close btn */
+    #bpcl{position:absolute;top:12px;right:12px;width:30px;height:30px;border-radius:50%;background:rgba(255,255,255,.2);border:none;cursor:pointer;font-size:14px;font-weight:900;color:white;display:flex;align-items:center;justify-content:center;z-index:10;transition:all .15s;}
+    #bpcl:hover{background:rgba(255,255,255,.35);transform:scale(1.1);}
+    /* Problem header — matches banner */
+    .bpp-top{background:linear-gradient(135deg,#2d1b69 0%,#3b1f6e 60%,#5a3e8a 100%);padding:22px 24px 18px;display:flex;align-items:center;gap:14px;position:relative;}
+    .bpp-top::after{content:'';position:absolute;bottom:0;left:0;right:0;height:4px;background:linear-gradient(90deg,#3b1f6e,#e8c650 40%,#e8c650 60%,#3b1f6e);}
+    .bpp-emoji{font-size:30px;flex-shrink:0;}
+    .bpp-pain{font-family:'Merriweather',serif;font-size:16px;font-weight:900;color:white;line-height:1.4;}
+    .bpp-pain em{font-style:normal;color:#e8c650;}
     /* Body */
-    .bpb{padding:22px 28px 26px;}
-    .bpb-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:18px;}
-    .bpb-card{background:#f9f8fc;border:1.5px solid #e2ddf0;border-radius:12px;padding:14px 10px;text-align:center;}
-    .bpb-card img{width:56px;height:72px;object-fit:contain;border-radius:5px;box-shadow:0 3px 10px rgba(0,0,0,.15);margin-bottom:6px;}
-    .bpb-name{font-size:10px;font-weight:700;color:#1a3a6e;line-height:1.3;margin-bottom:4px;}
-    .bpb-price{font-size:12px;font-weight:900;color:#9a8ab0;text-decoration:line-through;}
+    .bpp-body{padding:20px 24px 24px;}
+    /* 3 product images + fix label */
+    .bpp-imgs-row{display:flex;align-items:center;justify-content:center;gap:10px;margin-bottom:16px;}
+    .bpp-img{border-radius:8px;box-shadow:0 4px 14px rgba(0,0,0,.18);}
+    .bpp-img:nth-child(1){width:62px;transform:rotate(-4deg);}
+    .bpp-img:nth-child(2){width:72px;}
+    .bpp-img:nth-child(3){width:62px;transform:rotate(4deg);}
+    /* 3 item checklist */
+    .bpp-items{display:flex;flex-direction:column;gap:6px;margin-bottom:18px;}
+    .bpp-item{font-size:13px;font-weight:600;color:#2d2040;display:flex;align-items:center;gap:8px;}
+    .bpp-item::before{content:'✓';color:#166534;font-weight:900;font-size:12px;flex-shrink:0;}
     /* Price block */
-    .bpb-price-block{background:linear-gradient(135deg,#f0f4ff,#fdf9ef);border:2px solid #e2ddf0;border-radius:14px;padding:16px 20px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px;}
-    .bpb-pl .bpb-was{font-size:13px;color:#b0a8c0;text-decoration:line-through;}
-    .bpb-pl .bpb-now{font-family:'Merriweather',serif;font-size:48px;font-weight:900;color:#1a3a6e;line-height:1;}
-    .bpb-save{display:inline-block;background:#166534;color:white;font-size:11px;font-weight:900;padding:5px 14px;border-radius:50px;margin-bottom:5px;}
-    .bpb-note{font-size:11px;color:#7a7090;}
-    .bpb-cta{display:block;width:100%;background:linear-gradient(135deg,#e8c650,#c9960a);color:#0f2348;text-align:center;padding:16px;border-radius:12px;font-size:16px;font-weight:900;text-decoration:none;box-shadow:0 5px 24px rgba(232,198,80,.4);transition:all .2s;margin-bottom:9px;}
-    .bpb-cta:hover{transform:translateY(-2px);box-shadow:0 9px 32px rgba(232,198,80,.6);}
-    .bpb-dismiss{display:block;text-align:center;font-size:12px;color:#b0a8c0;cursor:pointer;background:none;border:none;width:100%;padding:3px;font-family:inherit;transition:color .15s;}
-    .bpb-dismiss:hover{color:#5a4070;}
-    @media(max-width:520px){#bpop{max-width:340px;}.bph{flex-direction:column;align-items:center;text-align:center;padding:24px 20px 20px;}.bph-imgs{margin-bottom:8px;}.bph-i1{width:60px;}.bph-i2{width:66px;left:30px;}.bph-i3{width:72px;left:58px;}.bpb{padding:18px 20px 22px;}.bpb-pl .bpb-now{font-size:40px;}}
+    .bpp-price-row{background:#faf8ff;border:1.5px solid #e2ddf0;border-radius:12px;padding:14px 18px;display:flex;align-items:center;justify-content:space-between;gap:16px;margin-bottom:14px;}
+    .bpp-price-left .bpp-was{font-size:13px;color:#b0a8c0;text-decoration:line-through;}
+    .bpp-price-left .bpp-now{font-family:'Merriweather',serif;font-size:44px;font-weight:900;color:#2d1b69;line-height:1;}
+    .bpp-save{display:inline-block;background:#166534;color:white;font-size:10px;font-weight:900;padding:4px 12px;border-radius:20px;margin-bottom:4px;}
+    .bpp-note{font-size:11px;color:#7a7090;}
+    .bpp-cta{display:block;width:100%;background:linear-gradient(135deg,#5a3e8a,#2d1b69);color:white;text-align:center;padding:15px;border-radius:11px;font-size:16px;font-weight:900;text-decoration:none;box-shadow:0 4px 18px rgba(59,31,110,.3);transition:all .2s;margin-bottom:8px;}
+    .bpp-cta:hover{box-shadow:0 8px 28px rgba(59,31,110,.45);transform:translateY(-2px);}
+    .bpp-dismiss{display:block;text-align:center;font-size:12px;color:#b0a8c0;cursor:pointer;background:none;border:none;width:100%;padding:3px;font-family:inherit;transition:color .15s;}
+    .bpp-dismiss:hover{color:#5a4070;}
+    @media(max-width:520px){#bpop{max-width:340px;}.bpp-top{padding:18px 16px 14px;}.bpp-pain{font-size:14px;}.bpp-body{padding:16px 18px 20px;}.bpp-price-left .bpp-now{font-size:36px;}}
     </style>
 
     <div id="bpo" role="dialog" aria-modal="true" aria-label="Self-Led Study Bundle">
-        <div id="bpop">
-            <button id="bpcl" onclick="closeBPop()" aria-label="Close">&#10005;</button>
-            <!-- Header -->
-            <div class="bph">
-                <div class="bph-imgs">
-                    <img class="bph-i1" src="The_Complete_Bible_Quiz_Book.png" alt="Quiz Book">
-                    <img class="bph-i2" src="52_week_reading_plan.png" alt="Reading Plan">
-                    <img class="bph-i3" src="Bible_Timeline_Poster.png" alt="Timeline Poster">
-                </div>
-                <div class="bph-copy">
-                    <div class="bph-eyebrow">&#128230; 3 Resources &middot; One Download &middot; Save $8</div>
-                    <div class="bph-title">Stop Searching.<br><em>Get Everything Now.</em></div>
-                    <p class="bph-sub">Quiz book, reading plan and timeline poster &mdash; the complete self-led Bible study system.</p>
-                </div>
-            </div>
-            <!-- Body -->
-            <div class="bpb">
-                <div class="bpb-row">
-                    <div class="bpb-card">
-                        <img src="The_Complete_Bible_Quiz_Book.png" alt="Quiz Book">
-                        <div class="bpb-name">Complete Bible Quiz Book</div>
-                        <div class="bpb-price">$19</div>
-                    </div>
-                    <div class="bpb-card">
-                        <img src="52_week_reading_plan.png" alt="Reading Plan">
-                        <div class="bpb-name">52-Week Bible Journey</div>
-                        <div class="bpb-price">$9</div>
-                    </div>
-                    <div class="bpb-card">
-                        <img src="Bible_Timeline_Poster.png" alt="Timeline Poster">
-                        <div class="bpb-name">Bible Timeline Poster</div>
-                        <div class="bpb-price">$7</div>
-                    </div>
-                </div>
-                <div class="bpb-price-block">
-                    <div class="bpb-pl">
-                        <div class="bpb-was">$35 separately</div>
-                        <div class="bpb-now">$27</div>
-                    </div>
-                    <div style="text-align:right;">
-                        <div class="bpb-save">SAVE $8</div>
-                        <div class="bpb-note">Instant download<br>All 3 PDFs included</div>
-                    </div>
-                </div>
-                <a href="bible-study-bundle.html" class="bpb-cta">&#11015; Get the Study Bundle &mdash; $27</a>
-                <button class="bpb-dismiss" onclick="closeBPop()">No thanks, I&rsquo;ll buy separately</button>
-            </div>
+      <div id="bpop">
+        <button id="bpcl" onclick="closeBPop()" aria-label="Close">&#10005;</button>
+
+        <!-- Problem header -->
+        <div class="bpp-top">
+          <div class="bpp-emoji">😓</div>
+          <div class="bpp-pain">
+            Building quizzes from scratch <em>every single week</em> is exhausting.
+          </div>
         </div>
+
+        <!-- Body -->
+        <div class="bpp-body">
+
+          <!-- Product images -->
+          <div class="bpp-imgs-row">
+            <img class="bpp-img" src="The_Complete_Bible_Quiz_Book.png" alt="Quiz Book">
+            <img class="bpp-img" src="52_week_reading_plan.png" alt="Reading Plan">
+            <img class="bpp-img" src="Bible_Timeline_Poster.png" alt="Timeline Poster">
+          </div>
+
+          <!-- Fix label -->
+          <div style="font-size:10px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:#5a3e8a;margin-bottom:10px;">The fix &mdash; 3 done-for-you resources</div>
+
+          <!-- Checklist -->
+          <div class="bpp-items">
+            <div class="bpp-item">3,800+ quiz questions &mdash; Genesis to Revelation, ready to use</div>
+            <div class="bpp-item">52-week reading plan &mdash; pre-built, start any Sunday</div>
+            <div class="bpp-item">Bible timeline poster &mdash; print once, use for years</div>
+          </div>
+
+          <!-- Price -->
+          <div class="bpp-price-row">
+            <div class="bpp-price-left">
+              <div class="bpp-was">$35 separately</div>
+              <div class="bpp-now">$27</div>
+            </div>
+            <div style="text-align:right;">
+              <div class="bpp-save">SAVE $8</div>
+              <div class="bpp-note">Instant download<br>All 3 PDFs included</div>
+            </div>
+          </div>
+
+          <a href="bible-study-bundle.html" class="bpp-cta">&#9889; Get the Study Bundle &mdash; $27</a>
+          <button class="bpp-dismiss" onclick="closeBPop()">No thanks, I&rsquo;ll keep building from scratch</button>
+        </div>
+      </div>
     </div>
 
     <script>
