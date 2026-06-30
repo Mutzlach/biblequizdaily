@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us | BibleQuizDaily</title>
     <meta name="description" content="Contact BibleQuizDaily for questions, feedback, partnership opportunities, or technical support. We respond within 24-48 hours Monday to Friday.">
-    <link rel="canonical" href="https://biblequizdaily.com/contact.html">
+    <link rel="canonical" href="https://www.biblequizdaily.com/contact">
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
     <!-- Open Graph -->
     <meta property="og:title" content="Contact Us | BibleQuizDaily">
     <meta property="og:description" content="Get in touch with BibleQuizDaily for questions, feedback, or partnership opportunities.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://biblequizdaily.com/contact.html">
+    <meta property="og:url" content="https://www.biblequizdaily.com/contact">
     <meta property="og:image" content="https://biblequizdaily.com/_Header_Logo_.png">
     <meta property="og:image:width" content="512">
     <meta property="og:image:height" content="512">
@@ -55,8 +55,8 @@
       "@graph":[
         {
           "@type":"WebPage",
-          "@id":"https://biblequizdaily.com/contact.html",
-          "url":"https://biblequizdaily.com/contact.html",
+          "@id":"https://www.biblequizdaily.com/contact",
+          "url":"https://www.biblequizdaily.com/contact",
           "name":"Contact Us | BibleQuizDaily",
           "description":"Get in touch with BibleQuizDaily for questions, feedback, or partnership opportunities.",
           "isPartOf":{"@id":"https://biblequizdaily.com/#website"},
@@ -65,7 +65,7 @@
             "@type":"BreadcrumbList",
             "itemListElement":[
               {"@type":"ListItem","position":1,"name":"Home","item":"https://biblequizdaily.com/"},
-              {"@type":"ListItem","position":2,"name":"Contact","item":"https://biblequizdaily.com/contact.html"}
+              {"@type":"ListItem","position":2,"name":"Contact","item":"https://www.biblequizdaily.com/contact"}
             ]
           }
         },
@@ -318,6 +318,190 @@
             </ul>
         </nav>
     </header>
+
+    <!-- BUNDLE BANNER -->
+    <style>
+    .pb-wrap {
+        max-width: 860px;
+        margin: 4px auto 52px;
+        padding: 0 20px;
+    }
+    .pb {
+        display: block;
+        text-decoration: none;
+        border-radius: 16px;
+        overflow: hidden;
+        background: #fff;
+        box-shadow: 0 2px 0 0 #e8c650, 0 8px 32px rgba(59,31,110,.13);
+        border: 1.5px solid #e8e2f4;
+        transition: box-shadow .22s, transform .22s;
+        position: relative;
+    }
+    .pb:hover {
+        box-shadow: 0 2px 0 0 #e8c650, 0 16px 48px rgba(59,31,110,.2);
+        transform: translateY(-2px);
+    }
+    .pb-top {
+        background: linear-gradient(135deg, #2d1b69 0%, #3b1f6e 60%, #5a3e8a 100%);
+        padding: 18px 24px 16px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+    }
+    .pb-pain {
+        font-family: 'Merriweather', serif;
+        font-size: 16px;
+        font-weight: 900;
+        color: white;
+        line-height: 1.4;
+        flex: 1;
+    }
+    .pb-pain em {
+        font-style: normal;
+        color: #e8c650;
+    }
+    .pb-emoji {
+        font-size: 32px;
+        flex-shrink: 0;
+    }
+    .pb-bottom {
+        display: flex;
+        align-items: stretch;
+        gap: 0;
+    }
+    /* Three product images */
+    .pb-imgs {
+        flex-shrink: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 20px 20px;
+        background: #faf8ff;
+        border-right: 1.5px solid #e8e2f4;
+        min-width: 185px;
+    }
+    .pb-img {
+        border-radius: 6px;
+        box-shadow: 0 6px 18px rgba(0,0,0,.22);
+        display: block;
+    }
+    .pb-img:nth-child(1) { width: 58px; transform: rotate(-5deg); }
+    .pb-img:nth-child(2) { width: 68px; }
+    .pb-img:nth-child(3) { width: 58px; transform: rotate(5deg); }
+    /* Solution copy */
+    .pb-solution {
+        flex: 1;
+        padding: 16px 16px 16px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 6px;
+    }
+    .pb-solve-label {
+        font-size: 10px;
+        font-weight: 900;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: #5a3e8a;
+    }
+    .pb-solve-text {
+        font-size: 13px;
+        font-weight: 600;
+        color: #2d2040;
+        line-height: 1.55;
+    }
+    .pb-solve-list {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+    }
+    .pb-solve-item {
+        font-size: 12px;
+        color: #4a3a6a;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        gap: 7px;
+    }
+    .pb-solve-item::before {
+        content: '✓';
+        color: #166534;
+        font-weight: 900;
+        font-size: 11px;
+        flex-shrink: 0;
+    }
+    /* Price + CTA */
+    .pb-cta-col {
+        flex-shrink: 0;
+        border-left: 1.5px solid #e8e2f4;
+        padding: 16px 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 6px;
+        background: #faf8ff;
+        min-width: 148px;
+        text-align: center;
+    }
+    .pb-price-block {
+        display: flex;
+        align-items: baseline;
+        gap: 6px;
+    }
+    .pb-was {
+        font-size: 12px;
+        color: #b0a8c0;
+        text-decoration: line-through;
+        font-weight: 600;
+    }
+    .pb-now {
+        font-family: 'Merriweather', serif;
+        font-size: 38px;
+        font-weight: 900;
+        color: #2d1b69;
+        line-height: 1;
+    }
+    .pb-save {
+        font-size: 10px;
+        font-weight: 900;
+        color: #166534;
+        background: #dcfce7;
+        padding: 3px 10px;
+        border-radius: 20px;
+        letter-spacing: .3px;
+    }
+    .pb-btn {
+        display: block;
+        width: 100%;
+        background: linear-gradient(135deg, #5a3e8a, #2d1b69);
+        color: white;
+        font-size: 13px;
+        font-weight: 900;
+        padding: 11px 12px;
+        border-radius: 9px;
+        text-align: center;
+        box-shadow: 0 4px 14px rgba(59,31,110,.3);
+        transition: box-shadow .2s, transform .2s;
+    }
+    .pb:hover .pb-btn {
+        box-shadow: 0 6px 22px rgba(59,31,110,.45);
+        transform: scale(1.03);
+    }
+    .pb-fine {
+        font-size: 10px;
+        color: #9a8ab0;
+        font-weight: 600;
+    }
+    @media(max-width:620px) {
+        .pb-top { padding: 14px 16px 12px; }
+        .pb-pain { font-size: 14px; }
+        .pb-bottom { flex-wrap: wrap; }
+        .pb-imgs { border-right: none; border-bottom: 1.5px solid #e8e2f4; width: 100%; padding: 12px 20px 0; justify-content: center; }
+        .pb-cta-col { border-left: none; border-top: 1.5px solid #e8e2f4; width: 100%; padding: 14px 16px; }
+    }
+    </style>
 
     <main role="main">
     <div class="container">
