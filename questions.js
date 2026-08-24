@@ -1690,210 +1690,211 @@ window.quizQuestions = {
         {
             scripture: "Behold, a sower went forth to sow.",
             reference: "Matthew 13:3",
-            question: "What parable involves seeds and soil?",
+            question: "Which parable of Jesus describes seed falling on different types of soil?",
             answers: ["Mustard seed", "The Sower", "Growing seed", "Wheat and tares"],
             correct: 1
         },
         {
-            scripture: "And when he sowed, some seeds fell by the way side.",
-            reference: "Matthew 13:4",
-            question: "How many types of soil in parable?",
+            scripture: "Some seeds fell by the way side... some fell upon stony places... some fell among thorns... but other fell into good ground.",
+            reference: "Matthew 13:4-8",
+            question: "How many types of soil are described in the Parable of the Sower?",
             answers: ["Two", "Three", "Four", "Five"],
             correct: 2
         },
         {
-            scripture: "Hear ye therefore the parable of the sower.",
-            reference: "Matthew 13:18",
-            question: "What do birds represent in sower parable?",
-            answers: ["Angels", "Satan", "Prophets", "Disciples"],
-            correct: 1
-        },
-        {
-            scripture: "When any one heareth the word, then cometh the wicked one.",
+            scripture: "When any one heareth the word of the kingdom, and understandeth it not, then cometh the wicked one, and catcheth away that which was sown in his heart.",
             reference: "Matthew 13:19",
-            question: "What is the mustard seed parable about?",
-            answers: ["Faith", "Kingdom of heaven", "Prayer", "Love"],
+            question: "What do the birds represent in the Parable of the Sower?",
+            answers: ["Angels", "Satan", "Prophets", "Disciples"],
             correct: 1
         },
         {
             scripture: "The kingdom of heaven is like to a grain of mustard seed.",
             reference: "Matthew 13:31",
-            question: "What is smallest of all seeds?",
-            answers: ["Wheat", "Mustard seed", "Barley", "Rice"],
+            question: "What is the Parable of the Mustard Seed about?",
+            answers: ["Faith", "Kingdom of heaven", "Prayer", "Love"],
             correct: 1
         },
         {
             scripture: "Which indeed is the least of all seeds.",
             reference: "Matthew 13:32",
-            question: "What grows with wheat until harvest?",
+            question: "In the Parable of the Mustard Seed, what is it called the smallest of?",
+            answers: ["Wheat", "All seeds", "Barley", "Rice"],
+            correct: 1
+        },
+        {
+            scripture: "The kingdom of heaven is likened unto a man which sowed good seed in his field: but while he slept, his enemy came and sowed tares among the wheat.",
+            reference: "Matthew 13:24-25",
+            question: "In the Parable of the Wheat and the Tares, what grows alongside the wheat until harvest?",
             answers: ["Barley", "Tares (weeds)", "Corn", "Oats"],
             correct: 1
         },
         {
-            scripture: "The kingdom of heaven is likened unto a man which sowed good seed.",
-            reference: "Matthew 13:24",
-            question: "Who sowed the tares?",
+            scripture: "But while men slept, his enemy came and sowed tares among the wheat, and went his way.",
+            reference: "Matthew 13:25",
+            question: "In the Parable of the Wheat and the Tares, who sowed the tares?",
             answers: ["A servant", "The enemy", "The wind", "Birds"],
             correct: 1
         },
         {
-            scripture: "But while men slept, his enemy came and sowed tares.",
-            reference: "Matthew 13:25",
-            question: "What is the pearl of great price about?",
+            scripture: "Again, the kingdom of heaven is like unto a merchant man, seeking goodly pearls.",
+            reference: "Matthew 13:45",
+            question: "What does the Parable of the Pearl of Great Price teach about?",
             answers: ["Wealth", "Kingdom of heaven", "Love", "Faith"],
             correct: 1
         },
         {
-            scripture: "Again, the kingdom of heaven is like unto a merchant man.",
-            reference: "Matthew 13:45",
-            question: "What did merchant do when he found pearl?",
+            scripture: "Who, when he had found one pearl of great price, went and sold all that he had, and bought it.",
+            reference: "Matthew 13:46",
+            question: "In the Parable of the Pearl of Great Price, what did the merchant do when he found it?",
             answers: ["Kept it secret", "Sold all he had", "Shared it", "Hid it"],
             correct: 1
         },
         {
-            scripture: "Who, when he had found one pearl of great price, went and sold all.",
-            reference: "Matthew 13:46",
-            question: "What did the Good Samaritan do?",
-            answers: ["Passed by", "Helped injured man", "Called for help", "Reported crime"],
+            scripture: "But a certain Samaritan, as he journeyed, came where he was: and when he saw him, he had compassion on him, and went to him, and bound up his wounds.",
+            reference: "Luke 10:33-34",
+            question: "In the Parable of the Good Samaritan, what did the Samaritan do for the injured man?",
+            answers: ["Passed by", "Helped injured man", "Called for help", "Reported the crime"],
             correct: 1
         },
         {
-            scripture: "But a certain Samaritan, as he journeyed, came where he was.",
-            reference: "Luke 10:33",
-            question: "Who passed by the injured man first?",
-            answers: ["A Samaritan", "A priest", "A Levite", "Both priest and Levite"],
-            correct: 3
-        },
-        {
-            scripture: "And by chance there came down a certain priest that way.",
-            reference: "Luke 10:31",
-            question: "What did the Prodigal Son do?",
-            answers: ["Stayed home", "Wasted inheritance", "Invested money", "Gave to poor"],
+            scripture: "And by chance there came down a certain priest that way... and likewise a Levite... came and looked on him, and passed by on the other side.",
+            reference: "Luke 10:31-32",
+            question: "In the Parable of the Good Samaritan, which two men passed by the injured man without helping him?",
+            answers: ["A Samaritan and a priest", "A priest and a Levite", "Two Samaritans", "A Levite and a merchant"],
             correct: 1
         },
         {
-            scripture: "And the younger of them said to his father, Give me the portion.",
-            reference: "Luke 15:12",
-            question: "What job did Prodigal Son take?",
+            scripture: "And not many days after the younger son gathered all together, and took his journey into a far country, and there wasted his substance with riotous living.",
+            reference: "Luke 15:13",
+            question: "In the Parable of the Prodigal Son, what did the younger son do with his inheritance?",
+            answers: ["Stayed home", "Wasted it on riotous living", "Invested it", "Gave it to the poor"],
+            correct: 1
+        },
+        {
+            scripture: "And he went and joined himself to a citizen of that country; and he sent him into his fields to feed swine.",
+            reference: "Luke 15:15",
+            question: "In the Parable of the Prodigal Son, what job did the son take after spending all his money?",
             answers: ["Shepherd", "Farmer", "Fed pigs", "Servant"],
             correct: 2
         },
         {
-            scripture: "And he went and joined himself to a citizen, who sent him to feed swine.",
-            reference: "Luke 15:15",
-            question: "How did father react to son's return?",
-            answers: ["Angry", "Threw a celebration", "Rejected him", "Made him work"],
+            scripture: "But when he was yet a great way off, his father saw him, and had compassion, and ran, and fell on his neck, and kissed him... bring hither the fatted calf, and kill it; and let us eat, and be merry.",
+            reference: "Luke 15:20-23",
+            question: "In the Parable of the Prodigal Son, how did the father react when his son returned home?",
+            answers: ["He was angry", "He threw a celebration", "He rejected him", "He made him work"],
             correct: 1
         },
         {
-            scripture: "But the father said to his servants, Bring forth the best robe.",
-            reference: "Luke 15:22",
-            question: "What did Lost Sheep parable teach?",
+            scripture: "I say unto you, that likewise joy shall be in heaven over one sinner that repenteth.",
+            reference: "Luke 15:7",
+            question: "What does the Parable of the Lost Sheep teach?",
             answers: ["Obedience", "God seeks the lost", "Faith", "Prayer"],
             correct: 1
         },
         {
-            scripture: "What man of you, having an hundred sheep, if he lose one.",
+            scripture: "What man of you, having an hundred sheep, if he lose one of them, doth not leave the ninety and nine... and go after that which is lost?",
             reference: "Luke 15:4",
-            question: "How many sheep did shepherd have?",
+            question: "In the Parable of the Lost Sheep, how many sheep did the shepherd have?",
             answers: ["50", "75", "100", "150"],
             correct: 2
         },
         {
-            scripture: "And when he cometh home, he calleth together his friends.",
-            reference: "Luke 15:6",
-            question: "What did the Lost Coin woman do?",
-            answers: ["Forgot it", "Searched diligently", "Bought new one", "Asked neighbors"],
+            scripture: "And when she hath found it, she calleth her friends and her neighbours together, saying, Rejoice with me; for I have found the piece which I had lost.",
+            reference: "Luke 15:9",
+            question: "In the Parable of the Lost Coin, what did the woman do after losing one of her coins?",
+            answers: ["She forgot about it", "She searched diligently", "She bought a new one", "She asked her neighbors for money"],
             correct: 1
         },
         {
-            scripture: "Doth not light a candle, and sweep the house, and seek diligently?",
+            scripture: "Either what woman having ten pieces of silver, if she lose one piece, doth not light a candle, and sweep the house, and seek diligently till she find it?",
             reference: "Luke 15:8",
-            question: "How many coins did woman have?",
+            question: "In the Parable of the Lost Coin, how many silver coins did the woman have?",
             answers: ["5", "10", "15", "20"],
             correct: 1
         },
         {
-            scripture: "Either what woman having ten pieces of silver.",
-            reference: "Luke 15:8",
-            question: "What did Pharisee and Tax Collector do?",
-            answers: ["Prayed", "Argued", "Made sacrifice", "Read scripture"],
+            scripture: "Two men went up into the temple to pray; the one a Pharisee, and the other a publican.",
+            reference: "Luke 18:10",
+            question: "In the Parable of the Pharisee and the Tax Collector, what did both men go to the temple to do?",
+            answers: ["Prayed", "Argued", "Made a sacrifice", "Read Scripture"],
             correct: 0
         },
         {
-            scripture: "Two men went up into the temple to pray.",
-            reference: "Luke 18:10",
-            question: "Who went home justified?",
-            answers: ["Pharisee", "Tax collector", "Both", "Neither"],
-            correct: 1
-        },
-        {
-            scripture: "I tell you, this man went down to his house justified.",
+            scripture: "I tell you, this man went down to his house justified rather than the other: for every one that exalteth himself shall be abased.",
             reference: "Luke 18:14",
-            question: "What did talents parable teach?",
-            answers: ["Saving money", "Using gifts wisely", "Giving to poor", "Working hard"],
+            question: "In the Parable of the Pharisee and the Tax Collector, which man went home justified before God?",
+            answers: ["The Pharisee", "The tax collector", "Both", "Neither"],
             correct: 1
         },
         {
-            scripture: "For unto every one that hath shall be given.",
-            reference: "Matthew 25:29",
-            question: "How many talents did servants receive?",
+            scripture: "His lord said unto him, Well done, thou good and faithful servant: thou hast been faithful over a few things, I will make thee ruler over many things.",
+            reference: "Matthew 25:21",
+            question: "What does the Parable of the Talents teach?",
+            answers: ["Saving money", "Using our gifts wisely", "Giving to the poor", "Working hard"],
+            correct: 1
+        },
+        {
+            scripture: "And unto one he gave five talents, to another two, and to another one; to every man according to his several ability.",
+            reference: "Matthew 25:15",
+            question: "In the Parable of the Talents, how many talents did the three servants each receive?",
             answers: ["1, 2, 3", "2, 3, 4", "5, 2, 1", "3, 2, 1"],
             correct: 2
         },
         {
-            scripture: "And unto one he gave five talents, to another two.",
-            reference: "Matthew 25:15",
-            question: "What did lazy servant do?",
-            answers: ["Lost it", "Hid it in ground", "Spent it", "Gave it away"],
+            scripture: "Then he which had received the one talent went and digged in the earth, and hid his lord's money.",
+            reference: "Matthew 25:18",
+            question: "In the Parable of the Talents, what did the servant who received one talent do with it?",
+            answers: ["He lost it", "He hid it in the ground", "He spent it", "He gave it away"],
             correct: 1
         },
         {
-            scripture: "Then he which had received the one talent went and digged.",
-            reference: "Matthew 25:18",
-            question: "What separates sheep from goats?",
-            answers: ["Faith", "Prayer", "Deeds of mercy", "Sacrifice"],
+            scripture: "And he shall separate them one from another, as a shepherd divideth his sheep from the goats.",
+            reference: "Matthew 25:32-40",
+            question: "In the Parable of the Sheep and the Goats, what separates the sheep from the goats?",
+            answers: ["Faith alone", "Prayer", "Deeds of mercy", "Sacrifice"],
             correct: 2
         },
         {
-            scripture: "And he shall separate them one from another, as a shepherd.",
-            reference: "Matthew 25:32",
-            question: "What did king say about helping others?",
-            answers: ["It's optional", "You did it to me", "It's duty", "It earns favor"],
+            scripture: "Inasmuch as ye have done it unto one of the least of these my brethren, ye have done it unto me.",
+            reference: "Matthew 25:40",
+            question: "In the Parable of the Sheep and the Goats, what did the King say about helping those in need?",
+            answers: ["It's optional", "You did it to me", "It's a duty", "It earns favor"],
             correct: 1
         },
         {
-            scripture: "Inasmuch as ye have done it unto one of the least.",
-            reference: "Matthew 25:40",
-            question: "What did foolish virgins lack?",
+            scripture: "And the foolish said unto the wise, Give us of your oil; for our lamps are gone out.",
+            reference: "Matthew 25:8",
+            question: "In the Parable of the Ten Virgins, what did the five foolish virgins lack?",
             answers: ["Lamps", "Oil", "Wicks", "Matches"],
             correct: 1
         },
         {
-            scripture: "And the foolish said unto the wise, Give us of your oil.",
-            reference: "Matthew 25:8",
-            question: "How many wise virgins were there?",
+            scripture: "Then shall the kingdom of heaven be likened unto ten virgins... and five of them were wise, and five were foolish.",
+            reference: "Matthew 25:1-2",
+            question: "In the Parable of the Ten Virgins, how many of the ten virgins were wise?",
             answers: ["Three", "Five", "Seven", "Ten"],
             correct: 1
         },
         {
-            scripture: "Then shall the kingdom of heaven be likened unto ten virgins.",
-            reference: "Matthew 25:1",
-            question: "What did Rich Fool do?",
-            answers: ["Gave to poor", "Built bigger barns", "Shared wealth", "Invested"],
+            scripture: "And he said, This will I do: I will pull down my barns, and build greater; and there will I bestow all my fruits and my goods.",
+            reference: "Luke 12:18",
+            question: "In the Parable of the Rich Fool, what did the rich man do with his abundant harvest?",
+            answers: ["He gave it to the poor", "He built bigger barns", "He shared his wealth", "He invested it"],
             correct: 1
         },
         {
-            scripture: "And he said, This will I do: I will pull down my barns, and build greater.",
-            reference: "Luke 12:18",
-            question: "What happened to Rich Fool?",
-            answers: ["He prospered", "He died that night", "He lost wealth", "He repented"],
+            scripture: "But God said unto him, Thou fool, this night thy soul shall be required of thee.",
+            reference: "Luke 12:20",
+            question: "In the Parable of the Rich Fool, what happened to the man the same night he planned to enjoy his wealth?",
+            answers: ["He prospered", "He died that night", "He lost his wealth", "He repented"],
             correct: 1
         }
     ],
 
     // NEW SEASONAL QUIZZES - 60 BRAND NEW ORIGINAL QUESTIONS
     // Easter Quiz - Palm Sunday through Resurrection
+    
     "easter": [
         {
             scripture: "Rejoice greatly, O daughter of Zion; shout, O daughter of Jerusalem: behold, thy King cometh unto thee.",
