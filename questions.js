@@ -1718,7 +1718,7 @@ window.quizQuestions = {
         {
             scripture: "Which indeed is the least of all seeds.",
             reference: "Matthew 13:32",
-            question: "In the Parable of the Mustard Seed, what is it called the smallest of?",
+            question: "In the Parable of the Mustard Seed, what is the mustard seed described as the smallest of?",
             answers: ["Wheat", "All seeds", "Barley", "Rice"],
             correct: 1
         },
@@ -1800,8 +1800,8 @@ window.quizQuestions = {
             correct: 2
         },
         {
-            scripture: "And when she hath found it, she calleth her friends and her neighbours together, saying, Rejoice with me; for I have found the piece which I had lost.",
-            reference: "Luke 15:9",
+            scripture: "Either what woman having ten pieces of silver, if she lose one piece, doth not light a candle, and sweep the house, and seek diligently till she find it?",
+            reference: "Luke 15:8",
             question: "In the Parable of the Lost Coin, what did the woman do after losing one of her coins?",
             answers: ["She forgot about it", "She searched diligently", "She bought a new one", "She asked her neighbors for money"],
             correct: 1
@@ -1817,13 +1817,13 @@ window.quizQuestions = {
             scripture: "Two men went up into the temple to pray; the one a Pharisee, and the other a publican.",
             reference: "Luke 18:10",
             question: "In the Parable of the Pharisee and the Tax Collector, what did both men go to the temple to do?",
-            answers: ["Prayed", "Argued", "Made a sacrifice", "Read Scripture"],
+            answers: ["Pray", "Argue", "Make a sacrifice", "Read Scripture"],
             correct: 0
         },
         {
             scripture: "I tell you, this man went down to his house justified rather than the other: for every one that exalteth himself shall be abased.",
             reference: "Luke 18:14",
-            question: "In the Parable of the Pharisee and the Tax Collector, which man went home justified before God?",
+            question: "In the Parable of the Pharisee and the Tax Collector, who went home justified before God?",
             answers: ["The Pharisee", "The tax collector", "Both", "Neither"],
             correct: 1
         },
