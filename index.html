@@ -904,11 +904,18 @@
         .xmas-subnav {
             background: linear-gradient(135deg, #1b4332 0%, #2d5a45 100%);
             border-top: 1px solid rgba(232,198,80,0.25);
+            position: relative;
+            overflow: hidden;
         }
-        .xmas-subnav-inner {
+        .xmas-subnav-row {
             max-width: 1400px;
             margin: 0 auto;
             padding: 7px 5%;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+        .xmas-subnav-links {
             display: flex;
             align-items: center;
             gap: 18px;
@@ -916,8 +923,10 @@
             -ms-overflow-style: none;
             scrollbar-width: none;
             white-space: nowrap;
+            flex-shrink: 0;
+            max-width: 100%;
         }
-        .xmas-subnav-inner::-webkit-scrollbar { display: none; }
+        .xmas-subnav-links::-webkit-scrollbar { display: none; }
         .xmas-subnav-label {
             font-size: 12px;
             font-weight: 800;
@@ -925,7 +934,7 @@
             letter-spacing: .3px;
             flex-shrink: 0;
         }
-        .xmas-subnav-inner a {
+        .xmas-subnav-links a {
             font-size: 13px;
             font-weight: 600;
             color: #f0ece0;
@@ -933,7 +942,7 @@
             flex-shrink: 0;
             transition: color .15s;
         }
-        .xmas-subnav-inner a:hover { color: #e8c650; }
+        .xmas-subnav-links a:hover { color: #e8c650; }
         .xmas-subnav-bundle {
             background: linear-gradient(135deg, #e8c650, #c9960a);
             color: #1b4332 !important;
@@ -942,8 +951,46 @@
             font-weight: 800 !important;
         }
         .xmas-subnav-bundle:hover { color: #1b4332 !important; filter: brightness(1.08); }
+
+        /* Decorative zone — only fills leftover space AFTER the links, never overlaps them */
+        .xmas-subnav-decor {
+            display: none;
+            flex: 1 1 auto;
+            position: relative;
+            height: 22px;
+            min-width: 50px;
+            overflow: hidden;
+        }
+        @media (min-width: 1100px) {
+            .xmas-subnav-decor { display: block; }
+        }
+        .xmas-tree {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 13px;
+            opacity: .55;
+        }
+        .xmas-snow {
+            position: absolute;
+            top: -6px;
+            font-size: 10px;
+            color: #ffffff;
+            opacity: 0;
+            animation: xmas-snowfall 4.5s linear infinite;
+        }
+        @keyframes xmas-snowfall {
+            0%   { transform: translateY(-4px) translateX(0); opacity: 0; }
+            15%  { opacity: .9; }
+            85%  { opacity: .6; }
+            100% { transform: translateY(26px) translateX(6px); opacity: 0; }
+        }
+        @media (prefers-reduced-motion: reduce) {
+            .xmas-snow { animation: none; opacity: .5; }
+        }
+
         @media (max-width: 768px) {
-            .xmas-subnav-inner { padding: 6px 20px; gap: 14px; }
+            .xmas-subnav-row { padding: 6px 20px; gap: 14px; }
             .xmas-subnav-label { display: none; }
         }
     </style>
@@ -1015,14 +1062,33 @@
             </ul>
         </nav>
         <div class="xmas-subnav">
-            <div class="xmas-subnav-inner">
-                <span class="xmas-subnav-label">🎄 Christmas:</span>
-                <a href="nativity-bible-quiz">Nativity Quiz</a>
-                <a href="nativity-bingo">Nativity Bingo</a>
-                <a href="christmas-bible-crossword">Crossword</a>
-                <a href="christmas-scavenger-hunt">Scavenger Hunt</a>
-                <a href="who-said-it-christmas-edition">Who Said It?</a>
-                <a href="christmas-ministry-kit" class="xmas-subnav-bundle">🎁 Bundle &amp; Save 23%</a>
+            <div class="xmas-subnav-row">
+                <div class="xmas-subnav-links">
+                    <span class="xmas-subnav-label">🎄 Christmas:</span>
+                    <a href="nativity-bible-quiz">Nativity Quiz</a>
+                    <a href="nativity-bingo">Nativity Bingo</a>
+                    <a href="christmas-bible-crossword">Crossword</a>
+                    <a href="christmas-scavenger-hunt">Scavenger Hunt</a>
+                    <a href="who-said-it-christmas-edition">Who Said It?</a>
+                    <a href="christmas-ministry-kit" class="xmas-subnav-bundle">🎁 Bundle &amp; Save 23%</a>
+                </div>
+                <div class="xmas-subnav-decor" aria-hidden="true">
+                    <span class="xmas-tree" style="left:6%;">🎄</span>
+                    <span class="xmas-tree" style="left:26%;">🎄</span>
+                    <span class="xmas-tree" style="left:48%;">🎄</span>
+                    <span class="xmas-tree" style="left:70%;">🎄</span>
+                    <span class="xmas-tree" style="left:90%;">🎄</span>
+                    <span class="xmas-snow" style="left:2%; animation-delay:0s;">❄</span>
+                    <span class="xmas-snow" style="left:14%; animation-delay:1.2s;">❄</span>
+                    <span class="xmas-snow" style="left:24%; animation-delay:2.4s;">❄</span>
+                    <span class="xmas-snow" style="left:36%; animation-delay:0.6s;">❄</span>
+                    <span class="xmas-snow" style="left:46%; animation-delay:1.9s;">❄</span>
+                    <span class="xmas-snow" style="left:58%; animation-delay:0.3s;">❄</span>
+                    <span class="xmas-snow" style="left:68%; animation-delay:2.1s;">❄</span>
+                    <span class="xmas-snow" style="left:79%; animation-delay:1.0s;">❄</span>
+                    <span class="xmas-snow" style="left:88%; animation-delay:2.8s;">❄</span>
+                    <span class="xmas-snow" style="left:96%; animation-delay:1.6s;">❄</span>
+                </div>
             </div>
         </div>
     </header>
