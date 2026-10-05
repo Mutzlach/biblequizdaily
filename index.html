@@ -899,6 +899,53 @@
         .bp-dismiss{display:block;text-align:center;font-size:12px;color:#b0a8c0;cursor:pointer;background:none;border:none;width:100%;padding:4px;font-family:inherit;transition:color .15s;}
         .bp-dismiss:hover{color:#5a4070;}
         @media(max-width:560px){#bundle-popup{max-width:360px;}.bp-header{padding:24px 20px 20px;}.bp-headline{font-size:18px;}.bp-pills{display:none;}.bp-body{padding:18px 20px 22px;}.bp-price-left .bp-now{font-size:36px;}.bp-value-row{gap:6px;}.bp-value-card{padding:10px 8px;}}
+
+        /* ── CHRISTMAS SUB-NAV (thin line below main nav) ── */
+        .xmas-subnav {
+            background: linear-gradient(135deg, #1b4332 0%, #2d5a45 100%);
+            border-top: 1px solid rgba(232,198,80,0.25);
+        }
+        .xmas-subnav-inner {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 7px 5%;
+            display: flex;
+            align-items: center;
+            gap: 18px;
+            overflow-x: auto;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            white-space: nowrap;
+        }
+        .xmas-subnav-inner::-webkit-scrollbar { display: none; }
+        .xmas-subnav-label {
+            font-size: 12px;
+            font-weight: 800;
+            color: #e8c650;
+            letter-spacing: .3px;
+            flex-shrink: 0;
+        }
+        .xmas-subnav-inner a {
+            font-size: 13px;
+            font-weight: 600;
+            color: #f0ece0;
+            text-decoration: none;
+            flex-shrink: 0;
+            transition: color .15s;
+        }
+        .xmas-subnav-inner a:hover { color: #e8c650; }
+        .xmas-subnav-bundle {
+            background: linear-gradient(135deg, #e8c650, #c9960a);
+            color: #1b4332 !important;
+            padding: 4px 12px;
+            border-radius: 14px;
+            font-weight: 800 !important;
+        }
+        .xmas-subnav-bundle:hover { color: #1b4332 !important; filter: brightness(1.08); }
+        @media (max-width: 768px) {
+            .xmas-subnav-inner { padding: 6px 20px; gap: 14px; }
+            .xmas-subnav-label { display: none; }
+        }
     </style>
 </head>
 <body>
@@ -967,6 +1014,17 @@
                 <li><a href="shop" class="nav-shop-btn">🛒 Shop</a></li>
             </ul>
         </nav>
+        <div class="xmas-subnav">
+            <div class="xmas-subnav-inner">
+                <span class="xmas-subnav-label">🎄 Christmas:</span>
+                <a href="nativity-bible-quiz">Nativity Quiz</a>
+                <a href="nativity-bingo">Nativity Bingo</a>
+                <a href="christmas-bible-crossword">Crossword</a>
+                <a href="christmas-scavenger-hunt">Scavenger Hunt</a>
+                <a href="who-said-it-christmas-edition">Who Said It?</a>
+                <a href="christmas-ministry-kit" class="xmas-subnav-bundle">🎁 Bundle &amp; Save 23%</a>
+            </div>
+        </div>
     </header>
 
     <div class="hero">
